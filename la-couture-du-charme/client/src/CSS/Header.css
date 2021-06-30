@@ -1,10 +1,9 @@
 .header-box{
+    padding: 10px 16px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     text-align: center;
-    position: fixed;
-    width: 100%;
 }
 
 .header-logo{
@@ -59,4 +58,21 @@
     width: 10%;
     height: 3em;
     text-align: center;
+}
+
+.header-sticky {
+    position: fixed;
+    top: 0;
+    width: 99%;
+    animation: stick 100ms linear 1 forwards;
+  }
+
+@keyframes stick {
+    from {
+        background-color: #FFFFFF;
+    }
+    to {
+        background-color: #5c613f;
+        border-bottom: solid 3px black;
+    }
 }
