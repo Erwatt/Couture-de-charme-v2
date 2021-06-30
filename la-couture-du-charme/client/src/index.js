@@ -1,14 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './CSS/index.css';
-import App from './Components/App';
+import HomeRooms from './Components/HomeRooms';
+import HomePiscine from './Components/HomePiscine';
+import HomeSpa from './Components/HomeSpa';
+
+
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router} from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <App />
+    
+
+      <HomeRooms/>
+      <HomePiscine/>
+      <HomeSpa/>
+
+      
+
+      
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
