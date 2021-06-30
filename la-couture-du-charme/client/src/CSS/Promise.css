@@ -1,0 +1,72 @@
+.lcc-panel{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.lcc-slogan{
+    display: flex; 
+    flex-direction: column; 
+    background: url('../Images/fôret.png');
+    padding :1%;
+    padding-bottom: 5%;
+    position: relative;
+    height: 13em;
+    width: 30em ;
+    left: 10em;
+    top: 08em;
+    background-size: cover;
+}
+
+.lcc-choix{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    justify-content: center;
+    color: white;
+    background-color: #777D51;
+    padding :1%;
+    position: relative;
+    height: 9em;
+    width: 9em;
+    left: -6em;
+    top: 17em;
+    background-size: cover;
+}
+
+li{
+    margin-bottom: 6px;
+}
+
+.box-place{
+    display: flex;
+    flex-direction: row;
+}
+
+.titre{
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+    color: white;
+    margin-left: 1em;
+}
+
+.box1{
+    box-shadow:  0px 10px 7px black;
+    text-align: center;
+    background-color:#62514E;
+    border-radius: 10%;
+    width: 2.8em;
+    height: auto;
+    color: white;
+    margin-left: 3em;
+    margin-top: 7em;
+}
+
+.box2{
+    box-shadow:  0px 10px 7px black;
+    text-align: center;
+    background-color:#62514E;
+    border-radius: 10%;
+    width: 10em;
+    height: auto;
+    color: white;
+    margin-left: 3em;
+    margin-top: 7em;    
+}
