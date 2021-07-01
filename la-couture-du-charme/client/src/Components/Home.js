@@ -1,9 +1,11 @@
 import React from 'react';
 import '../CSS/Home.css';
+import Promise from './Promise';
 
 function Home(){
     return (
         <div className="home">
+            <Promise/>
             <div className="home-intro">
                 <div className="home-intro-info">
                     <p className="home-intro-txt">
