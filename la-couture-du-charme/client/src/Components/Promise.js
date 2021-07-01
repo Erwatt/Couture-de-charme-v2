@@ -1,3 +1,4 @@
+import React from 'react';
 import '../CSS/Promise.css'
 
 export default function Promise(){
