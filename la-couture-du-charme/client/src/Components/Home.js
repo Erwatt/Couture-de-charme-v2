@@ -1,6 +1,9 @@
 import React from 'react';
 import '../CSS/Home.css';
 import Promise from './Promise';
+import HomePiscine from './HomePiscine';
+import HomeRooms from './HomeRooms';
+import HomeSpa from './HomeSpa';
 
 function Home(){
     return (
@@ -16,6 +19,11 @@ function Home(){
                     </p>
                     <h2 className="home-intro-title">Qui sommes-nous ?</h2>
                 </div>
+            </div>
+            <div className="home-infos">
+                <HomePiscine/>
+                <HomeRooms/>
+                <HomeSpa/>
             </div>
         </div>
     );
