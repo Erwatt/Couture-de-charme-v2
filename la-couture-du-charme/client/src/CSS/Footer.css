@@ -52,6 +52,7 @@
 
 .footer-message-form-input > input{
     border: none;
+    box-shadow: 2px 2px 2px black;
 }
 
 .footer-message-form-txtarea{
@@ -62,9 +63,10 @@
 
 .footer-message-form-txtarea > textarea{
     margin-top: 3%;
-    transform: scaleY(1.7);
+    height: 100%;
     border: none;
     resize: none;
+    box-shadow: 2px 2px 2px black;
 }
 
 .footer-message-form-send{
@@ -90,6 +92,7 @@
     flex-direction: row;
     background-color: rgba(94, 69, 48, 0.801);
     justify-content: space-around;
+    color: #FFFFFF
 }
 
 .footer-down-mention{

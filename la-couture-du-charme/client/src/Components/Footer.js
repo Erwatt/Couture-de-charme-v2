@@ -8,7 +8,7 @@ function Footer(){
             <div className="footer-up">
                 <div className="footer-contact-map">
                     <div className="footer-contact">
-                        <h2>COUTURE DU CHARME</h2>
+                        <h2> LA COUTURE DU CHARME</h2>
                         <p>1400, rue de Beaumetz</p>
                         <p>59310 SAMÉON</p>
                         <h3>📞 03 27 41 52 47</h3>
