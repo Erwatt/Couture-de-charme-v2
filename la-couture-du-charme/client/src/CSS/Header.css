@@ -1,0 +1,79 @@
+.header-box{
+    padding: 10px 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    z-index: 1;
+}
+
+.header-logo{
+    width: 10%;
+    height: auto;
+}
+
+.header-tel{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+    background-color: #570F0F;
+    width: 80%;
+    height: 50%;
+    border-style: solid;
+    border-width: 2px;    
+    color: #FFFFFF;
+    border-color: #000000;
+    text-decoration: underline 1px;
+    box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header-book{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+    background-color: #570F0F;
+    width: 80%;
+    height: 50%;
+    border-style: solid;
+    border-width: 2px;    
+    color: #FFFFFF;
+    border-color: #000000;
+    cursor: pointer;
+    text-decoration: underline 1px;
+    box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header-tel-back{
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: #C4C4C4;
+    width: 10%;
+    height: 3em;
+    text-align: center;
+}
+
+.header-book-back{
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: #C4C4C4;
+    width: 10%;
+    height: 3em;
+    text-align: center;
+}
+
+.header-sticky {
+    position: fixed;
+    top: 0;
+    width: 99%;
+    animation: stick 100ms linear 1 forwards;
+  }
+
+@keyframes stick {
+    from {
+        background-color: #FFFFFF;
+    }
+    to {
+        background-color: #5c613f;
+        border-bottom: solid 3px black;
+    }
+}
