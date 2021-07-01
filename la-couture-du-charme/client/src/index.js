@@ -8,7 +8,15 @@ import App from './Components/App';
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <App />
+    
+
+      <HomeRooms/>
+      <HomePiscine/>
+      <HomeSpa/>
+
+      
+
+      
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
