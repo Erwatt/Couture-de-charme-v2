@@ -1,5 +1,5 @@
 .header-box{
-    padding: 10px 16px;
+    /* padding: 10px 16px; */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -67,6 +67,11 @@
     width: 99%;
     animation: stick 100ms linear 1 forwards;
   }
+
+.header-sticky > img{
+    width: 5%;
+    height: auto;
+}
 
 @keyframes stick {
     from {
