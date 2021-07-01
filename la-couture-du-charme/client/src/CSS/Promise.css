@@ -1,6 +1,7 @@
 .lcc-panel{
     display: flex;
     justify-content: space-evenly;
+    height: 500px;
 }
 
 .lcc-slogan{

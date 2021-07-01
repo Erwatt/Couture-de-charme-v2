@@ -1,0 +1,44 @@
+.text-containerRoom{
+    background-color: #C4C4C4;
+    padding :3%;
+    padding-bottom: 10%;
+    position: relative;
+    height: auto;
+    width: 28em;
+    left: -26em;
+    top: -3em;
+}
+
+.imageRoom{
+    padding :1%;
+    position: relative;
+    height: 15em;
+    width: 25em;
+    left: 25em;
+    top: 0em;
+    background: url("../Images/chambre.jpeg");
+    background-size: cover;
+
+}
+
+.titleRoom{
+    font-size: larger;
+    padding-left: 5%;
+
+    padding-bottom: 1%;
+    font-style: normal;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size:x-large;
+}
+
+.textRoom{
+    padding: 2%;
+    padding-left: 12%;
+    font-family: 'Sedan', sans-serif;
+    font-size: normal
+}
+
+.container-room{
+    margin-top: 3em;
+}

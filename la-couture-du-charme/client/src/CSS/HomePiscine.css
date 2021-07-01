@@ -1,0 +1,42 @@
+.text-container{
+    background-color: #C4C4C4;
+    padding :3%;
+    padding-bottom: 10%;
+    position: relative;
+    height: auto;
+    width: 28em;
+    left: 27em;
+    top: 1em;
+}
+
+.image{
+    padding :1%;
+    position: relative;
+    height: 17em;
+    width: 28em;
+    left: 0em;
+    top: 0em;
+    background: url("../Images/piscine.jpeg");
+    background-size: cover;
+}
+.title{
+    font-size: larger;
+    padding-left: 5%;
+
+    padding-bottom: 1%;
+    font-style: normal;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size:x-large;
+}
+
+.text{
+    padding: 2%;
+    padding-left: 12%;
+    font-family: 'Sedan', sans-serif;
+    font-size: normal
+}
+
+.container-piscine{
+    margin-top: 3em;
+}
