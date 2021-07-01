@@ -14,13 +14,6 @@ function App() {
       <div className="content">
         <Home/>
       </div>
-      <img src={logo}/>
-      <img src={logo}/>
-      <img src={logo}/>
-      <img src={logo}/>
-      <img src={logo}/>
-      <img src={logo}/>
-      <img src={logo}/>
     </div>
   );
 }
