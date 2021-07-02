@@ -17,7 +17,10 @@ function Home(){
                         Odio pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus.
                         Commodo sed egestas egestas fringilla phasellus faucibus.
                     </p>
-                    <h2 className="home-intro-title">Qui sommes-nous ?</h2>
+                    <div className="home-intro-who">
+                        <h2 className="home-intro-title">QUI</h2>
+                        <h2 className="home-intro-title home-intro-title-underline">SOMMES NOUS ?</h2>
+                    </div>
                 </div>
             </div>
             <div className="home-infos">
