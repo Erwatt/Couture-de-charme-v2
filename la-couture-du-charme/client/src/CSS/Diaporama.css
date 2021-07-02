@@ -1,0 +1,35 @@
+.Diaporama{
+    display: flex;
+    flex-direction: row;
+    max-height: 100%;
+    width:auto;
+    text-align: center;
+    margin-left: 14%;
+}
+
+.Diaporama_img{
+    height:400px;
+    width: auto;
+}
+
+.fleche_retour{
+  width: 30%;
+  height: auto;
+  transform: rotate(90deg);
+  margin-top: 80%;
+}
+
+.fleche_suivant{
+  width: 30%;
+  height: auto;
+  transform: rotate(-90deg);
+  margin-top: 80%;
+}
+
+.element_Diaporama:nth-child(1){
+  text-align: right;
+}
+
+.element_Diaporama:nth-child(3){
+  text-align: left;
+}
