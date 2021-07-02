@@ -6,7 +6,8 @@
 .footer-up{
     display: flex;
     flex-direction: column;
-    background-color: rgba(223, 221, 198, 0.67);
+    background-color: rgba(185, 179, 119, 0.67);
+    color: rgb(161, 126, 60);
 }
 
 .footer-contact-map{
@@ -23,6 +24,8 @@
 .footer-map{
     margin-top: 3%;
     margin-bottom: auto;
+    
+
 }
 
 .footer-message{
@@ -77,14 +80,19 @@
     margin-right: auto;
     background: none;
     border: none;
-    text-decoration: underline 2px;
     text-decoration-style: solid;
     transform: scale(1.2);
     cursor: pointer;
+    background-color: rgb(161, 126, 60);
+    padding:0.5%;
+    color: white;
+    border-radius: 30px;
 }
 
 .footer-message-form-send:hover{
-    color: red;
+    
+    background-color: rgb(92, 16, 16);
+    color: white;
 }
 
 .footer-down{
@@ -98,3 +106,18 @@
 .footer-down-mention{
     cursor: pointer;
 }
+
+
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid gray;
+    outline: 0;
+    font-size: 1.3rem;
+    color:rgb(161, 126, 60);
+    padding: 7px 0;
+    background: white;
+    transition: border-color 0.2s;
+}
+

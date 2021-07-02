@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    color: #FFFFFF;
+    color: #F1EDE2;
 }
 
 .home-intro-info > p{
@@ -23,15 +23,15 @@
     height: auto;
     padding-top: 2%;
     padding-bottom: 2%;
-
+    
     margin-left: auto;
     margin-right: auto;
 }
 
-.home-info{
-    margin-left: auto;
-    margin-right: auto;
-}
+/* .home-info{
+    margin-left: 20%; 
+    margin-right: auto; 
+}  */
 
 .home-intro-who{
     margin-top: auto;
@@ -41,4 +41,8 @@
 
 .home-intro-title-underline{
     text-decoration: underline solid 4px rgba(223, 221, 198, 0.67);
+}
+
+.home{
+    background-color: #F1EDE2;
 }
