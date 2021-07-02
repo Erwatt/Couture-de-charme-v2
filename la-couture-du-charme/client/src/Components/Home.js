@@ -4,11 +4,7 @@ import Promise from './Promise';
 import HomePiscine from './HomePiscine';
 import HomeRooms from './HomeRooms';
 import HomeSpa from './HomeSpa';
-// import Diaporama from './Diaporama';
-// import chambre from '../Images/chambre.jpeg';
-// import spa from '../Images/spa.jpeg';
-// import logo from '../Images/logo.png';
-// import piscine from '../Images/piscine.jpeg';
+
 
 function Home(){
     return (
@@ -29,7 +25,6 @@ function Home(){
                 </div>
             </div>
             <div className="home-infos">
-                
                 <HomeRooms/>
                 <HomePiscine/>
                 <HomeSpa/>
