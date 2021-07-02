@@ -1,0 +1,100 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-up{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(223, 221, 198, 0.67);
+}
+
+.footer-contact-map{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer-contact{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.footer-map{
+    margin-top: 3%;
+    margin-bottom: auto;
+}
+
+.footer-message{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-message-form{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-message-form-inputs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.footer-message-form-input{
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-message-form-input > input{
+    border: none;
+    box-shadow: 2px 2px 2px black;
+}
+
+.footer-message-form-txtarea{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.footer-message-form-txtarea > textarea{
+    margin-top: 3%;
+    height: 100%;
+    border: none;
+    resize: none;
+    box-shadow: 2px 2px 2px black;
+}
+
+.footer-message-form-send{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    background: none;
+    border: none;
+    text-decoration: underline 2px;
+    text-decoration-style: solid;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.footer-message-form-send:hover{
+    color: red;
+}
+
+.footer-down{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(94, 69, 48, 0.801);
+    justify-content: space-around;
+    color: #FFFFFF
+}
+
+.footer-down-mention{
+    cursor: pointer;
+}

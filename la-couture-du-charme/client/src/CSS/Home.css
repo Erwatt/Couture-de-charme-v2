@@ -32,3 +32,13 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.home-intro-who{
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+.home-intro-title-underline{
+    text-decoration: underline solid 4px rgba(223, 221, 198, 0.67);
+}
