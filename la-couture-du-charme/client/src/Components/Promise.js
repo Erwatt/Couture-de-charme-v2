@@ -12,7 +12,7 @@ export default function Promise(){
                     <div className='box2'>Chambres d'hôtes</div>
                 </div>
             </div>
-
+            
             <div className='lcc-choix'>
                     <li>Piscine</li>
                     <li>Spa</li>
