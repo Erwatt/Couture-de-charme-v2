@@ -1,0 +1,33 @@
+.pool{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.pool-diapo{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pool-info{
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #C4C4C4;
+    margin-bottom: 5%;
+}
+
+.pool-info-txt{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.pool-info-txt > p {
+    max-width: 30%;
+}

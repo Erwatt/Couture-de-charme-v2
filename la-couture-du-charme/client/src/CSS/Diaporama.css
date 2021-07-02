@@ -4,11 +4,10 @@
     max-height: 100%;
     width:auto;
     text-align: center;
-    margin-left: 14%;
 }
 
 .Diaporama_img{
-    height:400px;
+    height:500px;
     width: auto;
 }
 
@@ -16,14 +15,14 @@
   width: 30%;
   height: auto;
   transform: rotate(90deg);
-  margin-top: 80%;
+  margin-top: 100%;
 }
 
 .fleche_suivant{
   width: 30%;
   height: auto;
   transform: rotate(-90deg);
-  margin-top: 80%;
+  margin-top: 100%;
 }
 
 .element_Diaporama:nth-child(1){

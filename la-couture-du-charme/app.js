@@ -4,12 +4,6 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 const app = express();
-// mongoose.connect(process.env.DATABASE,{ useNewUrlParser: true,
-//   useCreateIndex: true,
-//   useUnifiedTopology: true,
-//   useFindAndModify: false   })
-// .then(() => console.log('Connexion à MongoDB réussie !'))
-// .catch(() => console.log('Connexion à MongoDB échouée !'));
 
 mongoose.connect(process.env.DATABASE,{ useNewUrlParser: true,
     useCreateIndex: true,
@@ -17,6 +11,7 @@ mongoose.connect(process.env.DATABASE,{ useNewUrlParser: true,
     useFindAndModify: false   })
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
+  
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');

@@ -24,7 +24,6 @@ function Home(){
                 </div>
             </div>
             <div className="home-infos">
-                
                 <HomeRooms/>
                 <HomePiscine/>
                 <HomeSpa/>
