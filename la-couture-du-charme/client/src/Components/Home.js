@@ -5,11 +5,10 @@ import HomePiscine from './HomePiscine';
 import HomeRooms from './HomeRooms';
 import HomeSpa from './HomeSpa';
 
-
 function Home(){
     return (
         <div className="home">
-            <Promise/>
+            <Promise size='big'/>
             <div className="home-intro">
                 <div className="home-intro-info">
                     <p className="home-intro-txt">

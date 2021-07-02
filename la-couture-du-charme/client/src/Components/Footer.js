@@ -27,6 +27,7 @@ function Footer(){
                         <h3>📞 03 27 41 52 47</h3>
                     </div>
                     <div className="footer-map">
+                       
                         <Map/>
                     </div>
                 </div>
@@ -35,19 +36,19 @@ function Footer(){
                         <div className="footer-message-form-inputs">
                             <div className="footer-message-form-input">
                                 <label htmlFor="Name">Nom et prénom</label>
-                                <input name="Name" onChange={(e) => setName(e.target.value)}/>
+                                <input className="form__field" name="Name" onChange={(e) => setName(e.target.value)}/>
                             </div>
                             <div className="footer-message-form-input">
                                 <label htmlFor="Phone">Numéro de téléphone</label>
-                                <input name="Phone" onChange={(e) => setPhone(e.target.value)}/>
+                                <input className="form__field" name="Phone" onChange={(e) => setPhone(e.target.value)}/>
                             </div>
                             <div className="footer-message-form-input">
                                 <label htmlFor="Mail">E-mail</label>
-                                <input name="Mail" onChange={(e) => setMail(e.target.value)}/>
+                                <input className="form__field" name="Mail" onChange={(e) => setMail(e.target.value)}/>
                             </div>
                             <div className="footer-message-form-input">
                                 <label htmlFor="Spam">Anti-spam</label>
-                                <input name="Spam" onChange={(e) => setSpam(e.target.value)}/>
+                                <input className="form__field" name="Spam" onChange={(e) => setSpam(e.target.value)}/>
                             </div>
                         </div>
                         <div className="footer-message-form-txtarea">
@@ -55,7 +56,7 @@ function Footer(){
                             <textarea name="Message" onChange={(e) => setMessage(e.target.value)}/>
                         </div>
                     </div>
-                    <button className="footer-message-form-send">📩 Envoyer le message</button>
+                    <button className="footer-message-form-send">Envoyer le message</button>
                 </form>
             </div>
             <div className="footer-down">
