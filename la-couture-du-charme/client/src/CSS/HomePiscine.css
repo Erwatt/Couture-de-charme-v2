@@ -28,6 +28,7 @@
 }
 
 .titlepiscine{
+    padding: 2%;
     font-size: larger;
     padding-left: 5%;
 
@@ -53,7 +54,7 @@
     margin: 2%;
     padding:1.5%;
     border: black solid;
-    border-style: double;
+    border-style: double ;
     margin: 2%;
     left: -1.5em;
     top: 2em;
