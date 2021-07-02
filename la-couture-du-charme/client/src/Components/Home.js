@@ -4,16 +4,11 @@ import Promise from './Promise';
 import HomePiscine from './HomePiscine';
 import HomeRooms from './HomeRooms';
 import HomeSpa from './HomeSpa';
-// import Diaporama from './Diaporama';
-// import chambre from '../Images/chambre.jpeg';
-// import spa from '../Images/spa.jpeg';
-// import logo from '../Images/logo.png';
-// import piscine from '../Images/piscine.jpeg';
 
 function Home(){
     return (
         <div className="home">
-            <Promise/>
+            <Promise size='big'/>
             <div className="home-intro">
                 <div className="home-intro-info">
                     <p className="home-intro-txt">
