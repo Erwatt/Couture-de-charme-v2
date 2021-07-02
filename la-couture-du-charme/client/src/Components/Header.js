@@ -7,20 +7,6 @@ function Header(){
 
     window.onscroll = function() {handleScroll()};
 
-    // var header = document.getElementById("my-header")
-    // console.log(header)
-    // var sticky = header.offsetTop;
-
-    // function fixeHeader(){
-    //     console.log(sticky)
-    //     if (window.pageYOffset > 100){
-    //         console.log(header)
-    //         header.classList.add("header-sticky");
-    //     } else {
-    //         header.classList.remove("header-sticky");
-    //     };
-    // };
-
     const [sticky, setSticky] = useState(false);
 
     function handleScroll(){
