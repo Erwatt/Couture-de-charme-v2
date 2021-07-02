@@ -86,3 +86,36 @@ li{
     margin-bottom: auto; 
 }
 
+.lcc-panel2{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.lcc-slogan2{
+
+    display: flex; 
+    flex-direction: column; 
+    background: url('../Images/fôret.png');
+    top: 25%;
+    left: 8%;
+    height: 100%;
+    width: 80%;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    border-radius: 8px;
+
+}
+
+.titre2{
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+    font-size: 400%;
+    color: white;
+    margin-top:8%;
+    margin-left: 15%;
+}
+
+
