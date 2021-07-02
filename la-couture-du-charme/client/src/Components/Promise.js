@@ -14,13 +14,11 @@ export default function Promise(){
             </div>
 
             <div className='lcc-choix'>
-                <ul>
                     <li>Piscine</li>
                     <li>Spa</li>
                     <li>Sauna</li>
                     <li>Modelage</li>
-                    <li>Activités</li>
-                </ul>    
+                    <li>Activités</li>   
             </div>
         </div>
     )
