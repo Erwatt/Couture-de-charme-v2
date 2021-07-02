@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../Images/logo.png';
+import Map from './Map';
 import '../CSS/Footer.css';
 import {useState} from 'react';
 import services from '../services';
@@ -26,7 +26,9 @@ function Footer(){
                         <p>59310 SAMÉON</p>
                         <h3>📞 03 27 41 52 47</h3>
                     </div>
-                    <img src={logo} alt="logo" className="footer-logo"/>
+                    <div className="footer-map">
+                        <Map/>
+                    </div>
                 </div>
                 <form className="footer-message" onSubmit={handleMessage}>
                     <div className="footer-message-form">
