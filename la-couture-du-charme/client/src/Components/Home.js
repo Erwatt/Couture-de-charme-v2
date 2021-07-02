@@ -5,7 +5,6 @@ import HomePiscine from './HomePiscine';
 import HomeRooms from './HomeRooms';
 import HomeSpa from './HomeSpa';
 
-
 function Home(){
     return (
         <div className="home">
