@@ -18,7 +18,7 @@ function Diaporama({picturesList}){
             <div className="element_Diaporama">
                 <img src={arrow} onClick={() => setPosDiapo(posDiapo + 1)} className="fleche_suivant" alt="suivant"/>
             </div>
-            {console.log(Math.abs(posDiapo % images.length))}
+            {/* {console.log(Math.abs(posDiapo % images.length))} */}
         </div>
     );
 }
