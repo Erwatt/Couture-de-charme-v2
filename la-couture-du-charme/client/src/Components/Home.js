@@ -8,7 +8,7 @@ import HomeSpa from './HomeSpa';
 function Home(){
     return (
         <div className="home">
-            <Promise/>
+            <Promise size='big'/>
             <div className="home-intro">
                 <div className="home-intro-info">
                     <p className="home-intro-txt">
@@ -24,7 +24,6 @@ function Home(){
                 </div>
             </div>
             <div className="home-infos">
-                
                 <HomeRooms/>
                 <HomePiscine/>
                 <HomeSpa/>
