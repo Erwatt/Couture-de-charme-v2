@@ -4,11 +4,11 @@ import '../CSS/Promise.css'
 export default function Promise({size, room, pool}){
 
     function handleRoomScroll(){
-        room.current.scrollIntoView();
+        room.current.scrollIntoView({behavior: "smooth", block: "start"});
     }
 
     function handlePoolScroll(){
-        pool.current.scrollIntoView();
+        pool.current.scrollIntoView({behavior: "smooth", block: "start"});
     }
  
     return size==='big' ?(
