@@ -9,6 +9,7 @@ import '../CSS/PrivatePool.css';
 
 function PrivatePool(){
     const picturesList = [chambre, spa, logo, piscine];
+    window.scrollTo(0, 0);
 
     return (
         <div className="pool">

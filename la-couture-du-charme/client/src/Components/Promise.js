@@ -1,15 +1,23 @@
 import React from 'react';
 import '../CSS/Promise.css'
 
-export default function Promise({size}){
+export default function Promise({size, room, pool}){
+
+    function handleRoomScroll(){
+        room.current.scrollIntoView();
+    }
+
+    function handlePoolScroll(){
+        pool.current.scrollIntoView();
+    }
  
     return size==='big' ?(
         <div className='lcc-panel'>
             <div className='lcc-slogan'>
                 <h1 className='titre'>Lorem Ipsum Dolor</h1>
                 <div className='box-place'>
-                    <div className='box1'>Spa</div>
-                    <div className='box2'>Chambres d'hôtes</div>
+                    <div className='box1' onClick={handlePoolScroll}>Spa</div>
+                    <div className='box2' onClick={handleRoomScroll}>Chambres d'hôtes</div>
                 </div>
             </div>
             
