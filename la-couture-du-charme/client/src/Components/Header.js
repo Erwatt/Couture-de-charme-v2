@@ -23,7 +23,7 @@ function Header(){
         } else {
             setSticky(false);
         };
-    }
+    };
     
 
     let headerClasses = ['header-box']
