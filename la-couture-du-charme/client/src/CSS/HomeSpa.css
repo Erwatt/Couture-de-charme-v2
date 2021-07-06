@@ -38,7 +38,7 @@
 .titleSpa{
     font-size: larger;
     padding-left: 5%;
-
+    color: black;
     padding-bottom: 1%;
     font-style: normal;
     font-family: 'Open Sans', sans-serif;
@@ -50,7 +50,8 @@
     padding: 2%;
     padding-left: 12%;
     font-family: 'Sedan', sans-serif;
-    font-size: normal
+    font-size: normal;
+    color: black;
 }
 
 .borderSpa{
@@ -61,4 +62,8 @@
     width: 31em;
     position: relative;
     
+}
+
+.Spa-link{
+    text-decoration: none;
 }

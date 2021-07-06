@@ -2,9 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../CSS/HomeRooms.css';
 
-function HomeRooms() {
+function HomeRooms({room}) {
+
+  
+
   return (
-    <div className="container-room">
+    <div className="container-room" ref={room}>
       <div className="borderRoom">
         <Link to="/PrivateRoom" className='Room-link'><div className="text-containerRoom">
            <h2 className = "titleRoom">
