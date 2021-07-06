@@ -5,11 +5,13 @@
     justify-content: space-around;
     text-align: center;
     z-index: 2;
+    background-color: rgba(185, 179, 119, 0.67);
 }
-
 .header-logo{
-    width: 15%;
+    width: 20%;
     height: auto;
+    
+
 }
 
 .header-tel{
@@ -23,7 +25,6 @@
     border-width: 2px;    
     color: #FFFFFF;
     border-color: #000000;
-    text-decoration: underline 1px;
     box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -39,7 +40,6 @@
     color: #FFFFFF;
     border-color: #000000;
     cursor: pointer;
-    text-decoration: underline 1px;
     box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -78,7 +78,7 @@
         background-color: #FFFFFF;
     }
     to {
-        background-color: #5c613f;
+        background-color: #abb958;
         border-bottom: solid 3px black;
     }
 }

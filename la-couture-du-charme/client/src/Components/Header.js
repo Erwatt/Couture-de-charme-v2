@@ -34,9 +34,9 @@ function Header(){
     return (
         <div className={headerClasses.join(" ")}>
             <div className="header-tel-back">
-                <p className="header-tel">06.31.84.42.39</p>
+                <p className="header-tel">06 31 84 42 39</p>
             </div>
-            <img src={logo} alt="La Couture du Charme" className="header-logo" onClick={handleHome}/>
+            {sticky===true?<div className="header-logo">La couture du charme</div>:<img src={logo} alt="La Couture du Charme" className="header-logo" onClick={handleHome}/>}
             <div className="header-book-back">
                 <p className="header-book"><span>Réserver</span></p>
             </div>
