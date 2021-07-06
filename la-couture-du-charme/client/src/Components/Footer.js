@@ -1,6 +1,6 @@
 import React from 'react';
 import Map from './Map';
-import '../CSS/Footer.css';
+import '../CSS/Footer.scss';
 import {useState} from 'react';
 import services from '../services';
 
