@@ -5,6 +5,7 @@ import Footer from './Footer';
 import Receiver from './Receiver';
 import PrivateRoom from './PrivateRoom';
 import PrivatePool from './PrivatePool';
+import PrivateSpa from './PrivateSpa';
 import '../CSS/App.css';
 import {Route, Switch} from 'react-router-dom';
 // import {useState} from 'react';
@@ -33,6 +34,7 @@ function App() {
           <Route exact path='/Message' component={Receiver}/>
           <Route exact path='/PrivateRoom' component={PrivateRoom}/>
           <Route exact path='/privatePool' component={PrivatePool}/>
+          <Route exact path='/privateSpa' component={PrivateSpa}/>
         </Switch>
       </div>
       <div>
