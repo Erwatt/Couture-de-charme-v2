@@ -45,10 +45,12 @@ li{
 }
 
 .box-place{
-    font-size: 200%;
+    font-size: 150%;
     display: flex;
     flex-direction: row;
     margin-top: 17%;
+    margin-right: 10%;
+
 }
 
 .titre{
@@ -63,13 +65,14 @@ li{
     box-shadow:  0px 10px 7px black;
     text-align: center;
     background-color:#62514E;
-    border-radius: 10%;
+    border-radius: 1em;
     width: 10%;
     height: auto;
     color: white;
     margin-left: 20%;
     margin-top: auto;
     margin-bottom: auto;
+    padding: 0.5%;
    
 }
 
@@ -77,13 +80,14 @@ li{
     box-shadow:  0px 10px 7px black;
     text-align: center;
     background-color:#62514E;
-    border-radius: 10%;
+    border-radius: 1em;
     width: 20%;
     height: auto;
     color: white;  
     margin-left: 20%;
     margin-top: auto;
     margin-bottom: auto; 
+    padding: 0.5%;
 }
 
 .lcc-panel2{
