@@ -61,7 +61,7 @@ function Footer(){
             </div>
             <div className="footer-down">
                 <p>Couture du Charme 2021</p>
-                <p className="footer-down-mention">📜 Mentions légales</p>
+                <div className="footer-down-mention">Mentions légales</div>
             </div>
         </div>
     );

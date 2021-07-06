@@ -4,13 +4,16 @@ import chambre from '../Images/chambre.jpeg';
 import spa from '../Images/spa.jpeg';
 import logo from '../Images/logo.png';
 import piscine from '../Images/piscine.jpeg';
+import Promise from './Promise';
 import '../CSS/PrivatePool.css';
 
 function PrivatePool(){
     const picturesList = [chambre, spa, logo, piscine];
+    window.scrollTo(0, 0);
 
     return (
         <div className="pool">
+            <Promise/>
             <div className="pool-diapo">
                 <Diaporama picturesList={picturesList}/>
             </div>

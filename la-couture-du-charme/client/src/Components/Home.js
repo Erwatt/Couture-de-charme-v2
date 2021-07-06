@@ -6,10 +6,19 @@ import HomeRooms from './HomeRooms';
 import HomeSpa from './HomeSpa';
 
 function Home(){
+
+    // const pos = React.createRef();
+    const room = React.createRef();
+    const pool = React.createRef();
+
+    // function scroll(){
+    //     pos.current.scrollIntoView();
+    // }
+
     return (
         <div className="home">
-            <Promise size='big'/>
-            <div className="home-intro">
+            <Promise size='big' room={room} pool={pool} />
+            <div /*onClick={scroll}*/ className="home-intro">
                 <div className="home-intro-info">
                     <p className="home-intro-txt">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -23,9 +32,9 @@ function Home(){
                     </div>
                 </div>
             </div>
-            <div className="home-infos">
-                <HomeRooms/>
-                <HomePiscine/>
+            <div /*ref={pos}*/ className="home-infos">
+                <HomeRooms room={room}/>
+                <HomePiscine pool={pool}/>
                 <HomeSpa/>
             </div>
         </div>
