@@ -64,7 +64,7 @@
 .header-sticky {
     position: fixed;
     top: 0;
-    width: 99%;
+    width: 100%;
     animation: stick 100ms linear 1 forwards;
   }
 

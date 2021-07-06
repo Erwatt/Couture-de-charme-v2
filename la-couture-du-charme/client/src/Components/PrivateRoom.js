@@ -9,6 +9,7 @@ import Promise from './Promise';
 
 export default function PrivateRoom(){
     const picturesList = [chambre, spa, logo, piscine]
+    window.scrollTo(0, 0);
 
     return(
         <div>

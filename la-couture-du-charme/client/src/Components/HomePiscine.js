@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 import '../CSS/HomePiscine.css';
 
-function HomePiscine() {
+function HomePiscine({pool}) {
   return (
-    <div className="container-piscine">
+    <div ref={pool} className="container-piscine">
       <div className="imagepiscine"></div>
        <div className="borderPiscine">
         <Link to="/privatePool" className="pool-link">
