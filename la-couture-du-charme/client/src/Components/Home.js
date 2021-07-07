@@ -4,6 +4,8 @@ import Promise from './Promise';
 import HomePiscine from './HomePiscine';
 import HomeRooms from './HomeRooms';
 import HomeSpa from './HomeSpa';
+import Avis from './Avis';
+// import Video from './Video';
 
 function Home(){
 
@@ -36,6 +38,9 @@ function Home(){
                 <HomeRooms room={room}/>
                 <HomePiscine pool={pool}/>
                 <HomeSpa/>
+            </div>
+            <div className="home-avis">
+                <Avis/>
             </div>
         </div>
     );
