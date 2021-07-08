@@ -11,7 +11,7 @@ import { useTransition, animated } from 'react-spring';
 
 function Home(){
 
-    window.onscroll = function() {handleScrollAnim()};
+    window.addEventListener('scroll',handleScrollAnim);
 
     const [anim1, setAnim1] = useState(false);
     const [anim2, setAnim2] = useState(false);
