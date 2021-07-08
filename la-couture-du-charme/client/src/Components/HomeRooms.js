@@ -9,7 +9,8 @@ function HomeRooms({room}) {
   return (
     <div className="container-room" ref={room}>
       <div className="borderRoom">
-        <Link to="/PrivateRoom" className='Room-link'><div className="text-containerRoom">
+        <Link to="/PrivateRoom" className='Room-link'>
+          <div className="text-containerRoom">
            <h2 className = "titleRoom">
                Chambres
            </h2>
