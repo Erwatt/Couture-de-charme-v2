@@ -1,69 +1,50 @@
 
-.text-containerSpa{
-    background-color: #C4C4C4;
-    height: 15em;
-    width: 29em;
-    position: relative;
-    z-index: 1;
-    padding:1.5%;
-    margin: 2%;
-
-}
-
-.imageSpa{
-    height: 15em;
-    width: 29em;
-    background: url("../Images/spa.jpeg");
-    background-size: cover;
-    position: relative;
-    left: -3em;
-    top: -3em;
-    margin: 2%;
-
-}
 
 
 .container-Spa{
-    margin-top: 8%;
-    
+   
+    background-color: khaki;
     display: flex;
     flex-direction: row;
-    margin-left: auto;
-    margin-right: auto;
-    margin-left: 10%;
+    padding: 5%;
+    margin: 5%;
+    
 
 
 }
 
-.titleSpa{
-    font-size: larger;
-    padding-left: 5%;
-    color: black;
-    padding-bottom: 1%;
-    font-style: normal;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: normal;
-    font-size:x-large;
-}
-
-.textSpa{
-    padding: 2%;
-    padding-left: 12%;
-    font-family: 'Sedan', sans-serif;
-    font-size: normal;
-    color: black;
-}
-
-.borderSpa{
-
-    border: black solid;
-    border-style: double;
-    height: 17em;
-    width: 31em;
-    position: relative;
+.containerText{
     
 }
 
-.Spa-link{
-    text-decoration: none;
+
+.imageSpa{
+    width:50%;
+}
+
+@media (max-width: 800px) { 
+    .container-Spa{
+   
+        background-color: rgb(218, 214, 180);
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
+        margin: 5%;
+    
+    
+    }
+
+    .containerTextBorder{
+        width:50%;
+        border: solid black;
+    }
+
+    .containerText{
+        width:100%;
+    }
+    
+    
+    .imageSpa{
+        width:100%;
+ }
 }

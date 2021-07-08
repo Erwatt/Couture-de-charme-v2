@@ -87,12 +87,10 @@
     padding:0.5%;
     color: white;
     border-radius: 30px;
-}
-
-.footer-message-form-send:hover{
-    
-    background-color: rgb(92, 16, 16);
-    color: white;
+    transition: 600ms;
+    &:hover{
+        background-color: rgb(92, 16, 16);
+    }
 }
 
 .footer-down{

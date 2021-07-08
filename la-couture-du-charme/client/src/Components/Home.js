@@ -75,6 +75,7 @@ function Home(){
     // }
 
     return (
+        
         <div className="home">
             <Promise size='big' room={room} pool={pool} />
             <div /*onClick={scroll}*/ className="home-intro">
@@ -87,7 +88,7 @@ function Home(){
                     </p>
                     <div className="home-intro-who">
                         <h2 className="home-intro-title">QUI</h2>
-                        <h2 className="home-intro-title home-intro-title-underline">SOMMES NOUS ?</h2>
+                        <h2 className="home-intro-title home-intro-title-underline">SOMMES-NOUS ?</h2>
                     </div>
                 </div>
             </div>
