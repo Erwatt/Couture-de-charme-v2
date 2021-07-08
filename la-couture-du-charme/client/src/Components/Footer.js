@@ -12,8 +12,14 @@ function Footer(){
     const [message, setMessage] = useState("");
 
     function handleMessage(e){
+        if ( spam !== 'Camille'){
+            e.preventDefault()
+            alert('Mauvaise réponse au test anti spam, va te faire foutre sale bot')
+        } else {
+            services.sendMessage(name, phone, mail, message);
+        }
         // e.preventDefault()
-        services.sendMessage(name, phone, mail, spam, message);
+        
     };
 
     return (
@@ -47,7 +53,7 @@ function Footer(){
                                 <input className="form__field" name="Mail" onChange={(e) => setMail(e.target.value)}/>
                             </div>
                             <div className="footer-message-form-input">
-                                <label htmlFor="Spam">Anti-spam</label>
+                                <label htmlFor="Spam">Comment s'appelle la femme de nico ?</label>
                                 <input className="form__field" name="Spam" onChange={(e) => setSpam(e.target.value)}/>
                             </div>
                         </div>

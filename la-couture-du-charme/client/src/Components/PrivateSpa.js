@@ -8,9 +8,10 @@ import '../CSS/PrivateSpa.css';
 import Promise from './Promise';
 
 export default function PrivateSpa(){
-    const picturesList = [chambre, spa, logo, piscine]
+    const picturesList = [chambre, spa, logo, piscine];
+    window.scrollTo(0, 0);
 
-    return(
+    return (
         <div>
                 <div className='spa'>
                 <Promise/>
