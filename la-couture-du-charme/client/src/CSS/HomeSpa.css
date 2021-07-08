@@ -22,6 +22,16 @@
     width:50%;
 }
 
+.containerTextBorder{
+    width:50%;
+    border: double black;
+    padding: 3%;
+    background-color: whitesmoke;
+    position: relative;
+    left: 1%;
+    top: 1%;
+}
+
 @media (max-width: 800px) { 
     .container-Spa{
    
@@ -34,10 +44,7 @@
     
     }
 
-    .containerTextBorder{
-        width:50%;
-        border: solid black;
-    }
+    
 
     .containerText{
         width:100%;
