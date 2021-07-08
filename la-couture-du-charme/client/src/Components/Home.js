@@ -75,6 +75,7 @@ function Home(){
     // }
 
     return (
+        
         <div className="home">
             <Promise size='big' room={room} pool={pool} />
             <div /*onClick={scroll}*/ className="home-intro">

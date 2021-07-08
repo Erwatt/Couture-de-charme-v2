@@ -12,6 +12,10 @@ function Header(){
         history.push('/');
     };
 
+    function handleBook(){
+        history.push('/Book');
+    };
+
     window.onscroll = function() {handleScroll()};
 
     const [sticky, setSticky] = useState(false);
@@ -38,7 +42,7 @@ function Header(){
             </div>
                 <img src={logo} alt="La Couture du Charme" className="header-logo" onClick={handleHome}/>
             <div className="header-book-back">
-                <p className="header-book"><span>Réserver</span></p>
+                <p className="header-book" onClick={handleBook}><span>Réserver</span></p>
             </div>
         </div>
     );
