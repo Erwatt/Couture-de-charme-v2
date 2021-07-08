@@ -16,13 +16,13 @@ function Header(){
         history.push('/Book');
     };
 
-    window.onscroll = function() {handleScroll()};
+    window.addEventListener("scroll", handleScroll);
 
     const [sticky, setSticky] = useState(false);
 
     function handleScroll(){
-        const offset = window.scrollY;
-        if (offset > 100){
+        const offsetHeader = window.scrollY;
+        if (offsetHeader > 100){
             setSticky(true);
         } else {
             setSticky(false);
