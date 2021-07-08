@@ -38,6 +38,10 @@
     text-align: center;
 }
 
+.home-intro-title{
+    text-decoration: underline solid 4px rgba(223, 221, 198, 0.67);
+}
+
 .home-intro-title-underline{
     text-decoration: underline solid 4px rgba(223, 221, 198, 0.67);
 }
