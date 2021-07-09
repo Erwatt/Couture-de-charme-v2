@@ -3,7 +3,7 @@
 
 .container-Spa{
    
-    background-color: khaki;
+    background-color: rgb(218, 214, 180);
     display: flex;
     flex-direction: row;
     padding: 5%;
@@ -13,7 +13,7 @@
 
 }
 
-.containerText{
+.containerTextSpa{
     
 }
 
@@ -22,20 +22,19 @@
     width:50%;
 }
 
-.containerTextBorder{
+.containerTextBorderSpa{
     width:50%;
     border: double black;
     padding: 3%;
     background-color: whitesmoke;
     position: relative;
-    left: 1%;
-    top: 1%;
+    left: -2%;
+    top: -2em;
 }
 
 @media (max-width: 800px) { 
     .container-Spa{
    
-        background-color: rgb(218, 214, 180);
         display: flex;
         flex-direction: column;
         padding: 5%;
@@ -46,7 +45,7 @@
 
     
 
-    .containerText{
+    .containerTextBorderSpa{
         width:100%;
     }
     
