@@ -65,7 +65,7 @@
 .footer-message-form-send{
     margin-top: 3%;
     margin-bottom: 3%;
-    width: 15%;
+    width: 20%;
     margin-left: auto;
     margin-right: auto;
     background: none;
@@ -128,5 +128,41 @@
     flex-direction: column;
 }
 
+
+
+@media (max-width: 800px) { 
+    .footer-contact{
+       
+        width: 100%;
+        
+    }
+    .footer-map{
+        
+        width: 95%;
+        
+        
+    }
+    .footer-message-form-inputs{
+        padding: 5%;
+    }
+    .footer-message-form{
+        flex-direction: column;
+    }
+    
+    .footer-message-form-send{
+        width: 30%;
+    }
+    .footer-message-form-txtarea{
+        width: 80%;
+        height: 15em;
+        padding: 5%;
+        padding-top: 0%;
+    }
+    .footer-contact-map{
+        flex-direction: column;
+        padding: 3%;
+    }
+    
+}
 
 
