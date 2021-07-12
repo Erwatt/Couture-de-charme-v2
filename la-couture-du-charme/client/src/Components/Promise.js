@@ -15,6 +15,8 @@ export default function Promise({size, room, pool}){
         <div className='lcc-panel'>
             <div className='lcc-slogan'>
                 <h1 className='titre'>Lorem Ipsum Dolor</h1>
+                <h1 className='titre2'>Lorem ipsum dolor sit amet</h1>
+
                 <div className='box-place'>
                     <div className='box1' onClick={handlePoolScroll}>Spa</div>
                     <div className='box2' onClick={handleRoomScroll}>Chambres d'hôtes</div>
