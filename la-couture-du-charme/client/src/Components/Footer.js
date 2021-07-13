@@ -3,6 +3,7 @@ import Map from './Map';
 import '../CSS/Footer.scss';
 import {useState} from 'react';
 import services from '../services';
+import {Link} from 'react-router-dom';
 
 function Footer(){
     const [name, setName] = useState("");
@@ -67,7 +68,7 @@ function Footer(){
             </div>
             <div className="footer-down">
                 <p>Couture du Charme 2021</p>
-                <div className="footer-down-mention">Mentions légales</div>
+                <Link to="/MentionsLégales" className="footer-link"><div className="footer-down-mention"><p>Mentions légales</p></div></Link>
             </div>
         </div>
     );
