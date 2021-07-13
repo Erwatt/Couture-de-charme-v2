@@ -1,69 +1,65 @@
-.text-containerpiscine{
-    background-color: #C4C4C4;
-    height: 15.5em;
-    width: 29.5em;
-    position : relative;
-    left: -2.5em;
-    top: -1.8em;
-}
 
-.imagepiscine{
-    height: 22em;
-    width: 35em;
-    background: url("../Images/piscine.jpeg");
-    background-size: cover;
-    position: relative;
-}
+
 
 .container-piscine{
-    margin-top: 8%;
-    
+   
+    background-color: rgb(218, 214, 180);
     display: flex;
     flex-direction: row;
-    margin-left: auto;
-    margin-right: auto;
-    margin-left: 23%;
+    padding: 5%;
+    margin: 5%;
+    
+
+
 }
 
-.titlepiscine{
-    padding: 2%;
-    font-size: larger;
-    padding-left: 5%;
-
-    padding-bottom: 1%;
-    font-style: normal;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: normal;
-    font-size:x-large;
-    color: black;
-}
+/* .containerTextPiscine{
+    
+} */
 
 .pool-link{
     text-decoration: none;
-}
-
-.textpiscine{
-    padding: 2%;
-    padding-left: 12%;
-    font-family: 'Sedan', sans-serif;
-    font-size: normal;
     color: black;
 }
 
-.borderPiscine{
-    height: 14.5em;
-    width: 26.5em;
+.imagePiscine{
+    width:50%;
     position: relative;
-    z-index: 1;
+    left: -3%;
+    top: 0em;
     margin: 2%;
-    padding:1.5%;
-    border: black solid;
-    border-style: double ;
-    margin: 2%;
-    left: -1.5em;
-    top: 2em;
-    border-left: none;
 }
 
+.containerTextBorderPiscine{
+    width:50%;
+    border: double black;
+    padding: 3%;
+    background-color: whitesmoke;
+    z-index: 1;
+}
 
+@media (max-width: 800px) { 
+    .container-piscine{
+   
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
+        margin: 5%;
+    
+    
+    }
 
+    
+
+    .containerTextBorderPiscine{
+        width:100%;
+        
+    }
+    
+    
+    .imagePiscine{
+        width:100%;
+        top: -2em;
+        margin:5%;
+ }
+}

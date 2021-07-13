@@ -26,6 +26,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    color: black;
 }
 
 .room-info-txt > p {

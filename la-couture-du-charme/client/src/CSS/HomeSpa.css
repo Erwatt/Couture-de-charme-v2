@@ -3,7 +3,7 @@
 
 .container-Spa{
    
-    background-color: khaki;
+    background-color: rgb(218, 214, 180);
     display: flex;
     flex-direction: row;
     padding: 5%;
@@ -13,19 +13,33 @@
 
 }
 
-.containerText{
+/* .containerTextSpa{
     
-}
+} */
 
 
 .imageSpa{
     width:50%;
 }
 
+.containerTextBorderSpa{
+    width:50%;
+    border: double black;
+    padding: 3%;
+    background-color: whitesmoke;
+    position: relative;
+    left: -2%;
+    top: -2em;
+}
+
+.spa-link{
+    text-decoration: none;
+    color: black;
+}
+
 @media (max-width: 800px) { 
     .container-Spa{
    
-        background-color: rgb(218, 214, 180);
         display: flex;
         flex-direction: column;
         padding: 5%;
@@ -34,12 +48,9 @@
     
     }
 
-    .containerTextBorder{
-        width:50%;
-        border: solid black;
-    }
+    
 
-    .containerText{
+    .containerTextBorderSpa{
         width:100%;
     }
     
