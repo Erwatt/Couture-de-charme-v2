@@ -13,9 +13,9 @@
 
 }
 
-.containerTextRoom{
+/* .containerTextRoom{
     
-}
+} */
 
 
 .imageRoom{
@@ -30,6 +30,11 @@
     position: relative;
     left: -2%;
     top: 2em;
+}
+
+.room-link{
+    text-decoration: none;
+    color: black;
 }
 
 @media (max-width: 800px) { 

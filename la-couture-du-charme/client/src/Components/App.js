@@ -7,6 +7,7 @@ import PrivateRoom from './PrivateRoom';
 import PrivatePool from './PrivatePool';
 import PrivateSpa from './PrivateSpa';
 import Book from './Book';
+import MentionsLegales from './MentionsLegales';
 import '../CSS/App.css';
 import {Route, Switch} from 'react-router-dom';
 // import {useState} from 'react';
@@ -14,6 +15,11 @@ import {Route, Switch} from 'react-router-dom';
 
 
 function App() {
+
+  // const [anim1, setAnim1] = useState(false);
+  //   const [anim2, setAnim2] = useState(false);
+  //   const [anim3, setAnim3] = useState(false);
+  //   const [anim4, setAnim4] = useState(false);
 
   // const [data, setData] = useState(null);
   
@@ -32,11 +38,12 @@ function App() {
       <div className="content">
         <Switch>
           <Route exact path='/' component={Home}/>
-          <Route exact path='/Message' component={Receiver}/>
-          <Route exact path='/PrivateRoom' component={PrivateRoom}/>
-          <Route exact path='/privatePool' component={PrivatePool}/>
-          <Route exact path='/privateSpa' component={PrivateSpa}/>
-          <Route exact path='/Book' component={Book}/>
+          <Route path='/Message' component={Receiver}/>
+          <Route path='/PrivateRoom' component={PrivateRoom}/>
+          <Route path='/PrivatePool' component={PrivatePool}/>
+          <Route path='/PrivateSpa' component={PrivateSpa}/>
+          <Route path='/Book' component={Book}/>
+          <Route path='/MentionsLégales' component={MentionsLegales}/>
         </Switch>
       </div>
       <div>

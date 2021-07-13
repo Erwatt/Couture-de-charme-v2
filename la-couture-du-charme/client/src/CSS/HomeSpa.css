@@ -13,9 +13,9 @@
 
 }
 
-.containerTextSpa{
+/* .containerTextSpa{
     
-}
+} */
 
 
 .imageSpa{
@@ -30,6 +30,11 @@
     position: relative;
     left: -2%;
     top: -2em;
+}
+
+.spa-link{
+    text-decoration: none;
+    color: black;
 }
 
 @media (max-width: 800px) { 

@@ -3,6 +3,8 @@ import Map from './Map';
 import '../CSS/Footer.scss';
 import {useState} from 'react';
 import services from '../services';
+import {Link} from 'react-router-dom';
+import facebook from '../Images/facebook.png'
 
 function Footer(){
     const [name, setName] = useState("");
@@ -30,6 +32,12 @@ function Footer(){
                         <h2> LA COUTURE DU CHARME</h2>
                         <p>1400, rue de Beaumetz<br></br>59310 SAMÉON</p>
                         <h3>📞 03 27 41 52 47</h3>
+                    </div>
+                    <div className="footer-share">
+                        <h2>RESEAUX SOCIAUX</h2>
+                        <a href="https://www.facebook.com/coutureducharme" target="_blank" rel="noreferrer">           
+                        <img className="footer-facebook" src={facebook} alt="facebook" loading="lazy"/>
+                        </a>
                     </div>
                     <div className="footer-map">
                         <Map/>
@@ -66,7 +74,7 @@ function Footer(){
             </div>
             <div className="footer-down">
                 <p>Couture du Charme 2021</p>
-                <div className="footer-down-mention">Mentions légales</div>
+                <Link to="/MentionsLégales" className="footer-link"><div className="footer-down-mention"><p>Mentions légales</p></div></Link>
             </div>
         </div>
     );
