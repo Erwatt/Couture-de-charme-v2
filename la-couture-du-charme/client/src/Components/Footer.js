@@ -35,7 +35,7 @@ function Footer(){
                     </div>
                     <div className="footer-share">
                         <h2>RESEAUX SOCIAUX</h2>
-                        <a href="https://www.facebook.com/coutureducharme" target="_blank">           
+                        <a href="https://www.facebook.com/coutureducharme" target="_blank" rel="noreferrer">           
                         <img className="footer-facebook" src={facebook} alt="facebook" loading="lazy"/>
                         </a>
                     </div>

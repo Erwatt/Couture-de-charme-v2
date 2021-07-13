@@ -40,8 +40,8 @@ function App() {
           <Route exact path='/' component={Home}/>
           <Route path='/Message' component={Receiver}/>
           <Route path='/PrivateRoom' component={PrivateRoom}/>
-          <Route path='/privatePool' component={PrivatePool}/>
-          <Route path='/privateSpa' component={PrivateSpa}/>
+          <Route path='/PrivatePool' component={PrivatePool}/>
+          <Route path='/PrivateSpa' component={PrivateSpa}/>
           <Route path='/Book' component={Book}/>
           <Route path='/MentionsLégales' component={MentionsLegales}/>
         </Switch>

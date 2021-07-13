@@ -13,10 +13,14 @@
 
 }
 
-.containerTextPiscine{
+/* .containerTextPiscine{
     
-}
+} */
 
+.pool-link{
+    text-decoration: none;
+    color: black;
+}
 
 .imagePiscine{
     width:50%;
