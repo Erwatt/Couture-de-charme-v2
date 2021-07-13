@@ -30,8 +30,7 @@ function Footer(){
                 <div className="footer-contact-map">
                     <div className="footer-contact">
                         <h2> LA COUTURE DU CHARME</h2>
-                        <p>1400, rue de Beaumetz</p>
-                        <p>59310 SAMÉON</p>
+                        <p>1400, rue de Beaumetz<br></br>59310 SAMÉON</p>
                         <h3>📞 03 27 41 52 47</h3>
                     </div>
                     <div className="footer-share">
@@ -44,6 +43,7 @@ function Footer(){
                         <Map/>
                     </div>
                 </div>
+
                 <form className="footer-message" onSubmit={handleMessage}>
                     <div className="footer-message-form">
                         <div className="footer-message-form-inputs">

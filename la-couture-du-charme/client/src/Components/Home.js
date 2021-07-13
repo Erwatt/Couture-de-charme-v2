@@ -81,20 +81,17 @@ function Home(){
         
         <div className="home">
             <Promise size='big' room={room} pool={pool} />
-            <div /*onClick={scroll}*/ className="home-intro">
-                <div className="home-intro-info">
-                    <p className="home-intro-txt">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            <div className="home-intro">
+               
+
+                <p className="home-introText">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         Odio pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus.
-                        Commodo sed egestas egestas fringilla phasellus faucibus.
-                    </p>
-                    <div className="home-intro-who">
-                        <h2 className="home-intro-title">QUI</h2>
-                        <h2 className="home-intro-title home-intro-title-underline">SOMMES-NOUS ?</h2>
-                    </div>
-                </div>
+                        Commodo sed egestas egestas fringilla phasellus faucibus.</p>
+                <h3 className="home-introQuestion">Qui sommes-nous ?</h3>
             </div>
+
+
             <div /*ref={pos}*/ className="home-infos">
 
                 {transition1((style, item) => 
