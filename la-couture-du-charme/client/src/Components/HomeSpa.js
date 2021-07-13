@@ -11,7 +11,9 @@ function HomeSpa() {
       <Link to="/PrivateSpa" className='spa-link'>
         <div className="containerTextSpa">
           <h3>Spa privatif</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed id semper risus in hendrerit gravida rutrum quisque. Purus non enim praesent elementum facilisis leo vel. Duis convallis convallis tellus id interdum velit laoreet id. Neque sodales ut etiam sit amet nisl purus. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis.</p>
+          <p>Entre amis ou en famille, venez vivre un moment inoubliable dans une bulle d'exception de 100 m².</p>
+          <p>Notre univers balnéo entièrement dédié au bien-être comprend un sauna, un jacuzzi et une picine privative chauffée.</p>
+          <p>Des modelages pourront vous être proposés afin de vous garantir une relaxation optimale.</p>
         </div>
       </Link>
       </div>

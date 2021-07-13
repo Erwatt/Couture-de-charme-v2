@@ -16,7 +16,9 @@ function HomeRooms({room}) {
           <div className="containerTextRomm">
             <h3>Chambres</h3>
             <p>Dans un style moderne et élégant, les chambres d'hôtes de la Couture du Charme vous proposent des prestations 
-              et un environnement de qualité. En famille, entre amis, pour un week-end en amoureux ou pour un séjour professionnel, 
+              et un environnement de qualité.
+            </p>
+            <p>En famille, entre amis, pour un week-end en amoureux ou pour un séjour professionnel, 
               venez gouter au calme et au dépaysement de l'une de nos 3 chambres spacieuses, au coeur de la campagne du Pévèle.
             </p>
           </div>

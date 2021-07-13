@@ -16,12 +16,12 @@
     padding: 3%;
     align-self: center;
     max-width: 50%;
-    
+    font-size: 17px;
 
 }
 
 .home-introQuestion{
-    text-align: center;
+    text-align:justify;
     padding:3%;
     align-self: center;
     text-decoration: underline wheat 3px;

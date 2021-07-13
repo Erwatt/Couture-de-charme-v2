@@ -31,7 +31,7 @@ function Footer(){
                     <div className="footer-contact">
                         <h2> LA COUTURE DU CHARME</h2>
                         <p>1400, rue de Beaumetz<br></br>59310 SAMÉON</p>
-                        <h3>📞 03 27 41 52 47</h3>
+                        <h3>📞 07 52 09 07 50</h3>
                     </div>
                     <div className="footer-share">
                         <h2>RESEAUX SOCIAUX</h2>

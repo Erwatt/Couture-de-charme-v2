@@ -38,7 +38,7 @@ function Header(){
     return (
         <div className={headerClasses.join(" ")}>
             <div className="header-tel-back">
-                <p className="header-tel">06 31 84 42 39</p>
+                <p className="header-tel">07 52 09 07 50</p>
             </div>
                 <img loading="auto" src={logo} alt="La Couture du Charme" className="header-logo" onClick={handleHome}/>
             <div className="header-book-back">
