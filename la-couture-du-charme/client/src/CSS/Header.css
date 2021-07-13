@@ -77,9 +77,9 @@
         background-color: #FFFFFF;
     }
     to {
-        background-color: #677034;
+        background-color: rgba(185, 179, 119, 0.67);
         border-bottom: solid 3px black;
-    }
+        }
 }
 
 /* @keyframes roll {
@@ -107,3 +107,4 @@ body{
 div{
     animation: roll2 9s linear infinite;
 } */
+
