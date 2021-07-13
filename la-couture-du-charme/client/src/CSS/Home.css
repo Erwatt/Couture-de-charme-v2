@@ -46,7 +46,6 @@
     text-decoration: underline solid 4px rgba(223, 221, 198, 0.67);
 }
 
-/* .home{
-    background-color: #F1EDE2;
+.home{
+    flex-grow: 1;
 }
-*/

@@ -4,6 +4,7 @@ import '../CSS/Footer.scss';
 import {useState} from 'react';
 import services from '../services';
 import {Link} from 'react-router-dom';
+import facebook from '../Images/facebook.png'
 
 function Footer(){
     const [name, setName] = useState("");
@@ -33,8 +34,13 @@ function Footer(){
                         <p>59310 SAMÉON</p>
                         <h3>📞 03 27 41 52 47</h3>
                     </div>
+                    <div className="footer-share">
+                        <h2>RESEAUX SOCIAUX</h2>
+                        <a href="https://www.facebook.com/coutureducharme" target="_blank">           
+                        <img className="footer-facebook" src={facebook} alt="facebook" loading="lazy"/>
+                        </a>
+                    </div>
                     <div className="footer-map">
-                       
                         <Map/>
                     </div>
                 </div>

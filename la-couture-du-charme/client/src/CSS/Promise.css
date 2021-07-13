@@ -1,6 +1,7 @@
 .lcc-panel{
     display: flex;
     height: 60em;
+    margin-top: -10%;
 }
 
 .lcc-slogan{
