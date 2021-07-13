@@ -7,11 +7,14 @@ import HomeSpa from './HomeSpa';
 import Avis from './Avis';
 import {useState} from 'react';
 import { useTransition, animated } from 'react-spring';
+import { useLocation } from 'react-router-dom';
 // import Video from './Video';
 
 function Home(){
 
-    window.addEventListener('scroll',handleScrollAnim);
+    if (useLocation().pathname === '/'){
+        window.addEventListener('scroll',handleScrollAnim);
+    }
 
     const [anim1, setAnim1] = useState(false);
     const [anim2, setAnim2] = useState(false);
@@ -44,13 +47,13 @@ function Home(){
 
     function handleScrollAnim(){
         const offset = window.scrollY;
-        if (offset > 800){
+        if (offset > 600){
             setAnim1(true);
-            if (offset > 1200){
+            if (offset > 900){
                 setAnim2(true);
-                if (offset > 1700){
+                if (offset > 1400){
                     setAnim3(true);
-                    if (offset > 2100){
+                    if (offset > 2000){
                         setAnim4(true);
                     } else {
                         setAnim4(false);
@@ -78,27 +81,24 @@ function Home(){
         
         <div className="home">
             <Promise size='big' room={room} pool={pool} />
-            <div /*onClick={scroll}*/ className="home-intro">
-                <div className="home-intro-info">
-                    <p className="home-intro-txt">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            <div className="home-intro">
+               
+
+                <p className="home-introText">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         Odio pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus.
-                        Commodo sed egestas egestas fringilla phasellus faucibus.
-                    </p>
-                    <div className="home-intro-who">
-                        <h2 className="home-intro-title">QUI</h2>
-                        <h2 className="home-intro-title home-intro-title-underline">SOMMES-NOUS ?</h2>
-                    </div>
-                </div>
+                        Commodo sed egestas egestas fringilla phasellus faucibus.</p>
+                <h3 className="home-introQuestion">Qui sommes-nous ?</h3>
             </div>
+
+
             <div /*ref={pos}*/ className="home-infos">
 
                 {transition1((style, item) => 
-                    item ? <animated.div style={style}><HomeRooms room={room}/></animated.div>:"" )}
+                    item ? <animated.div style={style}><HomeRooms room={room}/></animated.div>: <div ref={room}></div> )}
                 
                 {transition2((style, item) => 
-                    item ? <animated.div style={style}><HomePiscine pool={pool}/></animated.div>:"" )}
+                    item ? <animated.div style={style}><HomePiscine pool={pool}/></animated.div>:<div ref={pool}></div> )}
                 
                 {transition3((style, item) => 
                     item ? <animated.div style={style}><HomeSpa/></animated.div>:"" )}

@@ -1,68 +1,62 @@
-.text-containerRoom{
-    background-color: #C4C4C4;
-    height: 15em;
-    width: 29em;
-    position: relative;
-    z-index: 1;
-    padding:1.5%;
-    margin :2%;
 
-}
-
-.imageRoom{
-    height: 19em;
-    width: 29em;
-    background: url("../Images/chambre.jpeg");
-    background-size: cover;
-    position: relative;
-    left: -3em;
-    top: 3em;
-
-}
 
 
 .container-room{
-    margin-top: 8%;
+   
+    background-color: rgb(218, 214, 180);
     display: flex;
     flex-direction: row;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: flex-start;
-    margin-left: 10%;
-
-
-}
-
-.titleRoom{
-    font-size: larger;
-    padding-left: 5%;
-    padding-bottom: 1%;
-    font-style: normal;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: normal;
-    font-size:x-large;
-    color: black;
+    padding: 5%;
+    margin: 5%;
     
-}
 
-.textRoom{
-    padding: 2%;
-    padding-left: 12%;
-    font-family: 'Sedan', sans-serif;
-    font-size: normal;
-    color: black;
 
 }
 
-
-.borderRoom{
-    border: black solid;
-    border-style: double;
-    height: 17em;
-    width: 31em;
+/* .containerTextRoom{
     
+} */
+
+
+.imageRoom{
+    width:50%;
 }
 
-.Room-link{
+.containerTextBorderRoom{
+    width:50%;
+    border: double black;
+    padding: 3%;
+    background-color: whitesmoke;
+    position: relative;
+    left: -2%;
+    top: 2em;
+}
+
+.room-link{
     text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 800px) { 
+    .container-room{
+   
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
+        margin: 5%;
+    
+    
+    }
+
+    
+
+    .containerTextBorderRoom{
+        width:100%;
+        top: -2em;
+    }
+    
+    
+    .imageRoom{
+        width:100%;
+ }
 }
