@@ -73,9 +73,9 @@
 }
 
 @keyframes stick {
-    from {
+    /* from {
         background-color: #FFFFFF;
-    }
+    } */
     to {
         background-color: rgba(185, 179, 119, 0.67);
         border-bottom: solid 3px black;

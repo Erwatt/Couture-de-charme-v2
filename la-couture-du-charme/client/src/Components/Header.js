@@ -22,7 +22,7 @@ function Header(){
 
     function handleScroll(){
         const offsetHeader = window.scrollY;
-        if (offsetHeader > 100){
+        if (offsetHeader > 0){
             setSticky(true);
         } else {
             setSticky(false);
