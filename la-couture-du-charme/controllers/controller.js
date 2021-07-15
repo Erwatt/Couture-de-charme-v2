@@ -16,8 +16,8 @@ exports.sendMessage = (req, res) => {
     
 
     const transporter = Nodemailer.createTransport({
-        service: 'gmail',
-        host: 'smtp.gmail.com',
+        service: 'ionos',
+        host: 'smtp.ionos.fr',
         auth: {
           user: process.env.SENDER,
           pass: process.env.PASSWORD

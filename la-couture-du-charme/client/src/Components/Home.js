@@ -47,13 +47,13 @@ function Home(){
 
     function handleScrollAnim(){
         const offset = window.scrollY;
-        if (offset > 600){
+        if (offset > 500){
             setAnim1(true);
-            if (offset > 900){
+            if (offset > 800){
                 setAnim2(true);
-                if (offset > 1400){
+                if (offset > 1300){
                     setAnim3(true);
-                    if (offset > 2000){
+                    if (offset > 1900){
                         setAnim4(true);
                     } else {
                         setAnim4(false);
@@ -83,12 +83,18 @@ function Home(){
             <Promise size='big' room={room} pool={pool} />
             <div className="home-intro">
                
-
-                <p className="home-introText">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Odio pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus.
-                        Commodo sed egestas egestas fringilla phasellus faucibus.</p>
-                <h3 className="home-introQuestion">Qui sommes-nous ?</h3>
+                <div className="home-introText">
+                    <p>Au coeur d'une nature calme et verdoyante, la Couture du Charme est le lieu
+                                                    unique pour vous offrir un moment de détente inoubliable, entre amis ou en famille.
+                    </p>
+                    <p>Relaxez-vous dans notre spa privatif avec piscine, séjournez dans nos chambre d'hôtes
+                                                    spacieuses et modernes, détendez-vous grâce aux bienfaits de nos modelages...
+                    </p>
+                    <p>La Couture du Charme vous accueille à Saméon, à proximité d'Orchies et Saint Amand, 
+                                                    à 20 minutes de Lille et Valenciennes.
+                    </p>
+                </div>
+                <h2 className="home-introQuestion">Qui sommes-nous ?</h2>
             </div>
 
 
@@ -98,13 +104,13 @@ function Home(){
                     item ? <animated.div style={style}><HomeRooms room={room}/></animated.div>: <div ref={room}></div> )}
                 
                 {transition2((style, item) => 
-                    item ? <animated.div style={style}><HomePiscine pool={pool}/></animated.div>:<div ref={pool}></div> )}
+                    item ? <animated.div style={style}><HomePiscine pool={pool}/></animated.div>:<div ></div> )}
                 
                 {transition3((style, item) => 
                     item ? <animated.div style={style}><HomeSpa/></animated.div>:"" )}
                
             </div>
-            <div className="home-avis">
+            <div className="home-avis" ref={pool}>
             {transition4((style, item) => 
                     item ? <animated.div style={style}><Avis/></animated.div>:"" )}
             </div>
