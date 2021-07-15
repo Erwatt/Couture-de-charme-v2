@@ -8,6 +8,7 @@ import Avis from './Avis';
 import {useState} from 'react';
 import { useTransition, animated } from 'react-spring';
 import { useLocation } from 'react-router-dom';
+import Promise2 from './Promise2';
 // import Video from './Video';
 
 function Home(){
@@ -80,7 +81,8 @@ function Home(){
     return (
         
         <div className="home">
-            <Promise size='big' room={room} pool={pool} />
+            {/* <Promise size='big' room={room} pool={pool} /> */}
+            <Promise2/>
             <div className="home-intro">
                
                 <div className="home-introText">
@@ -96,7 +98,6 @@ function Home(){
                 </div>
                 <h2 className="home-introQuestion">Qui sommes-nous ?</h2>
             </div>
-
 
             <div /*ref={pos}*/ className="home-infos">
 
