@@ -15,7 +15,12 @@ function HomeRooms({room}) {
           <Link to="/PrivateRoom" className="room-link">
           <div className="containerTextRomm">
             <h3>Chambres</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed id semper risus in hendrerit gravida rutrum quisque. Purus non enim praesent elementum facilisis leo vel. Duis convallis convallis tellus id interdum velit laoreet id. Neque sodales ut etiam sit amet nisl purus. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis.</p>
+            <p>Dans un style moderne et élégant, les chambres d'hôtes de la Couture du Charme vous proposent des prestations 
+              et un environnement de qualité.
+            </p>
+            <p>En famille, entre amis, pour un week-end en amoureux ou pour un séjour professionnel, 
+              venez gouter au calme et au dépaysement de l'une de nos 3 chambres spacieuses, au coeur de la campagne du Pévèle.
+            </p>
           </div>
           </Link>
         </div>
