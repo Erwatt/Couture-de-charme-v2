@@ -104,13 +104,13 @@ function Home(){
                     item ? <animated.div style={style}><HomeRooms room={room}/></animated.div>: <div ref={room}></div> )}
                 
                 {transition2((style, item) => 
-                    item ? <animated.div style={style}><HomePiscine pool={pool}/></animated.div>:<div ref={pool}></div> )}
+                    item ? <animated.div style={style}><HomePiscine pool={pool}/></animated.div>:<div ></div> )}
                 
                 {transition3((style, item) => 
                     item ? <animated.div style={style}><HomeSpa/></animated.div>:"" )}
                
             </div>
-            <div className="home-avis">
+            <div className="home-avis" ref={pool}>
             {transition4((style, item) => 
                     item ? <animated.div style={style}><Avis/></animated.div>:"" )}
             </div>
