@@ -7,8 +7,8 @@
     display: flex;
     flex-direction: row;
     background-color: rgba(94, 69, 48, 0.801);
-    justify-content: space-around;
-    color: #FFFFFF
+    justify-content: space-evenly;
+    color: #FFFFFF;
 }
 
 .footer-down-mention{
@@ -37,10 +37,11 @@
     margin-bottom: auto;
     width: 40%;
     line-height: 300%;
+    margin-left: 10%;
 }
 .footer-map{
     margin: 1%;
-    margin-right:0;
+    margin-left: -15%;
     width: 40%;
     
 }
@@ -172,17 +173,13 @@
     
 }
 
-
-
-.footer-share{
-    margin-top: 5%;
-    font-size: large;
+.footer-facebook{
+    height: 17%;
+    width: 17%;
+    margin-top: auto;
     margin-bottom: auto;
-    margin-right: -10%;
 }
 
-.footer-facebook{
-    margin-top: 5%;
-    height: 8%;
-    width: 8%;
+.footer-link{
+    margin-right: 7%;
 }
