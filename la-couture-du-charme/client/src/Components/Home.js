@@ -90,9 +90,8 @@ function Home(){
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         Odio pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus.
                         Commodo sed egestas egestas fringilla phasellus faucibus.</p>
-                <h3 className="home-introQuestion">Qui sommes-nous ?</h3>
+                <h2 className="home-introQuestion">Qui sommes-nous ?</h2>
             </div>
-
 
             <div /*ref={pos}*/ className="home-infos">
 

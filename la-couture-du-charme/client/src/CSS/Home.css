@@ -1,27 +1,24 @@
 .home-intro{
-    background-color: #523203;
+    background-color: #633f0a;
     color: white;
     display: flex;
     flex-direction: row;
-    padding-right: 10%;
-    padding-left: 5%;
-    margin-right:5%;
-    margin-left:5%;
-
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 3%;
 
 }
 
-.home-introText{
-    padding: 3%;
-    align-self: center;
+.home-introText{    
+    margin: 3%;
     
-
 }
 
 .home-introQuestion{
+    margin: 3%;
     text-align: center;
-    padding:3%;
-    align-self: center;
 }
 
 @media (max-width: 800px) { 
