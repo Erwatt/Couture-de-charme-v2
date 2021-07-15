@@ -10,11 +10,11 @@ function Footer(){
     const [name, setName] = useState("");
     const [mail, setMail] = useState("");
     const [phone, setPhone] = useState("");
-    const [spam, setSpam] = useState("");
+    const [spam, setSpam] = useState(3);
     const [message, setMessage] = useState("");
 
     function handleMessage(e){
-        if ( spam !== 'Camille'){
+        if ( spam !== '4'){
             e.preventDefault()
             alert('Mauvaise réponse au test anti spam, va te faire foutre sale bot')
         } else {
@@ -31,13 +31,7 @@ function Footer(){
                     <div className="footer-contact">
                         <h2> LA COUTURE DU CHARME</h2>
                         <p>1400, rue de Beaumetz<br></br>59310 SAMÉON</p>
-                        <h3>📞 03 27 41 52 47</h3>
-                    </div>
-                    <div className="footer-share">
-                        <h2>RESEAUX SOCIAUX</h2>
-                        <a href="https://www.facebook.com/coutureducharme" target="_blank" rel="noreferrer">           
-                        <img className="footer-facebook" src={facebook} alt="facebook" loading="lazy"/>
-                        </a>
+                        <h3>📞 07 52 09 07 50</h3>
                     </div>
                     <div className="footer-map">
                         <Map/>
@@ -60,7 +54,7 @@ function Footer(){
                                 <input className="form__field" name="Mail" onChange={(e) => setMail(e.target.value)}/>
                             </div>
                             <div className="footer-message-form-input">
-                                <label htmlFor="Spam">Comment s'appelle la femme de nico ?</label>
+                                <label htmlFor="Spam">2 + 2 = ?</label>
                                 <input className="form__field" name="Spam" onChange={(e) => setSpam(e.target.value)}/>
                             </div>
                         </div>
@@ -73,6 +67,11 @@ function Footer(){
                 </form>
             </div>
             <div className="footer-down">
+                <div className="footer-facebook">
+                    <a href="https://www.facebook.com/coutureducharme" target="_blank" rel="noreferrer">           
+                    <img className="footer-facebook" src={facebook} alt="facebook" loading="lazy"/>
+                    </a>
+                </div>
                 <p>Couture du Charme 2021</p>
                 <Link to="/MentionsLégales" className="footer-link"><div className="footer-down-mention"><p>Mentions légales</p></div></Link>
             </div>

@@ -3,22 +3,28 @@
     color: white;
     display: flex;
     flex-direction: row;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    padding: 3%;
+    justify-content: space-around;
+    padding-right: 10%;
+    padding-left: 5%;
+    margin-right:5%;
+    margin-left:5%;
 
 }
 
-.home-introText{    
-    margin: 3%;
-    
+.home-introText{
+    padding: 3%;
+    align-self: center;
+    max-width: 50%;
+    font-size: 17px;
+
 }
 
 .home-introQuestion{
-    margin: 3%;
-    text-align: center;
+    text-align:justify;
+    padding:3%;
+    align-self: center;
+    text-decoration: underline wheat 3px;
+    font-weight: normal;
 }
 
 @media (max-width: 800px) { 

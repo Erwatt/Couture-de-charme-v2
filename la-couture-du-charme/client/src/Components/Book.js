@@ -5,6 +5,9 @@ import React, { useState } from 'react';
 
 
 export default function Book(){
+
+    window.scrollTo(0, 0);
+
     const [chambre, setChambres]=useState(false);
     const [spa, setSpa]=useState(false);
 
