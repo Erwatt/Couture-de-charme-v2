@@ -33,12 +33,6 @@ function Footer(){
                         <p>1400, rue de Beaumetz<br></br>59310 SAMÉON</p>
                         <h3>📞 07 52 09 07 50</h3>
                     </div>
-                    <div className="footer-share">
-                        <h2>RESEAUX SOCIAUX</h2>
-                        <a href="https://www.facebook.com/coutureducharme" target="_blank" rel="noreferrer">           
-                        <img className="footer-facebook" src={facebook} alt="facebook" loading="lazy"/>
-                        </a>
-                    </div>
                     <div className="footer-map">
                         <Map/>
                     </div>
@@ -73,6 +67,11 @@ function Footer(){
                 </form>
             </div>
             <div className="footer-down">
+                <div className="footer-facebook">
+                    <a href="https://www.facebook.com/coutureducharme" target="_blank" rel="noreferrer">           
+                    <img className="footer-facebook" src={facebook} alt="facebook" loading="lazy"/>
+                    </a>
+                </div>
                 <p>Couture du Charme 2021</p>
                 <Link to="/MentionsLégales" className="footer-link"><div className="footer-down-mention"><p>Mentions légales</p></div></Link>
             </div>
