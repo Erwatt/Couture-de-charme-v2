@@ -14,7 +14,7 @@ function HomeRooms({room}) {
         <div className="containerTextBorderRoom">
           <Link to="/PrivateRoom" className="room-link">
           <div className="containerTextRoom">
-            <h3>Chambres</h3>
+            <h2>Chambres</h2>
             <p>Dans un style moderne et élégant, les chambres d'hôtes de la Couture du Charme vous proposent des prestations 
               et un environnement de qualité.
             </p>

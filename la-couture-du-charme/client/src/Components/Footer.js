@@ -30,6 +30,7 @@ function Footer(){
                 <div className="footer-contact-map">
                     <div className="footer-contact">
                         <h2> LA COUTURE DU CHARME</h2>
+                        <h3>Spa et Chambres d'Hôtes</h3>
                         <p>1400, rue de Beaumetz<br></br>59310 SAMÉON</p>
                         <h3>📞 07 52 09 07 50</h3>
                     </div>
@@ -53,17 +54,14 @@ function Footer(){
                                 <label htmlFor="Mail">E-mail</label>
                                 <input className="form__field" name="Mail" onChange={(e) => setMail(e.target.value)}/>
                             </div>
-                            <div className="footer-message-form-input">
-                                <label htmlFor="Spam">2 + 2 = ?</label>
-                                <input className="form__field" name="Spam" onChange={(e) => setSpam(e.target.value)}/>
-                            </div>
+                           
                         </div>
                         <div className="footer-message-form-txtarea">
                             <label htmlFor="Message">Message</label>
                             <textarea name="Message" onChange={(e) => setMessage(e.target.value)}/>
                         </div>
                     </div>
-                    <button className="footer-message-form-send">Envoyer le message</button>
+                    <button className="footer-message-form-send">Envoyer votre message</button>
                 </form>
             </div>
             <div className="footer-down">

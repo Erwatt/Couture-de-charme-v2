@@ -10,7 +10,7 @@ function HomeSpa({spa}) {
       <div className="containerTextBorderSpa">
       <Link to="/PrivateSpa" className='spa-link'>
         <div className="containerTextSpa">
-          <h3>Spa privatif</h3>
+          <h2 >Spa privatif</h2>
           <p>Entre amis ou en famille, venez vivre un moment inoubliable dans une bulle d'exception de 100 m².</p>
           <p>Notre univers balnéo entièrement dédié au bien-être comprend un sauna, un jacuzzi et une picine privative chauffée.</p>
           <p>Des modelages pourront vous être proposés afin de vous garantir une relaxation optimale.</p>

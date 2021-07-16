@@ -13,9 +13,15 @@
 
 }
 
-/* .containerTextSpa{
-    
-} */
+
+.containerTextSpa{
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+  
+} 
+.titretest{
+    font-weight: bold;
+}
 
 
 .imageSpa{
