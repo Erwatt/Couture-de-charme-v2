@@ -5,23 +5,35 @@ import '../CSS/Home.css';
 import HomeRooms from './HomeRooms';
 import HomeSpa from './HomeSpa';
 import Avis from './Avis';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import { useTransition, animated } from 'react-spring';
 import { useLocation } from 'react-router-dom';
 // import Promise2 from './Promise2';
 import Promise3 from './Promise3';
+import {isDesktop, isMobile} from 'react-device-detect';
 // import Video from './Video';
 
 function Home(){
-
-    if (useLocation().pathname === '/'){
-        window.addEventListener('scroll',handleScrollAnim);
-    }
 
     const [anim1, setAnim1] = useState(false);
     // const [anim2, setAnim2] = useState(false);
     const [anim3, setAnim3] = useState(false);
     const [anim4, setAnim4] = useState(false);
+
+    useEffect(() => {
+        if (isMobile){
+            setAnim1(true);
+            setAnim3(true);
+            setAnim4(true);
+        };
+    }, []);
+
+    if ((useLocation().pathname === '/') && isDesktop ){
+        console.log(isDesktop)
+        window.addEventListener('scroll',handleScrollAnim);
+    }; 
+    
+
     
     const transition1 = useTransition(anim1, {
         from: { x: -100, y: 0, opacity: 0 },
@@ -49,6 +61,7 @@ function Home(){
 
     function handleScrollAnim(){
         const offset = window.scrollY;
+       
         if (offset > 50){
             setAnim1(true);
             if (offset > 700){

@@ -6,7 +6,7 @@ const API_URL = 'https://lacoutureducharme.herokuapp.com/api/';
 class services {
     sendMessage(name, phone, mail, spam, message){
         return axios
-            .post(API_URL + 'SendMessage', {name, phone, mail, spam, message});
+            .post(API_URL + 'SendMessage', {name, phone, mail, message});
     };
 
     getMessages(){

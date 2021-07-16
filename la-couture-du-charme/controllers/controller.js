@@ -3,14 +3,13 @@ const Nodemailer = require('nodemailer');
 
 exports.sendMessage = (req, res) => {
     console.log('coucou')
-    let {name, phone, mail, spam, message} = req.body;
-    var txt = "message: " + message + ". tél: " + phone + " spam: " + spam;
+    let {name, phone, mail, message} = req.body;
+    var txt = "message: " + message + ". tél: " + phone;
 
     const msg = new Message({
       name: name,
       phone: phone,
       mail: mail,
-      spam: spam,
       message: message
     });
     
