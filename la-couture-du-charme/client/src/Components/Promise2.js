@@ -6,11 +6,19 @@ import { useTransition, animated } from 'react-spring';
 import { useLocation } from 'react-router-dom';
 
 
-export default function Promise2(){
+export default function Promise2({room,spa}){
 
     if (useLocation().pathname === '/'){
         window.addEventListener('mousemove',handleScrollAnim);
     }
+
+    function handleRoomScroll(){
+        room.current.scrollIntoView({behavior: "smooth", block: "start"});
+    }
+    function handleSpaScroll(){
+        spa.current.scrollIntoView({behavior: "smooth", block: "start"});
+    }
+
 
     const [anim1, setAnim1] = useState(false);
     const [anim2, setAnim2] = useState(false);
@@ -73,17 +81,17 @@ export default function Promise2(){
 
 
     return(
-        <div className="containerPromise2">
+        <div className="containerPromise2" ref={room}>
             <div className="containerFond">
             {transition5((style, item) => 
                     item ? <animated.div style={style} className='citation'> <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></animated.div>: <div ></div> )}
             <div className="groupelement">
             {transition1((style, item) => 
-                    item ? <animated.div style={style} className="element" id="chambres">Chambres</animated.div>: <div ></div> )}
+                    item ? <animated.div style={style} className="element" id="chambres" onClick={handleRoomScroll}>Chambres</animated.div>: <div ></div> )}
                {transition2((style, item) => 
-                    item ? <animated.div style={style} className="element" id="piscine"> Piscine</animated.div>: <div ></div> )}
+                    item ? <animated.div style={style} className="element" id="piscine">Piscine</animated.div>: <div ></div> )}
                {transition3((style, item) => 
-                    item ? <animated.div style={style} className="element" id="spa">Spa</animated.div>: <div ></div> )}
+                    item ? <animated.div style={style} className="element" id="spa" onClick={handleSpaScroll}>Spa</animated.div>: <div ></div> )}
                {transition4((style, item) => 
                     item ? <animated.div style={style} className="element" id="modelages">Modelages</animated.div>: <div ></div> )}
                

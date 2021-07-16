@@ -72,7 +72,7 @@ function Home(){
 
     // const pos = React.createRef();
     const room = React.createRef();
-    const pool = React.createRef();
+    const spa = React.createRef();
 
     // function scroll(){
     //     pos.current.scrollIntoView();
@@ -82,7 +82,7 @@ function Home(){
         
         <div className="home">
             {/* <Promise size='big' room={room} pool={pool} /> */}
-            <Promise2/>
+            <Promise2 room={room} spa={spa}/>
             <div className="home-intro">
                
 
@@ -96,10 +96,10 @@ function Home(){
             <div /*ref={pos}*/ className="home-infos">
 
                 {transition1((style, item) => 
-                    item ? <animated.div style={style}><HomeSpa/></animated.div>: <div ref={room}></div> )}
+                    item ? <animated.div style={style}><HomeSpa spa={spa}/></animated.div>: <div ref={spa}></div> )}
                 
                 {transition2((style, item) => 
-                    item ? <animated.div style={style}><HomeRooms room={room}/></animated.div>:<div ref={pool}></div> )}
+                    item ? <animated.div style={style}><HomeRooms room={room}/></animated.div>:<div ref={room}></div> )}
                 
                 {/* {transition3((style, item) => 
                     item ? <animated.div style={style}><HomePiscine pool={pool}/></animated.div>:"" )}
