@@ -10,17 +10,18 @@ function Footer(){
     const [name, setName] = useState("");
     const [mail, setMail] = useState("");
     const [phone, setPhone] = useState("");
-    const [spam, setSpam] = useState(3);
+    // const [spam, setSpam] = useState(3);
     const [message, setMessage] = useState("");
 
     function handleMessage(e){
-        if ( spam !== '4'){
-            e.preventDefault()
-            alert('Mauvaise réponse au test anti spam, va te faire foutre sale bot')
-        } else {
-            services.sendMessage(name, phone, mail, message);
-        }
+        // if ( spam !== '4'){
+        //     e.preventDefault()
+        //     alert('Mauvaise réponse au test anti spam, va te faire foutre sale bot')
+        // } else {
+        //     services.sendMessage(name, phone, mail, message);
+        // }
         // e.preventDefault()
+        services.sendMessage(name, phone, mail, message);
         
     };
 
