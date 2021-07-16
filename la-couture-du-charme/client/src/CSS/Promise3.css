@@ -9,16 +9,7 @@
 
 }
 
-.promise3-cadre{
-    padding:20px;
-    position: absolute;
-    height: 150px;
-    width: 700px;
-    background-color: burlywood;
-    bottom: 5px;
-    /* bottom: -130px; */
-    right: 5px;
-}
+
 
 .promise3-citation{
     color: #000000;
@@ -26,13 +17,23 @@
     padding: 2%;
     opacity: 100%;
     text-align: center;
-    margin-right: auto;
-    margin-left: auto;
+    width: 40%;
+}
+
+.promise3-cadre{
+    padding:20px;
+    position: relative;
+    height: 175px;
+    width: 700px;
+    background-color: burlywood;
+    bottom:-28em;
+
+    /* bottom: -130px; */
+    right: -6em;
 }
 
 .promise3-title{
     border-bottom:5px solid burlywood;
-
 }
 
 .promise3-quiSommesNous{
@@ -48,4 +49,18 @@
 
 .promise3-quiSommesNous > p {
     margin-bottom: 60px;
+}
+
+
+@media (max-width: 800px) { 
+    .containerPromise3{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10%;
+          
+    }
+    .promise3-cadre{
+        bottom:-15em;
+        width: 90%;
+    }
 }

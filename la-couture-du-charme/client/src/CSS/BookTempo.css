@@ -1,0 +1,22 @@
+.containerBookTempo{
+    margin:5%;
+    border: solid rgb(138, 42, 42);
+    border-style: double;
+    border-width: 5px;
+
+    padding:3%;
+
+}
+
+.container2BookTempo{
+    border: solid rgb(138, 42, 42);
+    border-style: double;
+    border-width: 5px;
+
+    padding: 3%;
+}
+
+.textBookTempo{
+    font-size: 150%;
+    text-align: center;
+}
