@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import Header2 from './Header2';
+// import Header2 from './Header2';
 
 import Home from './Home';
 import Footer from './Footer';
@@ -8,7 +8,7 @@ import Receiver from './Receiver';
 import PrivateRoom from './PrivateRoom';
 import PrivatePool from './PrivatePool';
 import PrivateSpa from './PrivateSpa';
-import Book from './Book';
+// import Book from './Book';
 import BookTempo from './BookTempo';
 
 import MentionsLegales from './MentionsLegales';

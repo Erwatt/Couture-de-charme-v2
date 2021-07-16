@@ -44,12 +44,17 @@
     border-color: #000000;
     cursor: pointer;
     box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
+    &:hover{
+        box-shadow: none;
+        transform: translate(0, 1px);
+    }
 }
+
+
 
 .header-tel-back{
     margin-top: auto;
     margin-bottom: auto;
-    background-color: #C4C4C4;
     width: 10%;
     height: 3em;
     text-align: center;
@@ -58,7 +63,6 @@
 .header-book-back{
     margin-top: auto;
     margin-bottom: auto;
-    background-color: #C4C4C4;
     width: 10%;
     height: 3em;
     text-align: center;
@@ -68,13 +72,14 @@
     position: fixed;
     top: 0;
     width: 100%;
-    animation: stick 100ms linear 1 forwards;
+    animation: stick 1ms linear 1 forwards;
   }
 
 .header-sticky > img{
     width: 7%;
     height: auto;
 }
+
 
 @keyframes stick {
     /* from {
@@ -85,72 +90,6 @@
         border-bottom: solid 3px black;
         }
 }
-
-@media (min-width: 0px) and (max-width: 800px) { 
-    .header-tel-back{
-        font-size: 70%;
-        width: 20%;
-        height: 10%;
-    } 
-    .header-tel{
-        font-size: 70%;
-        width: 70%;
-    } 
-    .header-book-back{
-        font-size: 70%;
-        width: 20%;
-        height: 10%;   
-    }
-    .header-book{
-        font-size: 70%;
-        width: 70%;    
-    }
-}
-
-@media (min-width: 801px) and (max-width: 1030px) { 
-    .header-tel-back{
-        font-size: 80%;
-        width: 20%;
-        height: 10%;
-    } 
-    .header-tel{
-        font-size: 100%;
-        width: 65%;
-    } 
-    .header-book-back{
-        font-size: 80%;
-        width: 20%;
-        height: 10%;   
-    }
-    .header-book{
-        font-size: 100%;
-        width: 65%;    
-    }
-}
-
-@media (min-width: 1031px) and (max-width: 1300px) { 
-    .header-tel-back{
-        font-size: 100%;
-        width: 15%;
-        height: 10%;
-    } 
-    .header-tel{
-        font-size: 80%;
-        width: 65%;
-    } 
-    .header-book-back{
-        font-size: 100%;
-        width: 15%; 
-        height: 10%;  
-    }
-    .header-book{
-        font-size: 80%;
-        width: 65%;    
-    }
-}
-
-
-
 
 /* @keyframes roll {
     from {

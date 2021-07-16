@@ -17,8 +17,7 @@
     padding: 2%;
     opacity: 100%;
     text-align: center;
-    margin-right: auto;
-    margin-left: auto;
+    width: 40%;
 }
 
 .promise3-cadre{
@@ -30,12 +29,11 @@
     bottom:-28em;
 
     /* bottom: -130px; */
-    right: -2em;
+    right: -6em;
 }
 
 .promise3-title{
     border-bottom:5px solid burlywood;
-
 }
 
 .promise3-quiSommesNous{

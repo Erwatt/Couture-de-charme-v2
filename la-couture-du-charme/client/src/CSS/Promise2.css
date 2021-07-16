@@ -48,7 +48,22 @@
 }
 
 .containerFond{
-    background-color: rgba(70, 131, 131, 0.5);
+    /* background-color: rgba(70, 131, 131, 0.5); */
+    background: url('../Images/centre.jpg');
+
     height: 40em;
 
+}
+
+.promise-quiSommesNous{
+    padding: 3%;
+    align-self: center;
+    max-width: 50%;
+    font-size: 20px;
+    color: #FFFFFF;
+
+}
+
+.promise-quiSommesNous > p {
+    margin-bottom: 60px;
 }
