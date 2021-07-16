@@ -16,5 +16,11 @@ export const AvisList = [
         name: 'Cécile Recher',
         rate: 5,
         txt: '"Cela fait 6 mois que je viens dans ce gîte exceptionnel. Calme, propre. Aménagements modernes et des propriétaires charmants et attentionnés."'
+    },
+    {
+        id: 'jkl',
+        name: 'Laurent Perrone',
+        rate: 5,
+        txt: '"Très Belle maison et chambre confortable. Calme et tranquillité. Je recommande."'
     }
 ];
