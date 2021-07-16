@@ -9,6 +9,8 @@ import {useState} from 'react';
 import { useTransition, animated } from 'react-spring';
 import { useLocation } from 'react-router-dom';
 import Promise2 from './Promise2';
+import Promise3 from './Promise3';
+
 // import Video from './Video';
 
 function Home(){
@@ -82,7 +84,7 @@ function Home(){
         
         <div className="home">
             {/* <Promise size='big' room={room} pool={pool} /> */}
-            <Promise2 room={room} spa={spa}/>
+            <Promise3 room={room} spa={spa}/>
             <div className="home-intro">
                
 
