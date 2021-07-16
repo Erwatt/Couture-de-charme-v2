@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../Images/logo.png';
-import '../CSS/Header.css';
+import '../CSS/Header.scss';
 import {useState} from 'react';
 import {useHistory} from 'react-router-dom';
 

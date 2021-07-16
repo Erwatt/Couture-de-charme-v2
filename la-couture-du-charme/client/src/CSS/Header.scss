@@ -44,12 +44,17 @@
     border-color: #000000;
     cursor: pointer;
     box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
+    &:hover{
+        box-shadow: none;
+        transform: translate(0, 1px);
+    }
 }
+
+
 
 .header-tel-back{
     margin-top: auto;
     margin-bottom: auto;
-    background-color: #C4C4C4;
     width: 10%;
     height: 3em;
     text-align: center;
@@ -58,7 +63,6 @@
 .header-book-back{
     margin-top: auto;
     margin-bottom: auto;
-    background-color: #C4C4C4;
     width: 10%;
     height: 3em;
     text-align: center;
@@ -68,13 +72,14 @@
     position: fixed;
     top: 0;
     width: 100%;
-    animation: stick 100ms linear 1 forwards;
+    animation: stick 1ms linear 1 forwards;
   }
 
 .header-sticky > img{
     width: 7%;
     height: auto;
 }
+
 
 @keyframes stick {
     /* from {
