@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../CSS/HomeSpa.css';
-import imgSpa from '../Images/spa.jpeg'
+import imgSpa from '../Images/piscine.jpg'
 
-function HomeSpa() {
+function HomeSpa({spa}) {
   return (
-    <div className="container-Spa">
+    <div className="container-Spa" ref={spa}>
       <img src={imgSpa} alt="Canvas Logo" className="imageSpa"/>
       <div className="containerTextBorderSpa">
       <Link to="/PrivateSpa" className='spa-link'>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import imgPiscine from '../Images/piscine.jpeg'
+import imgPiscine from '../Images/piscine.jpg'
 
 import '../CSS/HomePiscine.css';
 

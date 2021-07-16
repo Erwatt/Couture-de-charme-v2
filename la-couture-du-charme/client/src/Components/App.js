@@ -1,12 +1,16 @@
 import React from 'react';
 import Header from './Header';
+// import Header2 from './Header2';
+
 import Home from './Home';
 import Footer from './Footer';
 import Receiver from './Receiver';
 import PrivateRoom from './PrivateRoom';
 import PrivatePool from './PrivatePool';
 import PrivateSpa from './PrivateSpa';
-import Book from './Book';
+// import Book from './Book';
+import BookTempo from './BookTempo';
+
 import MentionsLegales from './MentionsLegales';
 import '../CSS/App.css';
 import {Route, Switch} from 'react-router-dom';
@@ -42,7 +46,7 @@ function App() {
           <Route path='/PrivateRoom' component={PrivateRoom}/>
           <Route path='/PrivatePool' component={PrivatePool}/>
           <Route path='/PrivateSpa' component={PrivateSpa}/>
-          <Route path='/Book' component={Book}/>
+          <Route path='/Book' component={BookTempo}/>
           <Route path='/MentionsLégales' component={MentionsLegales}/>
         </Switch>
       </div>

@@ -1,18 +1,18 @@
 .containerPromise2{
-    display: flex;
-    flex-direction: row;
-    margin: 3%;
-    /* background: url('../Images/centre.jpg'); */
-    /* background-size: cover; */
-    background-color: rgba(70, 131, 131, 0.5);
+    margin: 6%;
+    margin-top: 3%;
+    margin-bottom: 3%;    
+    background: url('../Images/centre.jpg');
+    background-size: cover;
     height: 40em;
 
 }
 
 .citation{
-    color: #000000;
-    font-size: 60px;
-    padding: 2%;
+    color: white;
+    font-size: 4em;
+    padding: 5%;
+    padding-top: 1%;
     opacity: 100%;
 
 
@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: row;
     font-size: 1.5em;
-    margin-top: 8%;
+    margin-top: 5%;
 }
 
 .element{
