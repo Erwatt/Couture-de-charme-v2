@@ -49,17 +49,17 @@ function Home(){
 
     function handleScrollAnim(){
         const offset = window.scrollY;
-        if (offset > 50){
+        if (offset > 0){
             setAnim1(true);
-            if (offset > 700){
-                // setAnim2(true);
-                // if (offset > 1300){
-                    setAnim3(true);
-                    if (offset > 1300){
-                        setAnim4(true);
-                    } else {
-                        setAnim4(false);
-                    };
+            if (offset > 300){
+                setAnim2(true);
+                if (offset > 800){
+                    setAnim4(true);
+                    // if (offset > 2000){
+                    //     setAnim4(true);
+                    // } else {
+                    //      setAnim4(false);
+                    // };
                 } else {
                     setAnim4(false);
                 };
@@ -83,16 +83,8 @@ function Home(){
         
         <div className="home">
             {/* <Promise size='big' room={room} pool={pool} /> */}
-            <Promise3/>
-            {/* <div className="home-intro">
-               
-
-                <p className="home-introText">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Odio pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus.
-                        Commodo sed egestas egestas fringilla phasellus faucibus.</p>
-                <h2 className="home-introQuestion">Qui sommes-nous ?</h2>
-            </div> */}
+            <Promise3 room={room} spa={spa}/>
+            
 
             <div /*ref={pos}*/ className="home-infos">
 

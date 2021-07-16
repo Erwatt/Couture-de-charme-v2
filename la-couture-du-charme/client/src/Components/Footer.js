@@ -30,6 +30,7 @@ function Footer(){
                 <div className="footer-contact-map">
                     <div className="footer-contact">
                         <h2> LA COUTURE DU CHARME</h2>
+                        <h3>Spa et Chambres d'Hôtes</h3>
                         <p>1400, rue de Beaumetz<br></br>59310 SAMÉON</p>
                         <h3>📞 07 52 09 07 50</h3>
                     </div>
@@ -63,7 +64,7 @@ function Footer(){
                             <textarea name="Message" onChange={(e) => setMessage(e.target.value)}/>
                         </div>
                     </div>
-                    <button className="footer-message-form-send">Envoyer le message</button>
+                    <button className="footer-message-form-send">Envoyer votre message</button>
                 </form>
             </div>
             <div className="footer-down">

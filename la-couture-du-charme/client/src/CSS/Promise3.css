@@ -27,6 +27,7 @@
     width: 700px;
     background-color: burlywood;
     bottom:-28em;
+    color: white;
 
     /* bottom: -130px; */
     right: -6em;
@@ -34,6 +35,8 @@
 
 .promise3-title{
     border-bottom:5px solid burlywood;
+    color: white;
+
 }
 
 .promise3-quiSommesNous{
