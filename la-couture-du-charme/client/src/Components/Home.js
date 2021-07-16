@@ -1,14 +1,15 @@
 import React from 'react';
 import '../CSS/Home.css';
-import Promise from './Promise';
-import HomePiscine from './HomePiscine';
+// import Promise from './Promise';
+// import HomePiscine from './HomePiscine';
 import HomeRooms from './HomeRooms';
 import HomeSpa from './HomeSpa';
 import Avis from './Avis';
 import {useState} from 'react';
 import { useTransition, animated } from 'react-spring';
 import { useLocation } from 'react-router-dom';
-import Promise2 from './Promise2';
+// import Promise2 from './Promise2';
+import Promise3 from './Promise3';
 // import Video from './Video';
 
 function Home(){
@@ -18,7 +19,7 @@ function Home(){
     }
 
     const [anim1, setAnim1] = useState(false);
-    const [anim2, setAnim2] = useState(false);
+    // const [anim2, setAnim2] = useState(false);
     const [anim3, setAnim3] = useState(false);
     const [anim4, setAnim4] = useState(false);
     
@@ -28,16 +29,16 @@ function Home(){
         leave: { x: -100, y: 0, opacity: 0 },
     });
 
-    const transition2 = useTransition(anim2, {
+    // const transition2 = useTransition(anim2, {
+    //     from: { x: 100, y: 0, opacity: 0 },
+    //     enter: { x: 0, y: 0, opacity: 1 },
+    //     leave: { x: 100, y: 0, opacity: 0 },
+    // });
+
+    const transition3 = useTransition(anim3, {
         from: { x: 100, y: 0, opacity: 0 },
         enter: { x: 0, y: 0, opacity: 1 },
         leave: { x: 100, y: 0, opacity: 0 },
-    });
-
-    const transition3 = useTransition(anim3, {
-        from: { x: -100, y: 0, opacity: 0 },
-        enter: { x: 0, y: 0, opacity: 1 },
-        leave: { x: -100, y: 0, opacity: 0 },
     });
 
     const transition4 = useTransition(anim4, {
@@ -48,23 +49,23 @@ function Home(){
 
     function handleScrollAnim(){
         const offset = window.scrollY;
-        if (offset > 500){
+        if (offset > 50){
             setAnim1(true);
-            if (offset > 800){
-                setAnim2(true);
-                if (offset > 1300){
+            if (offset > 700){
+                // setAnim2(true);
+                // if (offset > 1300){
                     setAnim3(true);
-                    if (offset > 1900){
+                    if (offset > 1300){
                         setAnim4(true);
                     } else {
                         setAnim4(false);
                     };
                 } else {
-                    setAnim3(false);
+                    setAnim4(false);
                 };
-            } else {
-                setAnim2(false);
-            };
+            // } else {
+            //     setAnim2(false);
+            // };
         } else {
             setAnim1(false);
         }; 
@@ -72,7 +73,7 @@ function Home(){
 
     // const pos = React.createRef();
     const room = React.createRef();
-    const pool = React.createRef();
+    const spa = React.createRef();
 
     // function scroll(){
     //     pos.current.scrollIntoView();
@@ -82,36 +83,30 @@ function Home(){
         
         <div className="home">
             {/* <Promise size='big' room={room} pool={pool} /> */}
-            <Promise2/>
-            <div className="home-intro">
+            <Promise3/>
+            {/* <div className="home-intro">
                
-                <div className="home-introText">
-                    <p>Au coeur d'une nature calme et verdoyante, la Couture du Charme est le lieu
-                                                    unique pour vous offrir un moment de détente inoubliable, entre amis ou en famille.
-                    </p>
-                    <p>Relaxez-vous dans notre spa privatif avec piscine, séjournez dans nos chambre d'hôtes
-                                                    spacieuses et modernes, détendez-vous grâce aux bienfaits de nos modelages...
-                    </p>
-                    <p>La Couture du Charme vous accueille à Saméon, à proximité d'Orchies et Saint Amand, 
-                                                    à 20 minutes de Lille et Valenciennes.
-                    </p>
-                </div>
+
+                <p className="home-introText">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Odio pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus.
+                        Commodo sed egestas egestas fringilla phasellus faucibus.</p>
                 <h2 className="home-introQuestion">Qui sommes-nous ?</h2>
-            </div>
+            </div> */}
 
             <div /*ref={pos}*/ className="home-infos">
 
                 {transition1((style, item) => 
-                    item ? <animated.div style={style}><HomeRooms room={room}/></animated.div>: <div ref={room}></div> )}
+                    item ? <animated.div style={style}><HomeRooms room={room}/></animated.div>: <div className="home-room-before" ref={room}></div> )}
                 
-                {transition2((style, item) => 
-                    item ? <animated.div style={style}><HomePiscine pool={pool}/></animated.div>:<div ></div> )}
+                {/* {transition2((style, item) => 
+                    item ? <animated.div style={style}><HomePiscine pool={pool}/></animated.div>:<div ref={pool}></div> )} */}
                 
                 {transition3((style, item) => 
-                    item ? <animated.div style={style}><HomeSpa/></animated.div>:"" )}
+                    item ? <animated.div style={style}><HomeSpa pool={spa}/></animated.div>:"" )}
                
             </div>
-            <div className="home-avis" ref={pool}>
+            <div className="home-avis">
             {transition4((style, item) => 
                     item ? <animated.div style={style}><Avis/></animated.div>:"" )}
             </div>
