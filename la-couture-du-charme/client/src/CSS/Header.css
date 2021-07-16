@@ -9,9 +9,11 @@
     width: 100%;
 }
 .header-logo{
-    width: 20%;
+    width: 10%;
     height: auto;
     cursor: pointer;
+    position:relative;
+    
 }
 
 .header-tel{

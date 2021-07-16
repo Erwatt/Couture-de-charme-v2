@@ -19,7 +19,7 @@ function Home(){
 
     const [anim1, setAnim1] = useState(false);
     const [anim2, setAnim2] = useState(false);
-    const [anim3, setAnim3] = useState(false);
+    //const [anim3, setAnim3] = useState(false);
     const [anim4, setAnim4] = useState(false);
     
     const transition1 = useTransition(anim1, {
@@ -34,11 +34,11 @@ function Home(){
         leave: { x: 100, y: 0, opacity: 0 },
     });
 
-    const transition3 = useTransition(anim3, {
-        from: { x: -100, y: 0, opacity: 0 },
-        enter: { x: 0, y: 0, opacity: 1 },
-        leave: { x: -100, y: 0, opacity: 0 },
-    });
+    // const transition3 = useTransition(anim3, {
+    //     from: { x: -100, y: 0, opacity: 0 },
+    //     enter: { x: 0, y: 0, opacity: 1 },
+    //     leave: { x: -100, y: 0, opacity: 0 },
+    // });
 
     const transition4 = useTransition(anim4, {
         from: { x: 0, y: 100, opacity: 0 },
@@ -48,19 +48,19 @@ function Home(){
 
     function handleScrollAnim(){
         const offset = window.scrollY;
-        if (offset > 500){
+        if (offset > 600){
             setAnim1(true);
-            if (offset > 800){
+            if (offset > 900){
                 setAnim2(true);
-                if (offset > 1300){
-                    setAnim3(true);
-                    if (offset > 1900){
-                        setAnim4(true);
-                    } else {
-                        setAnim4(false);
-                    };
+                if (offset > 1400){
+                    setAnim4(true);
+                    // if (offset > 2000){
+                    //     setAnim4(true);
+                    // } else {
+                    //      setAnim4(false);
+                    // };
                 } else {
-                    setAnim3(false);
+                    setAnim4(false);
                 };
             } else {
                 setAnim2(false);
@@ -85,33 +85,27 @@ function Home(){
             <Promise2/>
             <div className="home-intro">
                
-                <div className="home-introText">
-                    <p>Au coeur d'une nature calme et verdoyante, la Couture du Charme est le lieu
-                                                    unique pour vous offrir un moment de détente inoubliable, entre amis ou en famille.
-                    </p>
-                    <p>Relaxez-vous dans notre spa privatif avec piscine, séjournez dans nos chambre d'hôtes
-                                                    spacieuses et modernes, détendez-vous grâce aux bienfaits de nos modelages...
-                    </p>
-                    <p>La Couture du Charme vous accueille à Saméon, à proximité d'Orchies et Saint Amand, 
-                                                    à 20 minutes de Lille et Valenciennes.
-                    </p>
-                </div>
+
+                <p className="home-introText">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Odio pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus.
+                        Commodo sed egestas egestas fringilla phasellus faucibus.</p>
                 <h2 className="home-introQuestion">Qui sommes-nous ?</h2>
             </div>
 
             <div /*ref={pos}*/ className="home-infos">
 
                 {transition1((style, item) => 
-                    item ? <animated.div style={style}><HomeRooms room={room}/></animated.div>: <div ref={room}></div> )}
+                    item ? <animated.div style={style}><HomeSpa/></animated.div>: <div ref={room}></div> )}
                 
                 {transition2((style, item) => 
-                    item ? <animated.div style={style}><HomePiscine pool={pool}/></animated.div>:<div ></div> )}
+                    item ? <animated.div style={style}><HomeRooms room={room}/></animated.div>:<div ref={pool}></div> )}
                 
-                {transition3((style, item) => 
-                    item ? <animated.div style={style}><HomeSpa/></animated.div>:"" )}
-               
+                {/* {transition3((style, item) => 
+                    item ? <animated.div style={style}><HomePiscine pool={pool}/></animated.div>:"" )}
+                */}
             </div>
-            <div className="home-avis" ref={pool}>
+            <div className="home-avis">
             {transition4((style, item) => 
                     item ? <animated.div style={style}><Avis/></animated.div>:"" )}
             </div>

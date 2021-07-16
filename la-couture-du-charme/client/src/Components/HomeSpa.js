@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../CSS/HomeSpa.css';
-import imgSpa from '../Images/spa.jpeg'
+import imgSpa from '../Images/piscine.jpg'
 
 function HomeSpa() {
   return (

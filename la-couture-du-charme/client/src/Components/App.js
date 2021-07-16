@@ -7,6 +7,8 @@ import PrivateRoom from './PrivateRoom';
 import PrivatePool from './PrivatePool';
 import PrivateSpa from './PrivateSpa';
 import Book from './Book';
+import BookTempo from './BookTempo';
+
 import MentionsLegales from './MentionsLegales';
 import '../CSS/App.css';
 import {Route, Switch} from 'react-router-dom';
@@ -42,7 +44,7 @@ function App() {
           <Route path='/PrivateRoom' component={PrivateRoom}/>
           <Route path='/PrivatePool' component={PrivatePool}/>
           <Route path='/PrivateSpa' component={PrivateSpa}/>
-          <Route path='/Book' component={Book}/>
+          <Route path='/Book' component={BookTempo}/>
           <Route path='/MentionsLégales' component={MentionsLegales}/>
         </Switch>
       </div>
