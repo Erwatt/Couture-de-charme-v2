@@ -39,6 +39,10 @@
 
 }
 
+.sentence{
+    margin-bottom: 1%;
+}
+
 .promise3-quiSommesNous{
     /* padding: 3%; */
     padding-bottom: 3%;
@@ -47,6 +51,8 @@
     /* font-size: 20px; */
     color: #FFFFFF;
     text-align: justify;
+    display: flex;
+    flex-direction: column;
 
 }
 
