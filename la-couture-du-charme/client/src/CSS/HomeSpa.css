@@ -26,6 +26,10 @@
 
 .imageSpa{
     width:50%;
+    position: relative;
+    left: -3%;
+    top: 0em;
+    margin: 2%;
 }
 
 .containerTextBorderSpa{
@@ -33,9 +37,7 @@
     border: double black;
     padding: 3%;
     background-color: whitesmoke;
-    position: relative;
-    left: -2%;
-    top: -2em;
+    z-index: 1;
 }
 
 .spa-link{
@@ -44,14 +46,12 @@
 }
 
 @media (max-width: 800px) { 
+
     .container-Spa{
-   
         display: flex;
         flex-direction: column;
         padding: 5%;
         margin: 5%;
-    
-    
     }
 
     
@@ -63,5 +63,7 @@
     
     .imageSpa{
         width:100%;
+        top: -2em;
+        margin:5%;
  }
 }
