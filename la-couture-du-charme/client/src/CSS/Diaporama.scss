@@ -1,0 +1,34 @@
+
+
+.Diaporama{
+
+  display: flex;
+  flex-direction: row;
+ 
+  width: 100%;
+  justify-content: center;
+}
+
+
+.containerArrow{
+  
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 5%;
+  
+}
+
+
+.Diaporama_img{
+  width: 100%;
+}
+.fleche_suivant{
+  transform: rotate(-90deg);
+}
+.fleche_retour{
+  
+  transform: rotate(90deg);
+}
+

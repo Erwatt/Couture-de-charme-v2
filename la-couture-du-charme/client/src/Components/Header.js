@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../Images/logo.png';
 import '../CSS/Header.scss';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {useHistory} from 'react-router-dom';
 import { useTransition, animated , config} from 'react-spring';
 import { useLocation } from 'react-router-dom';
@@ -9,9 +9,7 @@ import { useLocation } from 'react-router-dom';
 
 function Header(){
 
-    if (useLocation().pathname === '/'){
-        window.addEventListener('load',setAnimation);
-    }
+    
     
 
     const [anim1, setAnim1] = useState(false);
@@ -56,12 +54,18 @@ function Header(){
     if (sticky){
         headerClasses.push("header-sticky");
     }
-    function setAnimation(){
+    useEffect(() => {
+        setAnim1(false);
+
+        setInterval(() => {
+            setAnim1(true);
+        }, 1000);
+
         
-        setAnim1(true);
-        
+
+    }, []);
     
-}
+
 
     return (
         <div className={headerClasses.join(" ")}>
