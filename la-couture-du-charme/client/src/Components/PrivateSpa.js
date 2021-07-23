@@ -6,7 +6,7 @@ import poufs from '../Images/poufs.jpg';
 import sauna from '../Images/sauna.jpg';
 import piscine from '../Images/piscine.jpg'
 import '../CSS/PrivateSpa.css';
-import Promise from './Promise';
+
 
 export default function PrivateSpa(){
     const picturesList = [fontaine, spa, poufs, sauna, piscine];
@@ -15,7 +15,7 @@ export default function PrivateSpa(){
     return (
         <div>
                 <div className='spa'>
-                <Promise/>
+                <div className="SpaHeader">Spa privatif<b></b></div>
                 <div className='spa-diapo'><Diaporama picturesList ={picturesList}/></div>
                 <div className='spa-info'><h1>Lorem ispum dolor</h1>
                     <div className='spa-info-txt'>

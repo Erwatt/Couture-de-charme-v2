@@ -14,7 +14,7 @@ export default function PrivateRoom(){
     return(
         <div>
                 <div className='room'>
-                <Promise/>
+                <div className="RoomHeader">Chambres<b></b></div>
                 <div className='room-diapo'><Diaporama picturesList ={picturesList}/></div>
                 <div className='room-info'><h1>Lorem ispum dolor</h1>
                     <div className='room-info-txt'>
