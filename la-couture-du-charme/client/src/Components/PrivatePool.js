@@ -13,7 +13,6 @@ function PrivatePool(){
 
     return (
         <div className="pool">
-            <Promise/>
             <div className="pool-diapo">
                 <Diaporama picturesList={picturesList}/>
             </div>
