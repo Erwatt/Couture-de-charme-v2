@@ -14,23 +14,24 @@ export default function PrivateRoom(){
     return(
         <div>
                 <div className='room'>
-                <div className="RoomHeader">Chambres<b></b></div>
-                <div className='room-diapo'><Diaporama picturesList ={picturesList}/></div>
-                <div className='room-info'><h1>Lorem ispum dolor</h1>
-                    <div className='room-info-txt'>
-                    <p>Lorem ipsum nico ipsum lorem dolor est dolor ispsum lorem dolor dolor trop ipsum ipsum lorem dolor beau dolor
-                    Lorem ipsum nico ipsum lorem dolor est dolor ispsum lorem dolor dolor trop ipsum ipsum lorem dolor beau dolor
-                    Lorem ipsum nico ipsum lorem dolor est dolor ispsum lorem dolor dolor trop ipsum ipsum lorem dolor beau dolor
-                    Lorem ipsum nico ipsum lorem dolor est dolor ispsum lorem dolor dolor trop ipsum ipsum lorem dolor beau dolor
-                    </p>
-                    <p>Lorem ipsum nico ipsum lorem dolor est dolor ispsum lorem dolor dolor trop ipsum ipsum lorem dolor beau dolor
-                    Lorem ipsum nico ipsum lorem dolor est dolor ispsum lorem dolor dolor trop ipsum ipsum lorem dolor beau dolor
-                    Lorem ipsum nico ipsum lorem dolor est dolor ispsum lorem dolor dolor trop ipsum ipsum lorem dolor beau dolor
-                    Lorem ipsum nico ipsum lorem dolor est dolor ispsum lorem dolor dolor trop ipsum ipsum lorem dolor beau dolor
-                    </p>
+                
+                    <div className='room-diapo'><Diaporama picturesList ={picturesList}/></div>
+                    <div className='room-info'>
+                        <h1 className="room-info-title">Lorem ispum dolor</h1>
+                        <div className='room-info-txt'>
+                            <p className="room-info-txt-element">Lorem ipsum nico ipsum lorem dolor est dolor ispsum lorem dolor dolor trop ipsum ipsum lorem dolor beau dolor
+                            Lorem ipsum nico ipsum lorem dolor est dolor ispsum lorem dolor dolor trop ipsum ipsum lorem dolor beau dolor
+                            Lorem ipsum nico ipsum lorem dolor est dolor ispsum lorem dolor dolor trop ipsum ipsum lorem dolor beau dolor
+                            Lorem ipsum nico ipsum lorem dolor est dolor ispsum lorem dolor dolor trop ipsum ipsum lorem dolor beau dolor
+                            </p>
+                            <p className="room-info-txt-element">Lorem ipsum nico ipsum lorem dolor est dolor ispsum lorem dolor dolor trop ipsum ipsum lorem dolor beau dolor
+                            Lorem ipsum nico ipsum lorem dolor est dolor ispsum lorem dolor dolor trop ipsum ipsum lorem dolor beau dolor
+                            Lorem ipsum nico ipsum lorem dolor est dolor ispsum lorem dolor dolor trop ipsum ipsum lorem dolor beau dolor
+                            Lorem ipsum nico ipsum lorem dolor est dolor ispsum lorem dolor dolor trop ipsum ipsum lorem dolor beau dolor
+                            </p>
                         </div>
-                </div> 
-            </div>
+                    </div> 
+                </div>
         </div>
     );
 };

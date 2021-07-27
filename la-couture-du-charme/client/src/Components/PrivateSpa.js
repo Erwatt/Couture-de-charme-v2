@@ -30,8 +30,8 @@ export default function PrivateSpa(){
                     Lorem ipsum nico ipsum lorem dolor est dolor ispsum lorem dolor dolor trop ipsum ipsum lorem dolor beau dolor
                     </p>
                         </div>
-                </div> 
-            </div>
+                    </div> 
+                </div>
         </div>
     );
 };

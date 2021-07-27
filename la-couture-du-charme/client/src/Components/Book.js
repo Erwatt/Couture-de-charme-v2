@@ -71,7 +71,7 @@ export default function Book(){
                     {phase===0?
                         <div className="containerButtonChoix"><div className="buttonChoix" onClick={()=>Test(1)}>Je veux une chambre</div><div className="buttonChoix" onClick={()=>Test(2)}>Je ne viens que pour le centre de détente</div></div>
                     :false}
-                    {phase===1 ?
+                    {phase<=1 ?
                         <div className="containerButtonChoix">
                             <div className="buttonChoix2" id="hoverNone" >Pour combien de personne ? </div>
                             
@@ -93,7 +93,7 @@ export default function Book(){
                     }
 
                     {
-                        phase===3?
+                        phase<=3?
                         <div className="containerButtonChoix">
                                <div className="buttonChoix2" id="hoverNone" >
                                <p>Du</p>
@@ -108,7 +108,7 @@ export default function Book(){
                         :false
                     }
 
-                    {phase===4?
+                    {phase<=4?
                     <div className="containerButtonChoix" id="">
                         <div className="buttonChoix2" id="hoverNone" >
                             <p>Du</p>
@@ -120,7 +120,7 @@ export default function Book(){
                     </div>
                     
                     :false}
-                    {phase===5?
+                    {phase<=5?
                     <div className="containerButtonChoix">
                         <div className="buttonChoix2" id="hoverNone">Etes-vous intérésser par le centre de détente ?</div>
                         <div className="buttonChoix" onClick={()=>Test(11,true)}>Oui</div>
