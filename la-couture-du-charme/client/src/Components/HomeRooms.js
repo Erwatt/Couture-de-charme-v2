@@ -9,10 +9,11 @@ function HomeRooms({room}) {
   
 
   return (
+    <Link to="/PrivateRoom" className="room-link"> 
     <div className="container-room" ref={room}>
         <img src={imgRoom} alt="Canvas Logo" className="imageRoom"/>
         <div className="containerTextBorderRoom">
-          {/* <Link to="/PrivateRoom" className="room-link"> */}
+          
           <div className="containerTextRoom">
             <h2>Chambres</h2>
             <p>Dans un style moderne et élégant, les chambres d'hôtes de la Couture du Charme vous proposent des prestations 
@@ -22,11 +23,11 @@ function HomeRooms({room}) {
               venez gouter au calme et au dépaysement de l'une de nos 3 chambres spacieuses, au coeur de la campagne du Pévèle.
             </p>
           </div>
-          {/* </Link> */}
+         
         </div>
       
     </div>
-    
+    </Link>
   );
 }
 

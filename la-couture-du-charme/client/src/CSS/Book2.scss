@@ -1,0 +1,106 @@
+
+
+#containerBook{
+    margin: 5%;
+    border: solid black;
+    border-style: dashed;
+    padding:2%;
+}
+.containerButtonBook{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.buttonBook{
+    align-self: center;
+    background-color: cadetblue;
+    width : max-content;
+    padding:0.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+.containerBookRoom{
+    border:none;
+}
+.containerBookSpa{
+    
+}
+
+
+.containerFormSpa{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+    
+}
+
+.elementForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.buttonChoiceWeekend{
+    background-color: cadetblue;
+    color: white;
+    padding:7%;
+    border-radius: 7px;
+    width: 100%;
+    padding-right: 15%;
+    padding-left: 15%;
+    cursor: pointer;
+    
+}
+
+.buttonChoiceWeekendClicked{
+    border : solid cadetblue;
+    padding:7%;
+    border-radius: 7px;
+    width: 100%;
+    padding-right: 15%;
+    padding-left: 15%;
+    cursor: pointer;
+}
+
+.buttonChoice17h{
+    background-color: cadetblue;
+    color: white;
+    padding:7%;
+    border-radius: 7px;
+    width: 100%;
+    padding-right: 15%;
+    padding-left: 15%;
+    cursor: pointer;
+}
+
+.buttonChoice17hClicked{
+    border : solid cadetblue;
+    padding:7%;
+    border-radius: 7px;
+    width: 100%;
+    padding-right: 15%;
+    padding-left: 15%;
+    cursor: pointer;
+
+}
+
+
+.validateBtn{
+    background-color: rgb(67, 148, 67);
+    color: white;
+    padding:7%;
+    border-radius: 7px;
+    width: 100%;
+    padding-right: 15%;
+    padding-left: 15%;
+    cursor: pointer;
+    font-size: 120%;
+}
+
+
