@@ -5,6 +5,7 @@ import {useState} from 'react';
 import services from '../services';
 import {Link} from 'react-router-dom';
 import facebook from '../Images/facebook.png'
+import instagram from '../Images/instagram.png'
 
 function Footer(){
     const [name, setName] = useState("");
@@ -66,9 +67,12 @@ function Footer(){
                 </form>
             </div>
             <div className="footer-down">
-                <div className="footer-facebook">
+                <div className="footer-reseaux">
                     <a href="https://www.facebook.com/coutureducharme" target="_blank" rel="noreferrer">           
                     <img className="footer-facebook" src={facebook} alt="facebook" loading="lazy"/>
+                    </a>
+                    <a href="https://www.instagram.com/spa_la.couture.du.charme/?hl=fr" target="_blank" rel="noreferrer">           
+                    <img className="footer-instagram" src={instagram} alt="instagram" loading="lazy"/>
                     </a>
                 </div>
                 <p>Couture du Charme 2021</p>

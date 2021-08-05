@@ -4,12 +4,12 @@
     margin: 3%;
     background: url('../Images/centre.jpg');
     background-size: cover;
+    background-position: center center;
     /* background-color: rgba(70, 131, 131, 0.5); */
     height: 40em;
     
 
 }
-
 
 
 .promise3-citation{
@@ -22,16 +22,15 @@
 }
 
 .promise3-cadre{
-    padding:20px;
+    padding: 1.5%;
     position: relative;
-    height: 175px;
-    width: 700px;
+    height: 30%;
+    width: 48%;
     background-color: burlywood;
-    bottom:-28em;
+    bottom: -65%;
     line-height: 150%;
-
     /* bottom: -130px; */
-    right: -6em;
+    right: -7%;
 }
 
 .promise3-title{
@@ -63,10 +62,18 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 10%;
-          
+        background-size: contain;
+        height: 0%;
+        background-size: cover;
     }
     .promise3-cadre{
         position: unset;
         
+    }
+
+    .promise3-title{
+        font-size: 70%;
+        margin-top: 50%;
+        text-align: left;
     }
 }
