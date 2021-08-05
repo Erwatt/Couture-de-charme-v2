@@ -8,287 +8,568 @@ import imgRoom from '../Images/chambre.jpeg'
 
 export default function Book(){
 
+const[bookRoom,setBookRoom]=useState(false)
+const[bookSpa,setBookSpa]=useState(false)
+const[semaine,setSemaine]=useState(false)
+const[weekend,setWeekend]=useState(false)
+const[before17,setBefore17]=useState(false)
+const[after17,setAfter17]=useState(false)
+const[nombre,setNombre]=useState(0)
+const[validate,setvalidate]=useState(false)
+const[creneau2h,setCreneau2h]=useState(false)
+const[creneau1h30,setCreneau1h30]=useState(false)
 
 
-    const [room, setRoom] = useState(false);
-    const [spa, setSpa] = useState(false);
-    const [les2, setLes2] = useState(false);
-    const [nombre, setNombre]=useState(0);
-    const [chambre1Over, setChambre1Over] = useState(false);
-    const [chambre2Over, setChambre2Over] = useState(false);
-    const [chambre3Over, setChambre3Over] = useState(false);
-    const [roomSelected,setRoomSelected]= useState(false);
-    const [roomSelectedNumber,setRoomSelectedNumber]= useState(0);
+const BookRoom = () => {
+    setBookRoom(true)
+    setBookSpa(false)
+}
+const BookSpa = () => {
+    setBookSpa(true)
+    setBookRoom(false)
+}
+const BookWeekend = ()=>{
+    if (weekend){setWeekend(false)}
+    else{setWeekend(true)}
+    setSemaine(false)
+    setAfter17(false)
+    setBefore17(false)
+    setNombre(document.getElementById("nombre").value)
+    
+    
 
+}
+const BookSemaine = ()=>{
+    if (semaine){setSemaine(false)}
+    else{setSemaine(true)}
+    setWeekend(false)
+    setAfter17(false)
+    setBefore17(false)
+    setNombre(document.getElementById("nombre").value)
+}
+const BookBefore17 = ()=>{
+    if(before17){setBefore17(false)}
+    else{setBefore17(true)}
+    setAfter17(false)
+    setNombre(document.getElementById("nombre").value)
+}
+const BookAfter17 = ()=>{
+    setBefore17(false)
+    if(after17){setAfter17(false)}
+    else{setAfter17(true)}
+    setNombre(document.getElementById("nombre").value)
+}
 
+const Creneau2h = ()=>{
+    setCreneau1h30(false)
+    if(creneau2h){setCreneau2h(false)}
+    else{setCreneau2h(true)}
+    setNombre(document.getElementById("nombre").value)
+}
+const Creneau1h30h = ()=>{
+    setCreneau2h(false)
+    if(creneau1h30){setCreneau1h30(false)}
+    else{setCreneau1h30(true)}
+    setNombre(document.getElementById("nombre").value)
+}
 
-
-
-    const Click = (val,val1,val2) => {
-        if(val===1){
-            setRoomSelectedNumber(0)
-            setRoomSelected(false)
-            setNombre(0)
-            setSpa(false)
-            setLes2(false)
-            if (room===false){setRoom(true)}
-            else{setRoom(false)}
+const Validate = ()=>{
+    setNombre(document.getElementById("nombre").value)
+    if(nombre<1||nombre>8){setvalidate(false)}
+    else{
+        if (semaine===false&&weekend===false){setvalidate(false)}
+        else{
+            if(semaine&&after17===false&&before17===false){setvalidate(false)}
+            else{
+                if(semaine&&after17&&creneau2h===false&&creneau1h30===false){setvalidate(false)}
+                else{setvalidate(true)}
+            }
         }
-        if(val===2){
-            setRoomSelectedNumber(0)
-            setRoomSelected(false)
-            setNombre(0)
-            setRoom(false)
-            setLes2(false)
-            if (spa===false){setSpa(true)}
-            else{setSpa(false)}
-        }
-        if(val===3){
-            setRoomSelectedNumber(0)
-            setRoomSelected(false)
-            setNombre(0)
-            setRoom(false)
-            setSpa(false)
-            if (les2===false){setLes2(true)}
-            else{setLes2(false)}
-            
-        }
-        if(val===4){
-            setNombre(val1)
-
-        }
-        if(val===5){
-            setRoomSelected(true)
-            setRoomSelectedNumber(val1)
-           
-        }
-
-
     }
+    
+}
+
 
 
     return(
-    <div className="containerBook2">
-        <div className="containerForm2">
-
-            <div className="containerButtonChoix2">
-                <div className="buttonChoix2" onClick={()=>Click(1)}>Je veux une chambre</div>
-                <div className="buttonChoix2" onClick={()=>Click(2)}>Je ne viens que pour le centre de détente</div>
-                <div className="buttonChoix2" onClick={()=>Click(3)}>Les deux</div>
-            </div>
-
+        <div>
             {
-
-                room===true?
-                <div className="containerPoster">
-                    <div className="containerBookElement" onMouseOver={()=>setChambre1Over(true)} onMouseLeave={()=>setChambre1Over(false)}>
-                        <div className="posterChambre" id="chambre1" >
-                            {
-                                chambre1Over===true?<div>Description : </div>:
-                                <img src={imgRoom} alt="Canvas Logo" className="roomimage"/>
-
-                            }
-                            
-                        </div>
-                    
-                        <PopupButton className="bookButton" url="https://calendly.com/nicolasdefoort/couture-du-charme" text="Réserver" />
-                    </div>
-                    <div className="containerBookElement" onMouseOver={()=>setChambre2Over(true)} onMouseLeave={()=>setChambre2Over(false)}>
-                        <div className="posterChambre" id="chambre2" >
-                            {
-                                chambre2Over===true?<div>Description : </div>: 
-                                <img src={imgRoom} alt="Canvas Logo" className="roomimage"/>
-                            }
-                            
-                        </div>
-                        <PopupButton className="bookButton" url="https://calendly.com/nicolasdefoort/couture-du-charme" text="Réserver" />
-                    </div>
-                    <div className="containerBookElement" onMouseOver={()=>setChambre3Over(true)} onMouseLeave={()=>setChambre3Over(false)}>
-                        <div className="posterChambre" id="chambre3" >
-                            {
-                                chambre3Over===true?<div className="roomDescription">Description : </div>:
-                                <img src={imgRoom} alt="Canvas Logo" className="roomimage"/>
-                            }
-                            
-                        </div>
-                        <PopupButton className="bookButton" url="https://calendly.com/nicolasdefoort/couture-du-charme" text="Réserver" />
-                    </div>
-                    
-                </div>:false
-            }
-            {/* {
-                room===true?
-                <div className="containerButtonChoix2">
-                    <p>Pour combien de personnes ?</p>
-                    <input type="number" id="nombre"  min="1" max="100"/>
-                    <div className="buttonNumber" onClick={()=>Click(4,document.getElementById("nombre").value)}><p>Valider</p></div>
-                </div>:false
-
-
-            } */}
-
-
-
-            {/* {nombre>0?
-                <div className="containerButtonChoix2">
-                    <PopupButton className="bookButton" url="https://calendly.com/nicolasdefoort/couture-du-charme" text="Chambre 1" />
-                    <PopupButton className="bookButton" url="https://calendly.com/nicolasdefoort/couture-du-charme" text="Chambre 2" />
-                    <PopupButton className="bookButton" url="https://calendly.com/nicolasdefoort/couture-du-charme" text="Chambre 3" />
-                </div>:false
-
-            } */}
-
-
-            {
-                spa===true?
-                <div className="">
-                    {/* <p>Pour combien de personnes ?</p>
-                    <input type="number" id="nombre"  min="1" max="100"/>
-                    <div className="buttonNumber" onClick={()=>Click(4,document.getElementById("nombre").value)}><p>Valider</p></div>
- */}
-                    
-                    <InlineWidget url="https://calendly.com/nicolasdefoort/couture-du-charme" 
-                    pageSettings={{
-                    backgroundColor: 'ffffff',
-                    hideEventTypeDetails: false,
-                    hideLandingPageDetails: false,
-                    primaryColor: '00a2ff',
-                    textColor: '4d5055'
-                }}/>
-            
-
-                </div>:false
-            }
-            {/* {nombre>0?
-                <div className="">
-                    <InlineWidget url="https://calendly.com/nicolasdefoort/couture-du-charme" 
-                    pageSettings={{
-                    backgroundColor: 'ffffff',
-                    hideEventTypeDetails: false,
-                    hideLandingPageDetails: false,
-                    primaryColor: '00a2ff',
-                    textColor: '4d5055'
-                }}/>
-                    
-                </div>:false
-
-            } */}
-            {
-                les2?
-                
-                <div className="">
+                validate?
+                <div>
                     {
-                    roomSelected?
-                        <div className="containerLes2">
-                            <div className="les2Element" id="les2Chambre">
-                                <p>Réservation chambre</p>
+                        nombre==1||nombre==2?
+                        <div>
+                            {
+                                semaine?<div>
+                                    {
+                                        before17?
+                                        <div>
+                                            <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-semaine-1h30-2" 
+                                                pageSettings={{
+                                                backgroundColor: 'ffffff',
+                                                hideEventTypeDetails: false,
+                                                hideLandingPageDetails: false,
+                                                primaryColor: '00a2ff',
+                                                textColor: '4d5055'
+                                            }}/>
+                                            
+                                        </div>:
+                                        <div>
+                                            {
+                                                creneau1h30?
+                                                <div>
+                                                    <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-1h30-soir-de-semaine-1ou2-personnes" 
+                                                pageSettings={{
+                                                backgroundColor: 'ffffff',
+                                                hideEventTypeDetails: false,
+                                                hideLandingPageDetails: false,
+                                                primaryColor: '00a2ff',
+                                                textColor: '4d5055'
+                                            }}/>
+                                                    
+                                                </div>:
+                                                <div>
+                                                    <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-2h-soir-1-ou-2-personnes" 
+                                                pageSettings={{
+                                                backgroundColor: 'ffffff',
+                                                hideEventTypeDetails: false,
+                                                hideLandingPageDetails: false,
+                                                primaryColor: '00a2ff',
+                                                textColor: '4d5055'
+                                            }}/>
+                                                </div>
+                                            }
+                                        </div>
+                                    }
+                                </div>:<div>
+                                <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-2h-weekend-1-ou-2-pers" 
+                                                    pageSettings={{
+                                                    backgroundColor: 'ffffff',
+                                                    hideEventTypeDetails: false,
+                                                    hideLandingPageDetails: false,
+                                                    primaryColor: '00a2ff',
+                                                    textColor: '4d5055'
+                                                }}/>
+                                </div>
+                            }
+                        </div>:false
+                    }
+                    {
+                        nombre==3?
+                        <div>
+                            {
+                                semaine?<div>
+                                    {
+                                        before17?<div>
+                                            <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-semaine-1h30-3" 
+                                                pageSettings={{
+                                                backgroundColor: 'ffffff',
+                                                hideEventTypeDetails: false,
+                                                hideLandingPageDetails: false,
+                                                primaryColor: '00a2ff',
+                                                textColor: '4d5055'
+                                            }}/>
+                                        </div>:
+                                        <div>
+                                            {
+                                                creneau1h30?
+                                                <div>
+                                                    <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-1h30-soir-de-semaine-3-personnes" 
+                                                    pageSettings={{
+                                                    backgroundColor: 'ffffff',
+                                                    hideEventTypeDetails: false,
+                                                    hideLandingPageDetails: false,
+                                                    primaryColor: '00a2ff',
+                                                    textColor: '4d5055'
+                                                }}/>
+                                                </div>:
+                                                <div>
+                                                    <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-2h-soir-de-semaine-3-personnes" 
+                                                pageSettings={{
+                                                backgroundColor: 'ffffff',
+                                                hideEventTypeDetails: false,
+                                                hideLandingPageDetails: false,
+                                                primaryColor: '00a2ff',
+                                                textColor: '4d5055'
+                                            }}/>
+                                                </div>
+                                            }
+                                        </div>
+                                    }
+                                </div>:<div>
+                                <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-2h-we-3" 
+                                                    pageSettings={{
+                                                    backgroundColor: 'ffffff',
+                                                    hideEventTypeDetails: false,
+                                                    hideLandingPageDetails: false,
+                                                    primaryColor: '00a2ff',
+                                                    textColor: '4d5055'
+                                                }}/>
+                                </div>
+                            }
+                        </div>:false
+                    }
+                    {
+                        nombre==4?
+                        <div>
+                            {
+                                semaine?<div>
+                                    {
+                                        before17?<div>
+                                            <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-1h30-4personnes" 
+                                                pageSettings={{
+                                                backgroundColor: 'ffffff',
+                                                hideEventTypeDetails: false,
+                                                hideLandingPageDetails: false,
+                                                primaryColor: '00a2ff',
+                                                textColor: '4d5055'
+                                            }}/>
+                                        </div>:
+                                        <div>
+                                            {
+                                                creneau1h30?
+                                                <div>
+                                                    <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-1h30-soir-de-semaine-4-personnes" 
+                                                    pageSettings={{
+                                                    backgroundColor: 'ffffff',
+                                                    hideEventTypeDetails: false,
+                                                    hideLandingPageDetails: false,
+                                                    primaryColor: '00a2ff',
+                                                    textColor: '4d5055'
+                                                }}/>
 
-                                {
-                                    roomSelectedNumber===0?<div>ERROR</div>:
-                                    <div>
-                                        {
-                                        roomSelectedNumber===1?
-                                            <InlineWidget url="https://calendly.com/nicolasdefoort/couture-du-charme" 
-                                            pageSettings={{
-                                            backgroundColor: 'ffffff',
-                                            hideEventTypeDetails: true,
-                                            hideLandingPageDetails: false,
-                                            primaryColor: '00a2ff',
-                                            textColor: '4d5055'}}/>
-                                        :false
-                                        }
-                                        {
-                                        roomSelectedNumber===2?
-                                            <InlineWidget url="https://calendly.com/nicolasdefoort/couture-du-charme" 
-                                            pageSettings={{
-                                            backgroundColor: 'ffffff',
-                                            hideEventTypeDetails: true,
-                                            hideLandingPageDetails: false,
-                                            primaryColor: '00a2ff',
-                                            textColor: '4d5055'}}/>
-                                        :false
-                                        }
-                                        {
-                                        roomSelectedNumber===3?
-                                            <InlineWidget url="https://calendly.com/nicolasdefoort/couture-du-charme" 
-                                            pageSettings={{
-                                            backgroundColor: 'ffffff',
-                                            hideEventTypeDetails: true,
-                                            hideLandingPageDetails: false,
-                                            primaryColor: '00a2ff',
-                                            textColor: '4d5055'}}/>
-                                        :false
-                                        }
-                                    </div>
-                                }
-                                
+                                                </div>:<div>
+                                                <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-2h-soir-de-semaine-4-personnes" 
+                                                pageSettings={{
+                                                backgroundColor: 'ffffff',
+                                                hideEventTypeDetails: false,
+                                                hideLandingPageDetails: false,
+                                                primaryColor: '00a2ff',
+                                                textColor: '4d5055'
+                                            }}/>
+                                                </div>
+                                            }
+                                        </div>
+                                    }
+                                </div>:<div>
+                                <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-2h-weekend-4-personnes" 
+                                                    pageSettings={{
+                                                    backgroundColor: 'ffffff',
+                                                    hideEventTypeDetails: false,
+                                                    hideLandingPageDetails: false,
+                                                    primaryColor: '00a2ff',
+                                                    textColor: '4d5055'
+                                                }}/>
+                                </div>
+                            }
 
-                            </div>    
-                            <div className="les2Element" id="les2Spa">
-                            <p>Réservation Spa</p>
-                        
-                            <div className="">
-                                <InlineWidget url="https://calendly.com/nicolasdefoort/couture-du-charme" 
-                                pageSettings={{
-                                backgroundColor: 'ffffff',
-                                hideEventTypeDetails: true,
-                                hideLandingPageDetails: false,
-                                primaryColor: '00a2ff',
-                                textColor: '4d5055'}}/>
-
-                            </div>
+                        </div>:false
+                    }
+                    {
+                        nombre==5?
+                        <div>
+                            {
+                                semaine?<div>
+                                    {
+                                        before17?<div>
+                                            <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-1h30-semaine-5-personnes" 
+                                                pageSettings={{
+                                                backgroundColor: 'ffffff',
+                                                hideEventTypeDetails: false,
+                                                hideLandingPageDetails: false,
+                                                primaryColor: '00a2ff',
+                                                textColor: '4d5055'
+                                            }}/>
+                                        </div>:
+                                        <div>
+                                            {
+                                                creneau1h30?<div>
+                                                    <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-1h30-soir-semaine-5-personnes" 
+                                                    pageSettings={{
+                                                    backgroundColor: 'ffffff',
+                                                    hideEventTypeDetails: false,
+                                                    hideLandingPageDetails: false,
+                                                    primaryColor: '00a2ff',
+                                                    textColor: '4d5055'
+                                                }}/>
+                                                </div>:<div>
+                                                <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-2h-soir-de-semaine-5-personnes" 
+                                                pageSettings={{
+                                                backgroundColor: 'ffffff',
+                                                hideEventTypeDetails: false,
+                                                hideLandingPageDetails: false,
+                                                primaryColor: '00a2ff',
+                                                textColor: '4d5055'
+                                            }}/>
+                                                </div>
+                                            }
+                                        </div>
+                                    }
+                                </div>:<div>
+                                <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-2h-weekend-5-personnes" 
+                                                    pageSettings={{
+                                                    backgroundColor: 'ffffff',
+                                                    hideEventTypeDetails: false,
+                                                    hideLandingPageDetails: false,
+                                                    primaryColor: '00a2ff',
+                                                    textColor: '4d5055'
+                                                }}/>
+                                </div>
+                            }
                         </div>
-                    </div>
-                        :
-                        <div className="containerPoster">
-                            <div className="containerBookElement" onMouseOver={()=>setChambre1Over(true)} onMouseLeave={()=>setChambre1Over(false)}>
-                                <div className="posterChambre" id="chambre1" >
+                        :false
+                    }
+                    {
+                        nombre==6?
+                        <div>
+                            {
+                                semaine?<div>
                                     {
-                                        chambre1Over===true?<div>Description : </div>:
-                                        <img src={imgRoom} alt="Canvas Logo" className="roomimage"/>
-
+                                        before17?<div>
+                                            <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-1h30-semaine-6-personnes" 
+                                                pageSettings={{
+                                                backgroundColor: 'ffffff',
+                                                hideEventTypeDetails: false,
+                                                hideLandingPageDetails: false,
+                                                primaryColor: '00a2ff',
+                                                textColor: '4d5055'
+                                            }}/>
+                                        </div>:
+                                        <div>
+                                            {
+                                                creneau1h30?<div>
+                                                    <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-1h30-soir-de-semaine-6-personne" 
+                                                    pageSettings={{
+                                                    backgroundColor: 'ffffff',
+                                                    hideEventTypeDetails: false,
+                                                    hideLandingPageDetails: false,
+                                                    primaryColor: '00a2ff',
+                                                    textColor: '4d5055'
+                                                }}/>
+                                                </div>:<div>
+                                                <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-2h-soir-de-semaine-6-personnes" 
+                                                pageSettings={{
+                                                backgroundColor: 'ffffff',
+                                                hideEventTypeDetails: false,
+                                                hideLandingPageDetails: false,
+                                                primaryColor: '00a2ff',
+                                                textColor: '4d5055'
+                                            }}/>
+                                                </div>
+                                            }
+                                        </div>
                                     }
-                                    
+                                </div>:<div>
+                                <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-2h-weekend-6-personnes" 
+                                                    pageSettings={{
+                                                    backgroundColor: 'ffffff',
+                                                    hideEventTypeDetails: false,
+                                                    hideLandingPageDetails: false,
+                                                    primaryColor: '00a2ff',
+                                                    textColor: '4d5055'
+                                                }}/>
                                 </div>
-                            
-                                <div className="selectRoomButton"  onClick={()=>Click(5,1)}>Réserver</div>
-                                
-                            </div>
-                            <div className="containerBookElement" onMouseOver={()=>setChambre2Over(true)} onMouseLeave={()=>setChambre2Over(false)}>
-                                <div className="posterChambre" id="chambre2" >
-                                    {
-                                        chambre2Over===true?<div>Description : </div>: 
-                                        <img src={imgRoom} alt="Canvas Logo" className="roomimage"/>
-                                    }
-                                    
-                                </div>
-                                <div className="selectRoomButton"  onClick={()=>Click(5,2)}>Réserver</div>
-                            </div>
-                            <div className="containerBookElement" onMouseOver={()=>setChambre3Over(true)} onMouseLeave={()=>setChambre3Over(false)}>
-                                <div className="posterChambre" id="chambre3" >
-                                    {
-                                        chambre3Over===true?<div className="roomDescription">Description : </div>:
-                                        <img src={imgRoom} alt="Canvas Logo" className="roomimage"/>
-                                    }
-                                    
-                                </div>
-                                <div className="selectRoomButton" onClick={()=>Click(5,3)} >Réserver</div>
-                            </div>
-                            
+                            }
                         </div>
-                        }   
-                        
-                        
+                        :false
+                    }
+                    {
+                        nombre==7?
+                        <div>
+                            {
+                                semaine?<div>
+                                    {
+                                        before17?<div>
+                                            <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-1h30-semaine-7-personnes" 
+                                                pageSettings={{
+                                                backgroundColor: 'ffffff',
+                                                hideEventTypeDetails: false,
+                                                hideLandingPageDetails: false,
+                                                primaryColor: '00a2ff',
+                                                textColor: '4d5055'
+                                            }}/>
+                                        </div>:
+                                        <div>
+                                            {
+                                                creneau1h30?<div>
+                                                    <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-1h30-soir-de-semaine-7-personnes" 
+                                                    pageSettings={{
+                                                    backgroundColor: 'ffffff',
+                                                    hideEventTypeDetails: false,
+                                                    hideLandingPageDetails: false,
+                                                    primaryColor: '00a2ff',
+                                                    textColor: '4d5055'
+                                                }}/>
+                                                </div>:<div>
+                                                <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-2h-soir-de-semaine-7-personnes" 
+                                                pageSettings={{
+                                                backgroundColor: 'ffffff',
+                                                hideEventTypeDetails: false,
+                                                hideLandingPageDetails: false,
+                                                primaryColor: '00a2ff',
+                                                textColor: '4d5055'
+                                            }}/>
+                                                </div>
+                                            }
+                                        </div>
+                                    }
+                                </div>:<div>
+                                <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-2h-weekend-7-personnes" 
+                                                    pageSettings={{
+                                                    backgroundColor: 'ffffff',
+                                                    hideEventTypeDetails: false,
+                                                    hideLandingPageDetails: false,
+                                                    primaryColor: '00a2ff',
+                                                    textColor: '4d5055'
+                                                }}/>
+                                </div>
+                            }
+                        </div>
+                        :false
+                    }
+                    {
+                        nombre==8?
+                        <div>
+                            {
+                                semaine?<div>
+                                    {
+                                        before17?<div>
+                                            <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-1h30-semaine-8-personnes" 
+                                                pageSettings={{
+                                                backgroundColor: 'ffffff',
+                                                hideEventTypeDetails: false,
+                                                hideLandingPageDetails: false,
+                                                primaryColor: '00a2ff',
+                                                textColor: '4d5055'
+                                            }}/>
+                                        </div>:
+                                        <div>
+                                            {
+                                                creneau1h30?<div>
+                                                    <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-1h30-soir-de-semaine-8-personnes" 
+                                                    pageSettings={{
+                                                    backgroundColor: 'ffffff',
+                                                    hideEventTypeDetails: false,
+                                                    hideLandingPageDetails: false,
+                                                    primaryColor: '00a2ff',
+                                                    textColor: '4d5055'
+                                                }}/>
+                                                </div>:<div>
+                                                <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-2h-soir-de-semaine-8-personnes" 
+                                                pageSettings={{
+                                                backgroundColor: 'ffffff',
+                                                hideEventTypeDetails: false,
+                                                hideLandingPageDetails: false,
+                                                primaryColor: '00a2ff',
+                                                textColor: '4d5055'
+                                            }}/>
+                                                </div>
+                                            }
+                                        </div>
+                                    }
+                                </div>:<div>
+                                <InlineWidget url="https://calendly.com/spa-lacoutureducharme/creneau-spa-2h-weekend-8-personnes" 
+                                                    pageSettings={{
+                                                    backgroundColor: 'ffffff',
+                                                    hideEventTypeDetails: false,
+                                                    hideLandingPageDetails: false,
+                                                    primaryColor: '00a2ff',
+                                                    textColor: '4d5055'
+                                                }}/>
+                                </div>
+                            }
+                        </div>
+                        :false
+                    }
+                </div>
+                :
+                <div >
+                    { (bookRoom ===false)&&(bookSpa===false)?
+                
+                <div className="containerButtonBook">
+                    <p className="buttonBook" id="bookRoom" onClick={()=>BookRoom()}>Réservation des chambres</p>
+                    <p className="buttonBook" id="bookSpa" onClick={()=>BookSpa()}>Réservation du centre de détente</p>
+                </div>
+
+                :
+                    <div>
+                        {
+                            bookRoom?
+                                <div className="containerBookRoom">
+                                    <iframe  height='600' width='100%' src='https://widget.itea.fr/widget.php?key=amkkhds7&numgite=2697&widget-itea=resa&nbmois-ligne=1' ></iframe>
+
+                                </div>
+                            :false
+                        }
+                        {
+                            bookSpa?
+                                <div className="containerBookSpa" id="containerBook">
+                                    <div className="containerFormSpa">
+                                        <div className="elementForm">
+                                            <div>Pour combien de personnes ? (max : 8 personnes)</div>
+                                            <input type="number" id="nombre"  min="1" max="8"/>
+                                           
+
+                                        </div>
+                                        <div className="elementForm">
+                                            {
+                                                semaine?<p className="buttonChoiceWeekendClicked"  onClick={()=>BookSemaine()}>En semaine</p>:<p className="buttonChoiceWeekend" onClick={()=>BookSemaine()}>En semaine</p>
+                                            }
+                                            {
+                                                weekend? <p className="buttonChoiceWeekendClicked" onClick={()=>BookWeekend()}>Le weekend</p>: <p className="buttonChoiceWeekend" onClick={()=>BookWeekend()}>Le weekend</p>
+                                            }
+                                           
+                                        </div>
+
+                                        {
+                                            semaine?
+                                            <div className="elementForm">
+                                                {
+                                                    before17?<p className="buttonChoice17hClicked" onClick={()=>BookBefore17()}>Avant 17 h</p>:<p className="buttonChoice17h" onClick={()=>BookBefore17()}>Avant 17 h</p> 
+                                                }
+                                                {
+                                                    after17?<p className="buttonChoice17hClicked" onClick={()=>BookAfter17()}>Après 17h</p>:<p className="buttonChoice17h" onClick={()=>BookAfter17()}>Après 17h</p>
+                                                }
+                                                
+                                            </div>
+                                            :false
+                                        }
+                                        {
+                                            after17?
+                                            <div className="elementForm">
+                                                {
+                                                    creneau1h30?<p className="buttonChoice17hClicked" onClick={()=>Creneau1h30h()}>Créneau 1h30</p>:<p className="buttonChoice17h" onClick={()=>Creneau1h30h()}>Créneau 1h30</p> 
+                                                }
+                                                {
+                                                    creneau2h?<p className="buttonChoice17hClicked" onClick={()=>Creneau2h()}>Créneau 2h</p>:<p className="buttonChoice17h" onClick={()=>Creneau2h()}>Créneau 2h</p>
+                                                }
+                                                
+                                            </div>
+                                            :false
+                                        }
+                                        
+                                        <div className="elementForm">
+                                            <p className="validateBtn" onClick={()=>Validate()} onMouseOver={()=>setNombre(document.getElementById("nombre").value)}>Valider</p>
+                                        </div>
+                                        
+                                    </div>                                 
+
+                                </div>
+                            :false
+                        }
                     </div>
-                    
-                    :false
+                }
+                </div>
+
+                
             }
-
-
+                
+               
+            
         </div>
+    
 
-
-    </div>
+    
 
     )
 }
