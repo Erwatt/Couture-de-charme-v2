@@ -57,7 +57,7 @@
 
 
 
-@media (max-width: 800px) { 
+@media (max-width: 1000px) { 
     .containerPromise3{
         display: flex;
         flex-direction: column;
@@ -68,7 +68,9 @@
     }
     .promise3-cadre{
         position: unset;
-        
+        width: auto;
+        height: auto;
+
     }
 
     .promise3-title{
