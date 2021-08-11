@@ -5,33 +5,30 @@ import spa from '../Images/spa.jpeg';
 import logo from '../Images/logo.png';
 import piscine from '../Images/piscine.jpeg';
 import '../CSS/PrivateRoom.css';
-import Promise from './Promise';
+
 
 export default function PrivateRoom(){
-    const picturesList = [chambre, spa, logo, piscine]
+    const picturesList1 = [chambre, spa, logo, piscine]
     window.scrollTo(0, 0);
 
     return(
         <div>
                 <div className='room'>
-                
-                    <div className='room-diapo'><Diaporama picturesList ={picturesList}/></div>
-                    <div className='room-info'>
-                        <h1 className="room-info-title">Lorem ispum dolor</h1>
-                        <div className='room-info-txt'>
-                            <p className="room-info-txt-element">Lorem ipsum nico ipsum lorem dolor est dolor ispsum lorem dolor dolor trop ipsum ipsum lorem dolor beau dolor
-                            Lorem ipsum nico ipsum lorem dolor est dolor ispsum lorem dolor dolor trop ipsum ipsum lorem dolor beau dolor
-                            Lorem ipsum nico ipsum lorem dolor est dolor ispsum lorem dolor dolor trop ipsum ipsum lorem dolor beau dolor
-                            Lorem ipsum nico ipsum lorem dolor est dolor ispsum lorem dolor dolor trop ipsum ipsum lorem dolor beau dolor
-                            </p>
-                            <p className="room-info-txt-element">Lorem ipsum nico ipsum lorem dolor est dolor ispsum lorem dolor dolor trop ipsum ipsum lorem dolor beau dolor
-                            Lorem ipsum nico ipsum lorem dolor est dolor ispsum lorem dolor dolor trop ipsum ipsum lorem dolor beau dolor
-                            Lorem ipsum nico ipsum lorem dolor est dolor ispsum lorem dolor dolor trop ipsum ipsum lorem dolor beau dolor
-                            Lorem ipsum nico ipsum lorem dolor est dolor ispsum lorem dolor dolor trop ipsum ipsum lorem dolor beau dolor
-                            </p>
-                        </div>
-                    </div> 
+                <div className="RoomHeader">Chambres<b></b></div>
+                <div className="cocoon-box">
+                    <h1>COCOON</h1>
+                    <div className="cocoon-diapo"><Diaporama picturesList ={picturesList1}/></div>
                 </div>
+                <div className="fragole-box">
+                    <h1>FRAGOLE</h1>
+                    <div className='cocoon-diapo'><Diaporama picturesList ={picturesList1}/></div>
+                </div>
+                <div className="scandinave-box">
+                    <h1>SCANDINAVE</h1>
+                    <div className='cocoon-diapo'><Diaporama picturesList ={picturesList1}/></div>
+                </div>
+                <iframe  height='750' width='100%' src='https://widget.itea.fr/widget.php?key=amkkhds7&numGite=2697&widget-itea=prix' ></iframe> 
+            </div>
         </div>
     );
 };

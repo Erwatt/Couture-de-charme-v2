@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../CSS/HomeSpa.css';
-import imgSpa from '../Images/piscine.jpg'
+import imgSpa from '../Images/spa.jpg';
 
 function HomeSpa({spa}) {
   return (
     <Link to="/PrivateSpa" className='spa-link'> 
     <div className="container-Spa" ref={spa}>
-      <img src={imgSpa} alt="Canvas Logo" className="imageSpa"/>
       <div className="containerTextBorderSpa">
       
         <div className="containerTextSpa">
@@ -18,6 +17,7 @@ function HomeSpa({spa}) {
         </div>
        
       </div>
+      <img src={imgSpa} alt="Canvas Logo" className="imageSpa" loading="lazy"/>
     </div>
     </Link> 
   );
