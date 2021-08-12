@@ -1,37 +1,79 @@
 
-
-#containerBook{
-    margin: 5%;
-    border: solid black;
-    border-style: dashed;
-    padding:2%;
+.textPersonne{
+    font-size: 120%;
 }
 
-.containerButtonBook{
+.containerPageCalendar{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.calendarContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.containerLeft{
     display: flex;
     flex-direction: column;
     
+    
+}
+.creneauText{
+    font-size: 150%;
+    margin-top: 6%;
+    text-align: center;
+}
+.messageText{
+    margin-top: 10%;
+    margin-right: 10%;
+    margin-left: 10%;
+    font-size: 100%;
 }
 
-.buttonBook{
-    align-self: center;
-    background-color: cadetblue;
-    width : max-content;
-    padding:0.5%;
-    padding-left: 1%;
-    padding-right: 1%;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-
-.containerBookRoom{
-    border:none;
-}
-.containerBookSpa{
+.priceText{
+    font-size: 200%;
+    margin-top: 10%;
+    font-weight: lighter;
+    text-align: end;
+    margin-right: 20%;
     
 }
 
+.logoCoutureContainer{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom:solid black 1px ;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.logoCouture{
+    
+    width: 30%;
+    
+}
+
+@media (max-width: 700px) { 
+    .calendarContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .calendar{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+}
+
+.textPersonne{
+    width: 100%;
+}
+.inputTextPersonne{
+    width: 20%;
+}
 
 .containerFormSpa{
     display: flex;
@@ -105,3 +147,89 @@
 }
 
 
+
+@media (max-width: 950px) {
+
+.textPersonne{
+    width: 55%;
+    font-size: 90%;
+}
+.inputTextPersonne{
+    width: 20%;
+}
+    
+.containerFormSpa{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    
+    
+}
+
+.elementForm{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    margin-top: 5%;
+    
+}
+
+.buttonChoiceWeekend{
+    background-color: cadetblue;
+    color: white;
+    padding:1%;
+    border-radius:7px;
+    width: unset;
+    padding-right: 2%;
+    padding-left: 2%;
+    cursor: pointer;
+    
+}
+
+.buttonChoiceWeekendClicked{
+    border : solid cadetblue;
+    padding:1%;
+    border-radius: 7px;
+    width: unset;
+    padding-right: 2%;
+    padding-left: 2%;
+    cursor: pointer;
+}
+
+.buttonChoice17h{
+    background-color: cadetblue;
+    color: white;
+    padding:1%;
+    border-radius: 7px;
+    width: unset;
+    padding-right: 2%;
+    padding-left: 2%;
+    cursor: pointer;
+}
+
+.buttonChoice17hClicked{
+    border : solid cadetblue;
+    padding:1%;
+    border-radius: 7px;
+    width: unset;
+    padding-right: 2%;
+    padding-left: 2%;
+    cursor: pointer;
+
+}
+
+
+.validateBtn{
+    background-color: rgb(67, 148, 67);
+    color: white;
+    padding:1%;
+    border-radius: 7px;
+    width: unset;
+    padding-right: 2%;
+    padding-left: 2%;
+    cursor: pointer;
+    font-size: 120%;
+}
+
+
+}
