@@ -1,3 +1,8 @@
+.PrivateSpaContainer{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 .spa{
     margin-top: 5%;
     display: flex;
@@ -22,7 +27,8 @@
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    background-color: #C4C4C4;
+    background-color: rgba(94, 69, 48, 0.801);
+    filter: opacity(80%);
     margin-bottom: 5%;
     
 }
@@ -42,12 +48,148 @@
     text-align: center;
 }
 
+.SpaHeader{
+    background-color: rgba(94, 69, 48, 0.801);
+    font-size: 300%;
+    color: white;
+    margin-bottom: 8%;
+    margin-top: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
+.spabox{
+    display: flex;
+    flex-direction: row; 
+    margin-bottom: 10%;
+    margin-top: 10%;
+    background-color: rgb(218, 214, 180);
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.poufsbox{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    background-color: rgb(218, 214, 180);
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+}
+
+.saunabox{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    background-color: rgb(218, 214, 180);
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.poolbox{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    background-color: rgb(218, 214, 180);
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.spapic{
+    height: 50%;
+    width: 40%;
+    margin-left: 3%;
+    animation-name: fondu;
+    animation-duration: 4s;
+}
+
+.poufspic{
+    height: 30%;
+    width: 30%;
+    animation-name: fondu;
+    animation-duration: 3s;
+}
+
+.saunapic{
+    height: 30%;
+    width: 40%;
+    margin-left: 3%;
+    animation-name: fondu;
+    animation-duration: 5s;
+}
+
+.piscinepic{
+    height: 30%;
+    width: 40%;
+    animation-name: fondu;
+    animation-duration: 3s;
+}
 
 
-@media(max-width: 800px)  {
-    .spa-info-txt{
-        
-        flex-direction: column;
+.spa-txt{
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 3%;
+    background-color: white;
+    border: double black;
+}
+.poufs-txt{
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 3%;
+    background-color: white;
+    border: double black;
+}
+.sauna-txt{
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 3%;
+    background-color: white;
+    border: double black;
+}
+.pool-txt{
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 3%; 
+    background-color: white;
+    border: double black;   
+}
 
+@keyframes fondu{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
     }
 }
+

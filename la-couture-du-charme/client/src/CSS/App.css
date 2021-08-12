@@ -1,3 +1,7 @@
+.App{
+   
+   overflow-x: hidden; 
+}
 .content{
-    margin-top: 10%;
+   margin-top: 10%;
 }

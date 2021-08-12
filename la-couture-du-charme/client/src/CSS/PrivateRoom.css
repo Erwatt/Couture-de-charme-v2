@@ -22,7 +22,7 @@
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    background-color: #C4C4C4;
+    background-color: rgba(94, 69, 48, 0.801);
     margin-bottom: 5%;
     
 }
@@ -42,12 +42,29 @@
     text-align: center;
 }
 
+.RoomHeader{
+    background-color: rgba(94, 69, 48, 0.801);
+    font-size: 300%;
+    color: white;
+    margin-bottom: 8%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
 
+.cocoon-box{
+    
+}
 
-@media(max-width: 800px)  {
-    .room-info-txt{
-        
-        flex-direction: column;
+.fragole-box{
+    
+}
 
-    }
+.scandinave-box{
+    margin-bottom: 10%;
+}
+
+.cocoon-diapo{
+    border: solid black;
+    margin-left: auto;
+    margin-right: auto;
 }
