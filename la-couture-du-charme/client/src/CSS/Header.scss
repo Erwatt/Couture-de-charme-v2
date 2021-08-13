@@ -7,6 +7,9 @@
     z-index: 2;
     background-color: rgba(185, 179, 119, 0.67);
     width: 100%;
+    position: fixed;
+    top: 0;
+    
     
 }
 .header-logo{
@@ -14,7 +17,14 @@
     height: auto;
     cursor: pointer;
     position:relative;
-    
+
+    transition-property: transform;
+    transition-duration: 1500ms;
+    &:hover{
+         
+        
+        transform: scale(1.30) ;
+    }
 }
 
 .header-tel{
@@ -44,9 +54,13 @@
     border-color: #000000;
     cursor: pointer;
     box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
+    
+    transition-property: transform,box-shadow;
+    transition-duration: 800ms;
     &:hover{
+         
         box-shadow: none;
-        transform: translate(0, 1px);
+        transform: translate(0, 1px) ;
     }
 }
 

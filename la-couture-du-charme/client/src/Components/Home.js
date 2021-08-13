@@ -49,9 +49,9 @@ function Home(){
 
     function handleScrollAnim(){
         const offset = window.scrollY;
-        if (offset > 50){
+        if (offset > 100){
             setAnim1(true);
-            if (offset > 700){
+            if (offset > 750){
                 // setAnim2(true);
                 // if (offset > 1300){
                     setAnim3(true);

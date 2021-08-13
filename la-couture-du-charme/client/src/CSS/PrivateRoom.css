@@ -7,12 +7,16 @@
     margin-top: 5%;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    
+    
 }
 
 .room-diapo{
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+   
+
+    
 }
 
 .room-info{
@@ -25,16 +29,22 @@
     margin-right: auto;
     background-color: rgba(94, 69, 48, 0.801);
     margin-bottom: 5%;
+    
 }
 
 .room-info-txt{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    color: black;
+    
+}
+.room-info-txt-element{
+    padding:2%;
 }
 
-.room-info-txt > p {
-    max-width: 30%;
+.room-info-title{
+    text-align: center;
 }
 
 .RoomHeader{

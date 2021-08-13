@@ -7,6 +7,8 @@
     background-position: center center;
     /* background-color: rgba(70, 131, 131, 0.5); */
     height: 40em;
+    
+
 }
 
 
@@ -53,12 +55,9 @@
 
 }
 
-.promise3-quiSommesNous > p {
-    margin-bottom: 60px;
-}
 
 
-@media (max-width: 800px) { 
+@media (max-width: 1000px) { 
     .containerPromise3{
         display: flex;
         flex-direction: column;

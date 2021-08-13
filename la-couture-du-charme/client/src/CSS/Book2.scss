@@ -1,0 +1,481 @@
+.imgDétente{
+    width: 90%;
+    
+    
+}
+
+.containerImgDétente{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.textPersonne{
+    font-size: 120%;
+}
+
+.containerPageCalendar{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.calendarContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.containerLeft{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.creneauText{
+    font-size: 150%;
+    margin-top: 6%;
+    text-align: center;
+}
+.messageText{
+    margin-top: 10%;
+    margin-right: 10%;
+    margin-left: 10%;
+    font-size: 100%;
+}
+
+.priceText{
+    font-size: 200%;
+    margin-top: 10%;
+    font-weight: lighter;
+    text-align: end;
+    margin-right: 20%;
+    
+}
+
+.logoCoutureContainer{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom:solid black 1px ;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.logoCouture{
+    
+    width: 30%;
+    
+}
+
+@media (max-width: 700px) { 
+    .calendarContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .calendar{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+}
+
+.textPersonne{
+    width: 100%;
+}
+.inputTextPersonne{
+    width: 20%;
+}
+
+.containerFormSpa{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+    
+}
+
+.elementForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.buttonChoiceWeekend{
+    background-color: cadetblue;
+    color: white;
+    padding:7%;
+    border-radius: 7px;
+    width: 100%;
+    padding-right: 15%;
+    padding-left: 15%;
+    cursor: pointer;
+    
+}
+
+.buttonChoiceWeekendClicked{
+    border : solid cadetblue;
+    padding:7%;
+    border-radius: 7px;
+    width: 100%;
+    padding-right: 15%;
+    padding-left: 15%;
+    cursor: pointer;
+}
+
+.buttonChoice17h{
+    background-color: cadetblue;
+    color: white;
+    padding:7%;
+    border-radius: 7px;
+    width: 100%;
+    padding-right: 15%;
+    padding-left: 15%;
+    cursor: pointer;
+}
+
+.buttonChoice17hClicked{
+    border : solid cadetblue;
+    padding:7%;
+    border-radius: 7px;
+    width: 100%;
+    padding-right: 15%;
+    padding-left: 15%;
+    cursor: pointer;
+
+}
+
+
+.validateBtn{
+    background-color: rgb(67, 148, 67);
+    color: white;
+    padding:7%;
+    border-radius: 7px;
+    width: 100%;
+    padding-right: 15%;
+    padding-left: 15%;
+    cursor: pointer;
+    font-size: 120%;
+}
+
+.containerIframe{
+    height: 500px;
+    width: 100%;
+}
+
+.containerBookRoom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.ElementRoom{
+    width: 30%;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 180%;
+
+}
+.conatierButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.ButtonBook2{
+    cursor: pointer;
+    color: white;
+    font-size: 140%;
+    text-align: center;
+    background-color: rgb(67, 148, 67);
+    padding: 0.5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 10%;
+    border-radius: 7px;
+}
+
+
+.imgRoom{
+    width: 100%;
+}
+
+
+
+
+
+
+
+@media (max-width: 950px) {
+
+.textPersonne{
+    width: 55%;
+    font-size: 90%;
+}
+.inputTextPersonne{
+    width: 20%;
+}
+    
+.containerFormSpa{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    
+    
+}
+
+.elementForm{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    margin-top: 5%;
+    
+}
+
+.buttonChoiceWeekend{
+    background-color: cadetblue;
+    color: white;
+    padding:1%;
+    border-radius:7px;
+    width: unset;
+    padding-right: 2%;
+    padding-left: 2%;
+    cursor: pointer;
+    
+}
+
+.buttonChoiceWeekendClicked{
+    border : solid cadetblue;
+    padding:1%;
+    border-radius: 7px;
+    width: unset;
+    padding-right: 2%;
+    padding-left: 2%;
+    cursor: pointer;
+}
+
+.buttonChoice17h{
+    background-color: cadetblue;
+    color: white;
+    padding:1%;
+    border-radius: 7px;
+    width: unset;
+    padding-right: 2%;
+    padding-left: 2%;
+    cursor: pointer;
+}
+
+.buttonChoice17hClicked{
+    border : solid cadetblue;
+    padding:1%;
+    border-radius: 7px;
+    width: unset;
+    padding-right: 2%;
+    padding-left: 2%;
+    cursor: pointer;
+
+}
+
+
+.validateBtn{
+    background-color: rgb(67, 148, 67);
+    color: white;
+    padding:1%;
+    border-radius: 7px;
+    width: unset;
+    padding-right: 2%;
+    padding-left: 2%;
+    cursor: pointer;
+    font-size: 120%;
+}
+
+
+}
+
+
+.containerHomeBook{
+    display: flex;
+    flex-direction: row;
+}
+
+.bookLeftContainer{
+    margin: 2%;
+    margin-top: 0%;
+    background-color: rgb(218, 214, 180);
+    border: solid white 0.0001px;
+    height: 50em;
+
+    
+
+}
+.giftRightContainer{
+    margin: 2%;
+    margin-top: 0%;
+    background-image: url("../Images/cadeau.jpeg");
+    background-size: cover;
+    height: 50em;
+    border: solid white 0.0001px;
+
+}
+
+.containerSide{
+    width: 50%;
+    
+
+}
+
+.textCadeauUnique{
+    color: white;
+    
+    margin-left: 10%;
+    font-size: 270%;
+    width: 50%;
+}
+
+.containerTextCadeau{
+    background-color: white;
+    width: 60%;
+    margin-left: 5%;
+    margin-top: 20%;
+    padding: 5%;
+    line-height: 150%;
+}
+
+.btnCadeau{
+    background-color: rgb(218, 214, 180);
+    width: max-content;
+    padding: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size: 150%;
+    border-radius: 7px;
+    color: rgb(78, 40, 15);
+    font-weight: bolder;
+    margin-right: 10%;
+    margin-top: 20%;
+    cursor: pointer;
+    transition-property: background-color,border-radius;
+    transition-duration: 800ms;
+    &:hover{
+         
+        background-color:white;
+        border-radius:0px
+        
+    }
+    
+}
+
+.containerFlexRowEnd{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+.textTitleBook{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    color: white;
+    margin-right: 10%;
+    
+    font-size: 270%;
+    width: 70%;
+}
+
+.containerWhite{
+    background-image: url("../Images/chill.jpeg");
+    margin:2%;
+    background-size: cover;
+    height: 48em;
+}
+
+.containerButtonBook{
+    width:50%;
+    margin-left: 10%;
+    padding: 1%;
+    margin-top: 7%;
+}
+.buttonBook{
+    color: rgb(78, 40, 15);
+    font-weight: lighter;
+    font-size: 200%;
+    padding: 3%;
+    cursor: pointer;
+    background-color: rgb(218, 214, 180);
+    width: max-content;
+    border-radius: 7px;
+
+    transition-property: background-color, border-radius;
+    transition-duration: 800ms;
+
+    &:hover{
+         
+        background-color:white;
+        border-radius:0px
+        
+    }
+}
+
+
+
+@media (max-width: 1000px) { 
+    .containerHomeBook{
+        display: flex;
+        flex-direction: column;
+    }
+    .containerSide{
+        width: 100%;
+        
+    
+    }
+    .buttonBook{
+        font-size: 150%;
+        width: 100%;
+        
+    }
+    .containerButtonBook{
+        margin-left: 5%;
+        width: 80%;
+    }
+    .containerWhite{
+        height: 32em;
+    }
+    .bookLeftContainer{
+        height: 34em;
+    }
+    .giftRightContainer{
+        
+    }
+
+}
+
+@media (max-width: 900px) { 
+    .containerBookRoom{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    .ElementRoom{
+        width: 97%;
+        
+    }
+
+    .el{
+        margin-left: 3%;
+    }
+    
+
+    .ButtonBook2{
+        
+        width: 35%;
+        
+    }
+
+}
+
+
+
