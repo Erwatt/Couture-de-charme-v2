@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import { InlineWidget, PopupWidget,CalendlyEventListener,PopupButton} from "react-calendly";
 import imgRoom from '../Images/chambre.jpeg'
 import logoCouture from '../Images/logo.png'
+import HomeBook2 from './HomeBook2'
+import cadeau from '../Images/cadeau.jpeg'
+import détente from '../Images/centrededétente.jpeg'
 
 
 
@@ -21,6 +24,7 @@ const[creneau2h,setCreneau2h]=useState(false)
 const[creneau1h30,setCreneau1h30]=useState(false)
 const[creneau,setCreneau]=useState("Créneau Spa")
 const[prix, setPrix]=useState(30)
+
 
 
 const BookRoom = () => {
@@ -242,22 +246,77 @@ const Validate = ()=>{
                 :
                 <div >
                     { (bookRoom ===false)&&(bookSpa===false)?
+
+
+                    <div className="containerHomeBook">
+                        <div className="containerSide">
+                            <div className="bookLeftContainer">
+                                <div className="containerWhite">
+                                    <div className="containerFlexRowEnd">
+                                        <p className="textTitleBook">Réservez votre séjour</p>
+                                    </div>
+                                    <div className="containerButtonBook">
+                                        <p className="buttonBook" id="bookRoom" onClick={()=>BookRoom()}>Réserver une chambre</p>
+                                        <p className="buttonBook" id="bookSpa" onClick={()=>BookSpa()}>Réserver le centre de détente</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            {/* 
+                            <p className="messageBook">Il est possible d'avoir accès à l'espace de détente pendant la location d'une chambre pour cela, veillez nous appeler pour vérifier que le centre de détente est disponible pendant votre séjour.</p>*/}
+                        </div> 
+                        <div className="containerSide">
+                            <div className="giftRightContainer">
+                                <p className="textCadeauUnique">Offrez un cadeau unique</p>
+                                <div className="containerTextCadeau">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Penatibus et magnis dis parturient montes nascetur ridiculus mus mauris. In cursus turpis massa tincidunt dui ut ornare lectus. </div>
+                                <div className="containerFlexRowEnd"><p className="btnCadeau">Offrir</p></div>
+                                                          
+                            </div>
+                            
+                        </div>
+                   
+                   </div>
+
                 
-                <div className="containerButtonBook">
-                    <p className="buttonBook" id="bookRoom" onClick={()=>BookRoom()}>Réservation des chambres</p>
-                    <p className="buttonBook" id="bookSpa" onClick={()=>BookSpa()}>Réservation du centre de détente</p>
-                    <p className="messageBook">Il est possible d'avoir accès à l'espace de détente pendant la location d'une chambre pour cela, veillez nous appeler pour vérifier que le centre de détente est disponible pendant votre séjour.</p>
-                </div>
+
+
+
+
 
 
                 :
                     <div>
                         {
                             bookRoom?
+                            <div>
                                 <div className="containerBookRoom">
-                                    <iframe  height='600' width='100%' src='https://widget.itea.fr/widget.php?key=amkkhds7&numgite=2697&widget-itea=resa&nbmois-ligne=1' ></iframe>
-
+                                    <div className="ElementRoom">
+                                        <p className="el">Fragole</p>
+                                        <div className="el">
+                                            <img className="imgRoom"  src={imgRoom}></img>
+                                        </div>
+                                        <div className="el"><iframe className="containerIframe"  src='https://widget.itea.fr/widget.php?key=amkkhds7&numgite=2697&widget-itea=dispo&nbmois-ligne=1&numChambre=1' ></iframe></div>
+                                    </div>
+                                    <div className="ElementRoom">
+                                        <p className="el">Scandinave</p>
+                                        <div className="el">
+                                            <img className="imgRoom" src={imgRoom}></img>
+                                        </div>
+                                        <div className="el"><iframe  className="containerIframe"  src='https://widget.itea.fr/widget.php?key=amkkhds7&numgite=2697&widget-itea=dispo&nbmois-ligne=1&numChambre=2' ></iframe></div>
+                                    </div>
+                                    <div className="ElementRoom">
+                                        <p className="el">Cocoon</p>
+                                        <div className="el">
+                                            <img  className="imgRoom" src={imgRoom}></img>
+                                        </div>
+                                        <div className="el"><iframe  className="containerIframe"  src='https://widget.itea.fr/widget.php?key=amkkhds7&numgite=2697&widget-itea=dispo&nbmois-ligne=1&numChambre=3' ></iframe></div>
+                                    </div>
+                                    
                                 </div>
+                                <div className="conatierButton">
+                                    <p className="ButtonBook2">Réserver</p>
+                                </div>
+                            </div>
                             :false
                         }
                         {
@@ -312,7 +371,10 @@ const Validate = ()=>{
                                             <p className="validateBtn" onClick={()=>Validate()} onMouseOver={()=>setNombre(document.getElementById("nombre").value)}>Valider</p>
                                         </div>
                                         
-                                    </div>                                 
+                                    </div>
+                                    <div className="containerImgDétente">
+                                        <img src={détente} className="imgDétente"></img>  
+                                    </div>                               
 
                                 </div>
                             :false
