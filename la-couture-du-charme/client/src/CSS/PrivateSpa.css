@@ -101,10 +101,12 @@
 
 .spapic{
     height: 50%;
-    width: 40%;
+    width: 45%;
     margin-left: 3%;
     animation-name: fondu;
     animation-duration: 4s;
+    position: relative;
+    right: 4%;
 }
 
 .poufspic{
@@ -112,6 +114,7 @@
     width: 30%;
     animation-name: fondu;
     animation-duration: 3s;
+    position: relative;
 }
 
 .saunapic{
@@ -120,13 +123,17 @@
     margin-left: 3%;
     animation-name: fondu;
     animation-duration: 5s;
+    position: relative;
+    left: 5%;
 }
 
 .piscinepic{
     height: 30%;
-    width: 40%;
+    width: 45%;
     animation-name: fondu;
     animation-duration: 3s;
+    position: relative;
+    left: 5%;
 }
 
 
@@ -140,6 +147,7 @@
     margin-left: 3%;
     background-color: white;
     border: double black;
+    position: relative;
 }
 .poufs-txt{
     padding-right: 5%;
@@ -151,6 +159,7 @@
     margin-left: 3%;
     background-color: white;
     border: double black;
+    position: relative;
 }
 .sauna-txt{
     padding-right: 5%;
@@ -162,6 +171,7 @@
     margin-left: 3%;
     background-color: white;
     border: double black;
+    position: relative;
 }
 .pool-txt{
     padding-right: 5%;
@@ -172,7 +182,8 @@
     margin-bottom: auto;
     margin-left: 3%; 
     background-color: white;
-    border: double black;   
+    border: double black;
+    
 }
 
 @keyframes fondu{

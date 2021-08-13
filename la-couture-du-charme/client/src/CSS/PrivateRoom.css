@@ -1,3 +1,8 @@
+.PrivateContainerRoom{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 .room{
     margin-top: 5%;
     display: flex;
@@ -42,19 +47,20 @@
 }
 
 .cocoon-box{
-    
+   margin-bottom: 5%;
+   margin-top: 5%;
 }
 
 .fragole-box{
-    
+    margin-bottom: 5%;
+    margin-top: 5%;
 }
 
 .scandinave-box{
-    margin-bottom: 10%;
+    margin-bottom: 5%;
+    margin-top: 5%;
 }
 
 .cocoon-diapo{
-    border: solid black;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 11%;
 }
