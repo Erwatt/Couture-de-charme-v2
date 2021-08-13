@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-// import Header2 from './Header2';
+//import Header2 from './BookTempo';
 import '../CSS/App.css'
 import Home from './Home';
 import Footer from './Footer';
@@ -16,6 +16,9 @@ import BookTempo from './BookTempo';
 import MentionsLegales from './MentionsLegales';
 import '../CSS/App.css';
 import {Route, Switch} from 'react-router-dom';
+import BkSpa from './BookSpa';
+import BkRoom from './BookRoom';
+
 // import {useState} from 'react';
 
 
@@ -49,7 +52,11 @@ function App() {
           <Route path='/PrivatePool' component={PrivatePool}/>
           <Route path='/PrivateSpa' component={PrivateSpa}/>
           <Route path='/Book' component={Book2}/>
+          <Route path='/BookSpa' component={BkSpa}/>
+          <Route path='/BookRoom' component={BkRoom}/>
           <Route path='/MentionsLégales' component={MentionsLegales}/>
+          
+
         </Switch>
       </div>
       <div>

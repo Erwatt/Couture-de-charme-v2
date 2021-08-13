@@ -1,3 +1,4 @@
+
 .PrivateContainerRoom{
     padding-left: 5%;
     padding-right: 5%;
@@ -7,16 +8,12 @@
     margin-top: 5%;
     display: flex;
     flex-direction: column;
-    
-    
+    text-align: center;
 }
 
 .room-diapo{
-    display: flex;
-    flex-direction: row;
-   
-
-    
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .room-info{
@@ -29,22 +26,16 @@
     margin-right: auto;
     background-color: rgba(94, 69, 48, 0.801);
     margin-bottom: 5%;
-    
 }
 
 .room-info-txt{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    color: black;
-    
-}
-.room-info-txt-element{
-    padding:2%;
 }
 
-.room-info-title{
-    text-align: center;
+.room-info-txt > p {
+    max-width: 30%;
 }
 
 .RoomHeader{
@@ -59,6 +50,7 @@
 .cocoon-box{
    margin-bottom: 5%;
    margin-top: 5%;
+   border-bottom: dashed grey;
 }
 
 .fragole-box{
@@ -72,5 +64,77 @@
 }
 
 .cocoon-diapo{
-    margin-left: 11%;
+    margin-left: 25%;
+    width: 50%;
+    height: 50%;
 }
+
+.fragole-diapo{
+    margin-left: 25%;
+    width: 50%;
+    height: 50%;
+}
+
+
+.scandinave-diapo{
+    margin-left: 25%;
+    width: 50%;
+    height: 50%;
+}
+
+
+.cocoon-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 7%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.cocoon1{
+    padding-bottom: 3%;
+    padding-top: 3%;
+    padding-right: 3%;
+    padding-left: 3%;
+    border-right: solid grey;
+}
+
+.cocoon2{
+    padding-bottom: 3%;
+    padding-top: 3%;
+    padding-right: 3%;
+    padding-left: 3%;
+    text-align: left;
+    border-right: solid grey;
+    
+}
+
+.cocoon3{
+    padding-bottom: 3%;
+    padding-top: 3%;
+    padding-right: 3%;
+    padding-left: 3%;
+}
+
+
+.fragole-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-bottom: dashed black;
+    margin-top: 7%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.scandinave-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-bottom: dashed black;
+    margin-top: 7%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
