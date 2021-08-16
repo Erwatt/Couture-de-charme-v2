@@ -7,6 +7,7 @@ import {useHistory} from 'react-router-dom';
 
 
 export default function Book(){
+    window.scrollTo(0, 0);
 
 const[bookRoom,setBookRoom]=useState(false)
 const[bookSpa,setBookSpa]=useState(false)
@@ -21,6 +22,9 @@ function handleBookRoom(){
     history.push('/BookRoom');
 };
 
+function handleGift(){
+    history.push('/Gift');
+}
 
 const BookRoom = () => {
     
@@ -30,6 +34,7 @@ const BookSpa = () => {
     
     handleBookSpa()
 }
+
 
 
 
@@ -56,7 +61,7 @@ const BookSpa = () => {
                                     <div className="giftRightContainer">
                                         <p className="textCadeauUnique">Offrez un cadeau unique</p>
                                         <div className="containerTextCadeau">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Penatibus et magnis dis parturient montes nascetur ridiculus mus mauris. In cursus turpis massa tincidunt dui ut ornare lectus. </div>
-                                        <div className="containerFlexRowEnd"><p className="btnCadeau">Offrir</p></div>
+                                        <div className="containerFlexRowEnd"><p className="btnCadeau" onClick={()=>handleGift()}>Offrir</p></div>
                                     </div>
                                 </div>
                             </div>

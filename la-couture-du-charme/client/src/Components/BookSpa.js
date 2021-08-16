@@ -9,6 +9,7 @@ import HomeBook2 from './HomeBook2'
 
 
 export default function BookSpa(){
+    window.scrollTo(0, 0);
     
     const[semaine,setSemaine]=useState(false)
     const[weekend,setWeekend]=useState(false)
@@ -134,7 +135,7 @@ export default function BookSpa(){
                                     <img src={logoCouture} className="logoCouture"></img>
                                 </div>
                                 <div className="creneauText">{creneau}</div>
-                                <div className="messageText">Petit message qui fait à peu près cette taille environ ou un peu plus que ça quand même</div>
+                                <div className="messageText">Délassez vous dans l'espace piscine sauna spa, seul ou à plusieurs, en semaine avant 17h.</div>
                                 <div className="priceText">€{prix} EUR</div>
                             </div >
                             <div className="calendar">
@@ -158,7 +159,7 @@ export default function BookSpa(){
                                             <img src={logoCouture} className="logoCouture"></img>
                                         </div>
                                         <div className="creneauText">{creneau}</div>
-                                        <div className="messageText">Petit message qui fait à peu près cette taille environ ou un peu plus que ça quand même</div>
+                                        <div className="messageText">Délassez vous dans l'espace piscine sauna spa, seul ou à plusieurs, en semaine après 17h.</div>
                                         <div className="priceText">€{prix} EUR</div>
                                     </div >
                                     <div className="calendar">
@@ -187,7 +188,7 @@ export default function BookSpa(){
                                             <img src={logoCouture} className="logoCouture"></img>
                                         </div>
                                         <div className="creneauText">{creneau}</div>
-                                        <div className="messageText">Petit message qui fait à peu près cette taille environ ou un peu plus que ça quand même</div>
+                                        <div className="messageText">Délassez vous dans l'espace piscine sauna spa, seul ou à plusieurs, en semaine après 17h.</div>
                                         <div className="priceText">€{prix} EUR</div>
                                     </div >
                                     <div className="calendar">
@@ -212,7 +213,7 @@ export default function BookSpa(){
                                     <img src={logoCouture} className="logoCouture"></img>
                                 </div>
                                 <div className="creneauText">{creneau}</div>
-                                <div className="messageText">Petit message qui fait à peu près cette taille environ ou un peu plus que ça quand même</div>
+                                <div className="messageText">Délassez vous dans l'espace piscine sauna spa, seul ou à plusieurs, le weekend.</div>
                                 <div className="priceText">€{prix} EUR</div>
                             </div >
                             <div className="calendar">

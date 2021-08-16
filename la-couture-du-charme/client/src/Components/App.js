@@ -8,6 +8,7 @@ import Receiver from './Receiver';
 import PrivateRoom from './PrivateRoom';
 import PrivatePool from './PrivatePool';
 import PrivateSpa from './PrivateSpa';
+import Gift from './Gift';
 // import Book from './Book';
 import Book2 from './Book2';
 
@@ -18,7 +19,7 @@ import '../CSS/App.css';
 import {Route, Switch} from 'react-router-dom';
 import BkSpa from './BookSpa';
 import BkRoom from './BookRoom';
-
+import Tarifs from './Tarifs';
 // import {useState} from 'react';
 
 
@@ -54,6 +55,8 @@ function App() {
           <Route path='/Book' component={Book2}/>
           <Route path='/BookSpa' component={BkSpa}/>
           <Route path='/BookRoom' component={BkRoom}/>
+          <Route path='/Gift' component={Gift}/>
+          <Route path='/Tarifs' component={Tarifs}/>
           <Route path='/MentionsLégales' component={MentionsLegales}/>
           
 
