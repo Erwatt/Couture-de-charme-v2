@@ -4,6 +4,7 @@ import imgRoom from '../Images/chambre.jpeg'
 
 
 function BookRoom(){
+    window.scrollTo(0, 0);
     return(
         <div>
             <div className="containerBookRoom">

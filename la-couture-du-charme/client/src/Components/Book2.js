@@ -7,6 +7,7 @@ import {useHistory} from 'react-router-dom';
 
 
 export default function Book(){
+    window.scrollTo(0, 0);
 
 const[bookRoom,setBookRoom]=useState(false)
 const[bookSpa,setBookSpa]=useState(false)
