@@ -48,38 +48,20 @@
 }
 
 .cocoon-box{
-   margin-bottom: 5%;
-   margin-top: 5%;
    border-bottom: dashed grey;
-}
-
-.fragole-box{
-    margin-bottom: 5%;
-    margin-top: 5%;
+   margin-top: 5%;
+   margin-bottom: 5%;
 }
 
 .scandinave-box{
-    margin-bottom: 5%;
     margin-top: 5%;
-}
+    margin-bottom: 5%;
+ }
 
 .cocoon-diapo{
-    margin-left: 25%;
-    width: 50%;
-    height: 50%;
-}
-
-.fragole-diapo{
-    margin-left: 25%;
-    width: 50%;
-    height: 50%;
-}
-
-
-.scandinave-diapo{
-    margin-left: 25%;
-    width: 50%;
-    height: 50%;
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
 }
 
 
@@ -87,7 +69,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 7%;
     padding-top: 5%;
     padding-bottom: 5%;
 }
@@ -97,44 +78,52 @@
     padding-top: 3%;
     padding-right: 3%;
     padding-left: 3%;
-    border-right: solid grey;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .cocoon2{
-    padding-bottom: 3%;
-    padding-top: 3%;
-    padding-right: 3%;
-    padding-left: 3%;
+    width: 80%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-right: 5%;
+    padding-left: 6%;
     text-align: left;
     border-right: solid grey;
+    border-left: solid grey;
     
 }
 
 .cocoon3{
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;    
     padding-bottom: 3%;
     padding-top: 3%;
     padding-right: 3%;
     padding-left: 3%;
 }
 
-
-.fragole-info{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    border-bottom: dashed black;
-    margin-top: 7%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+.cocoon32 {
+    text-decoration: underline black;
+    cursor: pointer;
 }
 
-.scandinave-info{
+.prix{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    border-bottom: dashed black;
-    margin-top: 7%;
-    padding-top: 5%;
-    padding-bottom: 5%;
 }
 
+.prix1{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.prix2{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
