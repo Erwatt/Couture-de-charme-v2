@@ -11,12 +11,21 @@ import { useLocation } from 'react-router-dom';
 // import Promise2 from './Promise2';
 import Promise3 from './Promise3';
 // import Video from './Video';
+import {useHistory} from 'react-router-dom';
+import Tarifs from './Tarifs';
+
 
 function Home(){
 
     if (useLocation().pathname === '/'){
         window.addEventListener('scroll',handleScrollAnim);
     }
+    const history = useHistory();
+
+
+    function handleTarifs(){
+    history.push('/Tarifs');
+};
 
     const [anim1, setAnim1] = useState(false);
     // const [anim2, setAnim2] = useState(false);
@@ -106,10 +115,11 @@ function Home(){
                     item ? <animated.div style={style}><HomeRooms room={room}/></animated.div>:"" )}
                
             </div>
-            <div className="home-avis">
+            <div className="containerBtnTarif"><p className="btnTarif" onClick={()=>handleTarifs()}>Voir les tarifs</p></div>
+            {/* <div className="home-avis">
             {transition4((style, item) => 
                     item ? <animated.div style={style}><Avis/></animated.div>:"" )}
-            </div>
+            </div> */}
         </div>
     );
 };
