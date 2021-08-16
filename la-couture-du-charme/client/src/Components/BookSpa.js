@@ -86,12 +86,12 @@ export default function BookSpa(){
                                 else{
                                     setCreneau(" Créneau Spa - Semaine - " +nombre.toString()+ " personne(s)" +" - 2h")
                                     if(nombre==1||nombre==2){setPrix(110)}
-                                    else{setPrix(110+(nombre-2)*30)}                            }
+                                    else{setPrix(110+(nombre-2)*20)}                            }
                             }
                             else{
                                 setCreneau("Créneau Spa - Semaine - " +nombre.toString()+ " personne(s)")
                                 if(nombre==1||nombre==2){setPrix(80)}
-                                else{setPrix(20+(nombre-2)*20)}                        }
+                                else{setPrix(80+(nombre-2)*20)}                        }
                                 
                         }
                         else{
