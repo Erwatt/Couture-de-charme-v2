@@ -21,6 +21,15 @@ export default function BookSpa(){
     const[creneau1h30,setCreneau1h30]=useState(false)
     const[creneau,setCreneau]=useState("Créneau Spa")
     const[prix, setPrix]=useState(30)
+    const[nombre1,setNombre1]=useState(false)
+    const[nombre2,setNombre2]=useState(false)
+    const[nombre3,setNombre3]=useState(false)
+    const[nombre4,setNombre4]=useState(false)
+    const[nombre5,setNombre5]=useState(false)
+    const[nombre6,setNombre6]=useState(false)
+    const[nombre7,setNombre7]=useState(false)
+    const[nombre8,setNombre8]=useState(false)
+
 
     const BookWeekend = ()=>{
         if (weekend){setWeekend(false)}
@@ -28,7 +37,6 @@ export default function BookSpa(){
         setSemaine(false)
         setAfter17(false)
         setBefore17(false)
-        setNombre(document.getElementById("nombre").value)
     
     }
     const BookSemaine = ()=>{
@@ -37,36 +45,138 @@ export default function BookSpa(){
         setWeekend(false)
         setAfter17(false)
         setBefore17(false)
-        setNombre(document.getElementById("nombre").value)
     }
     const BookBefore17 = ()=>{
         if(before17){setBefore17(false)}
         else{setBefore17(true)}
         setAfter17(false)
-        setNombre(document.getElementById("nombre").value)
     }
     const BookAfter17 = ()=>{
         setBefore17(false)
         if(after17){setAfter17(false)}
         else{setAfter17(true)}
-        setNombre(document.getElementById("nombre").value)
     }
+
+    const Nombre1 = ()=>{
+        setNombre2(false)
+        setNombre3(false)
+        setNombre4(false)
+        setNombre5(false)
+        setNombre6(false)
+        setNombre7(false)
+        setNombre8(false)
+        if(nombre1){setNombre1(false)
+             setNombre(0)}
+        else{setNombre1(true)}
+        setNombre(1)
+    }
+
+     const Nombre2 = ()=>{
+         setNombre1(false)
+         setNombre3(false)
+         setNombre4(false)
+         setNombre5(false)
+         setNombre6(false)
+         setNombre7(false)
+         setNombre8(false)
+         if(nombre2){setNombre2(false)
+            setNombre(0)}
+         else{setNombre2(true)}
+         setNombre(2)
+     }
+     const Nombre3 = ()=>{
+         setNombre2(false)
+         setNombre1(false)
+         setNombre4(false)
+         setNombre5(false)
+         setNombre6(false)
+         setNombre7(false)
+         setNombre8(false)
+         if(nombre3){setNombre3(false)
+            setNombre(0)}
+         else{setNombre3(true)}
+         setNombre(3)
+     }
+     const Nombre4 = ()=>{
+         setNombre2(false)
+         setNombre3(false)
+         setNombre1(false)
+         setNombre5(false)
+         setNombre6(false)
+         setNombre7(false)
+         setNombre8(false)
+         if(nombre4){setNombre4(false)
+            setNombre(0)}
+         else{setNombre4(true)}
+         setNombre(4)
+     }
+     const Nombre5 = ()=>{
+         setNombre2(false)
+         setNombre3(false)
+         setNombre4(false)
+         setNombre1(false)
+         setNombre6(false)
+         setNombre7(false)
+         setNombre8(false)
+         if(nombre5){setNombre5(false)
+            setNombre(0)}
+         else{setNombre5(true)}
+         setNombre(5)
+     }
+    const Nombre6 = ()=>{
+        setNombre2(false)
+        setNombre3(false)
+        setNombre4(false)
+        setNombre5(false)
+        setNombre1(false)
+        setNombre7(false)
+        setNombre8(false)
+        if(nombre6){setNombre6(false)
+            setNombre(0)}
+        else{setNombre6(true)}
+        setNombre(6)
+    }
+
+    const Nombre7 = ()=>{
+        setNombre2(false)
+        setNombre3(false)
+        setNombre4(false)
+        setNombre5(false)
+        setNombre1(false)
+        setNombre6(false)
+        setNombre8(false)
+        if(nombre7){setNombre7(false)
+            setNombre(0)}
+        else{setNombre7(true)}
+        setNombre(7)
+    }
+
+     const Nombre8 = ()=>{
+         setNombre2(false)
+         setNombre3(false)
+         setNombre4(false)
+         setNombre5(false)
+         setNombre1(false)
+         setNombre7(false)
+         setNombre6(false)
+         if(nombre8){setNombre8(false)
+            setNombre(0)}
+         else{setNombre8(true)}
+         setNombre(8)
+     }
     
     const Creneau2h = ()=>{
         setCreneau1h30(false)
-        if(creneau2h){setCreneau2h(false)}
+        if(creneau2h){setCreneau2h(false) }
         else{setCreneau2h(true)}
-        setNombre(document.getElementById("nombre").value)
     }
     const Creneau1h30h = ()=>{
         setCreneau2h(false)
         if(creneau1h30){setCreneau1h30(false)}
         else{setCreneau1h30(true)}
-        setNombre(document.getElementById("nombre").value)
     }
     
     const Validate = ()=>{
-        setNombre(document.getElementById("nombre").value)
         if(nombre<1||nombre>8){setvalidate(false)}
         else{
             if (semaine===false&&weekend===false){setvalidate(false)}
@@ -79,23 +189,28 @@ export default function BookSpa(){
                             
                             if(after17){
                                 if(creneau1h30){
-                                    setCreneau("Créneau Spa - " +" Semaine - "+nombre.toString()+ " personne(s)" +" - 1h30")
+                                    if(nombre>1){ setCreneau("Créneau Spa - " +" Semaine - "+nombre.toString()+ " personnes" +" - 1h30")}
+                                    else{ setCreneau("Créneau Spa - " +" Semaine - "+nombre.toString()+ " personne" +" - 1h30")}
                                     if(nombre==1||nombre==2){setPrix(90)}
                                     else{setPrix(90+(nombre-2)*20)}
                             }
                                 else{
-                                    setCreneau(" Créneau Spa - Semaine - " +nombre.toString()+ " personne(s)" +" - 2h")
+                                    if(nombre>1){ setCreneau(" Créneau Spa - Semaine - " +nombre.toString()+ " personnes" +" - 2h")}
+                                    else{setCreneau(" Créneau Spa - Semaine - " +nombre.toString()+ " personne" +" - 2h")}
+                                    
                                     if(nombre==1||nombre==2){setPrix(110)}
                                     else{setPrix(110+(nombre-2)*20)}                            }
                             }
                             else{
-                                setCreneau("Créneau Spa - Semaine - " +nombre.toString()+ " personne(s)")
+                                if(nombre>1){ setCreneau("Créneau Spa - Semaine - " +nombre.toString()+ " personnes")}
+                                    else{ setCreneau("Créneau Spa - Semaine - " +nombre.toString()+ " personne")}
                                 if(nombre==1||nombre==2){setPrix(80)}
                                 else{setPrix(80+(nombre-2)*20)}                        }
                                 
                         }
                         else{
-                            setCreneau("Créneau Spa - Weekend - " +nombre.toString()+ " personne(s)")
+                            if(nombre>1){setCreneau("Créneau Spa - Weekend - 2h - " +nombre.toString()+ " personnes")}
+                                    else{ setCreneau("Créneau Spa - Weekend - 2h - " +nombre.toString()+ " personne")}
                             if(nombre==1||nombre==2){setPrix(130)}
                             else{setPrix(130+(nombre-2)*20)}                    }
     
@@ -233,11 +348,19 @@ export default function BookSpa(){
         <div className="containerBookSpa" id="containerBook">
             <div className="containerFormSpa">
                 <div className="elementForm" id="formPersonne">
-                    
-                    <div className="textPersonne">Pour combien de personnes ? (max : 8 personnes)</div>
-                    <input className="inputTextPersonne" type="number" id="nombre"  min="1" max="8"/>
-                    
-
+                    <div className="conatinerTruc">
+                        <div className="Textprs">Nombre de participants :</div>
+                        <div className="containerBtnParticipant">
+                            {nombre1?<p onClick={()=>Nombre1()} className="btnParticipantClicked">1</p>:<p onClick={()=>Nombre1()} className="btnParticipant">1</p>}
+                            {nombre2?<p onClick={()=>Nombre2()} className="btnParticipantClicked">2</p>:<p onClick={()=>Nombre2()} className="btnParticipant">2</p>}
+                            {nombre3?<p onClick={()=>Nombre3()} className="btnParticipantClicked">3</p>:<p onClick={()=>Nombre3()} className="btnParticipant">3</p>}
+                            {nombre4?<p onClick={()=>Nombre4()} className="btnParticipantClicked">4</p>:<p onClick={()=>Nombre4()} className="btnParticipant">4</p>}
+                            {nombre5?<p onClick={()=>Nombre5()} className="btnParticipantClicked">5</p>:<p onClick={()=>Nombre5()} className="btnParticipant">5</p>}
+                            {nombre6?<p onClick={()=>Nombre6()} className="btnParticipantClicked">6</p>:<p onClick={()=>Nombre6()} className="btnParticipant">6</p>}
+                            {nombre7?<p onClick={()=>Nombre7()} className="btnParticipantClicked">7</p>:<p onClick={()=>Nombre7()} className="btnParticipant">7</p>}
+                            {nombre8?<p onClick={()=>Nombre8()} className="btnParticipantClicked">8</p>:<p onClick={()=>Nombre8()} className="btnParticipant">8</p>}
+                        </div>
+                    </div>
                 </div>
                 <div className="elementForm">
                     {
@@ -277,7 +400,7 @@ export default function BookSpa(){
                 }
                 
                 <div className="elementForm">
-                    <p className="validateBtn" onClick={()=>Validate()} onMouseOver={()=>setNombre(document.getElementById("nombre").value)}>Valider</p>
+                    <p className="validateBtn" onClick={()=>Validate()} >Valider</p>
                 </div>
                 
             </div>
