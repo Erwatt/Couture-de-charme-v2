@@ -31,9 +31,9 @@ function BookRoom(){
                 </div>
                 
             </div>
-            <div className="conatierButton">
+            {/* <div className="conatierButton">
                 <p className="ButtonBook2">Réserver</p>
-            </div>
+            </div> */}
         </div>
     )
 }
