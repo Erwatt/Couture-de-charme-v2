@@ -5,6 +5,19 @@ require('dotenv').config();
 
 const app = express();
 
+const stripe = require("stripe")("sk_test_51JKLlzFWy0s3veRrrKOLEWQnHpQMuMEPeQJWeZUm6u1YtQN0fYcDo4QcxTW6L0DoM1bdWBE2PeamG30L70zm27xj000SCUPvYB");
+
+const calculateOrderAmount = items => {
+  // Replace this constant with a calculation of the order's amount
+  // Calculate the order total on the server to prevent
+  // people from directly manipulating the amount on the client
+  return 1400;
+};
+
+
+
+
+
 mongoose.connect(process.env.DATABASE,{ useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
