@@ -26,7 +26,7 @@ export default function Gift(){
             <div className="gift-title">
                 <p><h1>Coffrets Cadeau, Invitations Cadeau</h1><br></br>
                 <p>Un délicieux moment de détente pour oublier le stress quotidien, <b>c'est la promesse que vous offrez.</b></p>
-                <p>Chacun de modelage ou de nos créneaux Spa Privatif est une escapade dans un univers de bien-être.</p></p>
+                <p>Chacun de  nos modelages ou de nos créneaux Spa Privatif est une escapade dans un univers de bien-être.</p></p>
             </div>
             <div className="gift-box1">
                 <img src={spa} alt="gift-pic1" className="gift-pic1"/>
@@ -34,7 +34,7 @@ export default function Gift(){
                     <h2>Au choix pour votre bon-cadeau (modelage ou spa privatif) : </h2>
                     <li>Une enveloppe prête à offrir ou envoyée par nos soins, comprenant votre invitation personnalisée</li>
                     <li>Une invitation électronique par email,  pour les plus pressé(e)s et les cadeaux de dernière minute</li>
-                    <li>Un élégant coffret, imaginé pour vous avec attention comprenant votre invitation personnalisée</li>
+                    <li>Un élégant coffret imaginé pour vous, comprenant votre invitation personnalisée</li>
                     <p>N'hésitez pas à offrir une prestation duo...</p>
                     <p>Vous pourrez ainsi partager à deux l'expérience du modelage ou du créneau spa, et créer un souvenir tendre ou amical.</p>
                 </div>
