@@ -30,6 +30,176 @@ export default function BookSpa(){
     const[nombre7,setNombre7]=useState(false)
     const[nombre8,setNombre8]=useState(false)
 
+    const[nombre1,setNombre1]=useState(false)
+    const[nombre2,setNombre2]=useState(false)
+    const[nombre3,setNombre3]=useState(false)
+    const[nombre4,setNombre4]=useState(false)
+    const[nombre5,setNombre5]=useState(false)
+    const[nombre6,setNombre6]=useState(false)
+    const[nombre7,setNombre7]=useState(false)
+    const[nombre8,setNombre8]=useState(false)
+    const[erreur,setErreur]=useState(false)
+
+
+
+    const Nombre = (val) =>{
+        if(val==1){
+            if (nombre1){
+                setNombre1(false)
+                setNombre(0)
+            }
+            else{
+                setNombre1(true)
+                setNombre2(false)
+                setNombre3(false)
+                setNombre4(false)
+                setNombre5(false)
+                setNombre6(false)
+                setNombre7(false)
+                setNombre8(false)
+                setNombre(1)
+
+            }
+
+        }
+        if(val==2){
+            if (nombre2){
+                setNombre2(false)
+                setNombre(0)
+            }
+            else{
+                setNombre2(true)
+                setNombre1(false)
+                setNombre3(false)
+                setNombre4(false)
+                setNombre5(false)
+                setNombre6(false)
+                setNombre7(false)
+                setNombre8(false)
+                setNombre(2)
+
+            }
+
+        }
+        if(val==3){
+            if (nombre3){
+                setNombre3(false)
+                setNombre(0)
+            }
+            else{
+                setNombre3(true)
+                setNombre1(false)
+                setNombre2(false)
+                setNombre4(false)
+                setNombre5(false)
+                setNombre6(false)
+                setNombre7(false)
+                setNombre8(false)
+                setNombre(3)
+
+            }
+
+        }
+        if(val==4){
+            if (nombre4){
+                setNombre4(false)
+                setNombre(0)
+            }
+            else{
+                setNombre4(true)
+                setNombre1(false)
+                setNombre2(false)
+                setNombre3(false)
+                setNombre5(false)
+                setNombre6(false)
+                setNombre7(false)
+                setNombre8(false)
+                setNombre(4)
+
+            }
+
+        }
+        if(val==5){
+            if (nombre5){
+                setNombre5(false)
+                setNombre(0)
+            }
+            else{
+                setNombre5(true)
+                setNombre1(false)
+                setNombre2(false)
+                setNombre3(false)
+                setNombre4(false)
+                setNombre6(false)
+                setNombre7(false)
+                setNombre8(false)
+                setNombre(5)
+
+            }
+
+        }
+        if(val==6){
+            if (nombre6){
+                setNombre6(false)
+                setNombre(0)
+            }
+            else{
+                setNombre6(true)
+                setNombre1(false)
+                setNombre2(false)
+                setNombre3(false)
+                setNombre4(false)
+                setNombre5(false)
+                setNombre7(false)
+                setNombre8(false)
+                setNombre(6)
+
+            }
+
+        }
+        if(val==7){
+            if (nombre7){
+                setNombre(0)
+                setNombre7(false)
+                setNombre(0)
+            }
+            else{
+                setNombre7(true)
+                setNombre1(false)
+                setNombre2(false)
+                setNombre3(false)
+                setNombre4(false)
+                setNombre5(false)
+                setNombre6(false)
+                setNombre8(false)
+                setNombre(7)
+
+            }
+
+        }
+        if(val==8){
+            if (nombre8){
+                setNombre(0)
+                setNombre8(false)
+                setNombre(0)
+            }
+            else{
+                setNombre8(true)
+                setNombre1(false)
+                setNombre2(false)
+                setNombre3(false)
+                setNombre4(false)
+                setNombre5(false)
+                setNombre6(false)
+                setNombre7(false)
+                setNombre(8)
+
+                
+            }
+
+        }
+    }
+
 
     const BookWeekend = ()=>{
         if (weekend){setWeekend(false)}
@@ -37,6 +207,8 @@ export default function BookSpa(){
         setSemaine(false)
         setAfter17(false)
         setBefore17(false)
+        setCreneau2h(false)
+        setCreneau1h30(false)
     
     }
     const BookSemaine = ()=>{
@@ -45,14 +217,20 @@ export default function BookSpa(){
         setWeekend(false)
         setAfter17(false)
         setBefore17(false)
+        setCreneau2h(false)
+        setCreneau1h30(false)
     }
     const BookBefore17 = ()=>{
         if(before17){setBefore17(false)}
         else{setBefore17(true)}
         setAfter17(false)
+        setCreneau1h30(false)
+        setCreneau2h(false)
     }
     const BookAfter17 = ()=>{
         setBefore17(false)
+        setCreneau1h30(false)
+        setCreneau2h(false)
         if(after17){setAfter17(false)}
         else{setAfter17(true)}
     }
@@ -177,13 +355,23 @@ export default function BookSpa(){
     }
     
     const Validate = ()=>{
-        if(nombre<1||nombre>8){setvalidate(false)}
+        if(nombre<1||nombre>8){
+            setvalidate(false)
+            setErreur(true)
+        }
         else{
-            if (semaine===false&&weekend===false){setvalidate(false)}
+            if (semaine===false&&weekend===false){
+                setvalidate(false)
+                setErreur(true)}
             else{
-                if(semaine&&after17===false&&before17===false){setvalidate(false)}
+                if(semaine&&after17===false&&before17===false){
+                    setvalidate(false)
+                    setErreur(true)}
                 else{
-                    if(semaine&&after17&&creneau2h===false&&creneau1h30===false){setvalidate(false)}
+                    if(semaine&&after17&&creneau2h===false&&creneau1h30===false){
+                        setvalidate(false)
+                        setErreur(true)
+                    }
                     else{
                         if(semaine){
                             
@@ -218,7 +406,7 @@ export default function BookSpa(){
                         
     
     
-                        
+                        setErreur(false)
                         setvalidate(true)
                         
                     
@@ -250,14 +438,16 @@ export default function BookSpa(){
                                     <img src={logoCouture} className="logoCouture"></img>
                                 </div>
                                 <div className="creneauText">{creneau}</div>
-                                <div className="messageText">Délassez vous dans l'espace piscine sauna spa, seul ou à plusieurs, en semaine avant 17h.</div>
-                                <div className="priceText">€{prix} EUR</div>
+                                <div>
+                                    <div className="messageText">Délassez vous dans l'espace piscine sauna spa, seul ou à plusieurs, en semaine avant 17h.</div>
+                                    <div className="accompteTXT">Accompte : €80</div>                                    
+                                    <div className="priceText">€{prix} EUR <div className="ttcText">TTC</div></div>                                </div>
                             </div >
                             <div className="calendar">
                                 <InlineWidget url="https://calendly.com/coutureducharme-le-spa/creneau-spa-1h30-journee-semaine" 
                                             pageSettings={{
                                             backgroundColor: 'ffffff',
-                                            hideEventTypeDetails: false,
+                                            hideEventTypeDetails: true,
                                             hideLandingPageDetails: false,
                                             primaryColor: '00a2ff',
                                             textColor: '4d5055'
@@ -275,14 +465,15 @@ export default function BookSpa(){
                                         </div>
                                         <div className="creneauText">{creneau}</div>
                                         <div className="messageText">Délassez vous dans l'espace piscine sauna spa, seul ou à plusieurs, en semaine après 17h.</div>
-                                        <div className="priceText">€{prix} EUR</div>
+                                        <div className="accompteTXT">Accompte : €90</div>  
+                                        <div className="priceText">€{prix} EUR <div className="ttcText">TTC</div></div>
                                     </div >
                                     <div className="calendar">
                                         <InlineWidget  url="https://calendly.com/coutureducharme-le-spa/creneau-spa-1h30-soir-de-semaine" 
                                             pageSettings={{
                                             backgroundColor: 'ffffff',
                                             hideEventTypeDetails: true,
-                                            hideLandingPageDetails: true,
+                                            hideLandingPageDetails: false,
                                             primaryColor: '00a2ff',
                                             textColor: '4d5055'
                                         }}
@@ -304,8 +495,8 @@ export default function BookSpa(){
                                         </div>
                                         <div className="creneauText">{creneau}</div>
                                         <div className="messageText">Délassez vous dans l'espace piscine sauna spa, seul ou à plusieurs, en semaine après 17h.</div>
-                                        <div className="priceText">€{prix} EUR</div>
-                                    </div >
+                                        <div className="accompteTXT">Accompte : €110</div>  
+                                        <div className="priceText">€{prix} EUR <div className="ttcText">TTC</div></div>                                    </div >
                                     <div className="calendar">
                                         <InlineWidget url="https://calendly.com/coutureducharme-le-spa/creneau-spa-2h00-soir-de-semaine" 
                                             pageSettings={{
@@ -329,8 +520,8 @@ export default function BookSpa(){
                                 </div>
                                 <div className="creneauText">{creneau}</div>
                                 <div className="messageText">Délassez vous dans l'espace piscine sauna spa, seul ou à plusieurs, le weekend.</div>
-                                <div className="priceText">€{prix} EUR</div>
-                            </div >
+                                <div className="accompteTXT">Accompte : €130</div>  
+                                <div className="priceText">€{prix} EUR <div className="ttcText">TTC</div></div>                            </div >
                             <div className="calendar">
                                 <InlineWidget url="https://calendly.com/coutureducharme-le-spa/creneau-spa-2h00-weekend" 
                                                     pageSettings={{
@@ -348,19 +539,19 @@ export default function BookSpa(){
         <div className="containerBookSpa" id="containerBook">
             <div className="containerFormSpa">
                 <div className="elementForm" id="formPersonne">
-                    <div className="conatinerTruc">
-                        <div className="Textprs">Nombre de participants :</div>
-                        <div className="containerBtnParticipant">
-                            {nombre1?<p onClick={()=>Nombre1()} className="btnParticipantClicked">1</p>:<p onClick={()=>Nombre1()} className="btnParticipant">1</p>}
-                            {nombre2?<p onClick={()=>Nombre2()} className="btnParticipantClicked">2</p>:<p onClick={()=>Nombre2()} className="btnParticipant">2</p>}
-                            {nombre3?<p onClick={()=>Nombre3()} className="btnParticipantClicked">3</p>:<p onClick={()=>Nombre3()} className="btnParticipant">3</p>}
-                            {nombre4?<p onClick={()=>Nombre4()} className="btnParticipantClicked">4</p>:<p onClick={()=>Nombre4()} className="btnParticipant">4</p>}
-                            {nombre5?<p onClick={()=>Nombre5()} className="btnParticipantClicked">5</p>:<p onClick={()=>Nombre5()} className="btnParticipant">5</p>}
-                            {nombre6?<p onClick={()=>Nombre6()} className="btnParticipantClicked">6</p>:<p onClick={()=>Nombre6()} className="btnParticipant">6</p>}
-                            {nombre7?<p onClick={()=>Nombre7()} className="btnParticipantClicked">7</p>:<p onClick={()=>Nombre7()} className="btnParticipant">7</p>}
-                            {nombre8?<p onClick={()=>Nombre8()} className="btnParticipantClicked">8</p>:<p onClick={()=>Nombre8()} className="btnParticipant">8</p>}
-                        </div>
+                    <div className="textPersonne">Nombre de participant(s) : </div>
+                    <div className="containerNombreParticipant">
+                        <div onClick={()=>Nombre(1)} className={nombre1?"nombreClicked":"nombreElement"}>1</div>
+                        <div onClick={()=>Nombre(2)} className={nombre2?"nombreClicked":"nombreElement"}>2</div>
+                        <div onClick={()=>Nombre(3)} className={nombre3?"nombreClicked":"nombreElement"}>3</div>
+                        <div onClick={()=>Nombre(4)} className={nombre4?"nombreClicked":"nombreElement"}>4</div>
+                        <div onClick={()=>Nombre(5)} className={nombre5?"nombreClicked":"nombreElement"}>5</div>
+                        <div onClick={()=>Nombre(6)} className={nombre6?"nombreClicked":"nombreElement"}>6</div>
+                        <div onClick={()=>Nombre(7)} className={nombre7?"nombreClicked":"nombreElement"}>7</div>
+                        <div onClick={()=>Nombre(8)} className={nombre8?"nombreClicked":"nombreElement"}>8</div>
                     </div>
+                    
+
                 </div>
                 <div className="elementForm">
                     {
@@ -401,9 +592,14 @@ export default function BookSpa(){
                 
                 <div className="elementForm">
                     <p className="validateBtn" onClick={()=>Validate()} >Valider</p>
+                   
                 </div>
                 
+                
             </div>
+            {
+                        erreur?<div className="erreurMgs">Certaines informations sont manquantes.</div>:false
+                    }
             <div className="containerImgDétente">
                 <img src={détente} className="imgDétente"></img>  
             </div>                               

@@ -20,6 +20,8 @@ import {Route, Switch} from 'react-router-dom';
 import BkSpa from './BookSpa';
 import BkRoom from './BookRoom';
 import Tarifs from './Tarifs';
+import CheckoutForm from './CheckoutForm';
+
 // import {useState} from 'react';
 
 
@@ -58,6 +60,7 @@ function App() {
           <Route path='/Gift' component={Gift}/>
           <Route path='/Tarifs' component={Tarifs}/>
           <Route path='/MentionsLégales' component={MentionsLegales}/>
+          <Route path ='/PaymentComponent' component={CheckoutForm}/>
           
 
         </Switch>
