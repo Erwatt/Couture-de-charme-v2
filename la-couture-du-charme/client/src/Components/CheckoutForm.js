@@ -100,13 +100,13 @@ export default function CheckoutForm() {
       )}
       {/* Show a success message upon completion */}
       <p className={succeeded ? "result-message" : "result-message hidden"}>
-        Payment succeeded, see the result in your
-        <a
-          href={`https://dashboard.stripe.com/test/payments`}
-        >
-          {" "}
-          Stripe dashboard.
-        </a> Refresh the page to pay again.
+        {
+            succeeded? <div>Gagné : <a href={`https://dashboard.stripe.com/test/payments`}>Dashboard.stripe</a></div>: 
+         <div>Raté</div>
+        
+        }
+       
+          
       </p>
     </form>
   );
