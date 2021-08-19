@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import logocouture from '../Images/logo.png'
+import '../CSS/CheckoutForm.scss'
 import {
   CardElement,
   useStripe,
@@ -34,6 +36,7 @@ export default function CheckoutForm() {
 
   const cardStyle = {
     style: {
+      hidePostalCode: true,
       base: {
         color: "#32325d",
         fontFamily: 'Arial, sans-serif',
@@ -78,18 +81,28 @@ export default function CheckoutForm() {
   };
 
   return (
+    <div className="PaymentContainer">
     <form id="payment-form" onSubmit={handleSubmit}>
-      <CardElement id="card-element" options={cardStyle} onChange={handleChange} />
-      <button
-        disabled={processing || disabled || succeeded}
-        id="submit"
-      >
-        <span id="button-text">
+    {
+        succeeded==false?
+        <div>
+      <div className="containerInput">
+
+        <div className="containerElementInput">
+          <label for="name">Nom :</label>
+          <input className="Inputtest" type="text" id="Name" name="Nom" required minlength="2"  maxlength="30" size="10" />
+        </div>
+        <div className="containerElementInput">
+          <label for="name">Prénom :</label>
+          <input className="Inputtest" type="text" id="firstName" name="Prénom" required minlength="2" maxlength="20" size="10"/>
+        </div>
+      </div>
+      
+          <CardElement id="card-element" options={cardStyle} onChange={handleChange} />
+          <button disabled={processing || disabled || succeeded}id="submit">
+          <span id="button-text">
           {processing ? (
-            <div className="spinner" id="spinner"></div>
-          ) : (
-            "Pay now"
-          )}
+            <div className="spinner" id="spinner"></div>) : ("Commander")}
         </span>
       </button>
       {/* Show any error that happens when processing the payment */}
@@ -98,16 +111,21 @@ export default function CheckoutForm() {
           {error}
         </div>
       )}
+        </div>:
+        false
+      }
+
+
+
+
+      
       {/* Show a success message upon completion */}
-      <p className={succeeded ? "result-message" : "result-message hidden"}>
-        {
-            succeeded? <div>Gagné : <a href={`https://dashboard.stripe.com/test/payments`}>Dashboard.stripe</a></div>: 
-         <div>Raté</div>
-        
-        }
-       
-          
-      </p>
+      {succeeded ?
+      <p className="successMessage">
+        Merci 
+        <a href={`https://dashboard.stripe.com/test/payments`}>{" "} Stripe dashboard.</a>
+      </p>:false}
     </form>
+    </div>
   );
 }
