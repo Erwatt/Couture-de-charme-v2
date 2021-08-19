@@ -32,7 +32,8 @@ function BookRoom(){
                 
             </div>
             <div className="conatierButton">
-                <p className="ButtonBook2">Réserver</p>
+                <p className="bookroomTxt">Pour réserver une chambre merci de d'appeler au 07 52 09 07 50</p>
+                {/* <p className="ButtonBook2">Réserver</p> */}
             </div>
         </div>
     )

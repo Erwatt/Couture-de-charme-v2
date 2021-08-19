@@ -60,7 +60,7 @@ function App() {
           <Route path='/Gift' component={Gift}/>
           <Route path='/Tarifs' component={Tarifs}/>
           <Route path='/MentionsLégales' component={MentionsLegales}/>
-          <Route path ='/test' component={CheckoutForm}/>
+          <Route path ='/PaymentComponent' component={CheckoutForm}/>
           
 
         </Switch>
