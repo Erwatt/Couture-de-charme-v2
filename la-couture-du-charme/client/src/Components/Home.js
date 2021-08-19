@@ -115,7 +115,7 @@ function Home(){
                     item ? <animated.div style={style}><HomeRooms room={room}/></animated.div>:"" )}
                
             </div>
-            <div className="containerBtnTarif"><p className="btnTarif" onClick={()=>handleTarifs()}>Voir les tarifs</p></div>
+            <div className="containerBtnTarif"><p className="btnTarif" onClick={()=>handleTarifs()}>Tarifs</p></div>
             {/* <div className="home-avis">
             {transition4((style, item) => 
                     item ? <animated.div style={style}><Avis/></animated.div>:"" )}
