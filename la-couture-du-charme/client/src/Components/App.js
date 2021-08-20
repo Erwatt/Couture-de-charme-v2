@@ -22,6 +22,8 @@ import BkRoom from './BookRoom';
 import Tarifs from './Tarifs';
 import Modelling from './Modeling';
 import Spa from './Spa';
+import CheckoutForm from './CheckoutForm';
+
 // import {useState} from 'react';
 
 
@@ -63,6 +65,7 @@ function App() {
           <Route path='/Modelling' component={Modelling}/>
           <Route path='/Spa' component={Spa}/>
 
+          <Route path ='/PaymentComponent' component={CheckoutForm}/>
           
 
         </Switch>

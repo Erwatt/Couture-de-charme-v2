@@ -69,13 +69,13 @@ function Footer(){
             <div className="footer-down">
                 <div className="footer-reseaux">
                     <a href="https://www.facebook.com/coutureducharme" target="_blank" rel="noreferrer">           
-                    <img className="footer-facebook" src={facebook} alt="facebook" loading="lazy"/>
+                        <img className="footer-facebook" src={facebook} alt="facebook" loading="lazy"/>
                     </a>
                     <a href="https://www.instagram.com/spa_la.couture.du.charme/?hl=fr" target="_blank" rel="noreferrer">           
-                    <img className="footer-instagram" src={instagram} alt="instagram" loading="lazy"/>
+                        <img className="footer-instagram" src={instagram} alt="instagram" loading="lazy"/>
                     </a>
                 </div>
-                <p>Couture du Charme 2021</p>
+                <p className="txtCouture2021Footer">Couture du Charme 2021</p>
                 <Link to="/MentionsLégales" className="footer-link"><div className="footer-down-mention"><p>Mentions légales</p></div></Link>
             </div>
         </div>

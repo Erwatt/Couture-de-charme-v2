@@ -77,7 +77,7 @@ function Header(){
                 <img loading="auto" src={logo} alt="La Couture du Charme" className="header-logo" onClick={handleHome}/>
             <div className="header-book-back">
             {transition1((style, item) => 
-                    item ? <animated.p style={style} className="header-book" onClick={handleBook}><span>Réserver</span></animated.p>: <div ></div> )}
+                    item ? <animated.p style={style} className="header-book" onClick={handleBook}><span>Réserver/Offrir</span></animated.p>: <div ></div> )}
             </div>
         </div>
     );
