@@ -112,7 +112,6 @@ function Home(){
             </div> */}
 
             <HomeSpa pool={spa}/>
-            <HomeRooms room={room}/>
 
             {/* <div className="home-avis">
             {transition4((style, item) => 
@@ -154,6 +153,7 @@ function Home(){
                     <img src={poufs} alt="piscine" className="poufspic"/>
                 </div>
             </div>
+            <HomeRooms room={room}/>
             <div className="containerBtnTarif"><p className="btnTarif" onClick={()=>handleTarifs()}>Voir les tarifs</p></div>
         </div>
     );

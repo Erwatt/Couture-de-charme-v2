@@ -1,13 +1,21 @@
 import '../CSS/Modelling.scss';
 import React, { useState } from 'react';
 import massage from '../Images/spa.jpg';
+import '../CSS/Book2.scss';
+import { useHistory } from 'react-router-dom';
 
 export default function Modelling(){
 
 const[min30, setMin30]=useState(false);
 const[min60, setMin60]=useState(false);
-const[solo, setSolo]=useState(false);
-const[duo, setDuo]=useState(false); 
+const[un, set1]=useState(false);
+const[deux, set2]=useState(false);
+const[trois, set3]=useState(false);
+const[quatre, set4]=useState(false);
+const[cinq, set5]=useState(false);
+const[six, set6]=useState(false);
+const[sept, set7]=useState(false);
+const[huit, set8]=useState(false); 
 const[invitation, setInvitation]=useState(false);
 const[enveloppe, setEnveloppe]=useState(false);
 const[coffret, setCoffret]=useState(false);
@@ -25,16 +33,108 @@ const Book60min = ()=>{
     setMin30(false)
 }
 
-const BookSolo = ()=>{
-    if (solo){setSolo(false)}
-    else{setSolo(true)}
-    setDuo(false)
+const Book1 = ()=>{
+    if (un){set1(false)}
+    else{set1(true)}
+    set2(false)
+    set3(false)
+    set4(false)
+    set5(false)
+    set6(false)
+    set7(false)
+    set8(false)
+    setNombre(1)
 }
 
-const BookDuo = ()=>{
-    if (duo){setDuo(false)}
-    else{setDuo(true)}
-    setSolo(false)
+const Book2 = ()=>{
+    if (deux){set2(false)}
+    else{set2(true)}
+    set1(false)
+    set3(false)
+    set4(false)
+    set5(false)
+    set6(false)
+    set7(false)
+    set8(false)
+    setNombre(2)
+}
+
+const Book3 = ()=>{
+    if (trois){set3(false)}
+    else{set3(true)}
+    set2(false)
+    set1(false)
+    set4(false)
+    set5(false)
+    set6(false)
+    set7(false)
+    set8(false)
+    setNombre(3)
+}
+
+const Book4 = ()=>{
+    if (quatre){set4(false)}
+    else{set4(true)}
+    set2(false)
+    set3(false)
+    set1(false)
+    set5(false)
+    set6(false)
+    set7(false)
+    set8(false)
+    setNombre(4)
+}
+
+const Book5 = ()=>{
+    if (cinq){set5(false)}
+    else{set5(true)}
+    set2(false)
+    set3(false)
+    set4(false)
+    set1(false)
+    set6(false)
+    set7(false)
+    set8(false)
+    setNombre(5)
+}
+
+const Book6 = ()=>{
+    if (six){set6(false)}
+    else{set6(true)}
+    set2(false)
+    set3(false)
+    set4(false)
+    set5(false)
+    set1(false)
+    set7(false)
+    set8(false)
+    setNombre(6)
+}
+
+const Book7 = ()=>{
+    if (sept){set7(false)}
+    else{set7(true)}
+    set2(false)
+    set3(false)
+    set4(false)
+    set5(false)
+    set6(false)
+    set1(false)
+    set8(false)
+    setNombre(7)
+}
+
+const Book8 = ()=>{
+    if (huit){set8(false)}
+    else{set8(true)}
+    set2(false)
+    set3(false)
+    set4(false)
+    set5(false)
+    set6(false)
+    set7(false)
+    set1(false)
+    setNombre(8)
 }
 
 const BookInvitation = ()=>{
@@ -78,7 +178,8 @@ const[semaine,setSemaine]=useState(false)
         setSemaine(false)
         setAfter17(false)
         setBefore17(false)
-        setNombre(document.getElementById("nombre").value)
+        setCreneau1h30(false)
+        setCreneau2h(false)
     
     }
     const BookSemaine = ()=>{
@@ -87,36 +188,33 @@ const[semaine,setSemaine]=useState(false)
         setWeekend(false)
         setAfter17(false)
         setBefore17(false)
-        setNombre(document.getElementById("nombre").value)
+
     }
     const BookBefore17 = ()=>{
         if(before17){setBefore17(false)}
         else{setBefore17(true)}
         setAfter17(false)
-        setNombre(document.getElementById("nombre").value)
     }
     const BookAfter17 = ()=>{
         setBefore17(false)
         if(after17){setAfter17(false)}
         else{setAfter17(true)}
-        setNombre(document.getElementById("nombre").value)
     }
     
     const Creneau2h = ()=>{
         setCreneau1h30(false)
         if(creneau2h){setCreneau2h(false)}
         else{setCreneau2h(true)}
-        setNombre(document.getElementById("nombre").value)
     }
     const Creneau1h30h = ()=>{
         setCreneau2h(false)
         if(creneau1h30){setCreneau1h30(false)}
         else{setCreneau1h30(true)}
-        setNombre(document.getElementById("nombre").value)
     }
+
+    let history=useHistory();
     
     const Validate = ()=>{
-        setNombre(document.getElementById("nombre").value)
         if(nombre<1||nombre>8){setvalidate(false)}
         else{
             if (semaine===false&&weekend===false){setvalidate(false)}
@@ -130,32 +228,50 @@ const[semaine,setSemaine]=useState(false)
                             if(after17){
                                 if(creneau1h30){
                                     setCreneau("Créneau Spa - " +" Semaine - "+nombre.toString()+ " personne(s)" +" - 1h30")
-                                    if(nombre==1||nombre==2){setPrix(90)}
-                                    else{setPrix(90+(nombre-2)*20)}
-                            }
+                                    if(nombre==1||nombre==2){
+                                        if(coffret===true){setPrix(108)}
+                                        else{setPrix(90)}}
+                                    else{
+                                        if(coffret===true){setPrix(108+(nombre-2)*20)}
+                                        else{setPrix(90+(nombre-2)*20)}}
+                                }
                                 else{
                                     setCreneau(" Créneau Spa - Semaine - " +nombre.toString()+ " personne(s)" +" - 2h")
-                                    if(nombre==1||nombre==2){setPrix(110)}
-                                    else{setPrix(110+(nombre-2)*30)}                            }
+                                    if(nombre==1||nombre==2){
+                                        if(coffret===true){setPrix(128)}
+                                        else{setPrix(110)}}
+                                    else{
+                                        if(coffret===true){setPrix(128+(nombre-2)*30)}
+                                        else{setPrix(110+(nombre-2)*30)}}
+                                }
                             }
+
                             else{
                                 setCreneau("Créneau Spa - Semaine - " +nombre.toString()+ " personne(s)")
-                                if(nombre==1||nombre==2){setPrix(80)}
-                                else{setPrix(20+(nombre-2)*20)}                        }
+                                if(nombre==1||nombre==2){
+                                    if(coffret===true){setPrix(98)}
+                                    else{setPrix(80)}}
+                                else{
+                                    if(coffret===true){setPrix(98+(nombre-2)*20)}
+                                    else{setPrix(80+(nombre-2)*20)}}                        
+                            }
                                 
                         }
                         else{
                             setCreneau("Créneau Spa - Weekend - " +nombre.toString()+ " personne(s)")
-                            if(nombre==1||nombre==2){setPrix(130)}
-                            else{setPrix(130+(nombre-2)*20)}                    }
+                            if(nombre==1||nombre==2){
+                                if(coffret===true){setPrix(148)}
+                                else{(setPrix(148+(nombre-2)*20))}}
+                            else{setPrix(130+(nombre-2)*20)}                    
+                        }
     
     
                         
     
     
                         
-                        setvalidate(true)
-                        
+                        // setvalidate(true)
+                        // history.push("/PaymentComponent")
                     
                     }
                 }
@@ -163,6 +279,8 @@ const[semaine,setSemaine]=useState(false)
         }
         
     }
+
+    
 
 
     return(
@@ -178,24 +296,73 @@ const[semaine,setSemaine]=useState(false)
                 </div>
                 <div className="modellingRight">
                     <h2>les bubulles c'est agréable</h2>
-                    <h1>on verra bien</h1>
+                    <h1>{prix}</h1>
                     <div className="separation"></div>
-                    <p><b>Durée :</b></p>
+                    <p><b>Nombre :</b></p>
+                    <div className="modellingFlexRow2">
+                        {
+                            <p onClick={()=>Book1()} className={un ? "Clicked" : "Unclicked"}>1</p>
+                        }
+                        {
+                            <p onClick={()=>Book2()} className={deux ? "Clicked" : "Unclicked"}>2</p>
+                        }
+                        {
+                            <p onClick={()=>Book3()} className={trois ? "Clicked" : "Unclicked"}>3</p>
+                        }
+                        {
+                            <p onClick={()=>Book4()} className={quatre ? "Clicked" : "Unclicked"}>4</p>
+                        }
+                        {
+                            <p onClick={()=>Book5()} className={cinq ? "Clicked" : "Unclicked"}>5</p>
+                        }
+                        {
+                            <p onClick={()=>Book6()} className={six ? "Clicked" : "Unclicked"}>6</p>
+                        }
+                        {
+                            <p onClick={()=>Book7()} className={sept ? "Clicked" : "Unclicked"}>7</p>
+                        }
+                        {
+                            <p onClick={()=>Book8()} className={huit ? "Clicked" : "Unclicked"}>8</p>
+                        }
+                    </div>  
+
+                    <p><b>Créneau :</b></p>
                     <div className="modellingFlexRow">
+                        <div className="spaSlots">
+                            {
+                                semaine?<p className="Clicked3"  onClick={()=>BookSemaine()}>En semaine</p>:<p className="Unclicked3" onClick={()=>BookSemaine()}>En semaine</p>
+                            }
+                            {
+                                weekend? <p className="Clicked3" onClick={()=>BookWeekend()}>Le weekend</p>: <p className="Unclicked3" onClick={()=>BookWeekend()}>Le weekend</p>
+                            }
+                        
+                        </div>
+
                         {
-                            min30?<p className="Clicked" onClick={()=>Book30min()}>30 min</p>:<p className="Unclicked" onClick={()=>Book30min()}>30 min</p>
+                            semaine?
+                            <div className="spaSlots">
+                                {
+                                    before17?<p className="Clicked3" onClick={()=>BookBefore17()}>Avant 17 h</p>:<p className="Unclicked3" onClick={()=>BookBefore17()}>Avant 17 h</p> 
+                                }
+                                {
+                                    after17?<p className="Clicked3" onClick={()=>BookAfter17()}>Après 17h</p>:<p className="Unclicked3" onClick={()=>BookAfter17()}>Après 17h</p>
+                                }
+                                
+                            </div>
+                            :false
                         }
                         {
-                            min60?<p className="Clicked" onClick={()=>Book60min()}>60 min</p>:<p className="Unclicked" onClick={()=>Book60min()}>60 min</p>
-                        }
-                    </div>
-                    <p><b>Solo ou Duo :</b></p>
-                    <div className="modellingFlexRow">
-                    {
-                            solo?<p className="Clicked" onClick={()=>BookSolo()}>Solo</p>:<p className="Unclicked" onClick={()=>BookSolo()}>Solo</p>
-                        }
-                        {
-                            duo?<p className="Clicked" onClick={()=>BookDuo()}>Duo</p>:<p className="Unclicked" onClick={()=>BookDuo()}>Duo</p>
+                            after17?
+                            <div className="spaSlots">
+                                {
+                                    creneau1h30?<p className="Clicked3" onClick={()=>Creneau1h30h()}>Créneau 1h30</p>:<p className="Unclicked3" onClick={()=>Creneau1h30h()}>Créneau 1h30</p> 
+                                }
+                                {
+                                    creneau2h?<p className="Clicked3" onClick={()=>Creneau2h()}>Créneau 2h</p>:<p className="Unclicked3" onClick={()=>Creneau2h()}>Créneau 2h</p>
+                                }
+                            
+                            </div>
+                            :false
                         }
                     </div>
                     <p><b>Options d'envoi :</b></p>
@@ -246,7 +413,7 @@ const[semaine,setSemaine]=useState(false)
                         </div>:false}
                     <p>Message personnel (240 caractères maximum) :</p>
                     <textarea rows="5" cols="50" maxLength="240" className="envoiMassage3"/>
-                    <p><input type="button" id="envoiMassage7" name="massage3" className="panier" value="Valider"/></p>
+                    <p onClick={()=>Validate()}  id="envoiMassage7" className="panier">Valider</p>
                 </div>
             </div>
         </div>

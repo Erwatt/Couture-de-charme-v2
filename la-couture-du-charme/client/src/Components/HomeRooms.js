@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import '../CSS/HomeRooms.css';
 import imgRoom from '../Images/room.JPG';
 import AOS from 'aos';
@@ -9,10 +9,12 @@ AOS.init();
 
 function HomeRooms({room}) {
 
-  
+  let history=useHistory();
+  function handleRoom(){
+    history.push("/PrivateRoom");
+  }
 
-  return (
-    <Link to="/PrivateRoom" className="room-link"> 
+  return ( 
     <div className="container-room" ref={room} data-aos="fade-right" data-aos-duration="1000">
         <img src={imgRoom} alt="Canvas Logo" className="imageRoom"/>
         <div className="containerTextBorderRoom">
@@ -25,12 +27,10 @@ function HomeRooms({room}) {
             <p>En famille, entre amis, pour un week-end en amoureux ou pour un séjour professionnel, 
               venez gouter au calme et au dépaysement de l'une de nos 3 chambres spacieuses, au coeur de la campagne du Pévèle.
             </p>
+            {/* <p onClick={()=>handleRoom()} className="room-link">Voir les chambres</p> */}
           </div>
-         
         </div>
-      
-    </div>
-    </Link>
+    </div>  
   );
 }
 

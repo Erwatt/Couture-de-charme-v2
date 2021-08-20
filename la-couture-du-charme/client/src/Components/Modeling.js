@@ -1,6 +1,7 @@
 import '../CSS/Modelling.scss';
 import React, { useState } from 'react';
 import massage from '../Images/massage.jpg';
+import { useHistory } from 'react-router-dom';
 
 export default function Modelling(){
 
@@ -12,6 +13,11 @@ const[invitation, setInvitation]=useState(false);
 const[enveloppe, setEnveloppe]=useState(false);
 const[coffret, setCoffret]=useState(false);
 const[vip, setVip]=useState(false);
+const[nombre,setNombre]=useState(0);
+const[creneau,setCreneau]=useState("Créneau Modelage");
+const[prix, setPrix]=useState(0);
+const[validate,setvalidate]=useState(false);
+
 
 const Book30min = ()=>{
     if (min30){setMin30(false)}
@@ -29,12 +35,14 @@ const BookSolo = ()=>{
     if (solo){setSolo(false)}
     else{setSolo(true)}
     setDuo(false)
+    setNombre(1)
 }
 
 const BookDuo = ()=>{
     if (duo){setDuo(false)}
     else{setDuo(true)}
     setSolo(false)
+    setNombre(2)
 }
 
 const BookInvitation = ()=>{
@@ -61,6 +69,49 @@ const BookCoffret = ()=>{
     setVip(true)
 }
 
+let history=useHistory();
+
+const Validate = ()=>{
+    if(solo===false&duo===false){setvalidate(false)}
+    else{
+        if (min30===false&&min60===false){setvalidate(false)}
+        else{
+            if(invitation===false&&enveloppe===false&&coffret===false){setvalidate(false)}
+            else{
+                if(min30){
+                    if(solo){
+                        setCreneau("Créneau Modelage - " +nombre.toString()+ " personne" +" - 30 min")
+                        if(coffret===true){setPrix(53)}
+                        else{setPrix(35)}
+                    }
+                    else{
+                        setCreneau(" Créneau Modelage - " +nombre.toString()+ " personnes" +" - 30 min")
+                        if(coffret===true){setPrix(78)}
+                        else{setPrix(60)}                          
+                    }
+                }
+                        
+                else{
+                    if(solo){
+                        setCreneau("Créneau Modelage - " +nombre.toString()+ " personne" +" - 60 min")
+                        if(coffret===true){setPrix(78)}
+                        else{setPrix(60)}                  
+                    }
+                    else{
+                        setCreneau("Créneau Modelage - " +nombre.toString()+ " personnes"  +" - 60 min")
+                        if(coffret===true){setPrix(118)}
+                        else{setPrix(100)}   
+                    }
+                }
+                
+                // setvalidate(true)
+                // history.push("/PaymentComponent")
+            
+            }
+        }
+    }
+}
+
 
     return(
         <div className="ModellingContainer">
@@ -75,7 +126,7 @@ const BookCoffret = ()=>{
                 </div>
                 <div className="modellingRight">
                     <h2>Massage aux huiles aromatiques</h2>
-                    <h1>on verra bien</h1>
+                    <h1>{prix}</h1>
                     <div className="separation"></div>
                     <p><b>Durée :</b></p>
                     <div className="modellingFlexRow">
@@ -143,7 +194,7 @@ const BookCoffret = ()=>{
                         </div>:false}
                     <p>Message personnel (240 caractères maximum) :</p>
                     <textarea rows="5" cols="50" maxLength="240" className="envoiMassage3"/>
-                    <p><input type="button" id="envoiMassage7" name="massage3" className="panier" value="Valider"/></p>
+                    <p onClick={()=>Validate()}  id="envoiMassage7" className="panier">Valider</p>
                 </div>
             </div>
         </div>
