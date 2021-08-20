@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../CSS/HomeRooms.css';
-import imgRoom from '../Images/room.JPG'
+import imgRoom from '../Images/room.JPG';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 
 function HomeRooms({room}) {
@@ -10,7 +13,7 @@ function HomeRooms({room}) {
 
   return (
     <Link to="/PrivateRoom" className="room-link"> 
-    <div className="container-room" ref={room}>
+    <div className="container-room" ref={room} data-aos="fade-right" data-aos-duration="1000">
         <img src={imgRoom} alt="Canvas Logo" className="imageRoom"/>
         <div className="containerTextBorderRoom">
           

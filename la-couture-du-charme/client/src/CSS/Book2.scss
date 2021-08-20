@@ -441,10 +441,11 @@
 
 .textCadeauUnique{
     color: white;
-    
-    margin-left: 10%;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 270%;
-    width: 50%;
+    width: 65%;
+    margin-top: 12%;
 }
 
 .containerTextCadeau{
@@ -462,12 +463,14 @@
     padding: 1%;
     padding-left: 3%;
     padding-right: 3%;
-    font-size: 150%;
+    font-size: 170%;
     border-radius: 7px;
     color: rgb(78, 40, 15);
     font-weight: bolder;
-    margin-right: 10%;
+    margin-right: auto;
+    margin-left: auto;
     margin-top: 20%;
+    font-weight: lighter;
     cursor: pointer;
     transition-property: background-color,border-radius;
     transition-duration: 800ms;
@@ -492,8 +495,9 @@
     flex-direction: row;
     justify-content: flex-end;
     color: white;
-    margin-right: 10%;
-    
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10%;
     font-size: 270%;
     width: 70%;
 }
@@ -507,9 +511,10 @@
 
 .containerButtonBook{
     width:50%;
-    margin-left: 10%;
     padding: 1%;
-    margin-top: 7%;
+    margin-top: 12%;
+    margin-left: auto;
+    margin-right: auto  ;
 }
 .buttonBook{
     color: rgb(78, 40, 15);
@@ -520,6 +525,8 @@
     background-color: rgb(218, 214, 180);
     width: max-content;
     border-radius: 7px;
+    margin-left: auto;
+    margin-right: auto;
 
     transition-property: background-color, border-radius;
     transition-duration: 800ms;
