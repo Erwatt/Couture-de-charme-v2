@@ -33,8 +33,15 @@
 }
 
 .room-link{
+    cursor: pointer;
+    margin-top: 10%;
+    width: 30%;
+    padding: 2%;
+    text-align: center;
     text-decoration: none;
-    color: black;
+    color: white;
+    background: black;
+    border-radius: 7px;
 }
 .containerTextRoom{
     font-family: 'Roboto', sans-serif;

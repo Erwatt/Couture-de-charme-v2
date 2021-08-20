@@ -18,6 +18,8 @@ AOS.init();
 
 export default function PrivateRoom(){
 
+    window.scrollTo(0,0);
+
     
     const[prix1,setPrix1]=useState(false);
     const[prix2,setPrix2]=useState(false);

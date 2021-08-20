@@ -19,6 +19,19 @@
     flex-direction: row;
 }
 
+.modellingFlexRow2{
+    display: flex;
+    flex-direction: row;
+    margin-right: 5%;
+}
+
+.modellingFlexRowEven{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: left;
+}
+
 .modellingFlexColumn{
     display: flex;
     flex-direction: column;
@@ -70,6 +83,33 @@
     margin-right: 5%;
 }
 
+.Clicked3{
+    border : solid cadetblue;
+    border-radius: 7px;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-right: 100%;
+}
+
+.Unclicked3{
+    background-color: cadetblue;
+    color: white;
+    border-radius: 7px;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-right: 100%;
+}
+
+.spaSlots{
+    margin-right: 10%;
+}
+
 .separation{
     border-bottom: solid grey;
     border-width: 2px;
@@ -94,12 +134,14 @@
 }
 
 .panier{
+    text-align: center;
     margin-bottom: 3%;
     width: 15%;
     border-radius: 30px;
     background-color: rgb(221, 215, 215);
     box-shadow: 0px 3px 5px black;
     transition: 600ms;
+    cursor: pointer;
     &:hover{
         background-color: whitesmoke;
         transform: translate(0, 1.5px);
