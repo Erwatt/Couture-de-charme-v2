@@ -64,7 +64,6 @@ function App() {
           <Route path='/MentionsLégales' component={MentionsLegales}/>
           <Route path='/Modelling' component={Modelling}/>
           <Route path='/Spa' component={Spa}/>
-
           <Route path ='/PaymentComponent' component={CheckoutForm}/>
           
 
