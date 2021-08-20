@@ -4,7 +4,8 @@ const Nodemailer = require('nodemailer');
 exports.sendMessage = (req, res) => {
     console.log('coucou')
     let {name, phone, mail, spam, message} = req.body;
-    var txt = "message: " + message + ". tél: " + phone + " spam: " + spam;
+    console.log(message)
+    var txt = spam ;
 
     const msg = new Message({
       name: name,
@@ -27,7 +28,7 @@ exports.sendMessage = (req, res) => {
     const mailOptions = {
         from: process.env.SENDER,
         to: process.env.RECEIVER,
-        subject: `Nouveau message de ${mail} : ${name}`,
+        subject: `Nouveau message de ${name} : ${mail} / ${phone}`,
         html: `${txt}`
     };
 
