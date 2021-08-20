@@ -21,14 +21,7 @@ export default function BookSpa(){
     const[creneau1h30,setCreneau1h30]=useState(false)
     const[creneau,setCreneau]=useState("Créneau Spa")
     const[prix, setPrix]=useState(30)
-    const[nombre1,setNombre1]=useState(false)
-    const[nombre2,setNombre2]=useState(false)
-    const[nombre3,setNombre3]=useState(false)
-    const[nombre4,setNombre4]=useState(false)
-    const[nombre5,setNombre5]=useState(false)
-    const[nombre6,setNombre6]=useState(false)
-    const[nombre7,setNombre7]=useState(false)
-    const[nombre8,setNombre8]=useState(false)
+    
 
     const[nombre1,setNombre1]=useState(false)
     const[nombre2,setNombre2]=useState(false)
