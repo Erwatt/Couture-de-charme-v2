@@ -62,8 +62,8 @@
 .spabox{
     display: flex;
     flex-direction: row; 
-    margin-bottom: 10%;
-    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-top: 5%;
     background-color: rgb(218, 214, 180);
     padding-right: 5%;
     padding-left: 5%;
@@ -74,8 +74,8 @@
 .poufsbox{
     display: flex;
     flex-direction: row;
-    margin-bottom: 10%;
-    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-top: 5%;
     background-color: rgb(218, 214, 180);
     padding-right: 5%;
     padding-left: 5%;
@@ -87,8 +87,8 @@
 .saunabox{
     display: flex;
     flex-direction: row;
-    margin-bottom: 10%;
-    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-top: 5%;
     background-color: rgb(218, 214, 180);
     padding-right: 5%;
     padding-left: 5%;
@@ -99,8 +99,7 @@
 .poolbox{
     display: flex;
     flex-direction: row;
-    margin-bottom: 10%;
-    margin-top: 10%;
+    margin-bottom: 5%;
     background-color: rgb(218, 214, 180);
     padding-right: 5%;
     padding-left: 5%;
@@ -157,6 +156,8 @@
     background-color: white;
     border: double black;
     position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
 }
 .poufs-txt{
     padding-right: 5%;
@@ -169,6 +170,8 @@
     background-color: white;
     border: double black;
     position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
 }
 .sauna-txt{
     padding-right: 5%;
@@ -181,6 +184,8 @@
     background-color: white;
     border: double black;
     position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
 }
 .pool-txt{
     padding-right: 5%;
@@ -192,6 +197,8 @@
     margin-left: 3%; 
     background-color: white;
     border: double black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
     
 }
 
@@ -204,3 +211,41 @@
     }
 }
 
+@media (max-width: 800px){
+    .spabox{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .saunabox{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .poolbox{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .poufsbox{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .spapic{
+        width: 100%;
+    }
+
+    .saunapic{
+        width: 90%;
+    }
+
+    .piscinepic{
+        width: 90%;
+    }
+
+    .poufspic{
+        width: 100%;
+    }
+}

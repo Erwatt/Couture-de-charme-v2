@@ -21,6 +21,7 @@ export default function BookSpa(){
     const[creneau1h30,setCreneau1h30]=useState(false)
     const[creneau,setCreneau]=useState("Créneau Spa")
     const[prix, setPrix]=useState(30)
+    
 
     const[nombre1,setNombre1]=useState(false)
     const[nombre2,setNombre2]=useState(false)
@@ -226,10 +227,118 @@ export default function BookSpa(){
         if(after17){setAfter17(false)}
         else{setAfter17(true)}
     }
+
+    const Nombre1 = ()=>{
+        setNombre2(false)
+        setNombre3(false)
+        setNombre4(false)
+        setNombre5(false)
+        setNombre6(false)
+        setNombre7(false)
+        setNombre8(false)
+        if(nombre1){setNombre1(false)
+             setNombre(0)}
+        else{setNombre1(true)}
+        setNombre(1)
+    }
+
+     const Nombre2 = ()=>{
+         setNombre1(false)
+         setNombre3(false)
+         setNombre4(false)
+         setNombre5(false)
+         setNombre6(false)
+         setNombre7(false)
+         setNombre8(false)
+         if(nombre2){setNombre2(false)
+            setNombre(0)}
+         else{setNombre2(true)}
+         setNombre(2)
+     }
+     const Nombre3 = ()=>{
+         setNombre2(false)
+         setNombre1(false)
+         setNombre4(false)
+         setNombre5(false)
+         setNombre6(false)
+         setNombre7(false)
+         setNombre8(false)
+         if(nombre3){setNombre3(false)
+            setNombre(0)}
+         else{setNombre3(true)}
+         setNombre(3)
+     }
+     const Nombre4 = ()=>{
+         setNombre2(false)
+         setNombre3(false)
+         setNombre1(false)
+         setNombre5(false)
+         setNombre6(false)
+         setNombre7(false)
+         setNombre8(false)
+         if(nombre4){setNombre4(false)
+            setNombre(0)}
+         else{setNombre4(true)}
+         setNombre(4)
+     }
+     const Nombre5 = ()=>{
+         setNombre2(false)
+         setNombre3(false)
+         setNombre4(false)
+         setNombre1(false)
+         setNombre6(false)
+         setNombre7(false)
+         setNombre8(false)
+         if(nombre5){setNombre5(false)
+            setNombre(0)}
+         else{setNombre5(true)}
+         setNombre(5)
+     }
+    const Nombre6 = ()=>{
+        setNombre2(false)
+        setNombre3(false)
+        setNombre4(false)
+        setNombre5(false)
+        setNombre1(false)
+        setNombre7(false)
+        setNombre8(false)
+        if(nombre6){setNombre6(false)
+            setNombre(0)}
+        else{setNombre6(true)}
+        setNombre(6)
+    }
+
+    const Nombre7 = ()=>{
+        setNombre2(false)
+        setNombre3(false)
+        setNombre4(false)
+        setNombre5(false)
+        setNombre1(false)
+        setNombre6(false)
+        setNombre8(false)
+        if(nombre7){setNombre7(false)
+            setNombre(0)}
+        else{setNombre7(true)}
+        setNombre(7)
+    }
+
+     const Nombre8 = ()=>{
+         setNombre2(false)
+         setNombre3(false)
+         setNombre4(false)
+         setNombre5(false)
+         setNombre1(false)
+         setNombre7(false)
+         setNombre6(false)
+         if(nombre8){setNombre8(false)
+            setNombre(0)}
+         else{setNombre8(true)}
+         setNombre(8)
+     }
     
     const Creneau2h = ()=>{
         setCreneau1h30(false)
-        if(creneau2h){setCreneau2h(false)}
+        if(creneau2h){setCreneau2h(false) }
         else{setCreneau2h(true)}
     }
     const Creneau1h30h = ()=>{
@@ -261,23 +370,28 @@ export default function BookSpa(){
                             
                             if(after17){
                                 if(creneau1h30){
-                                    setCreneau("Créneau Spa - " +" Semaine - "+nombre.toString()+ " personne(s)" +" - 1h30")
+                                    if(nombre>1){ setCreneau("Créneau Spa - " +" Semaine - "+nombre.toString()+ " personnes" +" - 1h30")}
+                                    else{ setCreneau("Créneau Spa - " +" Semaine - "+nombre.toString()+ " personne" +" - 1h30")}
                                     if(nombre==1||nombre==2){setPrix(90)}
                                     else{setPrix(90+(nombre-2)*20)}
                             }
                                 else{
-                                    setCreneau(" Créneau Spa - Semaine - " +nombre.toString()+ " personne(s)" +" - 2h")
+                                    if(nombre>1){ setCreneau(" Créneau Spa - Semaine - " +nombre.toString()+ " personnes" +" - 2h")}
+                                    else{setCreneau(" Créneau Spa - Semaine - " +nombre.toString()+ " personne" +" - 2h")}
+                                    
                                     if(nombre==1||nombre==2){setPrix(110)}
                                     else{setPrix(110+(nombre-2)*20)}                            }
                             }
                             else{
-                                setCreneau("Créneau Spa - Semaine - " +nombre.toString()+ " personne(s)")
+                                if(nombre>1){ setCreneau("Créneau Spa - Semaine - " +nombre.toString()+ " personnes")}
+                                    else{ setCreneau("Créneau Spa - Semaine - " +nombre.toString()+ " personne")}
                                 if(nombre==1||nombre==2){setPrix(80)}
                                 else{setPrix(80+(nombre-2)*20)}                        }
                                 
                         }
                         else{
-                            setCreneau("Créneau Spa - Weekend - " +nombre.toString()+ " personne(s)")
+                            if(nombre>1){setCreneau("Créneau Spa - Weekend - 2h - " +nombre.toString()+ " personnes")}
+                                    else{ setCreneau("Créneau Spa - Weekend - 2h - " +nombre.toString()+ " personne")}
                             if(nombre==1||nombre==2){setPrix(130)}
                             else{setPrix(130+(nombre-2)*20)}                    }
     

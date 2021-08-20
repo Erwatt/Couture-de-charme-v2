@@ -75,7 +75,7 @@ function Footer(){
                         <img className="footer-instagram" src={instagram} alt="instagram" loading="lazy"/>
                     </a>
                 </div>
-                <p className="txtCouture2021">Couture du Charme 2021</p>
+                <p className="txtCouture2021Footer">Couture du Charme 2021</p>
                 <Link to="/MentionsLégales" className="footer-link"><div className="footer-down-mention"><p>Mentions légales</p></div></Link>
             </div>
         </div>

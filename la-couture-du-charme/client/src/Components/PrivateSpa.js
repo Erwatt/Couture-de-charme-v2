@@ -12,12 +12,10 @@ AOS.init();
 
 
 export default function PrivateSpa(){
-    window.scrollTo(0, 0);
 
     return (
         <div className="PrivateSpaContainer">
-                <div className="SpaHeader">Spa privatif<b></b></div>
-                <div className="poolbox" data-aos="fade-left" >
+                <div className="poolbox" data-aos="fade-left" data-aos-duration="1000">
                     <img src={piscine} alt="piscine" className="piscinepic"/>
                     <div className="pool-txt">
                         <h2>Piscine chauffée avec hydrothérapie</h2>

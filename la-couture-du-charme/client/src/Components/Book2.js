@@ -48,11 +48,11 @@ const BookSpa = () => {
                                     <div className="bookLeftContainer">
                                         <div className="containerWhite">
                                             <div className="containerFlexRowEnd">
-                                                <p className="textTitleBook">Réservez votre séjour</p>
+                                                <p className="textTitleBook">Réservez votre prestation</p>
                                             </div>
                                             <div className="containerButtonBook">
-                                                <p className="buttonBook" id="bookRoom" onClick={()=>BookRoom()}>Réserver une chambre</p>
-                                                <p className="buttonBook" id="bookSpa" onClick={()=>BookSpa()}>Réserver le centre de détente</p>
+                                                <p className="buttonBook" id="bookSpa" onClick={()=>BookSpa()}>Centre de détente</p>
+                                                <p className="buttonBook" id="bookRoom" onClick={()=>BookRoom()}>Chambre</p>       
                                             </div>
                                         </div>
                                     </div>
@@ -60,8 +60,7 @@ const BookSpa = () => {
                                 <div className="containerSide">
                                     <div className="giftRightContainer">
                                         <p className="textCadeauUnique">Offrez un cadeau unique</p>
-                                        <div className="containerTextCadeau">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Penatibus et magnis dis parturient montes nascetur ridiculus mus mauris. In cursus turpis massa tincidunt dui ut ornare lectus. </div>
-                                        <div className="containerFlexRowEnd"><p className="btnCadeau" onClick={()=>handleGift()}>Offrir</p></div>
+                                        <div className="containerFlexRowEnd"><p className="btnCadeau" onClick={()=>handleGift()}>Bon cadeau</p></div>
                                     </div>
                                 </div>
                             </div>

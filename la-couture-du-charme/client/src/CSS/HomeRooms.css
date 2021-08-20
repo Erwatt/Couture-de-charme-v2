@@ -39,6 +39,7 @@
 .containerTextRoom{
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
+    margin-top: 15%;
 }
 
 @media (max-width: 800px) { 
