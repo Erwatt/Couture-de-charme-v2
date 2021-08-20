@@ -433,8 +433,8 @@ export default function BookSpa(){
                                 <div className="creneauText">{creneau}</div>
                                 <div>
                                     <div className="messageText">Délassez vous dans l'espace piscine sauna spa, seul ou à plusieurs, en semaine avant 17h.</div>
-                                    <div className="accompteTXT">Accompte : €80</div>                                    
-                                    <div className="priceText">€{prix} EUR <div className="ttcText">TTC</div></div>                                </div>
+                                    <div className="accompteTXT">Accompte : 80 €</div>                                    
+                                    <div className="priceText">{prix} €<div className="ttcText">TTC</div></div>                                </div>
                             </div >
                             <div className="calendar">
                                 <InlineWidget url="https://calendly.com/coutureducharme-le-spa/creneau-spa-1h30-journee-semaine" 
@@ -458,8 +458,8 @@ export default function BookSpa(){
                                         </div>
                                         <div className="creneauText">{creneau}</div>
                                         <div className="messageText">Délassez vous dans l'espace piscine sauna spa, seul ou à plusieurs, en semaine après 17h.</div>
-                                        <div className="accompteTXT">Accompte : €90</div>  
-                                        <div className="priceText">€{prix} EUR <div className="ttcText">TTC</div></div>
+                                        <div className="accompteTXT">Accompte : 90 €</div>  
+                                        <div className="priceText">{prix} €<div className="ttcText">TTC</div></div>
                                     </div >
                                     <div className="calendar">
                                         <InlineWidget  url="https://calendly.com/coutureducharme-le-spa/creneau-spa-1h30-soir-de-semaine" 
@@ -488,8 +488,8 @@ export default function BookSpa(){
                                         </div>
                                         <div className="creneauText">{creneau}</div>
                                         <div className="messageText">Délassez vous dans l'espace piscine sauna spa, seul ou à plusieurs, en semaine après 17h.</div>
-                                        <div className="accompteTXT">Accompte : €110</div>  
-                                        <div className="priceText">€{prix} EUR <div className="ttcText">TTC</div></div>                                    </div >
+                                        <div className="accompteTXT">Accompte : 110 €</div>  
+                                        <div className="priceText">{prix} €<div className="ttcText">TTC</div></div>                                    </div >
                                     <div className="calendar">
                                         <InlineWidget url="https://calendly.com/coutureducharme-le-spa/creneau-spa-2h00-soir-de-semaine" 
                                             pageSettings={{
@@ -513,8 +513,8 @@ export default function BookSpa(){
                                 </div>
                                 <div className="creneauText">{creneau}</div>
                                 <div className="messageText">Délassez vous dans l'espace piscine sauna spa, seul ou à plusieurs, le weekend.</div>
-                                <div className="accompteTXT">Accompte : €130</div>  
-                                <div className="priceText">€{prix} EUR <div className="ttcText">TTC</div></div>                            </div >
+                                <div className="accompteTXT">Accompte : 130 €</div>  
+                                <div className="priceText">{prix} €<div className="ttcText">TTC</div></div>                            </div >
                             <div className="calendar">
                                 <InlineWidget url="https://calendly.com/coutureducharme-le-spa/creneau-spa-2h00-weekend" 
                                                     pageSettings={{

@@ -3,6 +3,7 @@
     flex-direction: row;
     margin: 3%;
     background: url('../Images/centre.jpg');
+
     background-size: cover;
     background-position: center center;
     /* background-color: rgba(70, 131, 131, 0.5); */
@@ -19,6 +20,7 @@
     opacity: 100%;
     text-align: center;
     width: 40%;
+    
 }
 
 .promise3-cadre{
@@ -36,6 +38,7 @@
 .promise3-title{
     border-bottom:5px solid burlywood;
     color: white;
+    background: rgba(141, 168, 196, 0.7);
 }
 
 .sentence{

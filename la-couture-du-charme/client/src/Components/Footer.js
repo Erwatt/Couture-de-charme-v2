@@ -22,6 +22,8 @@ function Footer(){
         //     services.sendMessage(name, phone, mail, message);
         // }
         // e.preventDefault()
+        console.log(e)
+        console.log(message)
         services.sendMessage(name, phone, mail, message);
         
     };
