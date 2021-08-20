@@ -25,6 +25,9 @@
     margin-right: 5%;
 }
 
+.PaymentBlock{
+}
+
 .modellingFlexRowEven{
     display: flex;
     flex-direction: row;
@@ -119,18 +122,25 @@
 .envoiMassage{
     padding-top: 2%;
     padding-bottom: 2%;
+    border : 1px solid rgba(50, 50, 93, 0.2) ;
+    
 }
-
 .envoiMassage1{
+    border : 1px solid rgba(50, 50, 93, 0.2) ;
     margin-left: 10%;
     padding-top: 2%;
     padding-bottom: 2%;
 }
 
 .envoiMassage2{
+    border : 1px solid rgba(50, 50, 93, 0.2) ;
     width: 25%;
     padding-top: 0.3%;
     padding-bottom: 0.3%;
+}
+.envoiMassage3{
+    
+    border : 1px solid rgba(50, 50, 93, 0.2) ;
 }
 
 .panier{
@@ -184,11 +194,13 @@
     .envoiMassage{
         margin-left: 0%;
         margin-right: 10%;
+        border : 1px solid rgba(50, 50, 93, 0.2) ;
     }
 
     .envoiMassage1{
         margin-left: 0%;
         margin-right: 10%;
+        border : 1px solid rgba(50, 50, 93, 0.2) ;
     }
 
     .envoiMassage2{
@@ -196,10 +208,12 @@
         width: 50%;
         padding-top: 1%;
         padding-bottom: 1%;
+        border : 1px solid rgba(50, 50, 93, 0.2) ;
     }
 
     .envoiMassage3{
         width: 85%;
+        border : 1px solid rgba(50, 50, 93, 0.2) ;
     }
 
     .panier{
