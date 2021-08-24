@@ -42,7 +42,7 @@ export default function Gift(){
             <div className="gift-box2">
                 <div className="link1" onClick={handleGiftSpa}>
                     <img src={spa} alt="gift-pic2" className="gift-pic2"/>
-                    <p><b>Spa</b></p>
+                    <p><b>Centre de détente</b></p>
                 </div>
                 <div className="link2" onClick={handleModelling}>
                     <img src={massage} alt="gift-pic3" className="gift-pic3"/>

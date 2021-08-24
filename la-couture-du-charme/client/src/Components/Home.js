@@ -18,6 +18,8 @@ import poufs from '../Images/poufs.jpg';
 import sauna from '../Images/sauna.jpg';
 import piscine from '../Images/piscine.jpg'
 import '../CSS/PrivateSpa.css';
+import house1 from '../Images/house1.jpg';
+import house2 from '../Images/house2.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 AOS.init();
@@ -111,8 +113,21 @@ function Home(){
                 <h2 className="home-introQuestion">Qui sommes-nous ?</h2>
             </div> */}
 
-            <HomeSpa pool={spa}/>
-
+            <div className="IntroContainer" data-aos="fade-right" data-aos-duration="1000">
+                <div className="introTextContainer">
+                    <div className="house1box">
+                        <img src={house1} alt="house1" className="house1"/>
+                        <p>Relaxez-vous dans notre spa privatif avec piscine, séjournez dans nos chambres d'hôtes spacieuses et modernes, détendez-vous grâce aux bienfaits de nos modelages...</p>
+                    </div>
+                    <div className="house2box">
+                        <div className="subhouse2box">
+                            <h2>La Couture du Charme</h2>
+                            <p>Entre amis ou en famille, venez vivre un moment de détente inoubliable dans notre bulle d'exception de 100 m².</p>
+                        </div>
+                        <img src={house2} alt="house2" className="house2"/>
+                    </div>
+                </div>    
+            </div>
             {/* <div className="home-avis">
             {transition4((style, item) => 
                     item ? <animated.div style={style}><Avis/></animated.div>:"" )}

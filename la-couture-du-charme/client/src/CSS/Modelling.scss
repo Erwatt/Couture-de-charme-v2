@@ -25,9 +25,6 @@
     margin-right: 5%;
 }
 
-.PaymentBlock{
-}
-
 .modellingFlexRowEven{
     display: flex;
     flex-direction: row;
@@ -123,13 +120,15 @@
     padding-top: 2%;
     padding-bottom: 2%;
     border : 1px solid rgba(50, 50, 93, 0.2) ;
+    width: 88%;
     
 }
 .envoiMassage1{
     border : 1px solid rgba(50, 50, 93, 0.2) ;
-    margin-left: 10%;
+    margin-left: 20%;
     padding-top: 2%;
     padding-bottom: 2%;
+    width: 88%;
 }
 
 .envoiMassage2{
@@ -219,4 +218,22 @@
     .panier{
         width: 30%;
     }
+}
+
+.panier5294{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.giftPrice{
+    position: relative;
+    right: 30%;
+    padding-top: 5%;
+    font-size: 300%;
+}
+
+.PriceBox{
+    display: flex;
+    flex-direction: row;
 }

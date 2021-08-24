@@ -7,6 +7,8 @@ import CheckoutForm from './CheckoutForm';
 
 export default function Modelling(){
 
+let history=useHistory();
+
 const[min30, setMin30]=useState(false);
 const[min60, setMin60]=useState(false);
 const[solo, setSolo]=useState(false);
@@ -80,6 +82,9 @@ const BookCoffret = ()=>{
     setVip(true)}
 }
 
+const Invalidate = ()=>{
+    setvalidate(false)
+}
 
 
 const Validate = ()=>{
@@ -113,11 +118,8 @@ const Validate = ()=>{
                         if(coffret===true){setPrix(118)}
                         else{setPrix(100)}   
                     }
-                }
-                
+                }     
                 setvalidate(true)
-                
-            
             }
         }
     }
@@ -137,7 +139,6 @@ const Validate = ()=>{
                 </div>
                 <div className="modellingRight">
                     <h2>Massage aux huiles aromatiques</h2>
-                    <h1>{prix}</h1>
                     <div className="separation"></div>
                     <p><b>Durée :</b></p>
                     <div className="modellingFlexRow">
@@ -170,7 +171,7 @@ const Validate = ()=>{
                         }
                     </div>
                     <p><b>Invitation électronique : </b>envoyée par nos soins par mail</p>
-                    <p><b>Enveloppe cadeau : </b>envoyée par nos soins (délai postal)</p>
+                    <p><b>Enveloppe cadeau : </b>à retirer sur place ou envoyé par nos soins par courrier</p>
                     <p><b>Boîte Cadeau la Couture du Charme: </b>envoyée par nos soins (délai Colissimo)</p>
                     <div className="separation"></div>
                     <p><b>Personnalisez votre cadeau</b></p>
@@ -178,21 +179,24 @@ const Validate = ()=>{
                         <div className="modellingFlexColumn">
                             <p>De la part de :</p>
                             {!validate?<input type="text" id="envoiMassage1" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage1" name="massage1" className="envoiMassage" disabled/>}
-                            
+                            <p>Mail :</p>
+                            {!validate?<input type="text" id="envoiMassage9" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage9" name="massage1" className="envoiMassage" disabled/>}
+                            <p>Tél :</p>
+                            {!validate?<input type="text" id="envoiMassage10" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage10" name="massage1" className="envoiMassage" disabled/>}
                         </div>
                         <div className="modellingFlexColumn">
                             <p>Offert à :</p>
                             {!validate?<input type="text" id="envoiMassage2" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage2" name="massage1" className="envoiMassage1" disabled/>}
-                            
+                            <p>Mail :</p>
+                            {!validate?<input type="text" id="envoiMassage11" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage11" name="massage1" className="envoiMassage1" disabled/>}
+                            <p>Tél :</p>
+                            {!validate?<input type="text" id="envoiMassage12" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage12" name="massage1" className="envoiMassage1" disabled/>}
                         </div>
                     </div>
                     {vip?
                         <div>
                             <p>À livrer à (Nom Prénom) :</p>
                             {!validate?<input type="text" id="envoiMassage3" name="massage1" className="envoiMassage2"/>:<input type="text" id="envoiMassage3" name="massage1" className="envoiMassage2" disabled/>}
-                            
-                            <p>Mail (destinataire) :</p>
-                            {!validate?<input type="text" id="envoiMassage8" name="massage1" className="envoiMassage2"/>:<input type="text" id="envoiMassage8" name="massage1" className="envoiMassage2" disabled/>}
                             
                             <p>Adresse de livraison :</p>
                             {!validate?<input type="text" id="envoiMassage4" name="massage1" className="envoiMassage2"/>:<input type="text" id="envoiMassage4" name="massage1" className="envoiMassage2" disabled/>}
@@ -214,49 +218,20 @@ const Validate = ()=>{
                     {!validate?<textarea rows="5" cols="50" maxLength="240" className="envoiMassage3"/>:<textarea rows="5" cols="50" maxLength="240" className="envoiMassage3" disabled/>}
                     
                     {
-                        !validate?<p onClick={()=>Validate()}  id="envoiMassage7" className="panier">Valider</p>:false
-                    }
-                                      
+                        !validate?<p onClick={()=>Validate()}  id="envoiMassage7" className="panier">Valider</p>
+                        :<p onClick={()=>Invalidate()}  id="envoiMassage8" className="panier">Réinitialiser</p>
+                    }              
                     {
-                        validate?<CheckoutForm element="ModelingGift" prix={prix}/>:false
+                        validate?
+                        <div>
+                            <div className="PriceBox">
+                                <CheckoutForm element="ModelingGift" prix={prix}/>
+                                <h2 className="giftPrice">{prix}€</h2>
+                            </div>
+                            <p>paiement effectué par <b>Stripe</b></p>
+                        </div>
+                        :false
                     }
-
-{/* if(solo===false&duo===false){setvalidate(false)}
-    else{
-        if (min30===false&&min60===false){setvalidate(false)}
-        else{
-            if(invitation===false&&enveloppe===false&&coffret===false){setvalidate(false)}
-            else{
-                if(min30){
-                    if(solo){
-                        setCreneau("Créneau Modelage - " +nombre.toString()+ " personne" +" - 30 min")
-                        if(coffret===true){setPrix(53)}
-                        else{setPrix(35)}
-                    }
-                    else{
-                        setCreneau(" Créneau Modelage - " +nombre.toString()+ " personnes" +" - 30 min")
-                        if(coffret===true){setPrix(78)}
-                        else{setPrix(60)}                          
-                    }
-                }
-                        
-                else{
-                    if(solo){
-                        setCreneau("Créneau Modelage - " +nombre.toString()+ " personne" +" - 60 min")
-                        if(coffret===true){setPrix(78)}
-                        else{setPrix(60)}                  
-                    }
-                    else{
-                        setCreneau("Créneau Modelage - " +nombre.toString()+ " personnes"  +" - 60 min")
-                        if(coffret===true){setPrix(118)}
-                        else{setPrix(100)}   
-                    }
-                }
-                
-                setvalidate(true)
-                
-            
-            } */}
                 </div>
             </div>
         </div>
