@@ -49,15 +49,7 @@ export default function Promise3(){
             {transitionWho((style, item) =>
             item ? <animated.div style={style} className="promise3-cadre">
                 <div className="promise3-quiSommesNous">
-                        <div className="sentence">Au coeur d'une nature calme et verdoyante, la Couture du Charme est le lieu
-                         unique pour vous offrir un moment de détente inoubliable, entre amis ou en famille.
-                         
-                         
-                        </div>
-                        <div className="sentence">Relaxez-vous dans notre spa privatif avec piscine, séjournez dans nos chambre d'hôtes
-                         spacieuses et modernes, détendez-vous grâce aux bienfaits de nos modelages...</div>
-                        <div className="sentence">La Couture du Charme vous accueille à Saméon, à proximité d'Orchies et Saint Amand, 
-                         à 20 minutes de Lille et Valenciennes.</div>
+                        <p className='sentence'>Au cœur d'une nature calme et verdoyante, la Couture du Charme vous accueille dans son spa privatif, et ses chambres d’hôtes, à Saméon, à proximité d'Orchies et Saint Amand, à 20 minutes de Lille et Valenciennes.    </p>
                 </div> 
             </animated.div> : "")}       
         </div>

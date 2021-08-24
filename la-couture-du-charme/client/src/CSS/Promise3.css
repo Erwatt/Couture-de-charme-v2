@@ -26,13 +26,14 @@
 .promise3-cadre{
     padding: 1.5%;
     position: relative;
-    height: 30%;
+    height: 20%;
     width: 48%;
     background-color: burlywood;
     bottom: -65%;
     line-height: 150%;
     /* bottom: -130px; */
     right: -7%;
+    top: 75%;
 }
 
 .promise3-title{
@@ -42,7 +43,7 @@
 }
 
 .sentence{
-    margin-bottom: 1%;
+    margin-top: 5%;
 }
 
 .promise3-quiSommesNous{

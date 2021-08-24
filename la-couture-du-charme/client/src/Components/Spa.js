@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import massage from '../Images/spa.jpg';
 import '../CSS/Book2.scss';
 import { useHistory } from 'react-router-dom';
+import CheckoutForm from './CheckoutForm';
 
 export default function Modelling(){
 
@@ -22,18 +23,21 @@ const[coffret, setCoffret]=useState(false);
 const[vip, setVip]=useState(false);
 
 const Book30min = ()=>{
+    if(!validate){
     if (min30){setMin30(false)}
     else{setMin30(true)}
-    setMin60(false)
+    setMin60(false)}
 }
 
 const Book60min = ()=>{
+    if(!validate){
     if (min60){setMin60(false)}
     else{setMin60(true)}
-    setMin30(false)
+    setMin30(false)}
 }
 
 const Book1 = ()=>{
+    if(!validate){
     if (un){set1(false)}
     else{set1(true)}
     set2(false)
@@ -43,10 +47,11 @@ const Book1 = ()=>{
     set6(false)
     set7(false)
     set8(false)
-    setNombre(1)
+    setNombre(1)}
 }
 
 const Book2 = ()=>{
+    if(!validate){
     if (deux){set2(false)}
     else{set2(true)}
     set1(false)
@@ -56,10 +61,11 @@ const Book2 = ()=>{
     set6(false)
     set7(false)
     set8(false)
-    setNombre(2)
+    setNombre(2)}
 }
 
 const Book3 = ()=>{
+    if(!validate){
     if (trois){set3(false)}
     else{set3(true)}
     set2(false)
@@ -69,10 +75,11 @@ const Book3 = ()=>{
     set6(false)
     set7(false)
     set8(false)
-    setNombre(3)
+    setNombre(3)}
 }
 
 const Book4 = ()=>{
+    if(!validate){
     if (quatre){set4(false)}
     else{set4(true)}
     set2(false)
@@ -82,10 +89,11 @@ const Book4 = ()=>{
     set6(false)
     set7(false)
     set8(false)
-    setNombre(4)
+    setNombre(4)}
 }
 
 const Book5 = ()=>{
+    if(!validate){
     if (cinq){set5(false)}
     else{set5(true)}
     set2(false)
@@ -95,10 +103,11 @@ const Book5 = ()=>{
     set6(false)
     set7(false)
     set8(false)
-    setNombre(5)
+    setNombre(5)}
 }
 
 const Book6 = ()=>{
+    if(!validate){
     if (six){set6(false)}
     else{set6(true)}
     set2(false)
@@ -108,10 +117,11 @@ const Book6 = ()=>{
     set1(false)
     set7(false)
     set8(false)
-    setNombre(6)
+    setNombre(6)}
 }
 
 const Book7 = ()=>{
+    if(!validate){
     if (sept){set7(false)}
     else{set7(true)}
     set2(false)
@@ -121,10 +131,11 @@ const Book7 = ()=>{
     set6(false)
     set1(false)
     set8(false)
-    setNombre(7)
+    setNombre(7)}
 }
 
 const Book8 = ()=>{
+    if(!validate){
     if (huit){set8(false)}
     else{set8(true)}
     set2(false)
@@ -134,31 +145,34 @@ const Book8 = ()=>{
     set6(false)
     set7(false)
     set1(false)
-    setNombre(8)
+    setNombre(8)}
 }
 
 const BookInvitation = ()=>{
+    if(!validate){
     if (invitation){setInvitation(false)}
     else{setInvitation(true)}
     setEnveloppe(false)
     setCoffret(false)
-    setVip(false)
+    setVip(false)}
 }
 
 const BookEnveloppe = ()=>{
+    if(!validate){
     if (enveloppe){setEnveloppe(false)}
     else{setEnveloppe(true)}
     setInvitation(false)
     setCoffret(false)
-    setVip(true)
+    setVip(true)}
 }
 
 const BookCoffret = ()=>{
+    if(!validate){
     if (coffret){setCoffret(false)}
     else{setCoffret(true)}
     setEnveloppe(false)
     setInvitation(false)
-    setVip(true)
+    setVip(true)}
 }
 
 const[semaine,setSemaine]=useState(false)
@@ -173,46 +187,54 @@ const[semaine,setSemaine]=useState(false)
     const[prix, setPrix]=useState(30)
 
     const BookWeekend = ()=>{
+        if(!validate){
         if (weekend){setWeekend(false)}
         else{setWeekend(true)}
         setSemaine(false)
         setAfter17(false)
         setBefore17(false)
         setCreneau1h30(false)
-        setCreneau2h(false)
+        setCreneau2h(false)}
     
     }
     const BookSemaine = ()=>{
+        if(!validate){
         if (semaine){setSemaine(false)}
         else{setSemaine(true)}
         setWeekend(false)
         setAfter17(false)
-        setBefore17(false)
+        setBefore17(false)}
 
     }
     const BookBefore17 = ()=>{
+        if(!validate){
         if(before17){setBefore17(false)}
         else{setBefore17(true)}
-        setAfter17(false)
+        setAfter17(false)}
     }
     const BookAfter17 = ()=>{
+        if(!validate){
         setBefore17(false)
         if(after17){setAfter17(false)}
-        else{setAfter17(true)}
+        else{setAfter17(true)}}
     }
     
     const Creneau2h = ()=>{
+        if(!validate){
         setCreneau1h30(false)
         if(creneau2h){setCreneau2h(false)}
-        else{setCreneau2h(true)}
+        else{setCreneau2h(true)}}
     }
     const Creneau1h30h = ()=>{
+        if(!validate){
         setCreneau2h(false)
         if(creneau1h30){setCreneau1h30(false)}
-        else{setCreneau1h30(true)}
+        else{setCreneau1h30(true)}}
     }
 
-    let history=useHistory();
+    const Invalidate = ()=>{
+        setvalidate(false)
+    }
     
     const Validate = ()=>{
         if(nombre<1||nombre>8){setvalidate(false)}
@@ -261,18 +283,12 @@ const[semaine,setSemaine]=useState(false)
                             setCreneau("Créneau Spa - Weekend - " +nombre.toString()+ " personne(s)")
                             if(nombre==1||nombre==2){
                                 if(coffret===true){setPrix(148)}
-                                else{(setPrix(148+(nombre-2)*20))}}
-                            else{setPrix(130+(nombre-2)*20)}                    
+                                else{(setPrix(130))}}
+                            else{
+                                if(coffret===true){setPrix(148+(nombre-2)*20)}
+                                else{setPrix(130+(nombre-2)*20)}}                    
                         }
-    
-    
-                        
-    
-    
-                        
-                        // setvalidate(true)
-                        // history.push("/PaymentComponent")
-                    
+                        setvalidate(true)
                     }
                 }
             }
@@ -290,15 +306,14 @@ const[semaine,setSemaine]=useState(false)
                     <img src={massage} alt="spa" className="modellingPic"/>
                     <div>
                         <h1>Spa</h1>
-                        <p>Les senteurs d'huiles prestigieuses aux différents pouvoirs vous offrent une expérience sensorielle unique.</p>
-                        <p>Nos praticiennes adaptent l’intensité du massage en fonction de vos besoins. Pour un soin sur mesure (doux, moyen, fort), précisez votre choix à l’accueil.</p>
+                        <p>Offrez un moment de détente unique dans notre espace piscine sauna et spa.</p>
+                        <p>En créneau privatif.</p>
                     </div>
                 </div>
                 <div className="modellingRight">
-                    <h2>les bubulles c'est agréable</h2>
-                    <h1>{prix}</h1>
+                    <h2>Espace détente</h2>
                     <div className="separation"></div>
-                    <p><b>Nombre :</b></p>
+                    <p><b>Participants :</b></p>
                     <div className="modellingFlexRow2">
                         {
                             <p onClick={()=>Book1()} className={un ? "Clicked" : "Unclicked"}>1</p>
@@ -326,7 +341,7 @@ const[semaine,setSemaine]=useState(false)
                         }
                     </div>  
 
-                    <p><b>Créneau :</b></p>
+                    <p><b>Créneau souhaité pour votre cadeau:</b></p>
                     <div className="modellingFlexRow">
                         <div className="spaSlots">
                             {
@@ -378,42 +393,62 @@ const[semaine,setSemaine]=useState(false)
                         }
                     </div>
                     <p><b>Invitation électronique : </b>envoyée par nos soins par mail</p>
-                    <p><b>Enveloppe cadeau : </b>envoyée par nos soins (délai postal)</p>
+                    <p><b>Enveloppe cadeau : </b>à retirer sur place ou envoyé par nos soins par courrier</p>
                     <p><b>Boîte Cadeau la Couture du Charme: </b>envoyée par nos soins (délai Colissimo)</p>
                     <div className="separation"></div>
                     <p><b>Personnalisez votre cadeau</b></p>
                     <div className="modellingFlexRow">
                         <div className="modellingFlexColumn">
                             <p>De la part de :</p>
-                            <input type="text" id="envoiMassage1" name="massage1" className="envoiMassage"/>
+                            {!validate?<input type="text" id="envoiMassage1" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage1" name="massage1" className="envoiMassage" disabled/>}
+                            <p>Mail :</p>
+                            {!validate?<input type="text" id="envoiMassage9" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage9" name="massage1" className="envoiMassage" disabled/>}
+                            <p>Tél :</p>
+                            {!validate?<input type="text" id="envoiMassage10" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage10" name="massage1" className="envoiMassage" disabled/>}
                         </div>
                         <div className="modellingFlexColumn">
                             <p>Offert à :</p>
-                            <input type="text" id="envoiMassage2" name="massage1" className="envoiMassage1"/>
+                            {!validate?<input type="text" id="envoiMassage2" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage2" name="massage1" className="envoiMassage1" disabled/>}
+                            <p>Mail :</p>
+                            {!validate?<input type="text" id="envoiMassage11" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage11" name="massage1" className="envoiMassage1" disabled/>}
+                            <p>Tél :</p>
+                            {!validate?<input type="text" id="envoiMassage12" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage12" name="massage1" className="envoiMassage1" disabled/>}
                         </div>
                     </div>
                     {vip?
                         <div>
                             <p>À livrer à (Nom Prénom) :</p>
-                            <input type="text" id="envoiMassage3" name="massage1" className="envoiMassage2"/>
-                            <p>Mail (destinataire) :</p>
-                            <input type="text" id="envoiMassage8" name="massage1" className="envoiMassage2"/>
+                            {!validate?<input type="text" id="envoiMassage3" name="massage1" className="envoiMassage2"/>:<input type="text" id="envoiMassage3" name="massage1" className="envoiMassage2" disabled/>}
+                            
                             <p>Adresse de livraison :</p>
-                            <input type="text" id="envoiMassage4" name="massage1" className="envoiMassage2"/>
+                            {!validate?<input type="text" id="envoiMassage4" name="massage1" className="envoiMassage2"/>:<input type="text" id="envoiMassage4" name="massage1" className="envoiMassage2" disabled/>}
+                            
                             <div className="modellingFlexRow">
                                 <div className="modellingFlexColumn">
                                     <p>Code postal :</p>
-                                    <input type="text" id="envoiMassage5" name="massage1" className="envoiMassage"/>
+                                    {!validate?<input type="text" id="envoiMassage5" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage5" name="massage1" className="envoiMassage" disabled/>}
+                                    
                                 </div>
                                 <div className="modellingFlexColumn">
                                     <p>Ville :</p>
-                                <input type="text" id="envoiMassage6" name="massage1" className="envoiMassage1"/>
+                                    {!validate?<input type="text" id="envoiMassage6" name="massage1" className="envoiMassage1" />:<input type="text" id="envoiMassage6" name="massage1" className="envoiMassage1" disabled/>}
+                                
                                 </div>
                             </div>
                         </div>:false}
                     <p>Message personnel (240 caractères maximum) :</p>
-                    <textarea rows="5" cols="50" maxLength="240" className="envoiMassage3"/>
-                    <p onClick={()=>Validate()}  id="envoiMassage7" className="panier">Valider</p>
+                    {!validate?<textarea rows="5" cols="50" maxLength="240" className="envoiMassage3"/>:<textarea rows="5" cols="50" maxLength="240" className="envoiMassage3" disabled/>}
+                    {
+                        !validate?<p onClick={()=>Validate()}  id="envoiMassage7" className="panier">Valider</p>
+                        :<p onClick={()=>Invalidate()}  id="envoiMassage8" className="panier">Réinitialiser</p>
+                    }
+                    {
+                        validate?
+                        <div className="PriceBox">
+                            <CheckoutForm element="ModelingGift" prix={prix}/>
+                            <h2 className="giftPrice">{prix}€</h2>
+                        </div>:false
+                    }
                 </div>
             </div>
         </div>

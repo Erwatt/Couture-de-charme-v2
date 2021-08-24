@@ -2,6 +2,7 @@ import '../CSS/Book2.scss';
 import React, { useState } from 'react';
 import cocoon3 from '../Images/cocoon3.JPG';
 import scandinave3 from '../Images/scandinave3.JPG';
+import fragole from '../Images/fragole.jpeg';
 
 
 
@@ -13,7 +14,7 @@ function BookRoom(){
                 <div className="ElementRoom">
                     <p className="el">Fragole</p>
                     <div className="el">
-                        <img className="imgRoom"  src={cocoon3}></img>
+                        <img className="imgRoombis"  src={fragole}></img>
                     </div>
                     <div className="el"><iframe className="containerIframe"  src='https://widget.itea.fr/widget.php?key=amkkhds7&numgite=2697&widget-itea=dispo&nbmois-ligne=1&numChambre=1' ></iframe></div>
                 </div>

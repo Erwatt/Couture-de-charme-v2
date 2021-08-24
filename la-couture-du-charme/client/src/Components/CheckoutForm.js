@@ -26,7 +26,7 @@ export default function CheckoutForm({element,prix}) {
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify({items: [{ id : element ,price:12}]})
+        body: JSON.stringify({items: [{ id : element ,price:prix}]})
       })
       .then(res => {
         return res.json();
