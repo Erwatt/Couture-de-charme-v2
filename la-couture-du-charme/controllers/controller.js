@@ -44,3 +44,6 @@ exports.getMessages = (req, res) => {
       .then(messages => res.status(200).json(messages))
       .catch(error => res.status(400).json({error}));
 };
+
+
+
