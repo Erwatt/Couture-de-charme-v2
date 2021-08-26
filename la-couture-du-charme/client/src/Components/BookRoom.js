@@ -12,21 +12,21 @@ function BookRoom(){
         <div>
             <div className="containerBookRoom">
                 <div className="ElementRoom">
-                    <p className="el">Fragole</p>
+                    <p className="el"><b>FRAGOLE</b></p>
                     <div className="el">
                         <img className="imgRoombis"  src={fragole}></img>
                     </div>
                     <div className="el"><iframe className="containerIframe"  src='https://widget.itea.fr/widget.php?key=amkkhds7&numgite=2697&widget-itea=dispo&nbmois-ligne=1&numChambre=1' ></iframe></div>
                 </div>
                 <div className="ElementRoom">
-                    <p className="el">Scandinave</p>
+                    <p className="el"><b>SCANDINAVE</b></p>
                     <div className="el">
                         <img className="imgRoom" src={scandinave3}></img>
                     </div>
                     <div className="el"><iframe  className="containerIframe"  src='https://widget.itea.fr/widget.php?key=amkkhds7&numgite=2697&widget-itea=dispo&nbmois-ligne=1&numChambre=2' ></iframe></div>
                 </div>
                 <div className="ElementRoom">
-                    <p className="el">Cocoon</p>
+                    <p className="el"><b>COCOON</b></p>
                     <div className="el">
                         <img  className="imgRoom" src={cocoon3}></img>
                     </div>
@@ -35,7 +35,7 @@ function BookRoom(){
                 
             </div>
             <div className="conatierButton">
-                <p className="bookroomTxt">Pour réserver une chambre merci de d'appeler au 07 52 09 07 50</p>
+                <p className="bookroomTxt">Pour réserver une chambre merci d'appeler au 06 31 84 42 39 ou par mail : coutureducharme@gmail.com</p>
                 {/* <p className="ButtonBook2">Réserver</p> */}
             </div>
         </div>

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import massage from '../Images/massage.jpg';
 import { useHistory } from 'react-router-dom';
 import CheckoutForm from './CheckoutForm';
+import services from '../services';
 
 
 export default function Modelling(){
@@ -125,6 +126,26 @@ const Validate = ()=>{
     }
 }
 
+const [name, setName] = useState("");
+const [mail, setMail] = useState("");
+const [phone, setPhone] = useState("");
+// const [spam, setSpam] = useState(3);
+const [message, setMessage] = useState("");
+
+function handleMessage(e){
+    // if ( spam !== '4'){
+    //     e.preventDefault()
+    //     alert('Mauvaise réponse au test anti spam, va te faire foutre sale bot')
+    // } else {
+    //     services.sendMessage(name, phone, mail, message);
+    // }
+    // e.preventDefault()
+    console.log(e)
+    console.log(message)
+    services.sendMessage(name, phone, mail, message);
+    
+};
+
 
     return(
         <div className="ModellingContainer">
@@ -228,7 +249,7 @@ const Validate = ()=>{
                                 <CheckoutForm element="ModelingGift" prix={prix}/>
                                 <h2 className="giftPrice">{prix}€</h2>
                             </div>
-                            <p>paiement effectué par <b>Stripe</b></p>
+                            <p className="StripeSentence">paiement effectué par <b>Stripe</b></p>
                         </div>
                         :false
                     }

@@ -4,8 +4,8 @@ import '../CSS/Footer.scss';
 import {useState} from 'react';
 import services from '../services';
 import {Link} from 'react-router-dom';
-import facebook from '../Images/facebook.png'
-import instagram from '../Images/instagram.png'
+import facebook from '../Images/facebook.png';
+import instagram from '../Images/instagram.png';
 
 function Footer(){
     const [name, setName] = useState("");

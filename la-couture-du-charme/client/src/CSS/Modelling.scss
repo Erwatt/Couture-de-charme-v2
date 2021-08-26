@@ -216,6 +216,11 @@
     .panier{
         width: 30%;
     }
+
+    .PriceBox   {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .panier5294{
@@ -229,9 +234,18 @@
     right: 30%;
     padding-top: 5%;
     font-size: 300%;
+    width: 2%;
+    
 }
 
 .PriceBox{
     display: flex;
     flex-direction: row;
+}
+
+.StripeSentence{
+    text-align: center;
+    margin-right: 30%;
+    margin-top: -4%;
+    font-size: 70%;
 }

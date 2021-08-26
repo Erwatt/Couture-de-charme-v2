@@ -402,52 +402,57 @@ const[semaine,setSemaine]=useState(false)
                             <p>De la part de :</p>
                             {!validate?<input type="text" id="envoiMassage1" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage1" name="massage1" className="envoiMassage" disabled/>}
                             <p>Mail :</p>
-                            {!validate?<input type="text" id="envoiMassage9" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage9" name="massage1" className="envoiMassage" disabled/>}
+                            {!validate?<input type="text" id="envoiMassage2" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage9" name="massage1" className="envoiMassage" disabled/>}
                             <p>Tél :</p>
-                            {!validate?<input type="text" id="envoiMassage10" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage10" name="massage1" className="envoiMassage" disabled/>}
+                            {!validate?<input type="text" id="envoiMassage3" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage10" name="massage1" className="envoiMassage" disabled/>}
                         </div>
                         <div className="modellingFlexColumn">
                             <p>Offert à :</p>
-                            {!validate?<input type="text" id="envoiMassage2" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage2" name="massage1" className="envoiMassage1" disabled/>}
+                            {!validate?<input type="text" id="envoiMassage4" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage2" name="massage1" className="envoiMassage1" disabled/>}
                             <p>Mail :</p>
-                            {!validate?<input type="text" id="envoiMassage11" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage11" name="massage1" className="envoiMassage1" disabled/>}
+                            {!validate?<input type="text" id="envoiMassage5" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage11" name="massage1" className="envoiMassage1" disabled/>}
                             <p>Tél :</p>
-                            {!validate?<input type="text" id="envoiMassage12" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage12" name="massage1" className="envoiMassage1" disabled/>}
+                            {!validate?<input type="text" id="envoiMassage6" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage12" name="massage1" className="envoiMassage1" disabled/>}
                         </div>
                     </div>
                     {vip?
                         <div>
                             <p>À livrer à (Nom Prénom) :</p>
-                            {!validate?<input type="text" id="envoiMassage3" name="massage1" className="envoiMassage2"/>:<input type="text" id="envoiMassage3" name="massage1" className="envoiMassage2" disabled/>}
+                            {!validate?<input type="text" id="envoiMassage7" name="massage1" className="envoiMassage2"/>:<input type="text" id="envoiMassage3" name="massage1" className="envoiMassage2" disabled/>}
                             
                             <p>Adresse de livraison :</p>
-                            {!validate?<input type="text" id="envoiMassage4" name="massage1" className="envoiMassage2"/>:<input type="text" id="envoiMassage4" name="massage1" className="envoiMassage2" disabled/>}
+                            {!validate?<input type="text" id="envoiMassage8" name="massage1" className="envoiMassage2"/>:<input type="text" id="envoiMassage4" name="massage1" className="envoiMassage2" disabled/>}
                             
                             <div className="modellingFlexRow">
                                 <div className="modellingFlexColumn">
                                     <p>Code postal :</p>
-                                    {!validate?<input type="text" id="envoiMassage5" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage5" name="massage1" className="envoiMassage" disabled/>}
+                                    {!validate?<input type="text" id="envoiMassage9" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage5" name="massage1" className="envoiMassage" disabled/>}
                                     
                                 </div>
                                 <div className="modellingFlexColumn">
                                     <p>Ville :</p>
-                                    {!validate?<input type="text" id="envoiMassage6" name="massage1" className="envoiMassage1" />:<input type="text" id="envoiMassage6" name="massage1" className="envoiMassage1" disabled/>}
+                                    {!validate?<input type="text" id="envoiMassage10" name="massage1" className="envoiMassage1" />:<input type="text" id="envoiMassage6" name="massage1" className="envoiMassage1" disabled/>}
                                 
                                 </div>
                             </div>
                         </div>:false}
                     <p>Message personnel (240 caractères maximum) :</p>
-                    {!validate?<textarea rows="5" cols="50" maxLength="240" className="envoiMassage3"/>:<textarea rows="5" cols="50" maxLength="240" className="envoiMassage3" disabled/>}
+                    {!validate?<textarea rows="5" cols="50" maxLength="240" className="envoiMassage11"/>:<textarea rows="5" cols="50" maxLength="240" className="envoiMassage3" disabled/>}
                     {
-                        !validate?<p onClick={()=>Validate()}  id="envoiMassage7" className="panier">Valider</p>
-                        :<p onClick={()=>Invalidate()}  id="envoiMassage8" className="panier">Réinitialiser</p>
+                        !validate?<p onClick={()=>Validate()}  id="envoiMassage12" className="panier">Valider</p>
+                        :<p onClick={()=>Invalidate()}  id="envoiMassage13" className="panier">Réinitialiser</p>
                     }
                     {
                         validate?
-                        <div className="PriceBox">
-                            <CheckoutForm element="ModelingGift" prix={prix}/>
-                            <h2 className="giftPrice">{prix}€</h2>
-                        </div>:false
+                        <div>
+                            <div className="PriceBox">
+                                <CheckoutForm element="ModelingGift" prix={prix}
+                                ligne1={document.getElementById('envoiMassage5').value}/>
+                                <h2 className="giftPrice">{prix}€</h2>
+                            </div>
+                            <p className="StripeSentence">paiement effectué par <b>Stripe</b></p>
+                        </div>
+                        :false
                     }
                 </div>
             </div>

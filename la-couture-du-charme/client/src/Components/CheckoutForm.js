@@ -9,7 +9,7 @@ import {
 
 
 
-export default function CheckoutForm({element,prix}) {
+export default function CheckoutForm({element,prix, ligne1}) {
   const [succeeded, setSucceeded] = useState(false);
   const [error, setError] = useState(null);
   const [processing, setProcessing] = useState('');
@@ -124,7 +124,7 @@ export default function CheckoutForm({element,prix}) {
       {/* Show a success message upon completion */}
       {succeeded ?
       <p className="successMessage">
-        Merci 
+        Merci
         <a href={`https://dashboard.stripe.com/test/payments`}>{" "} Stripe dashboard.</a>
       </p>:false}
     </form>

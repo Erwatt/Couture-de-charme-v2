@@ -27,7 +27,7 @@ function HomeRooms({room}) {
             <p>En famille, entre amis, pour un week-end en amoureux ou pour un séjour professionnel, 
               venez gouter au calme et au dépaysement de l'une de nos 3 chambres spacieuses, au coeur de la campagne du Pévèle.
             </p>
-            {/* <p onClick={()=>handleRoom()} className="room-link">Voir les chambres</p> */}
+            {<p onClick={()=>handleRoom()} className="room-link">Voir les chambres</p> }
           </div>
         </div>
     </div>  
