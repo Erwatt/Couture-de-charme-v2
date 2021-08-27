@@ -7,6 +7,8 @@ import CheckoutForm from './CheckoutForm';
 
 export default function Modelling(){
 
+window.scrollTo(0, 0);
+
 const[min30, setMin30]=useState(false);
 const[min60, setMin60]=useState(false);
 const[un, set1]=useState(false);

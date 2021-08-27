@@ -417,6 +417,7 @@ export default function BookSpa(){
 
         
     <div>
+        <p className="titreBookSpa"><b>Réservation - Centre de détente</b></p>
         {
             validate?
             <div className="containerPageCalendar">

@@ -9,7 +9,7 @@ export default function Tarifs(){
         <div className="containerTarif">
             <h1 className="titreCouture">La Couture Du Charme</h1>
             <div className="containerWhiteTarif">
-                <p className="conainerTitleESPACE"><b><div className="elementTitleESPACE">ESPACE BIEN-ËTRE • SAM2ON</div><div className="elementTitleESPACE">ACC7S PRIVATIF SPA/SAUNA/PISCINE</div></b></p>
+                <p className="conainerTitleESPACE"><b><div className="elementTitleESPACE">ESPACE BIEN-ÊTRE • SAMÉON</div><div className="elementTitleESPACE">ACCÈS PRIVATIF SPA/SAUNA/PISCINE</div></b></p>
                 <div className="conatinerBloc2">
                     <div className="bloc2Left">
                         <p className="titleCoutureDuCharme"><b>LA COUTURE DU CHARME</b></p>
@@ -21,13 +21,13 @@ export default function Tarifs(){
                         </div>
                     </div>
                     <div className="bloc2Right">
-                        <p className="textTitleReservation">RESERVATION</p>
+                        <p className="textTitleReservation">RÉSERVATION</p>
                         <div>par téléphone, email ou en ligne : </div>
                         <div><b>calendly.com/coutureducharme-le-spa</b></div>
                     </div>
                 </div>
                 <div className="borderBlack"></div>
-                <p className="conainerTitleESPACE"><b>CRENEAU PRIVATIF POUR 2 PERSONNES</b></p>
+                <p className="conainerTitleESPACE"><b>CRÉNEAU PRIVATIF POUR 2 PERSONNES</b></p>
                 <div className="flexColumn">
                     <div className="elmentCreneau">
                         <div className="flexRow">
@@ -84,7 +84,7 @@ export default function Tarifs(){
                     <div className="elmentCreneau">
                         <div className="flexRow">
                             <div className="flexColumn" id="elementRow1">
-                                <div ><b>Supplément modelage</b></div>
+                                <div ><b>Supplément massage bien-être</b></div>
                                 <div>solo ou duo, durant le créneau privatif</div>
                                 <div>30' par personne</div>
                             </div>
@@ -97,25 +97,69 @@ export default function Tarifs(){
                             </div>
                         </div>
                     </div>
-                <div>
+                </div>
+                <div className="borderBlack"></div>
+                <p className="conainerTitleESPACE"><b>NUITÉE ET PETIT-DÉJEUNER</b></p>
+                <div className="flexColumn">
+                    <div className="elmentCreneau">
+                        <div className="flexRow">
+                            <div id="elementRow1"><b>FRAGOLE</b><div>(RdC, max 3 p)</div></div>
+                            <div className="flexColumn" id="elementRow2">
+                                <div>Semaine</div>
+                                <div>Weekend</div>
+                            </div>
+                            <div className="flexColumn" id="elementRow3">
+                                <div>75 € à 155 €</div>
+                                <div>90 € à 160 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="elmentCreneau">
+                        <div className="flexRow">
+                            <div id="elementRow1"><b>SCANDINAVE</b><div>(Étage, max 4 p)</div></div>
+                            <div className="flexColumn" id="elementRow2">
+                                <div>Semaine</div>
+                                <div>Weekend</div>
+                            </div>
+                            <div className="flexColumn" id="elementRow3">
+                                <div>75 € à 175 €</div>
+                                <div>90 € à 180 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="elmentCreneau">
+                        <div className="flexRow">
+                            <div id="elementRow1"><b>COCOON</b><div>(Étage, max 5 p)</div></div>
+                            <div className="flexColumn" id="elementRow2">
+                                <div>Semaine</div>
+                                <div>Weekend</div>
+                            </div>
+                            <div className="flexColumn" id="elementRow3">
+                                <div>75 € à 185 €</div>
+                                <div>90 € à 200 €</div>     
+                            </div>
+                        </div>
+                    </div>
+                    <div className="elmentCreneau">
+                        <div className="flexRow">
+                            <div id="elementRow1"><b>Enfants moins de 2 ans</b><div>1 lit bébé par chambre</div></div>
+                            <div className="flexColumn" id="elementRow2">
+                                <div>Gratuit</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p className="TaxeSéjour">Taxe de séjour : 0.22 €/jour/adulte incluse</p>
                 <div className="borderBlack"></div>
                 <div className="flexRow">
                     <div className="flexColumn">
-                        <p className="conainerTitleESPACE"><b>FORFAIT SPA & NUITEE</b></p>
+                        <p className="conainerTitleESPACE"><b>FORFAIT SPA & NUITÉE</b></p>
                         <div>Accès spa + nuitée en chambres d'hôtes</div>
                         <div> + petit déjeuner + champagne</div>
                         <div>Nous contacter : www.coutureducharme.fr</div>
                     </div>
-                   
                 </div>
-                
-
             </div>
-                </div>
-            
-            </div>
-            
-
         </div>
     )
 }

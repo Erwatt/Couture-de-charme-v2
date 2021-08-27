@@ -3,6 +3,12 @@
     padding-right: 5%;
 }
 
+.PrivateSpaContainer2{
+    padding : 5%;
+    margin: 5%;
+    background-color: rgb(247, 238, 238);
+}
+
 .spa{
     margin-top: 5%;
     display: flex;
@@ -114,15 +120,16 @@
     animation-name: fondu;
     animation-duration: 4s;
     position: relative;
-    right: 4%;
+    left: 47%;
 }
 
 .poufspic{
-    height: 30%;
-    width: 30%;
+    height: 50%;
+    width: 45%;
     animation-name: fondu;
     animation-duration: 3s;
     position: relative;
+    left: 52%;
 }
 
 .saunapic{
@@ -141,7 +148,7 @@
     animation-name: fondu;
     animation-duration: 3s;
     position: relative;
-    left: 5%;
+    left: 3%;
 }
 
 
@@ -150,8 +157,9 @@
     padding-left: 5%;
     padding-top: 5%;
     padding-bottom: 5%;
-    margin-top: auto;
-    margin-bottom: auto;
+    position: relative;
+    right: 48%;
+    margin-top: 3%;
     margin-left: 3%;
     background-color: white;
     border: double black;
@@ -164,8 +172,9 @@
     padding-left: 5%;
     padding-top: 5%;
     padding-bottom: 5%;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: 5%;
+    position: relative;
+    right: 45%;
     margin-left: 3%;
     background-color: white;
     border: double black;
@@ -178,8 +187,7 @@
     padding-left: 5%;
     padding-top: 5%;
     padding-bottom: 5%;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: 7%;
     margin-left: 3%;
     background-color: white;
     border: double black;
@@ -192,9 +200,8 @@
     padding-left: 5%;
     padding-top: 5%;
     padding-bottom: 5%;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 3%; 
+    margin-top: 7%;
+    position: relative; 
     background-color: white;
     border: double black;
     font-family: 'Roboto', sans-serif;
@@ -248,4 +255,21 @@
     .poufspic{
         width: 100%;
     }
+}
+
+.privateSpaBox > h2{
+    text-decoration: underline black;
+}
+
+.subPrivateSpaBox{
+    display: flex;
+    flex-direction: row;
+}
+
+.subPrivateSpaBox > p{
+    margin: 3%;
+}
+
+.subPrivateSpaBoxPic{
+    width: 40%;
 }

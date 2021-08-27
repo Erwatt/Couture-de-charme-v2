@@ -20,6 +20,7 @@ import piscine from '../Images/piscine.jpg'
 import '../CSS/PrivateSpa.css';
 import house1 from '../Images/house1.jpg';
 import house2 from '../Images/house2.jpg';
+import massage3 from '../Images/massage3.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 AOS.init();
@@ -117,7 +118,7 @@ function Home(){
                 <div className="introTextContainer">
                     <div className="house1box">
                         <img src={house1} alt="house1" className="house1"/>
-                        <p>Relaxez-vous dans notre spa privatif avec piscine, séjournez dans nos chambres d'hôtes spacieuses et modernes, détendez-vous grâce aux bienfaits de nos modelages...</p>
+                        <p>Relaxez-vous dans notre spa privatif avec piscine, séjournez dans nos chambres d'hôtes spacieuses et modernes, détendez-vous grâce aux bienfaits de nos massages bien-être...</p>
                     </div>
                     <div className="house2box">
                         <div className="subhouse2box">
@@ -141,15 +142,15 @@ function Home(){
                         <li>Des jets d’hydromassage latéraux : 5 jets de massage spécifiques pour le bas du dos, les muscles fessiers, la sangle abdominale et les mollets  </li>
                         <li>Une cascade : effet visuel captivant et relaxant, tout en permettant un bon massage des épaules et de la nuque</li>
                         <li>Nage à contre-courant : pour une pause sportive</li>
-                    </div>
+                    </div>   
                 </div>
                 <div className="spabox"  data-aos="fade-right" data-aos-duration="1000">
+                    <img src={Spa} alt="spa" className="spapic"/>
                     <div className="spa-txt">
                         <h2>Jacuzzi</h2>
                         <p>Excellent remède au stress, notre spa au design et au confort soigné vous permet de relâcher la pression et vous prélasser dans une eau à 37°C.</p>
                         <p>Chacune de ses 6 places dynamiques offre une qualité de massage permettant d’atteindre un haut niveau de performance grâce à des spécificités méticuleusement étudiées : multi jets hydrothérapie, spots de chromothérapie ….</p>
                     </div>
-                    <img src={Spa} alt="spa" className="spapic"/>
                 </div>
                 <div className="saunabox" data-aos="fade-left" data-aos-duration="1000">
                     <img src={sauna} alt="piscine" className="saunapic"/>
@@ -160,12 +161,12 @@ function Home(){
                     </div>
                 </div>
                 <div className="poufsbox" data-aos="fade-right" data-aos-duration="1000">
+                    <img src={massage3} alt="piscine" className="poufspic"/>
                     <div className="poufs-txt">
-                        <h2>Modelages</h2>
-                        <p>Invitez vos sens à découvrir les bienfaits d’un modelage personnalisé concocté par notre équipe d’esthéticiennes.</p> 
-                        <p>Seul ou en duo, quelle que soit la zone que vous souhaitez détendre, il ne vous reste qu’à préciser la pression souhaitée, et la senteur de l’huile de massage qui vous inspire…. Et elles se chargent de vous apporter une parfaite sensation de bienfait. </p>
+                        <h2>Massage bien-être</h2>
+                        <p>Invitez vos sens à découvrir les bienfaits d’un massage personnalisé concocté par notre équipe d’esthéticiennes.</p> 
+                        <p>Seul ou en duo, quelle que soit la zone que vous souhaitez détendre, il ne vous reste qu’à préciser la pression souhaitée, et la senteur de l’huile de massage qui vous inspire…. Et nos praticiennes se chargent de vous apporter une parfaite sensation de bienfait. </p>
                     </div>
-                    <img src={poufs} alt="piscine" className="poufspic"/>
                 </div>
             </div>
             <HomeRooms room={room}/>

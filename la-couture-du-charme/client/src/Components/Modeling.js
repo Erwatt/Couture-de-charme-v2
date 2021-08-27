@@ -8,7 +8,7 @@ import services from '../services';
 
 export default function Modelling(){
 
-let history=useHistory();
+window.scrollTo(0, 0);
 
 const[min30, setMin30]=useState(false);
 const[min60, setMin60]=useState(false);
@@ -153,7 +153,7 @@ function handleMessage(e){
                 <div className="modellingLeft">
                     <img src={massage} alt="spa" className="modellingPic"/>
                     <div>
-                        <h1>Modelage</h1>
+                        <h1>Massage bien-être</h1>
                         <p>Les senteurs d'huiles prestigieuses aux différents pouvoirs vous offrent une expérience sensorielle unique.</p>
                         <p>Nos praticiennes adaptent l’intensité du massage en fonction de vos besoins. Pour un soin sur mesure (doux, moyen, fort), précisez votre choix à l’accueil.</p>
                     </div>

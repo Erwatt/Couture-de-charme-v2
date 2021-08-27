@@ -162,7 +162,7 @@ export default function PrivateRoom(){
                 <div className="subPrivateRoomBox">
                     <p>Les familles sont les bienvenues, avec la possibilité de préparer jusque 5 couchages en chambre COCOON, ou 4 personnes en chambre SCANDINAVE.</p>
                     <p>La chambre FRAGOLE, située au RdC, est quant à elle accessible PMR, tout comme l’ensemble de notre espace table d’hôte, notre grand parking clos et nos accès extérieurs.</p>
-                    <p>Chaque chambre (superficie de 35-40 m2) dispose de lits king size, de salles de bain modernes, d’une connexion internet wifi (fibre), TV et console bureau.</p>
+                    <p>Chaque chambre (superficie de 35-40 m²) dispose de lits king size, de salles de bain modernes, d’une connexion internet wifi (fibre), TV et console bureau.</p>
                     <p>La proximité de l’autoroute A23 (sortie Saint Amand / Marchiennes), de la gare SNCF de Rosult et de la Zone d’Activité de Sars et Rosières facilitera vos déplacements professionnels.</p>
                 </div>
                 <div className="privateRoomDiapo"><Diaporama  picturesList ={picturesList}/></div>
@@ -170,7 +170,7 @@ export default function PrivateRoom(){
             <div className="privateRoomBox">
                 <img src={cocoon1} alt="test" className="privateRoomDiapo"/>
                 <div className="subPrivateRoomBox">
-                    <p className="privateRoomBoxText2">Pièce de vie de 40 m2 au rez de chaussée avec kitchenette (micro-onde, réfrigérateur, lave-vaisselle, machine à café, bouilloire, vaisselle), espace repas et babyfoot. Accès terrasse, salon de jardin, et espace pique-nique avec jeux enfants en saison sur notre terrain de 4000 m2.</p>
+                    <p className="privateRoomBoxText2">Pièce de vie de 40 m² au rez de chaussée avec kitchenette (micro-onde, réfrigérateur, lave-vaisselle, machine à café, bouilloire, vaisselle), espace repas et babyfoot. Accès terrasse, salon de jardin, et espace pique-nique avec jeux enfants en saison sur notre terrain de 4000 m².</p>
                     <p>Le petit déjeuner inclus est servi dès 7h en semaine, 8h30 le weekend. Possibilité de plateau repas en table d’hôtes sur demande (à prévoir 48h à l’avance).</p>
                 </div>
             </div>
