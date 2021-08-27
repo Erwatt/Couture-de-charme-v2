@@ -99,6 +99,11 @@ function Home(){
     //     pos.current.scrollIntoView();
     // }
 
+function handlePrivateSpa(){
+history.push('/PrivateSpa');
+}
+
+
     return (
         
         <div className="home" id="home">
@@ -146,7 +151,7 @@ function Home(){
                 </div>
                 <div className="spabox"  data-aos="fade-right" data-aos-duration="1000">
                     <img src={Spa} alt="spa" className="spapic"/>
-                    <div className="spa-txt">
+                    <div className="spa-txt" onClick={()=>handlePrivateSpa()}>
                         <h2>Jacuzzi</h2>
                         <p>Excellent remède au stress, notre spa au design et au confort soigné vous permet de relâcher la pression et vous prélasser dans une eau à 37°C.</p>
                         <p>Chacune de ses 6 places dynamiques offre une qualité de massage permettant d’atteindre un haut niveau de performance grâce à des spécificités méticuleusement étudiées : multi jets hydrothérapie, spots de chromothérapie ….</p>

@@ -14,6 +14,8 @@ AOS.init();
 
 export default function PrivateSpa(){
 
+    window.scrollTo(0, 0);
+
     return (
         <div className="PrivateSpaContainer2">
                 {/* <div className="poolbox" data-aos="fade-left" data-aos-duration="1000">

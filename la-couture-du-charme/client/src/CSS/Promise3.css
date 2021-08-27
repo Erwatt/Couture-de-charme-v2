@@ -43,20 +43,16 @@
 }
 
 .sentence{
-    margin-top: 5%;
+    font-size: 120%;
+    line-height: 200%;
 }
 
 .promise3-quiSommesNous{
-    /* padding: 3%; */
-    padding-bottom: 3%;
-    align-self: center;
-    /* max-width: 50%; */
-    /* font-size: 20px; */
+    padding: 3%;
+    margin-top: -5%;
+    padding-bottom: 100%;
     color: #FFFFFF;
     text-align: justify;
-    display: flex;
-    flex-direction: column;
-
 }
 
 

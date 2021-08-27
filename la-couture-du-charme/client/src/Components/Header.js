@@ -9,12 +9,7 @@ import { useLocation } from 'react-router-dom';
 
 function Header(){
 
-    
-    
-
     const [anim1, setAnim1] = useState(false);
-
-   
 
     const transition1 = useTransition(anim1, {
         

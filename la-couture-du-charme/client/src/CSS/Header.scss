@@ -13,7 +13,7 @@
     
 }
 .header-logo{
-    width: 10%;
+    width: 12%;
     height: auto;
     cursor: pointer;
     position:relative;
@@ -28,12 +28,10 @@
 }
 
 .header-tel{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 7%;
     background-color: #570F0F;
     width: 80%;
     height: 50%;
+    font-size: 120%;
     border-style: solid;
     border-width: 2px;    
     color: #FFFFFF;
@@ -42,12 +40,10 @@
 }
 
 .header-book{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 7%;
     background-color: #570F0F;
     width: 80%;
     height: 50%;
+    font-size: 120%;
     border-style: solid;
     border-width: 2px;    
     color: #FFFFFF;
@@ -67,18 +63,16 @@
 
 
 .header-tel-back{
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 10%;
-    height: 3em;
+    margin: 2%;
+    width: 15%;
+    height: 4em;
     text-align: center;
 }
 
 .header-book-back{
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 10%;
-    height: 3em;
+    margin: 2%;
+    width: 15%;
+    height: 4em;
     text-align: center;
 }
 
@@ -90,7 +84,7 @@
   }
 
 .header-sticky > img{
-    width: 7%;
+    width: 12%;
     height: auto;
 }
 

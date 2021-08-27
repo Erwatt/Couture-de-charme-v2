@@ -161,6 +161,7 @@
     right: 48%;
     margin-top: 3%;
     margin-left: 3%;
+    cursor: pointer;
     background-color: white;
     border: double black;
     position: relative;
