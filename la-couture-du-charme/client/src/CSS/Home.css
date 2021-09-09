@@ -53,34 +53,22 @@
 }
 
 .IntroContainer{
-        margin-bottom: 5%;
+        
         background-color: rgb(218, 214, 180);
-        padding-right: 5%;
-        padding-left: 5%;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        margin-left: 5%;
-        margin-right: 5%;
-        margin-top: 5%;
+        margin : 5%; 
+        
+        
 }
 
-.house1{
-    position: relative;
+.house1{  
     width: 100%;
     height: 90%;
-    margin-left: 10%;
-    bottom: 7%;
-    right: 12%;
-
 }
 
 .house2{
-    position: relative;
     width: 100%;
     height: 90%;
-    margin-left: 10%;
-    right: 7%;
-    top: 10%;
+    
 }
 
 
@@ -93,11 +81,15 @@
 .house1box{
     display: flex;
     flex-direction: column;
+    padding : 2%;
+    padding-right: 1%;
 }
 
 .house2box{
     display: flex;
     flex-direction: column;
+    padding : 2%;
+    padding-left: 1%;
 }
 
 .house1box >p{

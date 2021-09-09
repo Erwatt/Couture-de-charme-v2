@@ -26,7 +26,7 @@
 .promise3-cadre{
     padding: 1.5%;
     position: relative;
-    height: 20%;
+    height: 25%;
     width: 48%;
     background-color: burlywood;
     bottom: -65%;
@@ -66,16 +66,23 @@
         height: 0%;
         background-size: cover;
     }
+    .promise3-title{
+        width: 180%;
+    }
     .promise3-cadre{
         position: unset;
-        width: auto;
-        height: auto;
-
+        width: 100%;
+        height: 12em;
     }
 
     .promise3-title{
         font-size: 70%;
         margin-top: 50%;
         text-align: left;
+    }
+}
+@media (max-width: 450px) { 
+    .promise3-cadre{
+        height: 20em;
     }
 }
