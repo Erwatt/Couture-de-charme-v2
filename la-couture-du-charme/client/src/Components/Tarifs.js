@@ -1,6 +1,6 @@
 import '../CSS/Tarifs.scss';
-import React, { useState } from 'react';
-import tarif from '../Images/Tarifs.PNG'
+import React from 'react';
+// import tarif from '../Images/Tarifs.PNG'
 
 
 export default function Tarifs(){

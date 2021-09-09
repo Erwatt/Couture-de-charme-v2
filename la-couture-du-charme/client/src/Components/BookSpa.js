@@ -1,10 +1,10 @@
 import '../CSS/Book2.scss';
 import React, { useState } from 'react';
 import détente from '../Images/centrededétente.jpeg'
-import { InlineWidget, PopupWidget,CalendlyEventListener,PopupButton} from "react-calendly";
-import imgRoom from '../Images/chambre.jpeg'
+import { InlineWidget} from "react-calendly";
+// import imgRoom from '../Images/chambre.jpeg'
 import logoCouture from '../Images/logo.png'
-import HomeBook2 from './HomeBook2'
+// import HomeBook2 from './HomeBook2'
 
 
 
@@ -36,7 +36,7 @@ export default function BookSpa(){
 
 
     const Nombre = (val) =>{
-        if(val==1){
+        if(val===1){
             if (nombre1){
                 setNombre1(false)
                 setNombre(0)
@@ -55,7 +55,7 @@ export default function BookSpa(){
             }
 
         }
-        if(val==2){
+        if(val===2){
             if (nombre2){
                 setNombre2(false)
                 setNombre(0)
@@ -74,7 +74,7 @@ export default function BookSpa(){
             }
 
         }
-        if(val==3){
+        if(val===3){
             if (nombre3){
                 setNombre3(false)
                 setNombre(0)
@@ -93,7 +93,7 @@ export default function BookSpa(){
             }
 
         }
-        if(val==4){
+        if(val===4){
             if (nombre4){
                 setNombre4(false)
                 setNombre(0)
@@ -112,7 +112,7 @@ export default function BookSpa(){
             }
 
         }
-        if(val==5){
+        if(val===5){
             if (nombre5){
                 setNombre5(false)
                 setNombre(0)
@@ -131,7 +131,7 @@ export default function BookSpa(){
             }
 
         }
-        if(val==6){
+        if(val===6){
             if (nombre6){
                 setNombre6(false)
                 setNombre(0)
@@ -150,7 +150,7 @@ export default function BookSpa(){
             }
 
         }
-        if(val==7){
+        if(val===7){
             if (nombre7){
                 setNombre(0)
                 setNombre7(false)
@@ -170,7 +170,7 @@ export default function BookSpa(){
             }
 
         }
-        if(val==8){
+        if(val===8){
             if (nombre8){
                 setNombre(0)
                 setNombre8(false)
@@ -228,113 +228,113 @@ export default function BookSpa(){
         else{setAfter17(true)}
     }
 
-    const Nombre1 = ()=>{
-        setNombre2(false)
-        setNombre3(false)
-        setNombre4(false)
-        setNombre5(false)
-        setNombre6(false)
-        setNombre7(false)
-        setNombre8(false)
-        if(nombre1){setNombre1(false)
-             setNombre(0)}
-        else{setNombre1(true)}
-        setNombre(1)
-    }
+    // const Nombre1 = () => {
+    //     setNombre2(false)
+    //     setNombre3(false)
+    //     setNombre4(false)
+    //     setNombre5(false)
+    //     setNombre6(false)
+    //     setNombre7(false)
+    //     setNombre8(false)
+    //     if(nombre1){setNombre1(false)
+    //          setNombre(0)}
+    //     else{setNombre1(true)}
+    //     setNombre(1)
+    // }
 
-     const Nombre2 = ()=>{
-         setNombre1(false)
-         setNombre3(false)
-         setNombre4(false)
-         setNombre5(false)
-         setNombre6(false)
-         setNombre7(false)
-         setNombre8(false)
-         if(nombre2){setNombre2(false)
-            setNombre(0)}
-         else{setNombre2(true)}
-         setNombre(2)
-     }
-     const Nombre3 = ()=>{
-         setNombre2(false)
-         setNombre1(false)
-         setNombre4(false)
-         setNombre5(false)
-         setNombre6(false)
-         setNombre7(false)
-         setNombre8(false)
-         if(nombre3){setNombre3(false)
-            setNombre(0)}
-         else{setNombre3(true)}
-         setNombre(3)
-     }
-     const Nombre4 = ()=>{
-         setNombre2(false)
-         setNombre3(false)
-         setNombre1(false)
-         setNombre5(false)
-         setNombre6(false)
-         setNombre7(false)
-         setNombre8(false)
-         if(nombre4){setNombre4(false)
-            setNombre(0)}
-         else{setNombre4(true)}
-         setNombre(4)
-     }
-     const Nombre5 = ()=>{
-         setNombre2(false)
-         setNombre3(false)
-         setNombre4(false)
-         setNombre1(false)
-         setNombre6(false)
-         setNombre7(false)
-         setNombre8(false)
-         if(nombre5){setNombre5(false)
-            setNombre(0)}
-         else{setNombre5(true)}
-         setNombre(5)
-     }
-    const Nombre6 = ()=>{
-        setNombre2(false)
-        setNombre3(false)
-        setNombre4(false)
-        setNombre5(false)
-        setNombre1(false)
-        setNombre7(false)
-        setNombre8(false)
-        if(nombre6){setNombre6(false)
-            setNombre(0)}
-        else{setNombre6(true)}
-        setNombre(6)
-    }
+    //  const Nombre2 = ()=>{
+    //      setNombre1(false)
+    //      setNombre3(false)
+    //      setNombre4(false)
+    //      setNombre5(false)
+    //      setNombre6(false)
+    //      setNombre7(false)
+    //      setNombre8(false)
+    //      if(nombre2){setNombre2(false)
+    //         setNombre(0)}
+    //      else{setNombre2(true)}
+    //      setNombre(2)
+    //  }
+    //  const Nombre3 = ()=>{
+    //      setNombre2(false)
+    //      setNombre1(false)
+    //      setNombre4(false)
+    //      setNombre5(false)
+    //      setNombre6(false)
+    //      setNombre7(false)
+    //      setNombre8(false)
+    //      if(nombre3){setNombre3(false)
+    //         setNombre(0)}
+    //      else{setNombre3(true)}
+    //      setNombre(3)
+    //  }
+    //  const Nombre4 = ()=>{
+    //      setNombre2(false)
+    //      setNombre3(false)
+    //      setNombre1(false)
+    //      setNombre5(false)
+    //      setNombre6(false)
+    //      setNombre7(false)
+    //      setNombre8(false)
+    //      if(nombre4){setNombre4(false)
+    //         setNombre(0)}
+    //      else{setNombre4(true)}
+    //      setNombre(4)
+    //  }
+    //  const Nombre5 = ()=>{
+    //      setNombre2(false)
+    //      setNombre3(false)
+    //      setNombre4(false)
+    //      setNombre1(false)
+    //      setNombre6(false)
+    //      setNombre7(false)
+    //      setNombre8(false)
+    //      if(nombre5){setNombre5(false)
+    //         setNombre(0)}
+    //      else{setNombre5(true)}
+    //      setNombre(5)
+     //}
+    // const Nombre6 = ()=>{
+    //     setNombre2(false)
+    //     setNombre3(false)
+    //     setNombre4(false)
+    //     setNombre5(false)
+    //     setNombre1(false)
+    //     setNombre7(false)
+    //     setNombre8(false)
+    //     if(nombre6){setNombre6(false)
+    //         setNombre(0)}
+    //     else{setNombre6(true)}
+    //     setNombre(6)
+    // }
 
-    const Nombre7 = ()=>{
-        setNombre2(false)
-        setNombre3(false)
-        setNombre4(false)
-        setNombre5(false)
-        setNombre1(false)
-        setNombre6(false)
-        setNombre8(false)
-        if(nombre7){setNombre7(false)
-            setNombre(0)}
-        else{setNombre7(true)}
-        setNombre(7)
-    }
+    // const Nombre7 = ()=>{
+    //     setNombre2(false)
+    //     setNombre3(false)
+    //     setNombre4(false)
+    //     setNombre5(false)
+    //     setNombre1(false)
+    //     setNombre6(false)
+    //     setNombre8(false)
+    //     if(nombre7){setNombre7(false)
+    //         setNombre(0)}
+    //     else{setNombre7(true)}
+    //     setNombre(7)
+    // }
 
-     const Nombre8 = ()=>{
-         setNombre2(false)
-         setNombre3(false)
-         setNombre4(false)
-         setNombre5(false)
-         setNombre1(false)
-         setNombre7(false)
-         setNombre6(false)
-         if(nombre8){setNombre8(false)
-            setNombre(0)}
-         else{setNombre8(true)}
-         setNombre(8)
-     }
+    //  const Nombre8 = ()=>{
+    //      setNombre2(false)
+    //      setNombre3(false)
+    //      setNombre4(false)
+    //      setNombre5(false)
+    //      setNombre1(false)
+    //      setNombre7(false)
+    //      setNombre6(false)
+    //      if(nombre8){setNombre8(false)
+    //         setNombre(0)}
+    //      else{setNombre8(true)}
+    //      setNombre(8)
+    //  }
     
     const Creneau2h = ()=>{
         setCreneau1h30(false)
@@ -370,29 +370,29 @@ export default function BookSpa(){
                             
                             if(after17){
                                 if(creneau1h30){
-                                    if(nombre>1){ setCreneau("Créneau Spa - " +" Semaine - "+nombre.toString()+ " personnes" +" - 1h30")}
-                                    else{ setCreneau("Créneau Spa - " +" Semaine - "+nombre.toString()+ " personne" +" - 1h30")}
-                                    if(nombre==1||nombre==2){setPrix(90)}
+                                    if(nombre>1){ setCreneau("Créneau Spa - Semaine - "+nombre.toString()+ " personnes - 1h30")}
+                                    else{ setCreneau("Créneau Spa -  Semaine - "+nombre.toString()+ " personne - 1h30")}
+                                    if(nombre===1||nombre===2){setPrix(90)}
                                     else{setPrix(90+(nombre-2)*20)}
                             }
                                 else{
-                                    if(nombre>1){ setCreneau(" Créneau Spa - Semaine - " +nombre.toString()+ " personnes" +" - 2h")}
-                                    else{setCreneau(" Créneau Spa - Semaine - " +nombre.toString()+ " personne" +" - 2h")}
+                                    if(nombre>1){ setCreneau(" Créneau Spa - Semaine - " +nombre.toString()+ " personnes - 2h")}
+                                    else{setCreneau(" Créneau Spa - Semaine - " +nombre.toString()+ " personne - 2h")}
                                     
-                                    if(nombre==1||nombre==2){setPrix(110)}
+                                    if(nombre===1||nombre===2){setPrix(110)}
                                     else{setPrix(110+(nombre-2)*20)}                            }
                             }
                             else{
                                 if(nombre>1){ setCreneau("Créneau Spa - Semaine - " +nombre.toString()+ " personnes")}
                                     else{ setCreneau("Créneau Spa - Semaine - " +nombre.toString()+ " personne")}
-                                if(nombre==1||nombre==2){setPrix(80)}
+                                if(nombre===1||nombre===2){setPrix(80)}
                                 else{setPrix(80+(nombre-2)*20)}                        }
                                 
                         }
                         else{
                             if(nombre>1){setCreneau("Créneau Spa - Weekend - 2h - " +nombre.toString()+ " personnes")}
                                     else{ setCreneau("Créneau Spa - Weekend - 2h - " +nombre.toString()+ " personne")}
-                            if(nombre==1||nombre==2){setPrix(130)}
+                            if(nombre===1||nombre===2){setPrix(130)}
                             else{setPrix(130+(nombre-2)*20)}                    }
     
     
@@ -407,8 +407,8 @@ export default function BookSpa(){
                 }
             }
         }
-        
-    }
+    }  
+    
 
 
 
@@ -429,12 +429,12 @@ export default function BookSpa(){
                         <div className="calendarContainer">
                             <div className="containerLeft">
                                 <div className="logoCoutureContainer">
-                                    <img src={logoCouture} className="logoCouture"></img>
+                                    <img src={logoCouture} alt="logoCouture" className="logoCouture"></img>
                                 </div>
                                 <div className="creneauText">{creneau}</div>
                                 <div>
                                     <div className="messageText">Délassez vous dans l'espace piscine sauna spa, seul ou à plusieurs, en semaine avant 17h.</div>
-                                    <div className="accompteTXT">Accompte : 80 €</div>                                    
+                                    <div className="accompteTXT">Acompte : 80 €</div>                                    
                                     <div className="priceText">{prix} €<div className="ttcText">TTC</div></div>                                </div>
                             </div >
                             <div className="calendar">
@@ -455,11 +455,11 @@ export default function BookSpa(){
                                 <div className="calendarContainer">
                                     <div className="containerLeft">
                                         <div className="logoCoutureContainer">
-                                            <img src={logoCouture} className="logoCouture"></img>
+                                            <img src={logoCouture} alt="logoCouture" className="logoCouture"></img>
                                         </div>
                                         <div className="creneauText">{creneau}</div>
                                         <div className="messageText">Délassez vous dans l'espace piscine sauna spa, seul ou à plusieurs, en semaine après 17h.</div>
-                                        <div className="accompteTXT">Accompte : 90 €</div>  
+                                        <div className="accompteTXT">Acompte : 90 €</div>  
                                         <div className="priceText">{prix} €<div className="ttcText">TTC</div></div>
                                     </div >
                                     <div className="calendar">
@@ -485,11 +485,11 @@ export default function BookSpa(){
                                 <div className="calendarContainer">
                                     <div className="containerLeft">
                                         <div className="logoCoutureContainer">
-                                            <img src={logoCouture} className="logoCouture"></img>
+                                            <img src={logoCouture} alt="logoCouture" className="logoCouture"></img>
                                         </div>
                                         <div className="creneauText">{creneau}</div>
                                         <div className="messageText">Délassez vous dans l'espace piscine sauna spa, seul ou à plusieurs, en semaine après 17h.</div>
-                                        <div className="accompteTXT">Accompte : 110 €</div>  
+                                        <div className="accompteTXT">Acompte : 110 €</div>  
                                         <div className="priceText">{prix} €<div className="ttcText">TTC</div></div>                                    </div >
                                     <div className="calendar">
                                         <InlineWidget url="https://calendly.com/coutureducharme-le-spa/creneau-spa-2h00-soir-de-semaine" 
@@ -510,11 +510,11 @@ export default function BookSpa(){
                         <div className="calendarContainer">
                             <div className="containerLeft">
                                 <div className="logoCoutureContainer">
-                                    <img src={logoCouture} className="logoCouture"></img>
+                                    <img src={logoCouture} alt="logoCouture" className="logoCouture"></img>
                                 </div>
                                 <div className="creneauText">{creneau}</div>
                                 <div className="messageText">Délassez vous dans l'espace piscine sauna spa, seul ou à plusieurs, le weekend.</div>
-                                <div className="accompteTXT">Accompte : 130 €</div>  
+                                <div className="accompteTXT">Acompte : 130 €</div>  
                                 <div className="priceText">{prix} €<div className="ttcText">TTC</div></div>                            </div >
                             <div className="calendar">
                                 <InlineWidget url="https://calendly.com/coutureducharme-le-spa/creneau-spa-2h00-weekend" 
@@ -595,7 +595,7 @@ export default function BookSpa(){
                         erreur?<div className="erreurMgs">Certaines informations sont manquantes.</div>:false
                     }
             <div className="containerImgDétente">
-                <img src={détente} className="imgDétente"></img>  
+                <img src={détente} alt="détente" className="imgDétente"></img>  
             </div>                               
         </div>
         }    

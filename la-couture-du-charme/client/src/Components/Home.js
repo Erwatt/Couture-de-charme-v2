@@ -3,18 +3,18 @@ import '../CSS/Home.css';
 // import Promise from './Promise';
 // import HomePiscine from './HomePiscine';
 import HomeRooms from './HomeRooms';
-import HomeSpa from './HomeSpa';
-import Avis from './Avis';
-import {useState} from 'react';
-import { useTransition, animated } from 'react-spring';
-import { useLocation } from 'react-router-dom';
+// import HomeSpa from './HomeSpa';
+// import Avis from './Avis';
+// import {useState} from 'react';
+// import { useTransition, animated } from 'react-spring';
+// import { useLocation } from 'react-router-dom';
 // import Promise2 from './Promise2';
 import Promise3 from './Promise3';
 // import Video from './Video';
 import {useHistory} from 'react-router-dom';
-import Tarifs from './Tarifs';
+// import Tarifs from './Tarifs';
 import Spa from '../Images/spa.jpg';
-import poufs from '../Images/poufs.jpg';
+// import poufs from '../Images/poufs.jpg';
 import sauna from '../Images/sauna.jpg';
 import piscine from '../Images/piscine.jpg'
 import '../CSS/PrivateSpa.css';
@@ -28,9 +28,9 @@ AOS.init();
 function Home(){
 
 
-    if (useLocation().pathname === '/'){
-        window.addEventListener('scroll',handleScrollAnim);
-    }
+    // if (useLocation().pathname === '/'){
+    //     window.addEventListener('scroll',handleScrollAnim);
+    // }
     const history = useHistory();
 
 
@@ -38,16 +38,16 @@ function Home(){
     history.push('/Tarifs');
 };
 
-    const [anim1, setAnim1] = useState(false);
-    // const [anim2, setAnim2] = useState(false);
-    const [anim3, setAnim3] = useState(false);
-    const [anim4, setAnim4] = useState(false);
+    // const [anim1, setAnim1] = useState(false);
+    // // const [anim2, setAnim2] = useState(false);
+    // const [anim3, setAnim3] = useState(false);
+    // const [anim4, setAnim4] = useState(false);
     
-    const transition1 = useTransition(anim1, {
-        from: { x: -100, y: 0, opacity: 0 },
-        enter: { x: 0, y: 0, opacity: 1 },
-        leave: { x: -100, y: 0, opacity: 0 },
-    });
+    // const transition1 = useTransition(anim1, {
+    //     from: { x: -100, y: 0, opacity: 0 },
+    //     enter: { x: 0, y: 0, opacity: 1 },
+    //     leave: { x: -100, y: 0, opacity: 0 },
+    // });
 
     // const transition2 = useTransition(anim2, {
     //     from: { x: 100, y: 0, opacity: 0 },
@@ -55,45 +55,45 @@ function Home(){
     //     leave: { x: 100, y: 0, opacity: 0 },
     // });
 
-    const transition3 = useTransition(anim3, {
-        from: { x: 100, y: 0, opacity: 0 },
-        enter: { x: 0, y: 0, opacity: 1 },
-        leave: { x: 100, y: 0, opacity: 0 },
-    });
+    // const transition3 = useTransition(anim3, {
+    //     from: { x: 100, y: 0, opacity: 0 },
+    //     enter: { x: 0, y: 0, opacity: 1 },
+    //     leave: { x: 100, y: 0, opacity: 0 },
+    // });
 
-    const transition4 = useTransition(anim4, {
-        from: { x: 0, y: 100, opacity: 0 },
-        enter: { x: 0, y: 0, opacity: 1 },
-        leave: { x: 0, y: 100, opacity: 0 },
-    });
+    // const transition4 = useTransition(anim4, {
+    //     from: { x: 0, y: 100, opacity: 0 },
+    //     enter: { x: 0, y: 0, opacity: 1 },
+    //     leave: { x: 0, y: 100, opacity: 0 },
+    // });
 
-    function handleScrollAnim(){
-        const offset = window.scrollY;
-        if (offset > 100){
-            setAnim1(true);
-            if (offset > 750){
-                // setAnim2(true);
-                // if (offset > 1300){
-                    setAnim3(true);
-                    if (offset > 1300){
-                        setAnim4(true);
-                    } else {
-                        setAnim4(false);
-                    };
-                } else {
-                    setAnim4(false);
-                };
-            // } else {
-            //     setAnim2(false);
-            // };
-        } else {
-            setAnim1(false);
-        }; 
-    };
+    // function handleScrollAnim(){
+    //     const offset = window.scrollY;
+    //     if (offset > 100){
+    //         setAnim1(true);
+    //         if (offset > 750){
+    //             // setAnim2(true);
+    //             // if (offset > 1300){
+    //                 setAnim3(true);
+    //                 if (offset > 1300){
+    //                     setAnim4(true);
+    //                 } else {
+    //                     setAnim4(false);
+    //                 };
+    //             } else {
+    //                 setAnim4(false);
+    //             };
+    //         // } else {
+    //         //     setAnim2(false);
+    //         // };
+    //     } else {
+    //         setAnim1(false);
+    //     }; 
+    // };
 
     // const pos = React.createRef();
     const room = React.createRef();
-    const spa = React.createRef();
+    // const spa = React.createRef();
 
     // function scroll(){
     //     pos.current.scrollIntoView();

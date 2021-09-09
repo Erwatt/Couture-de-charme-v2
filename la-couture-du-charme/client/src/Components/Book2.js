@@ -1,6 +1,6 @@
 import '../CSS/Book2.scss';
-import React, { useState } from 'react';
-
+// import React, { useState } from 'react';
+import React from 'react';
 import {useHistory} from 'react-router-dom';
 
 
@@ -9,8 +9,8 @@ import {useHistory} from 'react-router-dom';
 export default function Book(){
     window.scrollTo(0, 0);
 
-const[bookRoom,setBookRoom]=useState(false)
-const[bookSpa,setBookSpa]=useState(false)
+// const[bookRoom,setBookRoom]=useState(false)
+// const[bookSpa,setBookSpa]=useState(false)
 
 const history = useHistory();
 

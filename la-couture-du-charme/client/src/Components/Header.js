@@ -4,7 +4,7 @@ import '../CSS/Header.scss';
 import {useState, useEffect} from 'react';
 import {useHistory} from 'react-router-dom';
 import { useTransition, animated , config} from 'react-spring';
-import { useLocation } from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 
 
 function Header(){

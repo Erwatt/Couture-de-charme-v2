@@ -1,9 +1,9 @@
 import '../CSS/Modelling.scss';
 import React, { useState } from 'react';
 import massage from '../Images/massage.jpg';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import CheckoutForm from './CheckoutForm';
-import services from '../services';
+// import services from '../services';
 
 
 export default function Modelling(){
@@ -18,8 +18,8 @@ const[invitation, setInvitation]=useState(false);
 const[enveloppe, setEnveloppe]=useState(false);
 const[coffret, setCoffret]=useState(false);
 const[vip, setVip]=useState(false);
-const[nombre,setNombre]=useState(0);
-const[creneau,setCreneau]=useState("Créneau Modelage");
+// const[nombre,setNombre]=useState(0);
+// const[creneau,setCreneau]=useState("Créneau Modelage");
 const[prix, setPrix]=useState(0);
 const[validate,setvalidate]=useState(false);
 
@@ -45,7 +45,8 @@ const BookSolo = ()=>{
     if (solo){setSolo(false)}
     else{setSolo(true)}
     setDuo(false)
-    setNombre(1)}
+    // setNombre(1)
+    }
 }
 
 const BookDuo = ()=>{
@@ -53,7 +54,8 @@ const BookDuo = ()=>{
     if (duo){setDuo(false)}
     else{setDuo(true)}
     setSolo(false)
-    setNombre(2)}
+    // setNombre(2)
+    }
 }
 
 const BookInvitation = ()=>{
@@ -97,12 +99,12 @@ const Validate = ()=>{
             else{
                 if(min30){
                     if(solo){
-                        setCreneau("Créneau Modelage - " +nombre.toString()+ " personne" +" - 30 min")
+                        // setCreneau("Créneau Modelage - " +nombre.toString()+ " personne" +" - 30 min")
                         if(coffret===true){setPrix(53)}
                         else{setPrix(35)}
                     }
                     else{
-                        setCreneau(" Créneau Modelage - " +nombre.toString()+ " personnes" +" - 30 min")
+                        // setCreneau(" Créneau Modelage - " +nombre.toString()+ " personnes" +" - 30 min")
                         if(coffret===true){setPrix(78)}
                         else{setPrix(60)}                          
                     }
@@ -110,12 +112,12 @@ const Validate = ()=>{
                         
                 else{
                     if(solo){
-                        setCreneau("Créneau Modelage - " +nombre.toString()+ " personne" +" - 60 min")
+                        // setCreneau("Créneau Modelage - " +nombre.toString()+ " personne" +" - 60 min")
                         if(coffret===true){setPrix(78)}
                         else{setPrix(60)}                  
                     }
                     else{
-                        setCreneau("Créneau Modelage - " +nombre.toString()+ " personnes"  +" - 60 min")
+                        // setCreneau("Créneau Modelage - " +nombre.toString()+ " personnes"  +" - 60 min")
                         if(coffret===true){setPrix(118)}
                         else{setPrix(100)}   
                     }
@@ -126,25 +128,25 @@ const Validate = ()=>{
     }
 }
 
-const [name, setName] = useState("");
-const [mail, setMail] = useState("");
-const [phone, setPhone] = useState("");
-// const [spam, setSpam] = useState(3);
-const [message, setMessage] = useState("");
+// const [name, setName] = useState("");
+// const [mail, setMail] = useState("");
+// const [phone, setPhone] = useState("");
+// // const [spam, setSpam] = useState(3);
+// const [message, setMessage] = useState("");
 
-function handleMessage(e){
-    // if ( spam !== '4'){
-    //     e.preventDefault()
-    //     alert('Mauvaise réponse au test anti spam, va te faire foutre sale bot')
-    // } else {
-    //     services.sendMessage(name, phone, mail, message);
-    // }
-    // e.preventDefault()
-    console.log(e)
-    console.log(message)
-    services.sendMessage(name, phone, mail, message);
+// function handleMessage(e){
+//     // if ( spam !== '4'){
+//     //     e.preventDefault()
+//     //     alert('Mauvaise réponse au test anti spam, va te faire foutre sale bot')
+//     // } else {
+//     //     services.sendMessage(name, phone, mail, message);
+//     // }
+//     // e.preventDefault()
+//     console.log(e)
+//     console.log(message)
+//     services.sendMessage(name, phone, mail, message);
     
-};
+// };
 
 
     return(

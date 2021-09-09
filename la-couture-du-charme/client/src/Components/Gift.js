@@ -1,6 +1,6 @@
 import '../CSS/Gift.scss';
-import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
+// import { Link } from 'react-router-dom';
+import React from 'react';
 import spa from '../Images/spa.jpg';
 import massage from '../Images/massage.jpg';
 import { useHistory } from 'react-router';
@@ -24,9 +24,9 @@ export default function Gift(){
     return(<div>
         <div className="giftbox">
             <div className="gift-title">
-                <p><h1>Coffrets Cadeau, Invitations Cadeau</h1><br></br>
+                <div><h1>Coffrets Cadeau, Invitations Cadeau</h1><br></br>
                 <p>Un délicieux moment de détente pour oublier le stress quotidien, <b>c'est la promesse que vous offrez.</b></p>
-                <p>Chacun de  nos massages ou de nos créneaux Spa Privatif est une escapade dans un univers de bien-être.</p></p>
+                <p>Chacun de  nos massages ou de nos créneaux Spa Privatif est une escapade dans un univers de bien-être.</p></div>
             </div>
             <div className="gift-box1">
                 <img src={spa} alt="gift-pic1" className="gift-pic1"/>
