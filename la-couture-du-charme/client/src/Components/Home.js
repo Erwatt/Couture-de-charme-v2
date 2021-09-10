@@ -150,8 +150,8 @@ history.push('/PrivateSpa');
                     </div>   
                 </div>
                 <div className="spabox"  data-aos="fade-right" data-aos-duration="1000">
-                    <img src={Spa} alt="spa" className="spapic"/>
-                    <div className="spa-txt" onClick={()=>handlePrivateSpa()}>
+                    <img src={Spa} alt="spa" className="piscinepic"/>
+                    <div className="pool-txt" onClick={()=>handlePrivateSpa()}>
                         <h2>Jacuzzi</h2>
                         <p>Excellent remède au stress, notre spa au design et au confort soigné vous permet de relâcher la pression et vous prélasser dans une eau à 37°C.</p>
                         <p>Chacune de ses 6 places dynamiques offre une qualité de massage permettant d’atteindre un haut niveau de performance grâce à des spécificités méticuleusement étudiées : multi jets hydrothérapie, spots de chromothérapie ….</p>
@@ -166,8 +166,8 @@ history.push('/PrivateSpa');
                     </div>
                 </div>
                 <div className="poufsbox" data-aos="fade-right" data-aos-duration="1000">
-                    <img src={massage3} alt="piscine" className="poufspic"/>
-                    <div className="poufs-txt">
+                    <img src={massage3} alt="piscine" className="piscinepic"/>
+                    <div className="pool-txt">
                         <h2>Massage bien-être</h2>
                         <p>Invitez vos sens à découvrir les bienfaits d’un massage personnalisé concocté par notre équipe d’esthéticiennes.</p> 
                         <p>Seul ou en duo, quelle que soit la zone que vous souhaitez détendre, il ne vous reste qu’à préciser la pression souhaitée, et la senteur de l’huile de massage qui vous inspire…. Et nos praticiennes se chargent de vous apporter une parfaite sensation de bienfait. </p>
