@@ -44,7 +44,7 @@
     margin-bottom: 4%;
 }
 
-.conainerTitleESPACE{
+.containerTitleESPACE{
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -96,4 +96,18 @@ width: 40%;
     font-size: 80%;
     font-style: italic;
     margin-top: 7%;
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tarif_li{
+    list-style-type: none;
+    // padding-left: 15%;
+}
+
+.tarif_list{
+    padding-left: 0;
 }

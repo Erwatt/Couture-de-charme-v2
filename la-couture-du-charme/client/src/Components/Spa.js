@@ -5,7 +5,7 @@ import '../CSS/Book2.scss';
 // import { useHistory } from 'react-router-dom';
 import CheckoutForm from './CheckoutForm';
 
-export default function Modelling(){
+export default function Spa(){
 
 window.scrollTo(0, 0);
 

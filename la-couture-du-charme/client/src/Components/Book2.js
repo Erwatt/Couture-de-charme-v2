@@ -52,7 +52,7 @@ const BookSpa = () => {
                                             </div>
                                             <div className="containerButtonBook">
                                                 <p className="buttonBook" id="bookSpa" onClick={()=>BookSpa()}>Centre de détente</p>
-                                                <p className="buttonBook" id="bookRoom" onClick={()=>BookRoom()}>Chambre</p>       
+                                                <p className="buttonBook" id="bookRoom" onClick={()=>BookRoom()}>Chambre d'hôtes</p>       
                                             </div>
                                         </div>
                                     </div>

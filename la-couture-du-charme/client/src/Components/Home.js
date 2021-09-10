@@ -153,8 +153,8 @@ history.push('/PrivateSpa');
                     <img src={Spa} alt="spa" className="piscinepic"/>
                     <div className="pool-txt" onClick={()=>handlePrivateSpa()}>
                         <h2>Jacuzzi</h2>
-                        <p>Excellent remède au stress, notre spa au design et au confort soigné vous permet de relâcher la pression et vous prélasser dans une eau à 37°C.</p>
-                        <p>Chacune de ses 6 places dynamiques offre une qualité de massage permettant d’atteindre un haut niveau de performance grâce à des spécificités méticuleusement étudiées : multi jets hydrothérapie, spots de chromothérapie ….</p>
+                        <p>Excellent remède au stress, notre spa au design et au confort soigné vous permet de relâcher la pression et vous prélasser dans une eau à 35-37°C.</p>
+                        <p>Chacune de ses 6 places dynamiques offre une qualité de massage permettant d’atteindre un haut niveau de performance grâce à des spécificités méticuleusement étudiées : multi jets hydrothérapie, spots de chromothérapie.</p>
                     </div>
                 </div>
                 <div className="saunabox" data-aos="fade-left" data-aos-duration="1000">
