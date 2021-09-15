@@ -1,7 +1,6 @@
 import '../CSS/Modelling.scss';
 import React, { useState } from 'react';
-import massage from '../Images/spa.jpg';
-import '../CSS/Book2.scss';
+import piscine from '../Images/photoPiscine.jpg';
 // import { useHistory } from 'react-router-dom';
 import CheckoutForm from './CheckoutForm';
 
@@ -305,7 +304,7 @@ const[semaine,setSemaine]=useState(false)
         <div className="ModellingContainer">
             <div className="modellingFlexRow">
                 <div className="modellingLeft">
-                    <img src={massage} alt="spa" className="modellingPic"/>
+                    <img src={piscine} alt="spa" className="poolPic"/>
                     <div>
                         <h1>Spa</h1>
                         <p>Offrez un moment de détente unique dans notre espace piscine sauna et spa.</p>

@@ -432,8 +432,9 @@
 .giftRightContainer{
     margin: 2%;
     margin-top: 0%;
-    background-image: url("../Images/cadeau.jpeg");
+    background-image: url("../Images/coffretCadeau.jpg");
     background-size: cover;
+    // background-repeat: no-repeat;
     height: 50em;
     border: solid white 0.0001px;
 
@@ -508,7 +509,7 @@
 }
 
 .containerWhite{
-    background-image: url("../Images/chill.jpeg");
+    background-image: url("../Images/photoSpa.jpg");
     margin:2%;
     background-size: cover;
     height: 48em;
