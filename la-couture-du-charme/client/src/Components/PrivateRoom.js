@@ -20,6 +20,10 @@ import tour from '../Images/tour.jpg';
 import fragole1 from '../Images/fragole.jpeg';
 import fragole2 from '../Images/Fragole2.jpeg';
 // import fragole3 from '../Images/Fragole3.jpg';
+import tableHotes1 from '../Images/tableHotes1.jpg';
+import tableHotes2 from '../Images/tableHotes2.jpg';
+import tableHotes3 from '../Images/tableHotes3.jpg';
+import tableHotes4 from '../Images/tableHotes4.jpg';
 import {useHistory} from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
@@ -42,8 +46,7 @@ history.push('/Tarifs');
     // const[prix3,setPrix3]=useState(false);
     const picturesList = [façade, devanture, devanture2, terrasse, tour];
     const picturesList2 = [fragole1, fragole2, cocoon1, cocoon2, cocoon3, scandinave5, scandinave1];
-    const picturesList3 = [];
-    const picturesList4 = [];
+    const picturesList3 = [tableHotes1, tableHotes2, tableHotes3, tableHotes4];
     // const picturesList2 = [scandinave1, scandinave2, scandinave3, scandinave4, scandinave5];
     // const ShowPrice1 = () => {if (prix1){setPrix1(false)}
     //                         else{setPrix1(true)}};
@@ -195,8 +198,8 @@ history.push('/Tarifs');
                 </div>
                 <p className="centré">Pour vos soirées en amoureux, ou entre amis, n’hésitez pas à consulter notre planning spa privatif avec piscine !</p>
                 <p className="centré">Selon disponibilité et avec supplément, possibilité de réserver un créneau sauna, spa, massage bien-être !</p>
-                {/* <img src={spa} alt="test" className="privateRoomDiapo2"/> */}
-                <div className="privateRoomDiapo"><Diaporama  picturesList ={picturesList4}/></div>
+                <img src={spa} alt="test" className="privateRoomDiapo2"/>
+                {/* <div className="privateRoomDiapo"><Diaporama  picturesList ={picturesList4}/></div> */}
             </div>
             <div className="containerBtnTarif"><p className="btnTarif" onClick={()=>handleTarifs()}>Voir les tarifs</p></div>
         </div>
