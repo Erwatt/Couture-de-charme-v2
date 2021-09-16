@@ -237,6 +237,7 @@
 .containerIframe{
     height: 500px;
     width: 100%;
+    // margin-top: 10%;
 }
 
 .containerBookRoom{
@@ -432,11 +433,9 @@
 .giftRightContainer{
     margin: 2%;
     margin-top: 0%;
-    background-image: url("../Images/coffretCadeau.jpg");
-    background-size: cover;
-    // background-repeat: no-repeat;
-    height: 50em;
+    background-color: rgb(218, 214, 180);
     border: solid white 0.0001px;
+    height: 50em;
 
 }
 
@@ -515,6 +514,13 @@
     height: 48em;
 }
 
+.containerBlack{
+    background-image: url("../Images/coffretCadeau.jpg");
+    margin:2%;
+    background-size: cover;
+    height: 48em;
+}
+
 .containerButtonBook{
     width:50%;
     padding: 1%;
@@ -545,6 +551,27 @@
     }
 }
 
+// .testdiapo{
+//     max-width: 600px;
+//     max-height: 250px;
+//     // margin-bottom: 60%;
+// }
+
+.bookRoom_txt{
+    text-align: left;
+    font-size: 20px;
+    margin:5%;
+    background-color: beige;
+    padding: 3%;
+    border: solid 2px black;
+}
+.bookRoom_txt > p{
+    margin: 0%;
+}
+
+.bookRoom_title{
+    text-align: center;
+}
 
 
 @media (max-width: 1000px) { 
@@ -573,7 +600,7 @@
         height: 34em;
     }
     .giftRightContainer{
-        
+        height: 34em;
     }
 
 }
