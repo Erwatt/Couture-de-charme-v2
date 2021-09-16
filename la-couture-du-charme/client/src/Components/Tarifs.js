@@ -155,8 +155,9 @@ export default function Tarifs(){
                 <div className="borderBlack"></div>
                 <div className="flexRow">
                     <div className="flexColumn center">
-                        <p className="containerTitleESPACE"><b>FORFAIT SPA & NUITÉE</b></p>
-                        <div>Accès spa + nuitée en chambres d'hôtes + petit déjeuner</div>
+                        <p className="containerTitleESPACE"><b>FORFAIT CENTRE DE DETENTE & NUITÉE (2 personnes)</b></p>
+                        <div>(2 h Centre de détente + nuitée en chambres d'hôtes + pdj)</div>
+                        <div>semaine: 195 € - le weekend : 210 € </div>
                         <div className="center">Nous contacter : www.coutureducharme.fr</div>
                     </div>
                 </div>
