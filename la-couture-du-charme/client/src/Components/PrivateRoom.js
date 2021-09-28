@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 // import { useState } from 'react';
 import Diaporama from './Diaporama';
 import '../CSS/PrivateRoom.scss';
@@ -194,10 +195,11 @@ history.push('/Tarifs');
                     <div className="subPrivateRoomBox">
                         <p className="privateRoomBoxText2">Pièce de vie de 40 m² au rez de chaussée avec kitchenette (micro-onde, réfrigérateur, lave-vaisselle, machine à café, bouilloire, vaisselle), espace repas et babyfoot. Accès terrasse, salon de jardin, et espace pique-nique avec jeux enfants en saison sur notre terrain de 4000 m².</p>
                         <p>Le petit déjeuner inclus est servi dès 7h en semaine, 8h30 le weekend. Possibilité de plateau repas en table d’hôtes sur demande (à prévoir 48h à l’avance).</p>
+                        <Link to="/BookRoom" className="Pv_Room_Link"><p className="Pv_Room_Dispo">Détails et disponibilités 📅</p></Link>
                     </div>
                 </div>
                 <p className="centré">Pour vos soirées en amoureux, ou entre amis, n’hésitez pas à consulter notre planning spa privatif avec piscine !</p>
-                <p className="centré">Selon disponibilité et avec supplément, possibilité de réserver un créneau sauna, spa, massage bien-être !</p>
+                <p className="centré">Selon disponibilité et avec supplément, possibilité de <b className="link"><Link to="/BookSpa" className="Pv_Room_Link">réserver</Link></b> un créneau piscine, sauna, spa, massage bien-être !</p>
                 <img src={spa} alt="test" className="privateRoomDiapo2"/>
                 {/* <div className="privateRoomDiapo"><Diaporama  picturesList ={picturesList4}/></div> */}
             </div>

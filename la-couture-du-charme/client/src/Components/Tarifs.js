@@ -73,7 +73,7 @@ export default function Tarifs(){
                         <div className="flexRow">
                             <div className="flexColumn" id="elementRow1">
                                 <div ><b>personne supplémentaire</b></div>
-                                <div>(max 8 personnes)</div>
+                                <div>(Contactez nous si plus de 6 personnes)</div>
                             </div>
                            
                             <div className="flexColumn" id="elementRow2">
@@ -157,9 +157,8 @@ export default function Tarifs(){
                 <div className="flexRow">
                     <div className="flexColumn center">
                         <p className="containerTitleESPACE"><b>FORFAIT CENTRE DE DETENTE & NUITÉE (2 personnes)</b></p>
-                        <div className="center">(2 h Centre de détente + nuitée en chambres d'hôtes + pdj)</div>
+                        <div className="center">2 h Centre de détente + nuitée en chambres d'hôtes + pdj</div>
                         <div className="center tarifAllInclusive">semaine: 195 € - le weekend : 210 € </div>
-                        <div className="center contactUs">Nous contacter : www.coutureducharme.fr</div>
                     </div>
                 </div>
             </div>
