@@ -18,13 +18,14 @@ export default function Tarifs(){
                             <div>59310 Saméon</div>
                             {/* <div>Le Spa : 07 52 09 07 50</div>
                             <div>spa@coutureducharme.fr</div> */}
-                            <ul className="tarif_list">Le spa : <li className="tarif_li">07 52 09 07 50</li><li className="tarif_li">spa@coutureducharme.fr</li></ul>
+                            <ul className="tarif_list marginTop">Les chambres : <li className="tarif_li">06 31 84 42 39</li><li className="tarif_li">coutureducharme@gmail.com</li></ul>
                         </div>
                     </div>
                     <div className="bloc2Right">
                         <p className="textTitleReservation">RÉSERVATION SPA </p>
                         <div>par téléphone, email ou en ligne : </div>
                         <div><a href="https://calendly.com/coutureducharme-le-spa"><b>calendly.com/coutureducharme-le-spa</b></a></div>
+                        <ul className="tarif_list">Le spa : <li className="tarif_li">07 52 09 07 50</li><li className="tarif_li">spa@coutureducharme.fr</li></ul>
                     </div>
                 </div>
                 <div className="borderBlack"></div>
@@ -156,9 +157,9 @@ export default function Tarifs(){
                 <div className="flexRow">
                     <div className="flexColumn center">
                         <p className="containerTitleESPACE"><b>FORFAIT CENTRE DE DETENTE & NUITÉE (2 personnes)</b></p>
-                        <div>(2 h Centre de détente + nuitée en chambres d'hôtes + pdj)</div>
-                        <div>semaine: 195 € - le weekend : 210 € </div>
-                        <div className="center">Nous contacter : www.coutureducharme.fr</div>
+                        <div className="center">(2 h Centre de détente + nuitée en chambres d'hôtes + pdj)</div>
+                        <div className="center tarifAllInclusive">semaine: 195 € - le weekend : 210 € </div>
+                        <div className="center contactUs">Nous contacter : www.coutureducharme.fr</div>
                     </div>
                 </div>
             </div>

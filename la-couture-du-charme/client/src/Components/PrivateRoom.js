@@ -20,6 +20,10 @@ import tour from '../Images/tour.jpg';
 import fragole1 from '../Images/fragole.jpeg';
 import fragole2 from '../Images/Fragole2.jpeg';
 // import fragole3 from '../Images/Fragole3.jpg';
+import tableHotes1 from '../Images/tableHotes1.jpg';
+import tableHotes2 from '../Images/tableHotes2.jpg';
+import tableHotes3 from '../Images/tableHotes3.jpg';
+import tableHotes4 from '../Images/tableHotes4.jpg';
 import {useHistory} from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
@@ -42,6 +46,7 @@ history.push('/Tarifs');
     // const[prix3,setPrix3]=useState(false);
     const picturesList = [façade, devanture, devanture2, terrasse, tour];
     const picturesList2 = [fragole1, fragole2, cocoon1, cocoon2, cocoon3, scandinave5, scandinave1];
+    const picturesList3 = [tableHotes1, tableHotes2, tableHotes3, tableHotes4];
     // const picturesList2 = [scandinave1, scandinave2, scandinave3, scandinave4, scandinave5];
     // const ShowPrice1 = () => {if (prix1){setPrix1(false)}
     //                         else{setPrix1(true)}};
@@ -184,7 +189,8 @@ history.push('/Tarifs');
                     <div className="privateRoomDiapo"><Diaporama  picturesList ={picturesList2}/></div>
                 </div>
                 <div className="privateRoomBox">
-                    <img src={cocoon1} alt="test" className="privateRoomDiapo"/>
+                    {/* <img src={cocoon1} alt="test" className="privateRoomDiapo"/> */}
+                    <div className="privateRoomDiapo"><Diaporama  picturesList ={picturesList3}/></div>
                     <div className="subPrivateRoomBox">
                         <p className="privateRoomBoxText2">Pièce de vie de 40 m² au rez de chaussée avec kitchenette (micro-onde, réfrigérateur, lave-vaisselle, machine à café, bouilloire, vaisselle), espace repas et babyfoot. Accès terrasse, salon de jardin, et espace pique-nique avec jeux enfants en saison sur notre terrain de 4000 m².</p>
                         <p>Le petit déjeuner inclus est servi dès 7h en semaine, 8h30 le weekend. Possibilité de plateau repas en table d’hôtes sur demande (à prévoir 48h à l’avance).</p>
@@ -193,7 +199,7 @@ history.push('/Tarifs');
                 <p className="centré">Pour vos soirées en amoureux, ou entre amis, n’hésitez pas à consulter notre planning spa privatif avec piscine !</p>
                 <p className="centré">Selon disponibilité et avec supplément, possibilité de réserver un créneau sauna, spa, massage bien-être !</p>
                 <img src={spa} alt="test" className="privateRoomDiapo2"/>
-                
+                {/* <div className="privateRoomDiapo"><Diaporama  picturesList ={picturesList4}/></div> */}
             </div>
             <div className="containerBtnTarif"><p className="btnTarif" onClick={()=>handleTarifs()}>Voir les tarifs</p></div>
         </div>
