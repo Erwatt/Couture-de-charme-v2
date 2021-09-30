@@ -1,81 +1,87 @@
-import React from 'react';
-import logo from '../Images/logo.png';
-import '../CSS/Header.scss';
-import {useState, useEffect} from 'react';
-import {useHistory} from 'react-router-dom';
-import { useTransition, animated , config} from 'react-spring';
-import { useLocation } from 'react-router-dom';
+import React from 'react'
+
+import { useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 
 
-function Header(){
 
-    const [anim1, setAnim1] = useState(false);
+//On importe les images
+import logo from '../Images/logo.png'
+import telephone from '../Images/phone-call.svg'
 
-    const transition1 = useTransition(anim1, {
-        
-        from: { opacity: 0 },
-        enter: { opacity: 1 },
-        leave: { opacity: 0 },
-        delay: 200,
-        config: config.molasses,
-    });
-    
-    
+//On importe le css
+import '../CSS/Header.scss'
+
+
+export default function Header() {
+
+
+    //Hooks cacher le menu automatiquement
+
+
+    function getSize() {
+        if (typeof window !== `undefined`) {
+            return (
+                window.pageYOffset
+            )
+        }
+    }
+
+    const [pos, setPos] = useState(getSize())
+    const [visible, setVisible] = useState(true)
+
+
+    useEffect(() => {
+
+        const handleScroll = () => {
+            const temp = window.pageYOffset
+
+            setVisible(pos >= temp)
+            setPos(temp)
+        }
+
+        window.addEventListener("scroll", handleScroll, { passive: true })
+
+
+        return (() => {
+            window.removeEventListener("scroll", handleScroll, { passive: true });
+        })
+    })
+
+
+    //Fin Hooks
+
+
     const history = useHistory();
 
-    function handleHome(){
+    function handleHome() {
         history.push('/');
     };
 
-    function handleBook(){
-        history.push('/Book');
+    function handleBook() {
+        history.push('/book');
     };
 
-    window.addEventListener("scroll", handleScroll);
-
-    const [sticky, setSticky] = useState(false);
-
-    function handleScroll(){
-        const offsetHeader = window.scrollY;
-        if (offsetHeader > 0){
-            setSticky(true);
-        } else {
-            setSticky(false);
-        };
-    };
-    
-
-    let headerClasses = ['header-box']
-    if (sticky){
-        headerClasses.push("header-sticky");
-    }
-    useEffect(() => {
-        setAnim1(false);
-
-        setInterval(() => {
-            setAnim1(true);
-        }, 1000);
-
-        
-
-    }, []);
-    
 
 
     return (
-        <div className={headerClasses.join(" ")}>
-            <div className="header-tel-back">
-                {transition1((style, item) => 
-                        item ? <animated.p style={style} className="header-tel"> 07 52 09 07 50</animated.p>: <div ></div> )}
-                
-            </div>
-                <img loading="auto" src={logo} alt="La Couture du Charme" className="header-logo" onClick={handleHome}/>
-            <div className="header-book-back">
-                {transition1((style, item) => 
-                        item ? <animated.p style={style} className="header-book" onClick={handleBook}><span>Réserver/Offrir</span></animated.p>: <div ></div> )}
-            </div>
-        </div>
+
+
+
+            <div className={!visible ? "MainHeader navbarHidden" : "MainHeader"}>
+
+
+                <div className="ContainerHeader">
+
+                    <div className="link bouton"><img src={telephone} alt="icone telephone" width="20" height="20" />07 52 09 07 50</div>
+
+                    <div className="link logo"> <img loading="auto" width="200" src={logo} alt="La Couture du Charme" className="header-logo" onClick={handleHome} /></div>
+
+                    <div className="link bouton" onClick={handleBook}><span>Réserver/Offrir</span></div>
+
+                </div>
+
+            </div >
+
     );
 };
-
-export default Header;

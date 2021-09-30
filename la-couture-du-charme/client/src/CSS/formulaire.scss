@@ -1,0 +1,187 @@
+@use "main" as *;
+
+.MainForm {
+    padding:7rem 2rem;
+
+    .GroupForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .ContainerForm {
+            display: flex;
+            flex-direction: column;
+
+            input,
+            textarea {
+                font-size: 1.7rem;
+                padding: 1.2rem 2rem;
+                margin-top: 1.5rem;
+                border: 0.1rem solid #cacaca;
+                border-radius: 0.4rem;
+                width: 40rem;
+                height: 3rem;
+            }
+
+            textarea {
+                height: 15rem;
+            }
+
+            input:hover,
+            textarea:hover {
+                border: 0.1rem solid black;
+            }
+
+            input::placeholder,
+            textarea::placeholder {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                -webkit-font-smoothing: antialiased;
+                line-height: 1.7rem;
+                height: 2.5rem;
+            }
+
+            .BlocForm {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                .ItemForm {
+                    padding: 3rem;
+                    flex: 1 1 30rem;
+
+                    label{
+                        
+                        letter-spacing: 1.5px;
+                    }
+
+                    p{
+                        width: 40rem;
+                        letter-spacing: 2px;
+                        line-height: 150%;
+                        text-align: justify;
+                        margin: auto;
+                    }
+
+                    button{
+                        margin: 0 auto;
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                        background: none;
+                        color:black;
+                        border: none;
+                        letter-spacing: 0.5rem;
+                        font-size: 1.7rem;
+                        font-family: MerriweatherLight;
+                        box-shadow: none;
+
+                        img{
+                            margin-right: 1rem;
+                        }
+
+                    }
+
+                }
+
+                .ItemFormBouton{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+            }
+
+        }
+
+    }
+}
+
+
+.ConfirmationEnvoi{
+    padding: 2rem;
+    background: #176B77;
+    color:white;
+}
+
+.ProblemeFormulaire{
+    padding: 2rem;
+    color:white;
+    background: red;
+}
+
+
+$animate: all 0.2s ease-in-out;
+
+.AnimationBouton{
+
+    .hover {
+      transition: $animate;
+      position: relative;
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        width: 0px;
+        height: 1px;
+        margin: 5px 0 0;
+        transition: $animate;
+        transition-duration: 0.75s;
+        opacity: 0;
+        background-color: black;
+      }
+      &.hover-1 {
+        &:before,
+        &:after {
+          left: 0;
+        }
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      .hover {
+        &:before,
+        &:after {
+          width: 100%;
+          opacity: 1;
+        }
+      }
+    }
+  
+  }
+
+
+@media only screen and (max-width: 450px) {
+
+    .MainForm{
+        margin:0;
+    }
+    
+.MainForm .GroupForm .ContainerForm input, 
+.MainForm .GroupForm .ContainerForm textarea  {
+      width:30rem;
+    }
+    .MainForm .GroupForm .ContainerForm .BlocForm .ItemForm p{
+        width: 30rem;
+        margin: auto;
+        padding-bottom: 3rem;
+    }
+    .MainForm .GroupForm .ContainerForm .BlocForm .ItemForm {
+        margin: 2rem 0;
+        padding:2rem 0;
+
+    }
+
+  }
+
+
+  @media only screen and (min-width: 1000px) {
+    .MainForm .GroupForm .ContainerForm .BlocForm {
+        flex-wrap: initial;
+    }
+
+
+  }

@@ -1,5 +1,6 @@
 import '../CSS/Book2.scss';
 import React, { useState } from 'react';
+import { Helmet, HelmetProvider } from 'react-helmet-async'
 
 import {useHistory} from 'react-router-dom';
 
@@ -19,7 +20,7 @@ function handleBookSpa(){
     history.push('/BookSpa');
 };
 function handleBookRoom(){
-    history.push('/BookRoom');
+    history.push('/chambres-hotes');
 };
 
 function handleGift(){
@@ -40,7 +41,15 @@ const BookSpa = () => {
 
 
     return(
-        <div>
+        <HelmetProvider>
+
+        <Helmet>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Réserver ou offir un SPA ou chambre d'hôtes</title>
+            <meta name="description" content="Réservez ou achetez un bon cadeau en ligne pour accéder au SPA ou/et chambres d'hôtes de la Couture du Charme à Saméon." />
+            <html lang="fr" />
+
+        </Helmet>
             
                         <div>
                             <div className="containerHomeBook">
@@ -66,7 +75,7 @@ const BookSpa = () => {
                             </div>
                         </div>
 
-        </div>
+                        </HelmetProvider>
     
 
     
