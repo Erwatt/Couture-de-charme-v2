@@ -1,16 +1,15 @@
 import '../CSS/Modelling.scss';
-import React, { useState } from 'react';
-import massage from '../Images/spa.jpg';
-import '../CSS/Book2.scss';
-import { useHistory } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import piscine from '../Images/photoPiscine.jpg';
+// import { useHistory } from 'react-router-dom';
 import CheckoutForm from './CheckoutForm';
 
-export default function Modelling(){
+export default function Spa(){
 
 window.scrollTo(0, 0);
 
-const[min30, setMin30]=useState(false);
-const[min60, setMin60]=useState(false);
+// const[min30, setMin30]=useState(false);
+// const[min60, setMin60]=useState(false);
 const[un, set1]=useState(false);
 const[deux, set2]=useState(false);
 const[trois, set3]=useState(false);
@@ -24,19 +23,19 @@ const[enveloppe, setEnveloppe]=useState(false);
 const[coffret, setCoffret]=useState(false);
 const[vip, setVip]=useState(false);
 
-const Book30min = ()=>{
-    if(!validate){
-    if (min30){setMin30(false)}
-    else{setMin30(true)}
-    setMin60(false)}
-}
+// const Book30min = ()=>{
+//     if(!validate){
+//     if (min30){setMin30(false)}
+//     else{setMin30(true)}
+//     setMin60(false)}
+// }
 
-const Book60min = ()=>{
-    if(!validate){
-    if (min60){setMin60(false)}
-    else{setMin60(true)}
-    setMin30(false)}
-}
+// const Book60min = ()=>{
+//     if(!validate){
+//     if (min60){setMin60(false)}
+//     else{setMin60(true)}
+//     setMin30(false)}
+// }
 
 const Book1 = ()=>{
     if(!validate){
@@ -185,8 +184,8 @@ const[semaine,setSemaine]=useState(false)
     const[validate,setvalidate]=useState(false)
     const[creneau2h,setCreneau2h]=useState(false)
     const[creneau1h30,setCreneau1h30]=useState(false)
-    const[creneau,setCreneau]=useState("Créneau Spa")
-    const[prix, setPrix]=useState(30)
+    // const[creneau,setCreneau]=useState("Créneau Spa")
+    const[prix, setPrix]=useState(0)
 
     const BookWeekend = ()=>{
         if(!validate){
@@ -239,65 +238,68 @@ const[semaine,setSemaine]=useState(false)
     }
     
     const Validate = ()=>{
-        if(nombre<1||nombre>8){setvalidate(false)}
-        else{
-            if (semaine===false&&weekend===false){setvalidate(false)}
-            else{
-                if(semaine&&after17===false&&before17===false){setvalidate(false)}
-                else{
-                    if(semaine&&after17&&creneau2h===false&&creneau1h30===false){setvalidate(false)}
-                    else{
-                        if(semaine){
-                            
-                            if(after17){
-                                if(creneau1h30){
-                                    setCreneau("Créneau Spa - " +" Semaine - "+nombre.toString()+ " personne(s)" +" - 1h30")
-                                    if(nombre==1||nombre==2){
-                                        if(coffret===true){setPrix(108)}
-                                        else{setPrix(90)}}
-                                    else{
-                                        if(coffret===true){setPrix(108+(nombre-2)*20)}
-                                        else{setPrix(90+(nombre-2)*20)}}
-                                }
-                                else{
-                                    setCreneau(" Créneau Spa - Semaine - " +nombre.toString()+ " personne(s)" +" - 2h")
-                                    if(nombre==1||nombre==2){
-                                        if(coffret===true){setPrix(128)}
-                                        else{setPrix(110)}}
-                                    else{
-                                        if(coffret===true){setPrix(128+(nombre-2)*30)}
-                                        else{setPrix(110+(nombre-2)*30)}}
-                                }
-                            }
-
-                            else{
-                                setCreneau("Créneau Spa - Semaine - " +nombre.toString()+ " personne(s)")
-                                if(nombre==1||nombre==2){
-                                    if(coffret===true){setPrix(98)}
-                                    else{setPrix(80)}}
-                                else{
-                                    if(coffret===true){setPrix(98+(nombre-2)*20)}
-                                    else{setPrix(80+(nombre-2)*20)}}                        
-                            }
-                                
-                        }
-                        else{
-                            setCreneau("Créneau Spa - Weekend - " +nombre.toString()+ " personne(s)")
-                            if(nombre==1||nombre==2){
-                                if(coffret===true){setPrix(148)}
-                                else{(setPrix(130))}}
-                            else{
-                                if(coffret===true){setPrix(148+(nombre-2)*20)}
-                                else{setPrix(130+(nombre-2)*20)}}                    
-                        }
-                        setvalidate(true)
-                    }
-                }
-            }
+        if((!semaine&!weekend)|(semaine&!after17&!before17)|(semaine&after17&!creneau1h30&!creneau2h)|(!enveloppe&!coffret&!invitation)){
+            setvalidate(false)
         }
-        
+        else{
+            setvalidate(true)
+        }
     }
 
+    useEffect(() => {
+        if(nombre!==0){
+            if(semaine){ 
+                if(after17){
+                    if(creneau1h30){
+                        // setCreneau("Créneau Spa - " +" Semaine - "+nombre.toString()+ " personne(s)" +" - 1h30")
+                        if(nombre===1||nombre===2){
+                            if(coffret===true){setPrix(108)}
+                            else{setPrix(90)}
+                        }
+                        else{
+                            if(coffret===true){setPrix(108+(nombre-2)*20)}
+                            else{setPrix(90+(nombre-2)*20)}
+                        }
+                    }
+                    else{
+                        // setCreneau(" Créneau Spa - Semaine - " +nombre.toString()+ " personne(s)" +" - 2h")
+                        if(nombre===1||nombre===2){
+                            if(coffret===true){setPrix(128)}
+                            else{setPrix(110)}}
+                        else{
+                            if(coffret===true){setPrix(128+(nombre-2)*30)}
+                            else{setPrix(110+(nombre-2)*30)}
+                        }
+                    }
+                }
+
+                else{
+                    // setCreneau("Créneau Spa - Semaine - " +nombre.toString()+ " personne(s)")
+                    if(nombre===1||nombre===2){
+                        if(coffret===true){setPrix(98)}
+                        else{setPrix(80)}}
+                    else{
+                        if(coffret===true){setPrix(98+(nombre-2)*20)}
+                        else{setPrix(80+(nombre-2)*20)}
+                    }                        
+                }
+                    
+            }
+            else if (weekend){
+                // setCreneau("Créneau Spa - Weekend - " +nombre.toString()+ " personne(s)")
+                if(nombre===1||nombre===2){
+                    if(coffret===true){setPrix(148)}
+                    else{(setPrix(130))}}
+                else{
+                    if(coffret===true){setPrix(148+(nombre-2)*20)}
+                    else{setPrix(130+(nombre-2)*20)}}                    
+            }
+            
+            if((!semaine&!weekend)|(semaine&!after17&!before17)|(semaine&after17&!creneau1h30&!creneau2h)){
+                setPrix(0)
+            }
+        }
+    }, [after17,before17, coffret, enveloppe, invitation, creneau1h30, creneau2h, nombre, semaine, weekend])
     
 
 
@@ -305,7 +307,7 @@ const[semaine,setSemaine]=useState(false)
         <div className="ModellingContainer">
             <div className="modellingFlexRow">
                 <div className="modellingLeft">
-                    <img src={massage} alt="spa" className="modellingPic"/>
+                    <img src={piscine} alt="spa" className="poolPic"/>
                     <div>
                         <h1>Spa</h1>
                         <p>Offrez un moment de détente unique dans notre espace piscine sauna et spa.</p>
@@ -313,7 +315,7 @@ const[semaine,setSemaine]=useState(false)
                     </div>
                 </div>
                 <div className="modellingRight">
-                    <h2>Espace détente</h2>
+                    <h2>Espace détente</h2><h3>Prix: {prix}€</h3>
                     <div className="separation"></div>
                     <p><b>Participants :</b></p>
                     <div className="modellingFlexRow2">
@@ -395,7 +397,7 @@ const[semaine,setSemaine]=useState(false)
                         }
                     </div>
                     <p><b>Invitation électronique : </b>envoyée par nos soins par mail</p>
-                    <p><b>Enveloppe cadeau : </b>à retirer sur place ou envoyé par nos soins par courrier</p>
+                    <p><b>Enveloppe cadeau : </b>à retirer sur place ou envoyée par nos soins par courrier</p>
                     <p><b>Boîte Cadeau la Couture du Charme: </b>envoyée par nos soins (délai Colissimo)</p>
                     <div className="separation"></div>
                     <p><b>Personnalisez votre cadeau</b></p>

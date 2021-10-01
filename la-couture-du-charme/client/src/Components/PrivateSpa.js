@@ -1,10 +1,10 @@
 import React from 'react';
-import Diaporama from './Diaporama';
-import fontaine from '../Images/fontaine.jpg';
-import spa from '../Images/spa.jpg';
-import poufs from '../Images/poufs.jpg';
-import sauna from '../Images/sauna.jpg';
-import piscine from '../Images/piscine.jpg';
+// import Diaporama from './Diaporama';
+// import fontaine from '../Images/fontaine.jpg';
+// import spa from '../Images/spa.jpg';
+// import poufs from '../Images/poufs.jpg';
+// import sauna from '../Images/sauna.jpg';
+// import piscine from '../Images/piscine.jpg';
 import massage2 from '../Images/massage2.jpg';
 import '../CSS/PrivateSpa.css';
 import AOS from 'aos';
