@@ -25,12 +25,22 @@ import Modelling from './Modeling';
 import Massage from '../pages/massage'
 import Spa from './Spa';
 import CheckoutForm from './CheckoutForm';
+import GA4React from "ga-4-react";
+
 
 // import {useState} from 'react';
 
 
 
 function App() {
+  
+  //Google Analytics 4
+  try {
+  setTimeout(_ => {
+    const ga4react = new GA4React("G-DB7YNEWFMK");
+    ga4react.initialize();
+  }, 4000);
+} catch (err) {}
 
   // const [anim1, setAnim1] = useState(false);
   //   const [anim2, setAnim2] = useState(false);
