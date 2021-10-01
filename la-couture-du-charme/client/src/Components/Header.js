@@ -1,4 +1,5 @@
 import React from 'react'
+import GA4React from "ga-4-react"
 
 import { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
@@ -15,6 +16,9 @@ import '../CSS/Header.scss'
 
 export default function Header() {
 
+    //Google Analytics 4
+    const ga4react = new GA4React("G-XXXXXXXXXX");
+    ga4react.initialize()
 
     //Hooks cacher le menu automatiquement
 
