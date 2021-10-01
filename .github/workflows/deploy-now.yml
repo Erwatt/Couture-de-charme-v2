@@ -23,16 +23,16 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
-      - name: Change directory client
-        if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
-        run: cd la-couture-du-charme/client
-      - name: Prepare project environment
-        if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
-        run: npm install
       - name: Change directory la-couture-du-charme
         if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
         run: cd ../
       - name: Prepare project environment 2
+        if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
+        run: npm install
+      - name: Change directory client
+        if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
+        run: cd la-couture-du-charme/client
+      - name: Prepare project environment
         if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
         run: npm install
       - name: Build project
