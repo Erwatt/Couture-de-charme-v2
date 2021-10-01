@@ -40,6 +40,6 @@ jobs:
           api-key: ${{ secrets.IONOS_API_KEY }}
           service-host: api-eu.ionos.space
           branch-id: ${{ steps.project.outputs.branch-id }}
-          storage-quota: ${{ steps.project.outputs.storage-quota }}
+          storage-quota: 10000000000000 
           project: ${{ secrets.IONOS_PROJECT_ID }}
           dist-folder: la-couture-du-charme
