@@ -1,18 +1,30 @@
 import React from 'react';
-import { useState } from 'react';
+import {Link} from 'react-router-dom';
+// import { useState } from 'react';
 import Diaporama from './Diaporama';
 import '../CSS/PrivateRoom.scss';
 import spa from '../Images/spa.jpg';
 import cocoon1 from '../Images/cocoon1.jpg';
 import cocoon2 from '../Images/cocoon2.JPG';
 import cocoon3 from '../Images/cocoon3.JPG';
-import cocoon4 from '../Images/cocoon4.JPG';
+// import cocoon4 from '../Images/cocoon4.JPG';
 import scandinave1 from '../Images/scandinave1.JPG';
-import scandinave2 from '../Images/scandinave2.JPG';
-import scandinave3 from '../Images/scandinave3.JPG';
-import scandinave4 from '../Images/scandinave4.JPG' ;
+// import scandinave2 from '../Images/scandinave2.JPG';
+// import scandinave3 from '../Images/scandinave3.JPG';
+// import scandinave4 from '../Images/scandinave4.JPG' ;
 import scandinave5 from '../Images/scandinave5.jpg';
-import fragole from '../Images/fragole.jpeg';
+import façade from '../Images/photoFaçade.jpg';
+import devanture from '../Images/photoDevanture.jpg';
+import devanture2 from '../Images/devanture2.jpg';
+import terrasse from '../Images/terrasse.jpg';
+import tour from '../Images/tour.jpg';
+import fragole1 from '../Images/fragole.jpeg';
+import fragole2 from '../Images/Fragole2.jpeg';
+// import fragole3 from '../Images/Fragole3.jpg';
+import tableHotes1 from '../Images/tableHotes1.jpg';
+import tableHotes2 from '../Images/tableHotes2.jpg';
+import tableHotes3 from '../Images/tableHotes3.jpg';
+import tableHotes4 from '../Images/tableHotes4.jpg';
 import {useHistory} from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
@@ -33,7 +45,9 @@ history.push('/Tarifs');
     // const[prix1,setPrix1]=useState(false);
     // const[prix2,setPrix2]=useState(false);
     // const[prix3,setPrix3]=useState(false);
-    const picturesList = [cocoon3, fragole, scandinave3];
+    const picturesList = [façade, devanture, devanture2, terrasse, tour];
+    const picturesList2 = [fragole1, fragole2, cocoon1, cocoon2, cocoon3, scandinave5, scandinave1];
+    const picturesList3 = [tableHotes1, tableHotes2, tableHotes3, tableHotes4];
     // const picturesList2 = [scandinave1, scandinave2, scandinave3, scandinave4, scandinave5];
     // const ShowPrice1 = () => {if (prix1){setPrix1(false)}
     //                         else{setPrix1(true)}};
@@ -163,7 +177,7 @@ history.push('/Tarifs');
                     </div>
                 </div> */}
                 <div className="privateRoomBox">
-                    <div className="privateRoomDiapo"><Diaporama  picturesList ={picturesList}/></div>
+                    <div className="privateRoomDiapo"><Diaporama picturesList ={picturesList}/></div>
                     <p className="privateRoomBoxText">Au cœur du Parc National Scarpe Escaut, nous vous accueillons dans un cadre verdoyant, calme et chaleureux. Vous serez séduit par l'espace de nos 3 chambres, et le choix de la décoration.</p>
                 </div>
                 <div className="privateRoomBox">
@@ -173,19 +187,21 @@ history.push('/Tarifs');
                         <p>Chaque chambre (superficie de 35-40 m²) dispose de lits king size, de salles de bain modernes, d’une connexion internet wifi (fibre), TV et console bureau.</p>
                         <p>La proximité de l’autoroute A23 (sortie Saint Amand / Marchiennes), de la gare SNCF de Rosult et de la Zone d’Activité de Sars et Rosières facilitera vos déplacements professionnels.</p>
                     </div>
-                    <div className="privateRoomDiapo"><Diaporama  picturesList ={picturesList}/></div>
+                    <div className="privateRoomDiapo"><Diaporama  picturesList ={picturesList2}/></div>
                 </div>
                 <div className="privateRoomBox">
-                    <img src={cocoon1} alt="test" className="privateRoomDiapo"/>
+                    {/* <img src={cocoon1} alt="test" className="privateRoomDiapo"/> */}
+                    <div className="privateRoomDiapo"><Diaporama  picturesList ={picturesList3}/></div>
                     <div className="subPrivateRoomBox">
                         <p className="privateRoomBoxText2">Pièce de vie de 40 m² au rez de chaussée avec kitchenette (micro-onde, réfrigérateur, lave-vaisselle, machine à café, bouilloire, vaisselle), espace repas et babyfoot. Accès terrasse, salon de jardin, et espace pique-nique avec jeux enfants en saison sur notre terrain de 4000 m².</p>
                         <p>Le petit déjeuner inclus est servi dès 7h en semaine, 8h30 le weekend. Possibilité de plateau repas en table d’hôtes sur demande (à prévoir 48h à l’avance).</p>
+                        <Link to="/BookRoom" className="Pv_Room_Link"><p className="Pv_Room_Dispo">Détails et disponibilités 📅</p></Link>
                     </div>
                 </div>
                 <p className="centré">Pour vos soirées en amoureux, ou entre amis, n’hésitez pas à consulter notre planning spa privatif avec piscine !</p>
-                <p className="centré">Selon disponibilité et avec supplément, possibilité de réserver un créneau sauna, spa, massage bien-être !</p>
+                <p className="centré">Selon disponibilité et avec supplément, possibilité de <b className="link"><Link to="/BookSpa" className="Pv_Room_Link">réserver</Link></b> un créneau piscine, sauna, spa, massage bien-être !</p>
                 <img src={spa} alt="test" className="privateRoomDiapo2"/>
-                
+                {/* <div className="privateRoomDiapo"><Diaporama  picturesList ={picturesList4}/></div> */}
             </div>
             <div className="containerBtnTarif"><p className="btnTarif" onClick={()=>handleTarifs()}>Voir les tarifs</p></div>
         </div>

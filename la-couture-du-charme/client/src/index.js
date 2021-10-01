@@ -9,7 +9,7 @@ import { Elements } from '@stripe/react-stripe-js';
 
 
 
-const stripePromise = loadStripe("pk_test_51JKLlzFWy0s3veRrxsohTmNgi5LdmSqBZDAyHHkce2q8JT80kWCM22PglHlQMAjoRZPe239mgXIwoyAK7FY9eCTO00FDLClGaK");
+const stripePromise = loadStripe("pk_test_51JY4jfC5irX1wDSrzF5VdFCoxPMribO2ge8FdGNYcMzeHPsqPd2aws1lrGClmw6acAt8s54FEMtGjKr8jOO6DeUs00lEJKkx1t");
 
 ReactDOM.render(
   <React.StrictMode>

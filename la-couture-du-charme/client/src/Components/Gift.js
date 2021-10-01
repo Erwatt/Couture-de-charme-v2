@@ -1,8 +1,9 @@
 import '../CSS/Gift.scss';
-import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
-import spa from '../Images/spa.jpg';
-import massage from '../Images/massage.jpg';
+// import { Link } from 'react-router-dom';
+import React from 'react';
+import bonCadeau from '../Images/bonCadeau.png';
+import coffretCadeau from '../Images/coffretCadeau.jpg';
+import massage from '../Images/val.jpg';
 import { useHistory } from 'react-router';
 
 
@@ -24,12 +25,12 @@ export default function Gift(){
     return(<div>
         <div className="giftbox">
             <div className="gift-title">
-                <p><h1>Coffrets Cadeau, Invitations Cadeau</h1><br></br>
+                <div><h1>Coffrets Cadeau, Invitations Cadeau</h1><br></br>
                 <p>Un délicieux moment de détente pour oublier le stress quotidien, <b>c'est la promesse que vous offrez.</b></p>
-                <p>Chacun de  nos massages ou de nos créneaux Spa Privatif est une escapade dans un univers de bien-être.</p></p>
+                <p>Chacun de  nos massages ou de nos créneaux Spa Privatif est une escapade dans un univers de bien-être.</p></div>
             </div>
             <div className="gift-box1">
-                <img src={spa} alt="gift-pic1" className="gift-pic1"/>
+                <img src={coffretCadeau} alt="gift-pic1" className="gift-pic1"/>
                 <div className="gift-text1">
                     <h2>Au choix pour votre bon-cadeau (modelage ou spa privatif) : </h2>
                     <li>Une enveloppe prête à offrir ou envoyée par nos soins, comprenant votre invitation personnalisée</li>
@@ -41,7 +42,7 @@ export default function Gift(){
             </div>
             <div className="gift-box2">
                 <div className="link1" onClick={handleGiftSpa}>
-                    <img src={spa} alt="gift-pic2" className="gift-pic2"/>
+                    <img src={bonCadeau} alt="gift-pic2" className="gift-pic2"/>
                     <p><b>Centre de détente</b></p>
                 </div>
                 <div className="link2" onClick={handleModelling}>
