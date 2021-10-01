@@ -1,9 +1,68 @@
-.PrivateContainerRoom{
+.PrivateContainerRoom {
     padding: 5%;
     background-color: rgb(247, 238, 238);
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 5%;
+}
+
+.containerBookRoom {
+    margin-top: 7rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap:2rem;
+
+    .ElementRoom {
+
+        flex: 0 1 40rem;
+
+        .cocoon1 {
+            margin: 5rem 2rem;
+            font-size: 1.7rem;
+            text-align: justify;
+            line-height: 200%;
+            letter-spacing: 0.3rem;
+            height: 30vh;
+        }
+
+        .cocoon2 {
+            ul {
+                font-family: MerriweatherBold;
+                list-style-type: none;
+                font-size: 2rem;
+                line-height: 200%;
+                height: 40rem;
+                padding: 0;
+                margin: 2rem;
+
+                display: flex;
+                flex-direction: column;
+                align-items: left;
+                justify-content: center;
+
+                li {
+                    text-align: left;
+                }
+            }
+        }
+
+        .cocoon3 {
+            font-family: Merriweather;
+            text-align: left;
+            list-style-type: none;
+            margin: 2rem 2rem 7rem 2rem;
+            font-size: 2rem;
+            line-height: 150%;
+
+            p:nth-of-type(1) {
+                font-family: MerriweatherBlack;
+            }
+
+            p:nth-of-type(2),p:nth-of-type(3) {
+                font-size: 1.7rem;
+            }
+        }
+    }
 }
 
 /*.room{
@@ -159,42 +218,42 @@
     }
 }*/
 
-.privateRoomBox{
+.privateRoomBox {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     padding-bottom: 5%;
 }
 
-.privateRoomDiapo{
+.privateRoomDiapo {
     width: 50%;
 }
 
-.privateRoomDiapo2{
+.privateRoomDiapo2 {
     width: 60%;
     height: 25em;
     margin-left: 20%;
 }
 
-.privateRoomBox > p{
+.privateRoomBox > p {
     margin-left: 5%;
     margin-right: 5%;
 }
 
-.subPrivateRoomBox{
+.subPrivateRoomBox {
     margin-left: 5%;
     margin-right: 5%;
 }
 
-.privateRoomBoxText{
+.privateRoomBoxText {
     margin-top: 8%;
 }
 
-.privateRoomBoxText2{
+.privateRoomBoxText2 {
     margin-top: 18%;
 }
 
-.centré{
+.centré {
     text-align: center;
     margin-bottom: 5%;
 }

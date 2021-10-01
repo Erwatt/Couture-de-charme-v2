@@ -1,87 +1,42 @@
-import React from 'react';
-import Map from './Map';
-import '../CSS/Footer.scss';
-import {useState} from 'react';
-import services from '../services';
-import {Link} from 'react-router-dom';
-import facebook from '../Images/facebook.png';
-import instagram from '../Images/instagram.png';
+import React from 'react'
 
-function Footer(){
-    const [name, setName] = useState("");
-    const [mail, setMail] = useState("");
-    const [phone, setPhone] = useState("");
-    // const [spam, setSpam] = useState(3);
-    const [message, setMessage] = useState("");
+//On importe le css
+import '../CSS/Footer.scss'
 
-    function handleMessage(e){
-        // if ( spam !== '4'){
-        //     e.preventDefault()
-        //     alert('Mauvaise réponse au test anti spam, va te faire foutre sale bot')
-        // } else {
-        //     services.sendMessage(name, phone, mail, message);
-        // }
-        // e.preventDefault()
-        console.log(e)
-        console.log(message)
-        services.sendMessage(name, phone, mail, message);
-        
-    };
+//On importe le SVG
+import PlayWhite from '../Images/playwhite.svg'
+
+export default function Footer() {
 
     return (
-        <div className="footer">
-            <div className="footer-up">
-                <div className="footer-contact-map">
-                    <div className="footer-contact">
-                        <h2> LA COUTURE DU CHARME</h2>
-                        <h3>Spa et Chambres d'Hôtes</h3>
-                        <p>1400, rue de Beaumetz<br></br>59310 SAMÉON</p>
-                        <h3>📞 07 52 09 07 50</h3>
-                    </div>
-                    <div className="footer-map">
-                        <Map/>
-                    </div>
+        <div className="MainFooter">
+
+            <div className="ContainerFooter">
+
+                <div className="ItemFooter">
+                    Couture du Charme 2021
                 </div>
 
-                <form className="footer-message" onSubmit={handleMessage}>
-                    <div className="footer-message-form">
-                        <div className="footer-message-form-inputs">
-                            <div className="footer-message-form-input">
-                                <label htmlFor="Name">Nom et prénom</label>
-                                <input className="form__field" name="Name" onChange={(e) => setName(e.target.value)}/>
-                            </div>
-                            <div className="footer-message-form-input">
-                                <label htmlFor="Phone">Numéro de téléphone</label>
-                                <input className="form__field" name="Phone" onChange={(e) => setPhone(e.target.value)}/>
-                            </div>
-                            <div className="footer-message-form-input">
-                                <label htmlFor="Mail">E-mail</label>
-                                <input className="form__field" name="Mail" onChange={(e) => setMail(e.target.value)}/>
-                            </div>
-                           
-                        </div>
-                        <div className="footer-message-form-txtarea">
-                            <label htmlFor="Message">Message</label>
-                            <textarea name="Message" onChange={(e) => setMessage(e.target.value)}/>
-                        </div>
+                <div className="ItemFooter">
+
+                    <div className="AnimationBoutonFooter">
+
+                        <a href="/" className="hover hover-1">
+                            <img src={PlayWhite} alt="Picto flèche" width="10px" />Accueil
+                        </a>
                     </div>
-                    <button className="footer-message-form-send">Envoyer votre message</button>
-                </form>
-            </div>
-            <div className="footer-down">
-                <div className="footer-reseaux">
-                    <a href="https://www.facebook.com/coutureducharme" target="_blank" rel="noreferrer">           
-                        <img className="footer-facebook" src={facebook} alt="facebook" loading="lazy"/>
-                    </a>
-                    <a href="https://www.instagram.com/spa_la.couture.du.charme/?hl=fr" target="_blank" rel="noreferrer">           
-                        <img className="footer-instagram" src={instagram} alt="instagram" loading="lazy"/>
-                    </a>
+
+                    <div className="AnimationBoutonFooter">
+
+                        <a href="/mentions-legales" className="hover hover-1">
+                            <img src={PlayWhite} alt="Picto flèche" width="10px" />Mentions légales
+                        </a>
+                    </div>
+
                 </div>
-                <p className="txtCouture2021Footer">Couture du Charme 2021</p>
-                <Link to="/MentionsLégales" className="footer-link"><div className="footer-down-mention"><p>Mentions légales</p></div></Link>
+
             </div>
+
         </div>
-    );
-};
-
-export default Footer;
+    )
+}
