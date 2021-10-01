@@ -1,211 +1,77 @@
-.header-box{
-    /* padding: 10px 16px; */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    text-align: center;
-    z-index: 2;
-    background-color: rgba(185, 179, 119, 0.67);
-    width: 100%;
+@use "main" as *;
+
+.MainHeader {
     position: fixed;
     top: 0;
-    
-    
-}
-.header-logo{
-    width: 12%;
-    height: auto;
-    cursor: pointer;
-    position:relative;
-
-    transition-property: transform;
-    transition-duration: 1500ms;
-    &:hover{
-         
-        
-        transform: scale(1.30) ;
-    }
-}
-
-.header-tel{
-    background-color: #570F0F;
-    width: 80%;
-    height: 50%;
-    font-size: 120%;
-    border-style: solid;
-    border-width: 2px;    
-    color: #FFFFFF;
-    border-color: #000000;
-    box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
-}
-
-.header-book{
-    background-color: #570F0F;
-    width: 80%;
-    height: 50%;
-    font-size: 120%;
-    border-style: solid;
-    border-width: 2px;    
-    color: #FFFFFF;
-    border-color: #000000;
-    cursor: pointer;
-    box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
-    
-    transition-property: transform,box-shadow;
-    transition-duration: 800ms;
-    &:hover{
-         
-        box-shadow: none;
-        transform: translate(0, 1px) ;
-    }
-}
-
-
-
-.header-tel-back{
-    margin: 2%;
-    width: 15%;
-    height: 4em;
-    text-align: center;
-}
-
-.header-book-back{
-    margin: 2%;
-    width: 15%;
-    height: 4em;
-    text-align: center;
-}
-
-.header-sticky {
-    position: fixed;
-    top: 0;
+    z-index: 100;
+    background: white;
     width: 100%;
-    animation: stick 1ms linear 1 forwards;
-  }
+    left: 50%;
+    transform: translate(-50%, 0%);
 
-.header-sticky > img{
-    width: 12%;
-    height: auto;
-}
+    .ContainerHeader {
+        max-width: 120rem;
+        margin: auto;
+        text-align: center;
+        transition: opacity 1s linear;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 
+    .link {
+        flex: 0 1 20rem;
+        cursor: pointer;
 
-@keyframes stick {
-    /* from {
-        background-color: #FFFFFF;
-    } */
-    to {
-        background-color: rgba(185, 179, 119, 0.67);
+        &.bouton {
+            background: #b8b58c;
+            padding: 2rem;
+            font-family: MerriweatherBold;
+            transition: 1s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075),
+                0 4px 4px hsl(0deg 0% 0% / 0.075), 0 8px 8px hsl(0deg 0% 0% / 0.075),
+                0 16px 16px hsl(0deg 0% 0% / 0.075);
+
+            img {
+                margin-right: 1rem;
+            }
         }
-}
 
-/* @keyframes roll {
-    from {
-        transform: rotate(0deg);
+        &.bouton:nth-child(3):hover {
+            background: #d6d3a1;
+            transform: translateY(-0.3rem);
+        }
     }
-    to {
-        transform: rotate(360deg);
-    }
-}
 
-@keyframes roll2 {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(-360deg);
+    &.navbarHidden {
+        opacity: 0;
+        transition: opacity 1s linear;
     }
 }
 
-body{
-    animation: roll 2s linear infinite;
-}
+@media only screen and (max-width: 500px) {
+    .MainHeader {
+        position: static;
+        transform: translate(0%, 0%);
+        margin-bottom: 5rem;
 
-div{
-    animation: roll2 9s linear infinite;
-} */
+        &.navbarHidden {
+            opacity: 1;
+        }
 
-@media (min-width: 0px) and (max-width: 400px) { 
-    .header-tel-back{
-        font-size: 70%;
-        width: 20%;
-        height: 10%;
-    } 
-    .header-tel{
-        font-size: 70%;
-        width: 90%;
-    } 
-    .header-book-back{
-        font-size: 70%;
-        width: 30%;
-        height: 10%;   
-    }
-    .header-book{
-        font-size: 70%;
-        width: 100%;    
-    }
-}
+        .ContainerHeader {
+            justify-content: center;
 
-@media (min-width: 401px) and (max-width: 800px) { 
-
-    .header-tel-back{
-        font-size: 70%;
-        width: 20%;
-        height: 10%;
-    } 
-    .header-tel{
-        font-size: 70%;
-        width: 90%;
-    } 
-    .header-book-back{
-        font-size: 70%;
-        width: 20%;
-        height: 10%;   
-    }
-    .header-book{
-        font-size: 70%;
-        width: 70%;    
-    }
-}
-
-
-@media (min-width: 801px) and (max-width: 1030px) { 
-    .header-tel-back{
-        font-size: 80%;
-        width: 20%;
-        height: 10%;
-    } 
-    .header-tel{
-        font-size: 100%;
-        width: 65%;
-    } 
-    .header-book-back{
-        font-size: 80%;
-        width: 20%;
-        height: 10%;   
-    }
-    .header-book{
-        font-size: 100%;
-        width: 65%;    
-    }
-}
-
-@media (min-width: 1031px) and (max-width: 1300px) { 
-    .header-tel-back{
-        font-size: 100%;
-        width: 15%;
-        height: 10%;
-    } 
-    .header-tel{
-        font-size: 80%;
-        width: 65%;
-    } 
-    .header-book-back{
-        font-size: 100%;
-        width: 15%; 
-        height: 10%;  
-    }
-    .header-book{
-        font-size: 80%;
-        width: 65%;    
+            .link.logo img {
+                    margin: 2rem 0;
+                }
+            
+        }
     }
 }
