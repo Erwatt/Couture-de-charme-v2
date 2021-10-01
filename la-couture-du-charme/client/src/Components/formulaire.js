@@ -65,10 +65,10 @@ export default function NewFormulaire() {
         //http://localhost:8000/post
         //https://domaine.com/post
         axios.post('http://localhost:3001/api/SendMessage', {
-            nom: name,
-            email: mail,
-            telephone: phone,
-            message: message
+            name,
+            mail,
+            phone,
+            message
 
         }
         )
