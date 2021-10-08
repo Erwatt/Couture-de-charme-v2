@@ -21,7 +21,7 @@ export default function CheckoutForm({element,prix, ligne1}) {
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
     window
-      .fetch("/create-payment-intent", {
+      .fetch("http://localhost:3001/api/SendMessage", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -33,6 +33,7 @@ export default function CheckoutForm({element,prix, ligne1}) {
       })
       .then(data => {
         setClientSecret(data.clientSecret);
+        console.log(data.clientSecret)//A supprimer
       });
   }, []);
 
@@ -91,12 +92,12 @@ export default function CheckoutForm({element,prix, ligne1}) {
       <div className="containerInput">
 
         <div className="containerElementInput">
-          <label for="name">Nom :</label>
-          <input className="Inputtest" type="text" id="Name" name="Nom" required minlength="2"  maxlength="30" size="10" />
+          <label htmlFor="name">Nom :</label>
+          <input className="Inputtest" type="text" id="Name" name="Nom" required minLength="2"  maxLength="30" size="10" />
         </div>
         <div className="containerElementInput">
-          <label for="name">Prénom :</label>
-          <input className="Inputtest" type="text" id="firstName" name="Prénom" required minlength="2" maxlength="20" size="10"/>
+          <label htmlFor="name">Prénom :</label>
+          <input className="Inputtest" type="text" id="firstName" name="Prénom" required minLength="2" maxLength="20" size="10"/>
         </div>
       </div>
       
