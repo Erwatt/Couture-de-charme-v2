@@ -13,7 +13,7 @@ import Gift from './Gift';
 // import Book from './Book';
 import Book2 from './Book2';
 
-import BookTempo from './BookTempo';
+// import BookTempo from './BookTempo';
 
 import MentionsLegales from './MentionsLegales';
 import '../CSS/App.css';

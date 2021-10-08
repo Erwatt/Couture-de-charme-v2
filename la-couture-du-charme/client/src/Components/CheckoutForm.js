@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logocouture from '../Images/logo.png'
+// import logocouture from '../Images/logo.png'
 import '../CSS/CheckoutForm.scss'
 import {
   CardElement,
@@ -35,7 +35,7 @@ export default function CheckoutForm({element,prix, ligne1}) {
         setClientSecret(data.clientSecret);
         console.log(data.clientSecret)//A supprimer
       });
-  }, []);
+  }, [element, prix]);
 
   const cardStyle = {
     style: {
@@ -87,7 +87,7 @@ export default function CheckoutForm({element,prix, ligne1}) {
     <div className="PaymentContainer">
     <form id="payment-form" onSubmit={handleSubmit}>
     {
-        succeeded==false?
+        succeeded===false?
         <div>
       <div className="containerInput">
 

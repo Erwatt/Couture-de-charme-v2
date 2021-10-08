@@ -10,8 +10,8 @@ import {useHistory} from 'react-router-dom';
 export default function Book(){
     window.scrollTo(0, 0);
 
-const[bookRoom,setBookRoom]=useState(false)
-const[bookSpa,setBookSpa]=useState(false)
+// const[bookRoom,setBookRoom]=useState(false)
+// const[bookSpa,setBookSpa]=useState(false)
 
 const history = useHistory();
 
@@ -61,17 +61,32 @@ const BookSpa = () => {
                                             </div>
                                             <div className="containerButtonBook">
                                                 <p className="buttonBook" id="bookSpa" onClick={()=>BookSpa()}>Centre de détente</p>
-                                                <p className="buttonBook" id="bookRoom" onClick={()=>BookRoom()}>Chambre</p>       
+                                                <p className="buttonBook" id="bookRoom" onClick={()=>BookRoom()}>Chambre d'hôtes</p>       
                                             </div>
                                         </div>
                                     </div>
                                 </div> 
                                 <div className="containerSide">
+                                    <div className="bookLeftContainer">
+                                        <div className="containerBlack">
+                                            <div className="containerFlexRowEnd">
+                                                <p className="textTitleBook">Offret un cadeau unique</p>
+                                            </div>
+                                            <div className="containerButtonBook">
+                                                {/* <p className="buttonBook" id="bookSpa" onClick={()=>BookSpa()}>Centre de détente</p> */}
+                                                <p className="btnCadeau" onClick={()=>handleGift()}>Bon cadeau</p>      
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                                {/* <div className="containerSide">
                                     <div className="giftRightContainer">
+                                        <div className="containerBlack">
                                         <p className="textCadeauUnique">Offrez un cadeau unique</p>
                                         <div className="containerFlexRowEnd"><p className="btnCadeau" onClick={()=>handleGift()}>Bon cadeau</p></div>
+                                        </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
 

@@ -79,7 +79,7 @@ export default function ChambresHotes() {
 
                     <div className="ContainerHome">
 
-                        <h3 align="center">Quels sont les équipements disponible avec la pisicine ?</h3>
+                        <h3 align="center">Quels sont les équipements disponibles avec la pisicine ?</h3>
                         <div className="EquipementItem PageItem NoImage">
 
                             <p align="justify">

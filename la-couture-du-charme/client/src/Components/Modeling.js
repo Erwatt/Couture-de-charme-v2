@@ -1,9 +1,9 @@
 import '../CSS/Modelling.scss';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import massage from '../Images/massage.jpg';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import CheckoutForm from './CheckoutForm';
-import services from '../services';
+// import services from '../services';
 
 
 export default function Modelling(){
@@ -18,8 +18,8 @@ const[invitation, setInvitation]=useState(false);
 const[enveloppe, setEnveloppe]=useState(false);
 const[coffret, setCoffret]=useState(false);
 const[vip, setVip]=useState(false);
-const[nombre,setNombre]=useState(0);
-const[creneau,setCreneau]=useState("Créneau Modelage");
+// const[nombre,setNombre]=useState(0);
+// const[creneau,setCreneau]=useState("Créneau Modelage");
 const[prix, setPrix]=useState(0);
 const[validate,setvalidate]=useState(false);
 
@@ -45,7 +45,8 @@ const BookSolo = ()=>{
     if (solo){setSolo(false)}
     else{setSolo(true)}
     setDuo(false)
-    setNombre(1)}
+    // setNombre(1)
+    }
 }
 
 const BookDuo = ()=>{
@@ -53,7 +54,8 @@ const BookDuo = ()=>{
     if (duo){setDuo(false)}
     else{setDuo(true)}
     setSolo(false)
-    setNombre(2)}
+    // setNombre(2)
+    }
 }
 
 const BookInvitation = ()=>{
@@ -89,62 +91,61 @@ const Invalidate = ()=>{
 
 
 const Validate = ()=>{
-    if(solo===false&duo===false){setvalidate(false)}
+    if((solo===false&duo===false)|(min30===false&&min60===false)|(invitation===false&&enveloppe===false&&coffret===false)){setvalidate(false)}
     else{
-        if (min30===false&&min60===false){setvalidate(false)}
-        else{
-            if(invitation===false&&enveloppe===false&&coffret===false){setvalidate(false)}
-            else{
-                if(min30){
-                    if(solo){
-                        setCreneau("Créneau Modelage - " +nombre.toString()+ " personne" +" - 30 min")
-                        if(coffret===true){setPrix(53)}
-                        else{setPrix(35)}
-                    }
-                    else{
-                        setCreneau(" Créneau Modelage - " +nombre.toString()+ " personnes" +" - 30 min")
-                        if(coffret===true){setPrix(78)}
-                        else{setPrix(60)}                          
-                    }
-                }
-                        
-                else{
-                    if(solo){
-                        setCreneau("Créneau Modelage - " +nombre.toString()+ " personne" +" - 60 min")
-                        if(coffret===true){setPrix(78)}
-                        else{setPrix(60)}                  
-                    }
-                    else{
-                        setCreneau("Créneau Modelage - " +nombre.toString()+ " personnes"  +" - 60 min")
-                        if(coffret===true){setPrix(118)}
-                        else{setPrix(100)}   
-                    }
-                }     
-                setvalidate(true)
-            }
-        }
+        setvalidate(true)
     }
 }
 
-const [name, setName] = useState("");
-const [mail, setMail] = useState("");
-const [phone, setPhone] = useState("");
-// const [spam, setSpam] = useState(3);
-const [message, setMessage] = useState("");
+useEffect(() => {
+    if(min30){
+        if(solo){
+            // setCreneau("Créneau Modelage - " +nombre.toString()+ " personne" +" - 30 min")
+            if(coffret===true){setPrix(53)}
+            else{setPrix(35)}
+        }
+        else if (duo){
+            // setCreneau(" Créneau Modelage - " +nombre.toString()+ " personnes" +" - 30 min")
+            if(coffret===true){setPrix(78)}
+            else{setPrix(60)}                          
+        }
+    }
+            
+    else if (min60){
+        if(solo){
+            // setCreneau("Créneau Modelage - " +nombre.toString()+ " personne" +" - 60 min")
+            if(coffret===true){setPrix(78)}
+            else{setPrix(60)}                  
+        }
+        else if (duo){
+            // setCreneau("Créneau Modelage - " +nombre.toString()+ " personnes"  +" - 60 min")
+            if(coffret===true){setPrix(118)}
+            else{setPrix(100)}   
+        }
+    }
 
-function handleMessage(e){
-    // if ( spam !== '4'){
-    //     e.preventDefault()
-    //     alert('Mauvaise réponse au test anti spam, va te faire foutre sale bot')
-    // } else {
-    //     services.sendMessage(name, phone, mail, message);
-    // }
-    // e.preventDefault()
-    console.log(e)
-    console.log(message)
-    services.sendMessage(name, phone, mail, message);
+    if ((!min30&!min60)|(!solo&!duo)){setPrix(0)}
+}, [coffret, enveloppe, solo, duo, invitation, min30, min60]);
+
+// const [name, setName] = useState("");
+// const [mail, setMail] = useState("");
+// const [phone, setPhone] = useState("");
+// // const [spam, setSpam] = useState(3);
+// const [message, setMessage] = useState("");
+
+// function handleMessage(e){
+//     // if ( spam !== '4'){
+//     //     e.preventDefault()
+//     //     alert('Mauvaise réponse au test anti spam, va te faire foutre sale bot')
+//     // } else {
+//     //     services.sendMessage(name, phone, mail, message);
+//     // }
+//     // e.preventDefault()
+//     console.log(e)
+//     console.log(message)
+//     services.sendMessage(name, phone, mail, message);
     
-};
+// };
 
 
     return(
@@ -159,7 +160,7 @@ function handleMessage(e){
                     </div>
                 </div>
                 <div className="modellingRight">
-                    <h2>Massage aux huiles aromatiques</h2>
+                    <h2>Massage aux huiles aromatiques</h2><h3>Prix: {prix}€</h3>
                     <div className="separation"></div>
                     <p><b>Durée :</b></p>
                     <div className="modellingFlexRow">
@@ -192,7 +193,7 @@ function handleMessage(e){
                         }
                     </div>
                     <p><b>Invitation électronique : </b>envoyée par nos soins par mail</p>
-                    <p><b>Enveloppe cadeau : </b>à retirer sur place ou envoyé par nos soins par courrier</p>
+                    <p><b>Enveloppe cadeau : </b>à retirer sur place ou envoyée par nos soins par courrier</p>
                     <p><b>Boîte Cadeau la Couture du Charme: </b>envoyée par nos soins (délai Colissimo)</p>
                     <div className="separation"></div>
                     <p><b>Personnalisez votre cadeau</b></p>

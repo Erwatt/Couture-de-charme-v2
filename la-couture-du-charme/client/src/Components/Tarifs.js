@@ -1,6 +1,6 @@
 import '../CSS/Tarifs.scss';
-import React, { useState } from 'react';
-import tarif from '../Images/Tarifs.PNG'
+import React from 'react';
+// import tarif from '../Images/Tarifs.PNG'
 
 
 export default function Tarifs(){
@@ -9,25 +9,28 @@ export default function Tarifs(){
         <div className="containerTarif">
             <h1 className="titreCouture">La Couture Du Charme</h1>
             <div className="containerWhiteTarif">
-                <p className="conainerTitleESPACE"><b><div className="elementTitleESPACE">ESPACE BIEN-ÊTRE • SAMÉON</div><div className="elementTitleESPACE">ACCÈS PRIVATIF SPA/SAUNA/PISCINE</div></b></p>
+                <p className="containerTitleESPACE"><b><div className="elementTitleESPACE">ESPACE BIEN-ÊTRE & CHAMBRES D'HOTES </div><div className="elementTitleESPACE">SAMEON</div></b></p>
                 <div className="conatinerBloc2">
                     <div className="bloc2Left">
                         <p className="titleCoutureDuCharme"><b>LA COUTURE DU CHARME</b></p>
                         <div className="flexColumn">
                             <div>1400 rue de Beaumetz</div>
                             <div>59310 Saméon</div>
-                            <div>07 52 09 07 50</div>
-                            <div>spa@coutureducharme.fr</div>
+                            {/* <div>Le Spa : 07 52 09 07 50</div>
+                            <div>spa@coutureducharme.fr</div> */}
+                            <ul className="tarif_list marginTop">Les chambres : <li className="tarif_li">06 31 84 42 39</li><li className="tarif_li">coutureducharme@gmail.com</li></ul>
                         </div>
                     </div>
                     <div className="bloc2Right">
-                        <p className="textTitleReservation">RÉSERVATION</p>
+                        <p className="textTitleReservation">RÉSERVATION SPA </p>
                         <div>par téléphone, email ou en ligne : </div>
-                        <div><b>calendly.com/coutureducharme-le-spa</b></div>
+                        <div><a href="https://calendly.com/coutureducharme-le-spa"><b>calendly.com/coutureducharme-le-spa</b></a></div>
+                        <ul className="tarif_list">Le spa : <li className="tarif_li">07 52 09 07 50</li><li className="tarif_li">spa@coutureducharme.fr</li></ul>
                     </div>
                 </div>
                 <div className="borderBlack"></div>
-                <p className="conainerTitleESPACE"><b>CRÉNEAU PRIVATIF POUR 2 PERSONNES</b></p>
+                <p className="containerTitleESPACE"><div className="elementTitleESPACE"><b>ESPACE DETENTE PISCINE SAUNA SPA</b></div>
+                <div className="elementTitleESPACE"><b>CRÉNEAU PRIVATIF POUR 2 PERSONNES</b></div></p>
                 <div className="flexColumn">
                     <div className="elmentCreneau">
                         <div className="flexRow">
@@ -70,7 +73,7 @@ export default function Tarifs(){
                         <div className="flexRow">
                             <div className="flexColumn" id="elementRow1">
                                 <div ><b>personne supplémentaire</b></div>
-                                <div>(max 8 personnes)</div>
+                                <div>(Contactez nous si plus de 6 personnes)</div>
                             </div>
                            
                             <div className="flexColumn" id="elementRow2">
@@ -99,7 +102,7 @@ export default function Tarifs(){
                     </div>
                 </div>
                 <div className="borderBlack"></div>
-                <p className="conainerTitleESPACE"><b>NUITÉE ET PETIT-DÉJEUNER</b></p>
+                <p className="containerTitleESPACE"><b>NUITÉE ET PETIT-DÉJEUNER</b></p>
                 <div className="flexColumn">
                     <div className="elmentCreneau">
                         <div className="flexRow">
@@ -152,11 +155,10 @@ export default function Tarifs(){
                 <p className="TaxeSéjour">Taxe de séjour : 0.22 €/jour/adulte incluse</p>
                 <div className="borderBlack"></div>
                 <div className="flexRow">
-                    <div className="flexColumn">
-                        <p className="conainerTitleESPACE"><b>FORFAIT SPA & NUITÉE</b></p>
-                        <div>Accès spa + nuitée en chambres d'hôtes</div>
-                        <div> + petit déjeuner + champagne</div>
-                        <div>Nous contacter : www.coutureducharme.fr</div>
+                    <div className="flexColumn center">
+                        <p className="containerTitleESPACE"><b>FORFAIT CENTRE DE DETENTE & NUITÉE (2 personnes)</b></p>
+                        <div className="center">2 h Centre de détente + nuitée en chambres d'hôtes + pdj</div>
+                        <div className="center tarifAllInclusive">semaine: 195 € - le weekend : 210 € </div>
                     </div>
                 </div>
             </div>
