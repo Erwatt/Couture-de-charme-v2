@@ -7,9 +7,12 @@ import {
   useElements
 } from "@stripe/react-stripe-js";
 
+import services from "../services";
 
 
-export default function CheckoutForm({element,prix, ligne1}) {
+export default function CheckoutForm({element,prix, ligne1, event, from, to, mailSender, mailReceiver, telSender,
+   telReceiver, message, number, creneau, sending}) {
+
   const [succeeded, setSucceeded] = useState(false);
   const [error, setError] = useState(null);
   const [processing, setProcessing] = useState('');
@@ -21,7 +24,7 @@ export default function CheckoutForm({element,prix, ligne1}) {
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
     window
-      .fetch("/create-payment-intent", {
+      .fetch("/api/create-payment-intent", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -35,6 +38,15 @@ export default function CheckoutForm({element,prix, ligne1}) {
         setClientSecret(data.clientSecret);
       });
   }, [element, prix]);
+
+  useEffect(() => {
+    if (succeeded){
+      if (event === "spa"){
+        services.spaGift(from, to, mailSender, mailReceiver, telSender,
+   telReceiver, message, number, creneau, sending)
+      }
+    }
+  }, [succeeded, event,from, to, mailSender, mailReceiver, telSender,telReceiver, message, number, creneau, sending])
 
   const cardStyle = {
     style: {

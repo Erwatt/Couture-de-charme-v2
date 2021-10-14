@@ -12,6 +12,11 @@ class services {
         return axios
             .get(API_URL + 'GetMessages');
     };
+
+    spaGift(from, to, mailSender, mailReceiver, telSender, telReceiver, message, number, creneau, sending){
+        return axios
+            .post(API_URL + 'SpaGift', {from, to, mailSender, mailReceiver, telSender, telReceiver, message, number, creneau, sending})
+    };
 };
 
 export default new services();
