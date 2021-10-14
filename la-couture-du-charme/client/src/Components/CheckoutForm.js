@@ -24,7 +24,7 @@ export default function CheckoutForm({element,prix, ligne1, event, from, to, mai
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
     window
-      .fetch("/api/create-payment-intent", {
+      .fetch("/create-payment-intent", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -49,8 +49,8 @@ export default function CheckoutForm({element,prix, ligne1, event, from, to, mai
   }, [succeeded, event,from, to, mailSender, mailReceiver, telSender,telReceiver, message, number, creneau, sending])
 
   const cardStyle = {
+    hidePostalCode: true,
     style: {
-      hidePostalCode: true,
       base: {
         color: "#32325d",
         fontFamily: 'Arial, sans-serif',
@@ -75,14 +75,20 @@ export default function CheckoutForm({element,prix, ligne1, event, from, to, mai
   };
 
   const handleSubmit = async ev => {
+    console.log(elements.getElement(CardElement))
     ev.preventDefault();
     setProcessing(true);
 
-    const payload = await stripe.confirmCardPayment(clientSecret, {
-      payment_method: {
-        card: elements.getElement(CardElement)
-      }
-    });
+    stripe.createPaymentMethod({
+      type: 'card',
+      card: elements.getElement(CardElement)
+
+    }).then(({ paymentMethod }) => {
+
+      const payload = stripe.confirmCardPayment(clientSecret, {
+        payment_method: paymentMethod.id
+      })
+
 
     if (payload.error) {
       setError(`Payment failed ${payload.error.message}`);
@@ -91,7 +97,7 @@ export default function CheckoutForm({element,prix, ligne1, event, from, to, mai
       setError(null);
       setProcessing(false);
       setSucceeded(true);
-    }
+    }})
   };
 
   return (
@@ -103,12 +109,12 @@ export default function CheckoutForm({element,prix, ligne1, event, from, to, mai
       <div className="containerInput">
 
         <div className="containerElementInput">
-          <label for="name">Nom :</label>
-          <input className="Inputtest" type="text" id="Name" name="Nom" required minlength="2"  maxlength="30" size="10" />
+          <label htmlFor="name">Nom :</label>
+          <input className="Inputtest" type="text" id="Name" name="Nom" required minLength="2"  maxLength="30" size="10" />
         </div>
         <div className="containerElementInput">
-          <label for="name">Prénom :</label>
-          <input className="Inputtest" type="text" id="firstName" name="Prénom" required minlength="2" maxlength="20" size="10"/>
+          <label htmlFor="name">Prénom :</label>
+          <input className="Inputtest" type="text" id="firstName" name="Prénom" required minLength="2" maxLength="20" size="10"/>
         </div>
       </div>
       
