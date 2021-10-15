@@ -35,9 +35,9 @@ export default function CheckoutForm({element,prix, ligne1, event, from, to, mai
         return res.json();
       })
       .then(data => {
-        setClientSecret(data.clientSecret);
+        setClientSecret(data.clientSecret.toString());
       });
-  }, [element, prix]);
+  }, []);
 
   useEffect(() => {
     if (succeeded){
@@ -79,14 +79,9 @@ export default function CheckoutForm({element,prix, ligne1, event, from, to, mai
     ev.preventDefault();
     setProcessing(true);
 
-    stripe.createPaymentMethod({
-      type: 'card',
-      card: elements.getElement(CardElement)
-
-    }).then(({ paymentMethod }) => {
-
-      const payload = stripe.confirmCardPayment(clientSecret, {
-        payment_method: paymentMethod.id
+      const payload = await stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+          card: elements.getElement(CardElement)}
       })
 
 
@@ -97,8 +92,7 @@ export default function CheckoutForm({element,prix, ligne1, event, from, to, mai
       setError(null);
       setProcessing(false);
       setSucceeded(true);
-    }})
-  };
+    }};
 
   return (
     <div className="PaymentContainer">
