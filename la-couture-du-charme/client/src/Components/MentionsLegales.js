@@ -39,6 +39,8 @@ function MentionsLegales() {
                 <br />
                 <h2>DONNEES A CARACTERE PERSONNEL</h2>
                 <p>Le présent site internet utilise des cookies dans le but de connaître les chiffres de fréquentation de ses différentes pages. L'objectif est de vous proposer du contenu de meilleur qualité, qui réponde parfaitement à vos attentes. Vos données personnelles sont collectées lors d'une prise de contact avec notamment le formulaire de contact ou lorsque vous prenez rendez-vous. Vous sont demandées uniquement les informations nécessaires pour pouvoir vous recontacter ou répondre à votre problématique. Nous ne communiquerons pas ces données à un tiers.</p>
+                <h2>DONNEES A CARACTERE PERSONNEL</h2>
+                <p>Le présent site internet utilise des cookies dans le but de connaître les chiffres de fréquentation de ses différentes pages. L'objectif est de vous proposer du contenu de meilleur qualité, qui réponde parfaitement à vos attentes. Vos données personnelles sont collectées lors d'une prise de contact avec notamment, notamment via le formulaire, lorsque vous prenez rendez-vous ou encore lorsque vous créez votre espace personnel en ligne. Vous est demandé, uniquement les informations nécessaires pour pouvoir vous recontacter ou répondre à votre problématique. Nous n'utiliserons pas ces informations dans un but de prospection, ni ne communiquerons ces données à un tiers.</p>
                 <p>Conformément au RGPD (règlement général sur la protection des données), vous disposez d’un droit d’information, d’accès, de rectification, d’effacement, de limitation, de portabilité et d’opposition sur vos données personnelles. Pour exercer ce droit, contactez-nous.</p>
             </div>
 
