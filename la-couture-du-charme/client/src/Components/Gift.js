@@ -25,19 +25,19 @@ export default function Gift(){
     return(<div>
         <div className="giftbox">
             <div className="gift-title">
-                <div><h1>Coffrets Cadeau, Invitations Cadeau</h1><br></br>
-                <p>Un délicieux moment de détente pour oublier le stress quotidien, <b>c'est la promesse que vous offrez.</b></p>
+                <div><h1>Coffrets Cadeau - Spa de la Couture du Charme</h1><br></br>
+                <p>Offrez un délicieux moment de détente pour oublier le stress quotidien, </p>
                 <p>Chacun de  nos massages ou de nos créneaux Spa Privatif est une escapade dans un univers de bien-être.</p></div>
             </div>
             <div className="gift-box1">
                 <img src={coffretCadeau} alt="gift-pic1" className="gift-pic1"/>
                 <div className="gift-text1">
-                    <h2>Au choix pour votre bon-cadeau (modelage ou spa privatif) : </h2>
+                    <h2>Au choix pour votre bon-cadeau (massage ou spa privatif) : </h2>
                     <li>Une enveloppe prête à offrir ou envoyée par nos soins, comprenant votre invitation personnalisée</li>
                     <li>Une invitation électronique par email,  pour les plus pressé(e)s et les cadeaux de dernière minute</li>
                     <li>Un élégant coffret imaginé pour vous, comprenant votre invitation personnalisée</li>
                     <p>N'hésitez pas à offrir une prestation duo...</p>
-                    <p>Vous pourrez ainsi partager à deux l'expérience du massage ou du créneau spa, et créer un souvenir tendre ou amical.</p>
+                    <p>Vous pourrez ainsi partager à deux l'expérience du massage ou du créneau spa, et créer un souvenir inoubliable.</p>
                 </div>
             </div>
             <div className="gift-box2">
