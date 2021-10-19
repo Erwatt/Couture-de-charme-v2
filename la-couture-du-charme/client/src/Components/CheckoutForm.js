@@ -7,9 +7,12 @@ import {
   useElements
 } from "@stripe/react-stripe-js";
 
+import services from "../services";
 
 
-export default function CheckoutForm({element,prix, ligne1}) {
+export default function CheckoutForm({element,prix, ligne1, event, from, to, mailSender, mailReceiver, telSender,
+   telReceiver, message, number, creneau, sending}) {
+
   const [succeeded, setSucceeded] = useState(false);
   const [error, setError] = useState(null);
   const [processing, setProcessing] = useState('');
@@ -32,13 +35,22 @@ export default function CheckoutForm({element,prix, ligne1}) {
         return res.json();
       })
       .then(data => {
-        setClientSecret(data.clientSecret);
+        setClientSecret(data.clientSecret.toString());
       });
-  }, [element, prix]);
+  }, []);
+
+  useEffect(() => {
+    if (succeeded){
+      if (event === "spa"){
+        services.spaGift(from, to, mailSender, mailReceiver, telSender,
+   telReceiver, message, number, creneau, sending)
+      }
+    }
+  }, [succeeded, event,from, to, mailSender, mailReceiver, telSender,telReceiver, message, number, creneau, sending])
 
   const cardStyle = {
+    hidePostalCode: true,
     style: {
-      hidePostalCode: true,
       base: {
         color: "#32325d",
         fontFamily: 'Arial, sans-serif',
@@ -63,14 +75,15 @@ export default function CheckoutForm({element,prix, ligne1}) {
   };
 
   const handleSubmit = async ev => {
+    console.log(elements.getElement(CardElement))
     ev.preventDefault();
     setProcessing(true);
 
-    const payload = await stripe.confirmCardPayment(clientSecret, {
-      payment_method: {
-        card: elements.getElement(CardElement)
-      }
-    });
+      const payload = await stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+          card: elements.getElement(CardElement)}
+      })
+
 
     if (payload.error) {
       setError(`Payment failed ${payload.error.message}`);
@@ -79,8 +92,7 @@ export default function CheckoutForm({element,prix, ligne1}) {
       setError(null);
       setProcessing(false);
       setSucceeded(true);
-    }
-  };
+    }};
 
   return (
     <div className="PaymentContainer">
@@ -91,12 +103,12 @@ export default function CheckoutForm({element,prix, ligne1}) {
       <div className="containerInput">
 
         <div className="containerElementInput">
-          <label for="name">Nom :</label>
-          <input className="Inputtest" type="text" id="Name" name="Nom" required minlength="2"  maxlength="30" size="10" />
+          <label htmlFor="name">Nom :</label>
+          <input className="Inputtest" type="text" id="Name" name="Nom" required minLength="2"  maxLength="30" size="10" />
         </div>
         <div className="containerElementInput">
-          <label for="name">Prénom :</label>
-          <input className="Inputtest" type="text" id="firstName" name="Prénom" required minlength="2" maxlength="20" size="10"/>
+          <label htmlFor="name">Prénom :</label>
+          <input className="Inputtest" type="text" id="firstName" name="Prénom" required minLength="2" maxLength="20" size="10"/>
         </div>
       </div>
       
