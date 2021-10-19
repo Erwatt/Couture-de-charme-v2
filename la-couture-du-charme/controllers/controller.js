@@ -17,22 +17,33 @@ exports.sendMessage = (req, res) => {
     
 
     const transporter = Nodemailer.createTransport({
-        service: 'ionos',
-        host: 'smtp.ionos.fr',
+        service: 'ethereal',
+        host: 'smtp.ethereal.email',
+        port: 587,
         auth: {
-          user: process.env.SENDER,
-          pass: process.env.PASSWORD
+          user: 'king.hayes@ethereal.email',
+          pass: 'nKQqWyhsaBmZeg21Ua'
         }
     });
 
     const mailOptions = {
-        from: process.env.SENDER,
-        to: process.env.RECEIVER,
+        from: 'king.hayes@ethereal.email',
+        to: 'david@minucci.tech',
         subject: `Nouveau message de ${name} : ${mail} / ${phone}`,
         html: `${txt}`
     };
 
-    transporter.sendMail(mailOptions);
+    // send mail with defined transport object
+    transporter.sendMail(mailOptions, (error, data) => {
+      if (error) {
+          console.log(error)
+          res.json({ msg: 'fail' })
+      }
+      else {
+          console.log('Message envoyé !')
+          res.json({ msg: 'success' })
+      }
+  })
 
     msg.save()
         .then(() => res.status(201).json({message: 'Message créé et envoyé'}))

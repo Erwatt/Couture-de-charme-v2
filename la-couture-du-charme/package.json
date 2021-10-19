@@ -13,8 +13,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@stripe/react-stripe-js": "^1.4.1",
-    "@stripe/stripe-js": "^1.17.1",
+    "@stripe/react-stripe-js": "^1.6.0",
+    "@stripe/stripe-js": "^1.20.3",
     "aos": "^2.3.4",
     "axios": "^0.21.1",
     "bcrypt": "^5.0.1",
