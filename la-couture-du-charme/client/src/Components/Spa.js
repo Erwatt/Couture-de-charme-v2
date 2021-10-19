@@ -10,7 +10,7 @@ import CheckoutForm from './CheckoutForm'
 
 export default function Spa() {
 
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
 
     // const[min30, setMin30]=useState(false);
     // const[min60, setMin60]=useState(false);
@@ -181,6 +181,16 @@ export default function Spa() {
         }
     }
 
+    const BookCoffret = () => {
+        if (!validate) {
+            if (coffret) { setCoffret(false) }
+            else { setCoffret(true) }
+            setInvitation(false)
+            setCoffret(true)
+            setVip(false)
+        }
+    }
+
 const[semaine,setSemaine]=useState(false)
     const [weekend,setWeekend]=useState(false)
     const [before17,setBefore17]=useState(false)
@@ -321,10 +331,6 @@ const[semaine,setSemaine]=useState(false)
                                 if (enveloppe){setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)}
                                 else{setSending(`Email`)}
                             }
-                        }
-                        else {
-                            if (coffret === true) { setPrix(128 + (nombre - 2) * 30) }
-                            else { setPrix(110 + (nombre - 2) * 30) }
                         }
                     }
                 }
@@ -540,24 +546,25 @@ const[semaine,setSemaine]=useState(false)
                     }
                     {
                         validate?
-                        <div>
-                            <div className="PriceBox">
-                                <CheckoutForm element="ModelingGift" prix={prix}
-                                ligne1={document.getElementById('envoiMassage5').value}
-                                event="spa"
-                                from={from}
-                                to={to}
-                                mailSender={mailSender}
-                                mailReceiver={mailReceiver}
-                                telSender={telSender}
-                                telReceiver={telReceiver}
-                                message={message}
-                                creneau={creneau}
-                                sending={sending}
-                                number={nombre}/>
-                                <h2 className="giftPrice">{prix}€</h2>
-                            </div>
-                            : false
+                        <div className="PriceBox">
+                            <Elements stripe={stripePromise}>
+                            <CheckoutForm element="ModelingGift" prix={prix}
+                            ligne1={document.getElementById('envoiMassage5').value}
+                            event="spa"
+                            from={from}
+                            to={to}
+                            mailSender={mailSender}
+                            mailReceiver={mailReceiver}
+                            telSender={telSender}
+                            telReceiver={telReceiver}
+                            message={message}
+                            creneau={creneau}
+                            sending={sending}
+                            number={nombre}/>
+                            </Elements>
+                            <h2 className="giftPrice">{prix}€</h2>
+                        </div>
+                        : false
                     }
                 </div>
             </div>

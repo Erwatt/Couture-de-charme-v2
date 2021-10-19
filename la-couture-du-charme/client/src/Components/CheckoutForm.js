@@ -16,23 +16,23 @@ export default function CheckoutForm({element,prix, ligne1, event, from, to, mai
   const [disabled, setDisabled] = useState(true);
   const [clientSecret, setClientSecret] = useState('');
 
-  useEffect(() => {
-    // Create PaymentIntent as soon as the page loads
-    window
-      .fetch("http://localhost:3001/api/SendMessage", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({items: [{ id : element, price:prix}]})
-      })
-      .then(res => {
-        return res.json();
-      })
-      .then(data => {
-        setClientSecret(data.clientSecret.toString());
-      });
-  }, []);
+  // useEffect(() => {
+  //   // Create PaymentIntent as soon as the page loads
+  //   window
+  //     .fetch("http://localhost:3001/api/SendMessage", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json"
+  //       },
+  //       body: JSON.stringify({items: [{ id : element, price:prix}]})
+  //     })
+  //     .then(res => {
+  //       return res.json();
+  //     })
+  //     .then(data => {
+  //       setClientSecret(data.clientSecret.toString());
+  //     });
+  // }, []);
 
   useEffect(() => {
     if (succeeded){
@@ -43,24 +43,24 @@ export default function CheckoutForm({element,prix, ligne1, event, from, to, mai
     }
   }, [succeeded, event,from, to, mailSender, mailReceiver, telSender,telReceiver, message, number, creneau, sending])
 
-  const cardStyle = {
-    hidePostalCode: true,
-    style: {
-      base: {
-        color: "#32325d",
-        fontFamily: 'Arial, sans-serif',
-        fontSmoothing: "antialiased",
-        fontSize: "16px",
-        "::placeholder": {
-          color: "#32325d"
-        }
-      },
-      invalid: {
-        color: "#fa755a",
-        iconColor: "#fa755a"
-      }
-    }
-  };
+  // const cardStyle = {
+  //   hidePostalCode: true,
+  //   style: {
+  //     base: {
+  //       color: "#32325d",
+  //       fontFamily: 'Arial, sans-serif',
+  //       fontSmoothing: "antialiased",
+  //       fontSize: "16px",
+  //       "::placeholder": {
+  //         color: "#32325d"
+  //       }
+  //     },
+  //     invalid: {
+  //       color: "#fa755a",
+  //       iconColor: "#fa755a"
+  //     }
+  //   }
+  // };
 
   // const handleChange = async (event) => {
   //   // Listen for changes in the CardElement
@@ -119,14 +119,14 @@ export default function CheckoutForm({element,prix, ligne1, event, from, to, mai
         alert(`Echec du paiement`)
       }
 
-    if (payload.error) {
-      setError(`Payment failed ${payload.error.message}`);
-      setProcessing(false);
-    } else {
-      setError(null);
-      setProcessing(false);
-      setSucceeded(true);
-    }
+    // if (payload.error) {
+    //   setError(`Payment failed ${payload.error.message}`);
+    //   setProcessing(false);
+    // } else {
+    //   setError(null);
+    //   setProcessing(false);
+    //   setSucceeded(true);
+    // }
   };
 
   return (
