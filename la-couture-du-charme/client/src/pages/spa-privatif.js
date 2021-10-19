@@ -43,8 +43,9 @@ export default function SpaPrivatif() {
 
                 <div className="TitrePage">
                     <h1 align="center">SPA privatif avec Jaccuzzi</h1>
-                    <h2 align="center">8 personnes maximum</h2>
-                    <p align="center">Entre <b>amis</b>, en <b>famille</b>, en <b>amoureux</b> ou pour vos évènements de <b>team building</b>. Le SPA privatif de la Couture du Charme est l'endroit idéal pour tous vos évènements. Equipé d'un <b>SPA privatif de 100m2</b> comprenant un jacuzzi, une piscine, un sauna, une terrasse. Vous pourrez réserver des massages, commander des boissons au <b>bord de la piscine</b> et vous y reposer dans nos chambres d'hôtes.</p>
+                    <h2 align="center">10 personnes maximum</h2>
+                    <p align="center">Entre <b>amis</b>, en <b>famille</b>, en <b>amoureux</b> ou pour vos évènements de <b>team building</b>. Le SPA privatif de la Couture du Charme est l'endroit détente idéal pour tous vos évènements !</p>
+                    <p align="center"> Equipé d'un <b>SPA privatif de 130m2</b> comprenant un jacuzzi, une piscine, un sauna. Vous pourrez réserver des massages, commander des boissons au <b>bord de la piscine</b> et même prolonger la détente en choisissant de séjourner dans l'une de nos <b>chambres d'hôtes.</b></p>
                 </div>
 
                 <div className="ContainerBackground" data-aos="fade-left" data-aos-duration="1000">

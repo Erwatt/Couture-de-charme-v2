@@ -36,14 +36,14 @@ export default function Home() {
             lien: "/spa-privatif",
             image: SPA,
             aos:"zoom-in-left",
-            description: "Relâchez la pression dans notre jacuzzi multi-jets <b>hydrothérapie</b> haute performance. <br/> <br/>Jusqu'à <b>6 personnes</b> pourront se prélasser dans une eau à <b>37°C</b>. <br/><br/>Profitez des bienfaits de la lumière, notre SPA est éclairé par des spots de <b>chromothérapie</b> apportant chacune un bénéfice."
+            description: "Relâchez la pression dans notre jacuzzi multi-jets <b>hydrothérapie</b> haute performance. <br/> <br/>Jusqu'à <b>6 personnes</b> pourront se prélasser dans une eau à <b>37°C</b>. <br/><br/>Profitez des bienfaits de la lumière, notre SPA est éclairé par des spots de <b>chromothérapie</b>."
         },
         {
             titre: "PISCINE PRIVATIVE",
             lien: "/piscine-privee",
             image: Piscine,
             aos:"fade-right",
-            description: "Sautez dans le grand bain en plongeant dans la pisicine intérieure chauffée à <b>30°C toute l’année</b>. <br/><br/>Vous être sportif ? Elle est équipée d’un kit de <b>nage à contre courant</b> réglable en intensité. <br/><br/>Pour les autres, elle comporte une cascade et <b>5 jets de massage</b> pour le dos, fessiers, abdos et mollets."
+            description: "Sautez dans le grand bain en plongeant dans la pisicine intérieure chauffée à <b>30°C toute l’année</b>. <br/><br/>Vous êtes sportif ? Elle est équipée d’un kit de <b>nage à contre courant</b> réglable en intensité. <br/><br/>Pour votre bien-être, elle comporte une cascade et <b>5 jets de massage</b> pour le dos, fessiers, abdos et mollets."
         },
         {
             titre: "SAUNA FINLANDAIS PRIVATIF",
@@ -64,7 +64,7 @@ export default function Home() {
             lien: "/chambres-hotes",
             image: Chambre,
             aos:"zoom-in-left",
-            description: "Dans un style moderne et élégant, les <b>chambres d'hôtes</b> de la Couture du Charme vous proposent des prestations et un environnement de qualité. <br/><br/>En famille ou entre amis, venez gouter au calme et au dépaysement de l'une de nos <b>3 chambres spacieuses</b>, au coeur de la campagne du Pévèle."
+            description: "Envie de prolonger la détente ? Dans un style moderne et élégant, les <b>chambres d'hôtes</b> de la Couture du Charme vous proposent des prestations et un environnement de qualité. <br/><br/>En famille ou entre amis, venez gouter au calme et au dépaysement de l'une de nos <b>3 chambres spacieuses</b>, au coeur de la campagne du Pévèle."
         },
     ]
 
@@ -110,7 +110,7 @@ export default function Home() {
 
                             <div className="PresentationItem">
                                 <div className="Separateur"></div>
-                                <p align="justify">Au cœur d'une nature calme et verdoyante, la <b>Couture du Charme</b> vous accueille dans son <b>spa privatif</b>, et ses <b>chambres d’hôtes</b>, à Saméon, à proximité d'Orchies et Saint Amand et seulement à 20 minutes de Lille et Valenciennes.</p>
+                                <p align="justify">Au cœur d'une nature calme et verdoyante, la <b>Couture du Charme</b> vous accueille dans son <b>spa privatif</b>, et ses <b>chambres d’hôtes</b>, à Saméon, à proximité d'Orchies et Saint Amand Les Eaux et seulement à 20 minutes de Lille et Valenciennes.</p>
                                 <div className="Separateur"></div>
                             </div>
 

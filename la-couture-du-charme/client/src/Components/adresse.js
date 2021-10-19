@@ -24,13 +24,14 @@ export default function Adresse() {
                 <div className="AdresseContainer">
 
                     <div className="AdresseMainCol">
-                        <h4>COUTURE DU CHARME</h4>
+                        <h4>La COUTURE DU CHARME</h4>
 
                         <ul>
                             <li>1400 rue de Beaumetz</li>
                             <li>59310 SAMÉON</li>
                         </ul>
 
+                        <p><a href="tel:+33752090750"><img src={PhoneBlack} alt="Téléphone" width="20px" />07 52 09 07 50</a></p>
                         <p><a href="tel:+33327415247"><img src={PhoneBlack} alt="Téléphone" width="20px" />03 27 41 52 47</a></p>
                     </div>
 
