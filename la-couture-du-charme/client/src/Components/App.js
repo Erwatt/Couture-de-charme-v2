@@ -25,18 +25,28 @@ import CheckoutForm from './CheckoutForm';
 import GA4React from "ga-4-react";
 
 
-
-
-
 function App() {
   
   //Google Analytics 4
-  try {
-  setTimeout(_ => {
-    const ga4react = new GA4React("G-DB7YNEWFMK");
-    ga4react.initialize();
-  }, 4000);
-} catch (err) {}
+//   try {
+//   setTimeout(_ => {
+//     const ga4react = new GA4React("G-DB7YNEWFMK");
+//     ga4react.initialize();
+
+//   }, 4000);
+// } catch (err) {}
+
+  //Google Analytics 4
+const ga4react = new GA4React(
+  'G-DB7YNEWFMK',
+  )
+  ga4react.initialize().then((ga4) => {
+    ga4.pageview('path')
+    ga4.gtag('event','pageview','path') // or your custom gtag event
+  },(err) => {
+    console.error(err)
+  })
+
 
 
   return (

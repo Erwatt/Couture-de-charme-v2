@@ -47,14 +47,30 @@
         background: #dadbdc;
 
         .ContainerHome {
+
             .EquipementItem p {
                 order: 2;
             }
+
         }
     }
 
+    .PageGift p{
+        order: 1;
+}
+
+
+
     .ContainerBackground:nth-of-type(odd) {
         background: #b8b58c;
+    }
+
+    .BackGreyGift{
+        background: #DADBDC !important;
+    }
+
+    .BackPink{
+        background: #f7eeee !important;
     }
 
     .ContainerHome {
@@ -193,6 +209,7 @@
         }
     }
 }
+
 
 @media only screen and (max-width: 500px) {
     .MainHome {

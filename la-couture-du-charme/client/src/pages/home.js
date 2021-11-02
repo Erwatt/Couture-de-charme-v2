@@ -26,7 +26,7 @@ export default function Home() {
 
     //On initialise AOS (mouvement div)
     useEffect(() => {
-        AOS.init({duration:1000});
+        AOS.init({duration:2000});
     }, [])
 
 
