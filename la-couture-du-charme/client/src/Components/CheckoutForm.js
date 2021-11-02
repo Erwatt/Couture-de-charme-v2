@@ -5,9 +5,12 @@ import '../CSS/CheckoutForm.scss'
 //NOUVEAU CODE STRIPE DAVID
 import {CardElement, useStripe, useElements} from "@stripe/react-stripe-js"
 
+import services from "../services";
 
 
-export default function CheckoutForm({element,prix, ligne1}) {
+export default function CheckoutForm({element,prix, ligne1, event, from, to, mailSender, mailReceiver, telSender,
+   telReceiver, message, number, creneau, sending}) {
+
   const [succeeded, setSucceeded] = useState(false);
   const [error, setError] = useState(null);
   const [processing, setProcessing] = useState('');
@@ -28,13 +31,22 @@ export default function CheckoutForm({element,prix, ligne1}) {
         return res.json();
       })
       .then(data => {
-        setClientSecret(data.clientSecret);
+        setClientSecret(data.clientSecret.toString());
       });
-  }, [element, prix]);
+  }, []);
+
+  useEffect(() => {
+    if (succeeded){
+      if (event === "spa"){
+        services.spaGift(from, to, mailSender, mailReceiver, telSender,
+   telReceiver, message, number, creneau, sending)
+      }
+    }
+  }, [succeeded, event,from, to, mailSender, mailReceiver, telSender,telReceiver, message, number, creneau, sending])
 
   const cardStyle = {
+    hidePostalCode: true,
     style: {
-      hidePostalCode: true,
       base: {
         color: "#32325d",
         fontFamily: 'Arial, sans-serif',

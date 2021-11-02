@@ -119,9 +119,9 @@ export default function ChambresHotes() {
                         <div className="ContainerEl">
 
                             <div className="el">
-                                <img className="imgRoombis" src={fragole}></img>
+                                <img alt="Fragole" className="imgRoombis" src={fragole}></img>
                             </div>
-                            <div className="el"><iframe className="containerIframe" src='https://widget.itea.fr/widget.php?key=amkkhds7&numgite=2697&widget-itea=dispo&nbmois-ligne=1&numChambre=1' ></iframe></div>
+                            <div className="el"><iframe title="itea-fragole" className="containerIframe" src='https://widget.itea.fr/widget.php?key=amkkhds7&numgite=2697&widget-itea=dispo&nbmois-ligne=1&numChambre=1' ></iframe></div>
 
                         </div>
                     </div>
@@ -153,9 +153,9 @@ export default function ChambresHotes() {
 
                         <div className="ContainerEl">
                             <div className="el">
-                                <img className="imgRoom" src={scandinave3}></img>
+                                <img alt="scandinave" className="imgRoom" src={scandinave3}></img>
                             </div>
-                            <div className="el"><iframe className="containerIframe" src='https://widget.itea.fr/widget.php?key=amkkhds7&numgite=2697&widget-itea=dispo&nbmois-ligne=1&numChambre=2' ></iframe></div>
+                            <div className="el"><iframe title="itea-scandinave" className="containerIframe" src='https://widget.itea.fr/widget.php?key=amkkhds7&numgite=2697&widget-itea=dispo&nbmois-ligne=1&numChambre=2' ></iframe></div>
                         </div>
                     </div>
 
@@ -185,9 +185,9 @@ export default function ChambresHotes() {
 
                         <div className="ContainerEl">
                             <div className="el">
-                                <img className="imgRoom" src={cocoon3}></img>
+                                <img alt="cocoon" className="imgRoom" src={cocoon3}></img>
                             </div>
-                            <div className="el"><iframe className="containerIframe" src='https://widget.itea.fr/widget.php?key=amkkhds7&numgite=2697&widget-itea=dispo&nbmois-ligne=1&numChambre=3' ></iframe></div>
+                            <div className="el"><iframe title="itea-cocoon" className="containerIframe" src='https://widget.itea.fr/widget.php?key=amkkhds7&numgite=2697&widget-itea=dispo&nbmois-ligne=1&numChambre=3' ></iframe></div>
                         </div>
                     </div>
 

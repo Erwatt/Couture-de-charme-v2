@@ -2,217 +2,215 @@ import '../CSS/Modelling.scss';
 import React, { useState, useEffect } from 'react';
 import piscine from '../Images/photoPiscine.jpg';
 // import { useHistory } from 'react-router-dom';
+import CheckoutForm from './CheckoutForm';
+// import services from '../services';
 
-//NOUVEAU CODE STRIPE DAVID
-import { Elements } from '@stripe/react-stripe-js'
-import { loadStripe } from '@stripe/stripe-js'
-import CheckoutForm from './CheckoutForm'
+export default function Spa(){
 
-export default function Spa() {
+// window.scrollTo(0, 0);
 
-    window.scrollTo(0, 0);
+// const[min30, setMin30]=useState(false);
+// const[min60, setMin60]=useState(false);
+const[un, set1]=useState(false);
+const[deux, set2]=useState(false);
+const[trois, set3]=useState(false);
+const[quatre, set4]=useState(false);
+const[cinq, set5]=useState(false);
+const[six, set6]=useState(false);
+const[sept, set7]=useState(false);
+const[huit, set8]=useState(false); 
+const[invitation, setInvitation]=useState(false);
+const[enveloppe, setEnveloppe]=useState(false);
+const[coffret, setCoffret]=useState(false);
+const[vip, setVip]=useState(false);
 
-    // const[min30, setMin30]=useState(false);
-    // const[min60, setMin60]=useState(false);
-    const [un, set1] = useState(false);
-    const [deux, set2] = useState(false);
-    const [trois, set3] = useState(false);
-    const [quatre, set4] = useState(false);
-    const [cinq, set5] = useState(false);
-    const [six, set6] = useState(false);
-    const [sept, set7] = useState(false);
-    const [huit, set8] = useState(false);
-    const [invitation, setInvitation] = useState(false);
-    const [enveloppe, setEnveloppe] = useState(false);
-    const [coffret, setCoffret] = useState(false);
-    const [vip, setVip] = useState(false);
+// const Book30min = ()=>{
+//     if(!validate){
+//     if (min30){setMin30(false)}
+//     else{setMin30(true)}
+//     setMin60(false)}
+// }
 
-    // const Book30min = ()=>{
-    //     if(!validate){
-    //     if (min30){setMin30(false)}
-    //     else{setMin30(true)}
-    //     setMin60(false)}
-    // }
+// const Book60min = ()=>{
+//     if(!validate){
+//     if (min60){setMin60(false)}
+//     else{setMin60(true)}
+//     setMin30(false)}
+// }
 
-    // const Book60min = ()=>{
-    //     if(!validate){
-    //     if (min60){setMin60(false)}
-    //     else{setMin60(true)}
-    //     setMin30(false)}
-    // }
+const Book1 = ()=>{
+    if(!validate){
+    if (un){set1(false)}
+    else{set1(true)}
+    set2(false)
+    set3(false)
+    set4(false)
+    set5(false)
+    set6(false)
+    set7(false)
+    set8(false)
+    setNombre(1)}
+}
 
-    const Book1 = () => {
-        if (!validate) {
-            if (un) { set1(false) }
-            else { set1(true) }
-            set2(false)
-            set3(false)
-            set4(false)
-            set5(false)
-            set6(false)
-            set7(false)
-            set8(false)
-            setNombre(1)
-        }
-    }
+const Book2 = ()=>{
+    if(!validate){
+    if (deux){set2(false)}
+    else{set2(true)}
+    set1(false)
+    set3(false)
+    set4(false)
+    set5(false)
+    set6(false)
+    set7(false)
+    set8(false)
+    setNombre(2)}
+}
 
-    const Book2 = () => {
-        if (!validate) {
-            if (deux) { set2(false) }
-            else { set2(true) }
-            set1(false)
-            set3(false)
-            set4(false)
-            set5(false)
-            set6(false)
-            set7(false)
-            set8(false)
-            setNombre(2)
-        }
-    }
+const Book3 = ()=>{
+    if(!validate){
+    if (trois){set3(false)}
+    else{set3(true)}
+    set2(false)
+    set1(false)
+    set4(false)
+    set5(false)
+    set6(false)
+    set7(false)
+    set8(false)
+    setNombre(3)}
+}
 
-    const Book3 = () => {
-        if (!validate) {
-            if (trois) { set3(false) }
-            else { set3(true) }
-            set2(false)
-            set1(false)
-            set4(false)
-            set5(false)
-            set6(false)
-            set7(false)
-            set8(false)
-            setNombre(3)
-        }
-    }
+const Book4 = ()=>{
+    if(!validate){
+    if (quatre){set4(false)}
+    else{set4(true)}
+    set2(false)
+    set3(false)
+    set1(false)
+    set5(false)
+    set6(false)
+    set7(false)
+    set8(false)
+    setNombre(4)}
+}
 
-    const Book4 = () => {
-        if (!validate) {
-            if (quatre) { set4(false) }
-            else { set4(true) }
-            set2(false)
-            set3(false)
-            set1(false)
-            set5(false)
-            set6(false)
-            set7(false)
-            set8(false)
-            setNombre(4)
-        }
-    }
+const Book5 = ()=>{
+    if(!validate){
+    if (cinq){set5(false)}
+    else{set5(true)}
+    set2(false)
+    set3(false)
+    set4(false)
+    set1(false)
+    set6(false)
+    set7(false)
+    set8(false)
+    setNombre(5)}
+}
 
-    const Book5 = () => {
-        if (!validate) {
-            if (cinq) { set5(false) }
-            else { set5(true) }
-            set2(false)
-            set3(false)
-            set4(false)
-            set1(false)
-            set6(false)
-            set7(false)
-            set8(false)
-            setNombre(5)
-        }
-    }
+const Book6 = ()=>{
+    if(!validate){
+    if (six){set6(false)}
+    else{set6(true)}
+    set2(false)
+    set3(false)
+    set4(false)
+    set5(false)
+    set1(false)
+    set7(false)
+    set8(false)
+    setNombre(6)}
+}
 
-    const Book6 = () => {
-        if (!validate) {
-            if (six) { set6(false) }
-            else { set6(true) }
-            set2(false)
-            set3(false)
-            set4(false)
-            set5(false)
-            set1(false)
-            set7(false)
-            set8(false)
-            setNombre(6)
-        }
-    }
+const Book7 = ()=>{
+    if(!validate){
+    if (sept){set7(false)}
+    else{set7(true)}
+    set2(false)
+    set3(false)
+    set4(false)
+    set5(false)
+    set6(false)
+    set1(false)
+    set8(false)
+    setNombre(7)}
+}
 
-    const Book7 = () => {
-        if (!validate) {
-            if (sept) { set7(false) }
-            else { set7(true) }
-            set2(false)
-            set3(false)
-            set4(false)
-            set5(false)
-            set6(false)
-            set1(false)
-            set8(false)
-            setNombre(7)
-        }
-    }
+const Book8 = ()=>{
+    if(!validate){
+    if (huit){set8(false)}
+    else{set8(true)}
+    set2(false)
+    set3(false)
+    set4(false)
+    set5(false)
+    set6(false)
+    set7(false)
+    set1(false)
+    setNombre(8)}
+}
 
-    const Book8 = () => {
-        if (!validate) {
-            if (huit) { set8(false) }
-            else { set8(true) }
-            set2(false)
-            set3(false)
-            set4(false)
-            set5(false)
-            set6(false)
-            set7(false)
-            set1(false)
-            setNombre(8)
-        }
-    }
+const BookInvitation = ()=>{
+    if(!validate){
+    if (invitation){setInvitation(false)}
+    else{setInvitation(true)}
+    setEnveloppe(false)
+    setCoffret(false)
+    setVip(false)}
+}
 
-    const BookInvitation = () => {
-        if (!validate) {
-            if (invitation) { setInvitation(false) }
-            else { setInvitation(true) }
-            setEnveloppe(false)
-            setCoffret(false)
-            setVip(false)
-        }
-    }
+const BookEnveloppe = ()=>{
+    if(!validate){
+    if (enveloppe){setEnveloppe(false)}
+    else{setEnveloppe(true)}
+    setInvitation(false)
+    setCoffret(false)
+    setVip(true)}
+}
 
-    const BookEnveloppe = () => {
-        if (!validate) {
-            if (enveloppe) { setEnveloppe(false) }
-            else { setEnveloppe(true) }
-            setInvitation(false)
-            setCoffret(false)
-            setVip(true)
-        }
-    }
+const BookCoffret = ()=>{
+    if(!validate){
+    if (coffret){setCoffret(false)}
+    else{setCoffret(true)}
+    setEnveloppe(false)
+    setInvitation(false)
+    setVip(true)}
+}
 
-    const BookCoffret = () => {
-        if (!validate) {
-            if (coffret) { setCoffret(false) }
-            else { setCoffret(true) }
-            setEnveloppe(false)
-            setInvitation(false)
-            setVip(true)
-        }
-    }
-
-    const [semaine, setSemaine] = useState(false)
-    const [weekend, setWeekend] = useState(false)
-    const [before17, setBefore17] = useState(false)
-    const [after17, setAfter17] = useState(false)
-    const [nombre, setNombre] = useState(0)
-    const [validate, setvalidate] = useState(false)
-    const [creneau2h, setCreneau2h] = useState(false)
-    const [creneau1h30, setCreneau1h30] = useState(false)
+const[semaine,setSemaine]=useState(false)
+    const [weekend,setWeekend]=useState(false)
+    const [before17,setBefore17]=useState(false)
+    const [after17,setAfter17]=useState(false)
+    const [nombre,setNombre]=useState(0)
+    const [validate,setvalidate]=useState(false)
+    const [creneau2h,setCreneau2h]=useState(false)
+    const [creneau1h30,setCreneau1h30]=useState(false)
     // const[creneau,setCreneau]=useState("Créneau Spa")
-    const [prix, setPrix] = useState(0)
+    const [prix, setPrix]=useState(0)
+    const [from, setFrom] = useState("");
+    const [to, setTo] = useState("");
+    const [mailReceiver, setMailReceiver] = useState("");
+    const [mailSender, setMailSender] = useState("");
+    const [telReceiver, setTelReceiver] = useState("");
+    const [telSender, SetTelSender] = useState("");
+    const [message, setMessage] = useState("");
+    const [deliveryName, setDeliveryName] = useState("");
+    const [adress, setAdress] = useState("");
+    const [postalCode, setPostalCode] = useState("");
+    const [city, setCity] = useState("");
+    const [creneau, setCreneau] = useState("");
+    const [sending, setSending] = useState("");
 
-    const BookWeekend = () => {
-        if (!validate) {
-            if (weekend) { setWeekend(false) }
-            else { setWeekend(true) }
-            setSemaine(false)
-            setAfter17(false)
-            setBefore17(false)
-            setCreneau1h30(false)
-            setCreneau2h(false)
-        }
-
+    const BookWeekend = ()=>{
+        if(!validate){
+        if (weekend){setWeekend(false)}
+        else{setWeekend(true)}
+        setSemaine(false)
+        setAfter17(false)
+        setBefore17(false)
+        setCreneau1h30(false)
+        setCreneau2h(false)}
+    
     }
     const BookSemaine = () => {
         if (!validate) {
