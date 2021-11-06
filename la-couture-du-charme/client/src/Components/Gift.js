@@ -1,57 +1,112 @@
-import '../CSS/Gift.scss';
 // import { Link } from 'react-router-dom';
-import React from 'react';
-import bonCadeau from '../Images/bonCadeau.png';
-import coffretCadeau from '../Images/coffretCadeau.jpg';
-import massage from '../Images/val.jpg';
-import { useHistory } from 'react-router';
+import React from 'react'
+import { useHistory } from 'react-router'
+
+//On importe les photos
+import Coffret from '../Images/coffret.jpg'
+import OffrirSpa from '../Images/offrir-spa.jpg'
+import OffrirMassage from '../Images/offrir-massage.jpg'
 
 
+//On importe le css
+import '../CSS/Gift.scss'
 
-export default function Gift(){
+//On importe les composants
+import Adresse from './adresse'
+
+
+export default function Gift() {
     window.scrollTo(0, 0);
-    
-    let history=useHistory();
 
-    function handleModelling(){
+    let history = useHistory();
+
+    function handleModelling() {
         history.push("/Modelling");
     }
 
-    function handleGiftSpa(){
+    function handleGiftSpa() {
         history.push("/Spa");
     }
 
 
-    return(<div>
-        <div className="giftbox">
-            <div className="gift-title">
-                <div><h1>Coffrets Cadeau - Spa de la Couture du Charme</h1><br></br>
-                <p>Offrez un délicieux moment de détente pour oublier le stress quotidien, </p>
-                <p>Chacun de  nos massages ou de nos créneaux Spa Privatif est une escapade dans un univers de bien-être.</p></div>
-            </div>
-            <div className="gift-box1">
-                <img src={coffretCadeau} alt="gift-pic1" className="gift-pic1"/>
-                <div className="gift-text1">
-                    <h2>Au choix pour votre bon-cadeau (massage ou spa privatif) : </h2>
-                    <li>Une enveloppe prête à offrir ou envoyée par nos soins, comprenant votre invitation personnalisée</li>
-                    <li>Une invitation électronique par email,  pour les plus pressé(e)s et les cadeaux de dernière minute</li>
-                    <li>Un élégant coffret imaginé pour vous, comprenant votre invitation personnalisée</li>
-                    <p>N'hésitez pas à offrir une prestation duo...</p>
-                    <p>Vous pourrez ainsi partager à deux l'expérience du massage ou du créneau spa, et créer un souvenir inoubliable.</p>
+    const Formule = [
+        {
+            titre: "OFFRIR UN SPA",
+            lien: () => { handleGiftSpa() },
+            image: OffrirSpa
+        },
+        {
+            titre: "OFFRIR UN MASSAGE",
+            lien: () => { handleModelling() },
+            image: OffrirMassage
+        }
+    ]
+
+
+    return (
+
+        <div className="MainHome">
+
+            <div className="ContainerBackground BackPink">
+
+                <div className="ContainerHome">
+
+                    <h3 align="center">COFFRET CADEAU</h3>
+
+                    <div className="EquipementItem PageItem PageGift">
+
+                        <p align="justify">
+                            <p align="justify">Un délicieux moment de détente pour oublier le stress quotidien, <b>c’est la promesse que vous offrez</b>.</p>
+                            <p align="justify">Envoyez ou offrez un coffret comprenant votre <b>invitation personnalisée</b>.</p>
+                            <p align="justify">Pour un <b>cadeau de dernière minute</b>, une invitation personnalisée electronique vous sera envoyée.</p>
+                        </p>
+                        <img src={Coffret} alt="coffret cadeau" width="580" height="350" />
+                    </div>
+
                 </div>
-            </div>
-            <div className="gift-box2">
-                <div className="link1" onClick={handleGiftSpa}>
-                    <img src={bonCadeau} alt="gift-pic2" className="gift-pic2"/>
-                    <p><b>Centre de détente</b></p>
+
+
+                <div className="MainBook">
+                    <div className="ContainerBackground BackGreyGift">
+
+                        <div className="SubContainerBackground">
+
+                            <h1 align="center">CHOISISSEZ UNE FORMULE</h1>
+
+
+                            <div className="SubContainerItem">
+
+                                {
+                                    Formule.map((item, i) => {
+
+                                        return (
+
+                                            <div className="ItemChoixBook" key={i} onClick={item.lien}>
+
+                                                <img src={item.image} alt={item.titre} width="350" />
+
+                                                <h2 align="center">{item.titre}</h2>
+
+                                            </div>
+
+                                        )
+                                    })
+                                }
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+
+
                 </div>
-                <div className="link2" onClick={handleModelling}>
-                    <img src={massage} alt="gift-pic3" className="gift-pic3"/>
-                    <p><b>Massage bien-être</b></p>
-                </div>
+
             </div>
+            <Adresse/>
         </div>
-        
-    </div>
     )
 }

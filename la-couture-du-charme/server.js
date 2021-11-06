@@ -2,9 +2,12 @@
 const http = require('http');
 const app = require('./app');
 const path = require('path');
-const express = require('express');
+const express = require('express')
 
-const stripe = require("stripe")("sk_test_51JKLlzFWy0s3veRrrKOLEWQnHpQMuMEPeQJWeZUm6u1YtQN0fYcDo4QcxTW6L0DoM1bdWBE2PeamG30L70zm27xj000SCUPvYB");
+// NOUVEAU CODE STRIPE DAVID
+require('dotenv').config()
+const Stripe = require('stripe')
+const stripe = Stripe(process.env.STRIPE_SECRET_KEY)
 
 
 const calculateOrderAmount = items => {
@@ -63,24 +66,68 @@ server.on('listening', () => {
 
 app.use('/api', route);
 
+//ANCIEN CODE
+// app.post("/create-payment-intent", async (req, res) => {
+//   const { items } = req.body;
 
-app.post("/create-payment-intent", async (req, res) => {
-  const { items } = req.body;
+// })
   
-  // Create a PaymentIntent with the order amount and currency
-  const paymentIntent = await stripe.paymentIntents.create({
-    amount: calculateOrderAmount(items),
-    currency: "EUR",
+//   // Create a PaymentIntent with the order amount and currency
+//   const paymentIntent = await stripe.paymentIntents.create({
+//     amount: calculateOrderAmount(items),
+//     currency: "EUR",
     
-  });
-  res.send({
-    clientSecret: paymentIntent.client_secret
-  });
-});
+//   });
+//   res.send({
+//     clientSecret: paymentIntent.client_secret
+//   });
+//   console.log(paymentIntent)
+// });
 
 
 // app.get('*', (req, res) => {
 //   res.sendFile(path.resolve(__dirname, './client/build', 'index.html'));
 // })
+
+
+// NOUVEAU CODE STRIPE DAVID
+app.post('/pay', async (req, res) =>{
+
+  const { items } = req.body;
+
+
+  try{
+
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount:calculateOrderAmount(items),
+      currency: 'eur',
+      payment_method_types: ['card'],
+      metadata: {
+        name: 'value'
+      }
+    })
+
+      const clientSecret = paymentIntent.client_secret
+      res.json({ clientSecret, message: 'Paiement effectue avec succes!'})
+
+  } catch (err){
+    console.error(err)
+    res.status(500).json({ message: 'Erreur serveur interne Stripe'})
+  }
+
+})
+
+app.post('/stripe', (req, res) =>{
+  if(req.body.type === 'payment_intent.created'){
+    console.log(`${req.body.data.object.metadata.name} paiement créé!`)
+  }
+  if(req.body.type === 'payment_intent.succeeded'){
+    console.log(`${req.body.data.object.metadata.name} paiement effectue avec succes!`)
+  }
+})
+
+
+
+
 
 server.listen(port);
