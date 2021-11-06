@@ -44,8 +44,8 @@ export default function SpaPrivatif() {
                 <div className="TitrePage">
                     <h1 align="center">SPA privatif avec Jaccuzzi</h1>
                     <h2 align="center">10 personnes maximum</h2>
-                    <p align="center">Entre <b>amis</b>, en <b>famille</b>, en <b>amoureux</b> ou pour vos évènements de <b>team building</b>. Le SPA privatif de la Couture du Charme est l'endroit détente idéal pour tous vos évènements !</p>
-                    <p align="center"> Equipé d'un <b>SPA privatif de 130m2</b> comprenant un jacuzzi, une piscine, un sauna. Vous pourrez réserver des massages, commander des boissons au <b>bord de la piscine</b> et même prolonger la détente en choisissant de séjourner dans l'une de nos <b>chambres d'hôtes.</b></p>
+                    <p align="center">Entre <b>amis</b>, en <b>famille</b>, en <b>amoureux</b> ou pour vos évènements de <b>team building</b>, le SPA privatif de la Couture du Charme est l'endroit détente idéal pour tous vos évènements !</p>
+                    <p align="center"> La Couture du Charme est un lieu reposant, doté d'un <b>SPA privatif de 130m2</b> comprenant un jacuzzi, une piscine, un sauna. Vous pourrez réserver des massages, commander une boisson au <b>bord de la piscine</b> et même prolonger la détente en choisissant de séjourner dans l'une de nos <b>chambres d'hôtes.</b></p>
                 </div>
 
                 <div className="ContainerBackground" data-aos="fade-left" data-aos-duration="1000">
@@ -108,11 +108,11 @@ export default function SpaPrivatif() {
 
                     <div className="ContainerHome">
 
-                        <h3 align="center">Modelages</h3>
+                        <h3 align="center">Massages bien-être</h3>
                         <div className="EquipementItem PageItem">
 
                             <p align="justify">
-                                <p align="justify">Invitez vos sens à découvrir <b>les bienfaits d’un modelage personnalisé</b> concocté par notre équipe d’esthéticiennes.</p>
+                                <p align="justify">Invitez vos sens à découvrir <b>les bienfaits d’un massage bien-être personnalisé</b> concocté par notre équipe d’esthéticiennes.</p>
                                 <p align="justify"><b>Seul ou en duo</b>, quelle que soit la zone que vous souhaitez détendre, il ne vous reste qu’à préciser la pression souhaitée, et la senteur de l’huile de massage qui vous inspire…. Et elles se chargent de vous apporter une parfaite sensation de bienfait.</p>
                             </p>
                             <img src={poufs} alt="poufs" width="580" height="350" />
