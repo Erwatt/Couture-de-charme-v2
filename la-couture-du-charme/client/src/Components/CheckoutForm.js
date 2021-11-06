@@ -14,7 +14,7 @@ export default function CheckoutForm({element,prix, ligne1, event, from, to, mai
   const [error, setError] = useState(null);
   const [processing, setProcessing] = useState('');
   const [disabled, setDisabled] = useState(true);
-  // const [clientSecret, setClientSecret] = useState('');
+  const [clientSecret, setClientSecret] = useState('');
 
   // useEffect(() => {
   //   // Create PaymentIntent as soon as the page loads
@@ -137,14 +137,11 @@ export default function CheckoutForm({element,prix, ligne1, event, from, to, mai
   return (
 
     // NOUVEAU CODE DAVID
-    
       <form onSubmit={pay}>
       {!succeeded ? (
-        <div>
       <div className="checkout">
       <CardElement onChange={handleChange}/>
         {/* <button onClick={pay}>Commander</button>  */}
-      </div>
       <button disabled={processing || disabled || succeeded} id="submit">
            <span id="button-text">
            {processing ? (
@@ -163,7 +160,6 @@ export default function CheckoutForm({element,prix, ligne1, event, from, to, mai
        </p>
        }
        </form>
-       
 
 // ANCIEN CODE
     // <div className="PaymentContainer">

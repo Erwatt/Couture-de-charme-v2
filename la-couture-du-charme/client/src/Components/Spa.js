@@ -542,14 +542,15 @@ const[semaine,setSemaine]=useState(false)
                     {!validate?<textarea onChange={(e) => setMessage(e.target.value)} rows="5" cols="50" maxLength="240" className="envoiMassage11"/>:<textarea rows="5" cols="50" maxLength="240" className="envoiMassage3" disabled/>}
                     {
                         !validate ? <p onClick={() => Validate()} id="envoiMassage12" className="panier">Valider</p>
-                            : <p onClick={() => Invalidate()} id="envoiMassage13" className="panier">Réinitialiser</p>
+                            : <p onClick={() => Invalidate()} id="envoiMassage13" className="panier-reinit">Réinitialiser</p>
                     }
                     {
                         validate?
                         <div className="PriceBox">
+                            <h2 className="giftPrice">{prix}€</h2>
                             <Elements stripe={stripePromise}>
                             <CheckoutForm element="ModelingGift" prix={prix}
-                            ligne1={document.getElementById('envoiMassage5').value}
+                            // ligne1={document.getElementById('envoiMassage5').value}
                             event="spa"
                             from={from}
                             to={to}
@@ -562,7 +563,7 @@ const[semaine,setSemaine]=useState(false)
                             sending={sending}
                             number={nombre}/>
                             </Elements>
-                            <h2 className="giftPrice">{prix}€</h2>
+                            <h4 style={{fontWeight: 'normal', margin:"2%"}}>Paiement effectué via <b>Stripe</b></h4>
                         </div>
                         : false
                     }
