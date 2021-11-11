@@ -10,7 +10,9 @@ import CheckoutForm from './CheckoutForm'
 
 export default function Spa() {
 
-    // window.scrollTo(0, 0);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     // const[min30, setMin30]=useState(false);
     // const[min60, setMin60]=useState(false);
@@ -25,7 +27,6 @@ export default function Spa() {
     const [invitation, setInvitation] = useState(false);
     const [enveloppe, setEnveloppe] = useState(false);
     const [coffret, setCoffret] = useState(false);
-    const [vip, setVip] = useState(false);
 
     // const Book30min = ()=>{
     //     if(!validate){
@@ -167,7 +168,7 @@ export default function Spa() {
             else { setInvitation(true) }
             setEnveloppe(false)
             setCoffret(false)
-            setVip(false)
+            setEnveloppe(false)
         }
     }
 
@@ -177,7 +178,6 @@ export default function Spa() {
             else { setEnveloppe(true) }
             setInvitation(false)
             setCoffret(false)
-            setVip(true)
         }
     }
 
@@ -187,7 +187,7 @@ export default function Spa() {
             else { setCoffret(true) }
             setInvitation(false)
             setCoffret(true)
-            setVip(false)
+            setEnveloppe(false)
         }
     }
 
@@ -295,7 +295,10 @@ const[semaine,setSemaine]=useState(false)
                             }
                             else{
                                 setPrix(90)
-                                if (enveloppe){setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)}
+                                if (enveloppe){
+                                    setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+                                    setPrix(92)
+                                }
                                 else{setSending(`Email`)}
                             }
                         }
@@ -306,7 +309,10 @@ const[semaine,setSemaine]=useState(false)
                             }
                             else{
                                 setPrix(90+(nombre-2)*20)
-                                if (enveloppe){setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)}
+                                if (enveloppe){
+                                    setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+                                    setPrix(92+(nombre-2)*20)
+                                }
                                 else{setSending(`Email`)}
                             }
                         }
@@ -321,14 +327,20 @@ const[semaine,setSemaine]=useState(false)
                             }
                             else{
                                 setPrix(110)
-                                if (enveloppe){setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)}
+                                if (enveloppe){
+                                    setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+                                    setPrix(112)
+                                }
                                 else{setSending(`Email`)}
                             }}
                         else{
                             if(coffret===true){setPrix(128+(nombre-2)*30)}
                             else{
                                 setPrix(110+(nombre-2)*30)
-                                if (enveloppe){setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)}
+                                if (enveloppe){
+                                    setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+                                    setPrix(112+(nombre-2)*30)
+                                }
                                 else{setSending(`Email`)}
                             }
                         }
@@ -345,7 +357,10 @@ const[semaine,setSemaine]=useState(false)
                         }
                         else{
                             setPrix(80)
-                            if (enveloppe){setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)}
+                            if (enveloppe){
+                                setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+                                setPrix(82)
+                            }
                                 else{setSending(`Email`)}
                         }}
                     else{
@@ -355,7 +370,10 @@ const[semaine,setSemaine]=useState(false)
                         }
                         else{
                             setPrix(80+(nombre-2)*20)
-                            if (enveloppe){setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)}
+                            if (enveloppe){
+                                setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+                                setPrix(82+(nombre-2)*20)
+                            }
                                 else{setSending(`Email`)}
                         }
                     }                        
@@ -372,7 +390,10 @@ const[semaine,setSemaine]=useState(false)
                     }
                     else{
                         setPrix(130)
-                        if (enveloppe){setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)}
+                        if (enveloppe){
+                            setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+                            setPrix(132)
+                        }
                                 else{setSending(`Email`)}
                     }}
                 else{
@@ -382,7 +403,10 @@ const[semaine,setSemaine]=useState(false)
                     }
                     else{
                         setPrix(130+(nombre-2)*20)
-                        if (enveloppe){setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)}
+                        if (enveloppe){
+                            setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+                            setPrix(132+(nombre-2)*20)
+                        }
                         else{setSending(`Email`)}
                     }}                    
             }
@@ -483,41 +507,41 @@ const[semaine,setSemaine]=useState(false)
                         }
                     </div>
                     <p><b>Options d'envoi :</b></p>
-                    <div className="modellingFlexRow">
+                    <div className="modellingFlexColumn">
                         {
-                            invitation ? <p className="Clicked2" onClick={() => BookInvitation()}>Invitation Electronique (gratuit)</p> : <p className="Unclicked2" onClick={() => BookInvitation()}>Invitation Electronique (gratuit)</p>
+                            invitation ? <p className="Clicked2" onClick={() => BookInvitation()}>Invitation</p> : <p className="Unclicked2" onClick={() => BookInvitation()}>Invitation</p>
                         }
                         {
-                            enveloppe ? <p className="Clicked2" onClick={() => BookEnveloppe()}>Enveloppe cadeau (gratuit)</p> : <p className="Unclicked2" onClick={() => BookEnveloppe()}>Enveloppe cadeau (gratuit)</p>
+                            enveloppe ? <p className="Clicked2" onClick={() => BookEnveloppe()}>Enveloppe</p> : <p className="Unclicked2" onClick={() => BookEnveloppe()}>Enveloppe</p>
                         }
                         {
-                            coffret ? <p className="Clicked2" onClick={() => BookCoffret()}>Boîte Cadeau la Couture du Charme (+18€)</p> : <p className="Unclicked2" onClick={() => BookCoffret()}>Boîte Cadeau la Couture du Charme (+18€)</p>
+                            coffret ? <p className="Clicked2" onClick={() => BookCoffret()}>Boîte Cadeau</p> : <p className="Unclicked2" onClick={() => BookCoffret()}>Boîte Cadeau</p>
                         }
                     </div>
-                    <p><b>Invitation électronique : </b>envoyée par nos soins par mail</p>
-                    <p><b>Enveloppe cadeau : </b>à retirer sur place ou envoyée par nos soins par courrier</p>
-                    <p><b>Boîte Cadeau la Couture du Charme: </b>envoyée par nos soins (délai Colissimo)</p>
+                    <p><b>Invitation électronique : </b>envoyée par nos soins par mail (horaires du spa)</p>
+                    <p><b>Enveloppe cadeau : </b>à retirer sur place ou envoyée par nos soins par courrier + 2€</p>
+                    <p><b>Boîte Cadeau la Couture du Charme: </b>envoyée par nos soins (délai Colissimo) + 18€</p>
                     <div className="separation"></div>
                     <p><b>Personnalisez votre cadeau</b></p>
                     <div className="modellingFlexRow">
                         <div className="modellingFlexColumn">
                             <p>De la part de :</p>
                             {!validate?<input type="text" onChange={(e) => setFrom(e.target.value)} id="envoiMassage1" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage1" name="massage1" className="envoiMassage" disabled/>}
-                            <p>Mail :</p>
+                            <p>Votre mail :</p>
                             {!validate?<input type="text" onChange={(e) => setMailSender(e.target.value)} id="envoiMassage2" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage9" name="massage1" className="envoiMassage" disabled/>}
-                            <p>Tél :</p>
+                            <p>Votre tél :</p>
                             {!validate?<input type="text" onChange={(e) => SetTelSender(e.target.value)} id="envoiMassage3" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage10" name="massage1" className="envoiMassage" disabled/>}
                         </div>
                         <div className="modellingFlexColumn">
                             <p>Offert à :</p>
                             {!validate?<input type="text" onChange={(e) => setTo(e.target.value)} id="envoiMassage4" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage2" name="massage1" className="envoiMassage1" disabled/>}
-                            <p>Mail :</p>
+                            <p>Mail destinataire :</p>
                             {!validate?<input type="text" onChange={(e) => setMailReceiver(e.target.value)} id="envoiMassage5" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage11" name="massage1" className="envoiMassage1" disabled/>}
-                            <p>Tél :</p>
+                            <p>Tél destinataire :</p>
                             {!validate?<input type="text" onChange={(e) => setTelReceiver(e.target.value)} id="envoiMassage6" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage12" name="massage1" className="envoiMassage1" disabled/>}
                         </div>
                     </div>
-                    {vip ?
+                    {coffret ?
                         <div>
                             <p>À livrer à (Nom Prénom) :</p>
                             {!validate?<input onChange={(e) => setDeliveryName(e.target.value)} type="text" id="envoiMassage7" name="massage1" className="envoiMassage2"/>:<input type="text" id="envoiMassage3" name="massage1" className="envoiMassage2" disabled/>}
@@ -538,7 +562,7 @@ const[semaine,setSemaine]=useState(false)
                                 </div>
                             </div>
                         </div> : false}
-                    <p>Message personnel (240 caractères maximum) :</p>
+                    <p>Message personnel accompagnant le cadeau :</p>
                     {!validate?<textarea onChange={(e) => setMessage(e.target.value)} rows="5" cols="50" maxLength="240" className="envoiMassage11"/>:<textarea rows="5" cols="50" maxLength="240" className="envoiMassage3" disabled/>}
                     {
                         !validate ? <p onClick={() => Validate()} id="envoiMassage12" className="panier">Valider</p>

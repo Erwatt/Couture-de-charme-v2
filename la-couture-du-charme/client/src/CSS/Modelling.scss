@@ -1,6 +1,6 @@
 .ModellingContainer{
     padding-left: 5%;
-    margin-top: 15%;
+    margin-top: 3%;
 }
 
 .modellingRight{
@@ -74,7 +74,7 @@
 .Clicked2{
     border : solid cadetblue;
     border-radius: 7px;
-    width: 20%;
+    width: 30%;
     cursor: pointer;
     text-align: center;
     padding: 0.5%;
@@ -85,7 +85,7 @@
     background-color: cadetblue;
     color: white;
     border-radius: 7px;
-    width: 20%;
+    width: 30%;
     cursor: pointer;
     text-align: center;
     padding: 0.5%;
@@ -101,6 +101,8 @@
     padding-top: 5%;
     padding-bottom: 5%;
     margin-right: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 .Unclicked3{
@@ -113,6 +115,8 @@
     padding-top: 5%;
     padding-bottom: 5%;
     margin-right: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 .spaSlots{
@@ -134,7 +138,7 @@
 }
 .envoiMassage1{
     border : 1px solid rgba(50, 50, 93, 0.2) ;
-    margin-left: 20%;
+    // margin-left: 20%;
     padding-top: 2%;
     padding-bottom: 2%;
     width: 88%;
@@ -222,7 +226,7 @@
 
     .envoiMassage1{
         margin-left: 0%;
-        margin-right: 10%;
+        // margin-right: 10%;
         border : 1px solid rgba(50, 50, 93, 0.2) ;
     }
 

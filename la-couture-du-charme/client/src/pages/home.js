@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 
 
+
 //On importe le CSS
 import '../CSS/Home.scss'
 import 'aos/dist/aos.css'
@@ -124,22 +125,42 @@ export default function Home() {
                 <div className="Equipements">
                     {
                         Equipements.map((item, i) => {
-                            return (
-                                <div className="ContainerBackground" key={i}>
-
-                                    <div className="ContainerHome" data-aos={item.aos}>
-
+                            if (item.lien !== '#'){
+                                return (
+                                    <div className="ContainerBackground" key={i}>
+    
+                                        <div className="ContainerHome" data-aos={item.aos}>
+    
                                         <a href={item.lien}><h3 align="center">{item.titre}</h3></a>
-                                        <div className="EquipementItem">
-
-                                            <p align="justify" dangerouslySetInnerHTML={{ __html: item.description }} />
-                                            <a href={item.lien}><img src={item.image} alt={item.titre} width="580" /></a>
+                                            <div className="EquipementItem">
+    
+                                                <p align="justify" dangerouslySetInnerHTML={{ __html: item.description }} />
+                                                <a href={item.lien}><img src={item.image} alt={item.titre} width="580" /></a>
+                                            </div>
+    
                                         </div>
-
+    
                                     </div>
-
-                                </div>
-                            )
+                                )
+                            } else {
+                                return (
+                                    <div className="ContainerBackground" key={i}>
+    
+                                        <div className="ContainerHome" data-aos={item.aos}>
+    
+                                        <h3 align="center">{item.titre}</h3>
+                                            <div className="EquipementItem">
+    
+                                                <p align="justify" dangerouslySetInnerHTML={{ __html: item.description }} />
+                                                <img src={item.image} alt={item.titre} width="580" />
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+                                )
+                            }
+                            
                         })
                     }
 
@@ -150,6 +171,10 @@ export default function Home() {
             </div>
 
             <Reserver />
+
+            <div className="BoutonBlack">
+                    <a href="/Tarifs">Nos Tarifs</a>
+            </div>
 
             <Adresse />
 
