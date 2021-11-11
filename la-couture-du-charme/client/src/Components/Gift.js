@@ -31,12 +31,12 @@ export default function Gift() {
 
     const Formule = [
         {
-            titre: "OFFRIR UN SPA",
+            titre: "OFFRIR UN CRENEAU ESPACE DETENTE",
             lien: () => { handleGiftSpa() },
             image: OffrirSpa
         },
         {
-            titre: "OFFRIR UN MASSAGE",
+            titre: "OFFRIR UN MASSAGE ou UN SOIN BIEN ETRE",
             lien: () => { handleModelling() },
             image: OffrirMassage
         }
@@ -56,9 +56,9 @@ export default function Gift() {
                     <div className="EquipementItem PageItem PageGift">
 
                         <p align="justify">
-                            <p align="justify">Un délicieux moment de détente pour oublier le stress quotidien, <b>c’est la promesse que vous offrez</b>.</p>
-                            <p align="justify">Envoyez ou offrez un coffret comprenant votre <b>invitation personnalisée</b>.</p>
-                            <p align="justify">Pour un <b>cadeau de dernière minute</b>, une invitation personnalisée electronique vous sera envoyée.</p>
+                            <p align="justify"><b>Offrez à vos proches</b> un délicieux moment de détente pour oublier le stress quotidien.</p>
+                            <p align="justify">Nous vous proposons un coffret comprenant votre <b>invitation personnalisée</b>, envoyée à domicile par nos soins.</p>
+                            <p align="justify">Pour un <b>cadeau de dernière minute</b>, un envoi par mail durant les horaires d'ouverture du spa est possible.</p>
                         </p>
                         <img src={Coffret} alt="coffret cadeau" width="580" height="350" />
                     </div>

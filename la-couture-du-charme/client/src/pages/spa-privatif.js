@@ -144,14 +144,13 @@ export default function SpaPrivatif() {
 
                 <div className="ContainerHome">
 
-                    <h3 align="center">Quels types d'évènements peuvent être organisés ?</h3>
+                    <h3 align="center">Quels types d'évènements peuvent être organisés à la Couture du Charme ?</h3>
                     <div className="EquipementItem PageItem NoImage">
 
                         <p align="justify">
-                            <p align="justify">Vous pouvez louer la piscine pour n'importe quel type d'évènements (dans le respect du caractère relaxant des lieux.) </p>
+                            <p align="justify">Vous pouvez réserver l'espace <b>spa privatif</b> pour n'importe quel type d'évènements (dans le respect du caractère relaxant des lieux.) </p>
                             <p>Que ce soit des <b>anniversaires</b> en famille ou avec des amis, des <b>EVJF</b> (enterrement de vie de jeune fille) ou <b>EVG</b> (enterrement de vie de garçon), avec vos collègues pour renforcer les liens lors d'un <b>team building</b> ou tout simplement pour venir vous détendre quelques heures <b>en couple</b> lors d'un rendez-vous romantique. </p>
                             <p>Pour vos évènements, nous pouvons prévoir <b>apéritif dinatoire</b>, ou <b>repas en table d'hôtes.</b> <i>(NB : il n'est pas autorisé d'amener boissons ou nourriture dans l'espace bien-être.) </i></p>
-                            <p><u>A noter</u> : certains créneaux sont aussi proposés en accès piscine seul. </p>
                             <p align="center"><b>N'hésitez pas à nous  contacter pour plus de renseignements !</b></p>
                         </p>
                     </div>
@@ -164,11 +163,11 @@ export default function SpaPrivatif() {
 
                 <div className="ContainerHome">
 
-                    <h3 align="center">Quels sont les équipements disponibles avec la pisicine ?</h3>
+                    <h3 align="center">Quels sont les équipements disponibles avec le jacuzzi ?</h3>
                     <div className="EquipementItem PageItem NoImage">
 
                         <p align="justify">
-                            <p align="justify">Vous pouvez être maximum <b>10 personnes</b> par créneau réservé. Outre la <b>pisicine</b>, qui dispose de 5 jets massants et d'une nage à contre courant, vous avez accès à un <b>sauna</b> et un <b>jaccuzzi</b>. </p>
+                            <p align="justify">Vous pouvez être maximum <b>10 personnes</b> par créneau réservé dans l'espace détente. Outre le jacuzzi, vous avez accès à un <b>sauna</b> et une <b>piscine</b> de 10m sur 4 m, qui dispose de 5 jets massants et d'une nage à contre courant. </p>
                             <p> Une douche est à votre disposition ainsi que des vestiaires. Nous pouvons fournir les <b>serviettes</b></p>
                             <p>Nous offrons la possibilité de commander des <b>boissons et en-cas</b> dans le respect des règles d'hygiène (gobelets spéciaux, espace dédié...), mais il n'est pas autorisé d'amener boissons ou nourriture personnelles</p>
                             <p align="center"> Pensez à réserver vos <b>massages</b> ! </p>
