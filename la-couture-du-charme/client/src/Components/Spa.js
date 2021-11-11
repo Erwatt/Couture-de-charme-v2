@@ -563,7 +563,7 @@ const[semaine,setSemaine]=useState(false)
                             </div>
                         </div> : false}
                     <p>Message personnel accompagnant le cadeau :</p>
-                    {!validate?<textarea onChange={(e) => setMessage(e.target.value)} rows="5" cols="50" maxLength="240" className="envoiMassage11"/>:<textarea rows="5" cols="50" maxLength="240" className="envoiMassage3" disabled/>}
+                        {!validate?<textarea onChange={(e) => setMessage(e.target.value)} rows="5" cols="50" maxLength="240" className="envoiMassage11"/>:<textarea rows="5" cols="50" maxLength="240" className="envoiMassage3" disabled/>}
                     {
                         !validate ? <p onClick={() => Validate()} id="envoiMassage12" className="panier">Valider</p>
                             : <p onClick={() => Invalidate()} id="envoiMassage13" className="panier-reinit">Réinitialiser</p>

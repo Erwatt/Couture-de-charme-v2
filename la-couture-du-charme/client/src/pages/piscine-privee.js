@@ -100,8 +100,14 @@ export default function ChambresHotes() {
 
                 </div>
 
+                <div className="BoutonBlack" data-aos="fade-right" data-aos-duration="1000">
+                    <a href="/">Retour Accueil</a>
+                </div>
+
+
                 <Reserver/>
 
+                
             </div>
 
             <Adresse />
