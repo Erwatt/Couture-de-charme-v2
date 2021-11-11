@@ -44,7 +44,7 @@ export default function Home() {
             lien: "/piscine-privee",
             image: Piscine,
             aos:"fade-right",
-            description: "Sautez dans le grand bain en plongeant dans la pisicine intérieure chauffée à <b>30°C toute l’année</b>. <br/><br/>Vous êtes sportif ? Elle est équipée d’un kit de <b>nage à contre courant</b> réglable en intensité. <br/><br/>Pour votre bien-être, elle comporte une cascade et <b>5 jets de massage</b> pour le dos, fessiers, abdos et mollets."
+            description: "Prélassez-vous dans le grand bain de la piscine intérieure de 10m sur 4m chauffée à <b>30°C toute l’année</b>. <br/><br/>Vous êtes sportif ? Elle est équipée d’un kit de <b>nage à contre courant</b> réglable en intensité. <br/><br/>Pour votre bien-être, elle comporte une cascade et <b>5 jets de massage</b> pour le dos, fessiers, abdos et mollets."
         },
         {
             titre: "SAUNA FINLANDAIS PRIVATIF",
@@ -58,7 +58,7 @@ export default function Home() {
             lien: "#",
             image: Massage,
             aos:"fade-right",
-            description: "Invitez vos sens à découvrir les bienfaits d’un massage personnalisé concocté par notre <b>équipe d’esthéticiennes</b>. <br/><br/><b>Seul ou en duo</b>, quelle que soit la zone que vous souhaitez détendre, il ne vous reste qu’à préciser la pression souhaitée, et la senteur de l’huile de massage qui vous inspire."
+            description: "Invitez vos sens à découvrir les bienfaits d’un massage personnalisé concocté par notre <b>équipe d’esthéticiennes</b>. <br/><br/><b>Seul ou en duo</b>, quelle que soit la zone que vous souhaitez détendre, il ne vous reste qu’à préciser la pression souhaitée, et la senteur de l’huile de massage qui vous inspire : sensation de bienfait assurée !"
         },
         {
             titre: "CHAMBRE D’HÔTES",
@@ -111,7 +111,7 @@ export default function Home() {
 
                             <div className="PresentationItem">
                                 <div className="Separateur"></div>
-                                <p align="justify">Au cœur d'une nature calme et verdoyante, la <b>Couture du Charme</b> vous accueille dans son <b>spa privatif</b>, et ses <b>chambres d’hôtes</b>, à Saméon, à proximité d'Orchies et Saint Amand Les Eaux et seulement à 20 minutes de Lille et Valenciennes.</p>
+                                <p align="justify">Au cœur d'une nature calme et verdoyante, la <b>Couture du Charme</b> vous accueille dans son <b>spa privatif</b> et ses <b>chambres d’hôtes.</b> A Saméon, à proximité d'Orchies et Saint Amand Les Eaux, 20 minutes seulement vous séparent de Lille et Valenciennes.</p>
                                 <div className="Separateur"></div>
                             </div>
 
