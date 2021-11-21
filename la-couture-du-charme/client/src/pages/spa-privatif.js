@@ -42,9 +42,10 @@ export default function SpaPrivatif() {
             <div className="MainHome">
 
                 <div className="TitrePage">
-                    <h1 align="center">SPA privatif avec Jaccuzzi</h1>
-                    <h2 align="center">8 personnes maximum</h2>
-                    <p align="center">Entre <b>amis</b>, en <b>famille</b>, en <b>amoureux</b> ou pour vos évènements de <b>team building</b>. Le SPA privatif de la Couture du Charme est l'endroit idéal pour tous vos évènements. Equipé d'un <b>SPA privatif de 100m2</b> comprenant un jacuzzi, une piscine, un sauna, une terrasse. Vous pourrez réserver des massages, commander des boissons au <b>bord de la piscine</b> et vous y reposer dans nos chambres d'hôtes.</p>
+                    <h1 align="center">Centre de détente privatif avec Jacuzzi</h1>
+                    <h2 align="center">10 personnes maximum</h2>
+                    <p align="center">Entre <b>amis</b>, en <b>famille</b>, en <b>amoureux</b> ou pour vos évènements de <b>team building</b>, le SPA privatif de la Couture du Charme est l'endroit détente idéal pour tous vos évènements !</p>
+                    <p align="center"> La Couture du Charme est un lieu reposant, doté d'un <b>SPA privatif de 130m2</b> comprenant un jacuzzi, une piscine, un sauna. Vous pourrez réserver des massages, commander une boisson au <b>bord de la piscine</b> et même prolonger la détente en choisissant de séjourner dans l'une de nos <b>chambres d'hôtes.</b></p>
                 </div>
 
                 <div className="ContainerBackground" data-aos="fade-left" data-aos-duration="1000">
@@ -55,7 +56,7 @@ export default function SpaPrivatif() {
                         <div className="EquipementItem PageItem">
 
                             <p align="justify">
-                                <p align="justify"><b>Excellent remède au stress</b>, notre spa au design et au confort soigné vous permet de relâcher la pression et vous prélasser dans une eau à 37°C.</p>
+                                <p align="justify"><b>Excellent remède au stress</b>, notre spa au design et au confort soignés vous permet de relâcher la pression et vous prélasser dans une eau à 37°C.</p>
                                 <p align="justify">Chacune de ses <b>6 places dynamiques</b> offre une qualité de massage permettant d’atteindre un haut niveau de performance grâce à des spécificités méticuleusement étudiées : <b>multi jets hydrothérapie</b>, spots de chromothérapie...</p>
                             </p>
                             <img src={spa} alt="jacuzzi" width="580" height="350" />
@@ -65,7 +66,7 @@ export default function SpaPrivatif() {
 
                 </div>
 
-                <div className="ContainerBackground" data-aos="fade-right" data-aos-duration="1000">
+                {/* <div className="ContainerBackground" data-aos="fade-right" data-aos-duration="1000">
 
                     <div className="ContainerHome">
 
@@ -107,11 +108,11 @@ export default function SpaPrivatif() {
 
                     <div className="ContainerHome">
 
-                        <h3 align="center">Modelages</h3>
+                        <h3 align="center">Massages bien-être</h3>
                         <div className="EquipementItem PageItem">
 
                             <p align="justify">
-                                <p align="justify">Invitez vos sens à découvrir <b>les bienfaits d’un modelage personnalisé</b> concocté par notre équipe d’esthéticiennes.</p>
+                                <p align="justify">Invitez vos sens à découvrir <b>les bienfaits d’un massage bien-être personnalisé</b> concocté par notre équipe d’esthéticiennes.</p>
                                 <p align="justify"><b>Seul ou en duo</b>, quelle que soit la zone que vous souhaitez détendre, il ne vous reste qu’à préciser la pression souhaitée, et la senteur de l’huile de massage qui vous inspire…. Et elles se chargent de vous apporter une parfaite sensation de bienfait.</p>
                             </p>
                             <img src={poufs} alt="poufs" width="580" height="350" />
@@ -137,6 +138,48 @@ export default function SpaPrivatif() {
 
                     </div>
 
+                </div> */}
+
+                <div className="ContainerBackground" data-aos="fade-right" data-aos-duration="1000">
+
+                <div className="ContainerHome">
+
+                    <h3 align="center">Quels types d'évènements peuvent être organisés à la Couture du Charme ?</h3>
+                    <div className="EquipementItem PageItem NoImage">
+
+                        <p align="justify">
+                            <p align="justify">Vous pouvez réserver l'espace <b>spa privatif</b> pour n'importe quel type d'évènements (dans le respect du caractère relaxant des lieux.) </p>
+                            <p>Que ce soit des <b>anniversaires</b> en famille ou avec des amis, des <b>EVJF</b> (enterrement de vie de jeune fille) ou <b>EVG</b> (enterrement de vie de garçon), avec vos collègues pour renforcer les liens lors d'un <b>team building</b> ou tout simplement pour venir vous détendre quelques heures <b>en couple</b> lors d'un rendez-vous romantique. </p>
+                            <p>Pour vos évènements, nous pouvons prévoir <b>apéritif dinatoire</b>, ou <b>repas en table d'hôtes.</b> <i>(NB : il n'est pas autorisé d'amener boissons ou nourriture dans l'espace bien-être.) </i></p>
+                            <p align="center"><b>N'hésitez pas à nous  contacter pour plus de renseignements !</b></p>
+                        </p>
+                    </div>
+
+                </div>
+
+                </div>
+
+                <div className="ContainerBackground" data-aos="fade-left" data-aos-duration="1000">
+
+                <div className="ContainerHome">
+
+                    <h3 align="center">Quels sont les équipements disponibles avec le jacuzzi ?</h3>
+                    <div className="EquipementItem PageItem NoImage">
+
+                        <p align="justify">
+                            <p align="justify">Vous pouvez être maximum <b>10 personnes</b> par créneau réservé dans l'espace détente. Outre le jacuzzi, vous avez accès à un <b>sauna</b> et une <b>piscine</b> de 10m sur 4 m, qui dispose de 5 jets massants et d'une nage à contre courant. </p>
+                            <p> Une douche est à votre disposition ainsi que des vestiaires. Nous pouvons fournir les <b>serviettes</b></p>
+                            <p>Nous offrons la possibilité de commander des <b>boissons et en-cas</b> dans le respect des règles d'hygiène (gobelets spéciaux, espace dédié...), mais il n'est pas autorisé d'amener boissons ou nourriture personnelles</p>
+                            <p align="center"> Pensez à réserver vos <b>massages</b> ! </p>
+                        </p>
+                    </div>
+
+                </div>
+
+                </div>
+
+                <div className="BoutonBlack" data-aos="fade-right" data-aos-duration="1000">
+                    <a href="/">Retour Accueil</a>
                 </div>
 
 

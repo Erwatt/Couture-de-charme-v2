@@ -10,7 +10,9 @@ import CheckoutForm from './CheckoutForm'
 
 export default function Spa() {
 
-    window.scrollTo(0, 0);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     // const[min30, setMin30]=useState(false);
     // const[min60, setMin60]=useState(false);
@@ -25,7 +27,6 @@ export default function Spa() {
     const [invitation, setInvitation] = useState(false);
     const [enveloppe, setEnveloppe] = useState(false);
     const [coffret, setCoffret] = useState(false);
-    const [vip, setVip] = useState(false);
 
     // const Book30min = ()=>{
     //     if(!validate){
@@ -167,7 +168,7 @@ export default function Spa() {
             else { setInvitation(true) }
             setEnveloppe(false)
             setCoffret(false)
-            setVip(false)
+            setEnveloppe(false)
         }
     }
 
@@ -177,7 +178,6 @@ export default function Spa() {
             else { setEnveloppe(true) }
             setInvitation(false)
             setCoffret(false)
-            setVip(true)
         }
     }
 
@@ -185,22 +185,35 @@ export default function Spa() {
         if (!validate) {
             if (coffret) { setCoffret(false) }
             else { setCoffret(true) }
-            setEnveloppe(false)
             setInvitation(false)
-            setVip(true)
+            setCoffret(true)
+            setEnveloppe(false)
         }
     }
 
-    const [semaine, setSemaine] = useState(false)
-    const [weekend, setWeekend] = useState(false)
-    const [before17, setBefore17] = useState(false)
-    const [after17, setAfter17] = useState(false)
-    const [nombre, setNombre] = useState(0)
-    const [validate, setvalidate] = useState(false)
-    const [creneau2h, setCreneau2h] = useState(false)
-    const [creneau1h30, setCreneau1h30] = useState(false)
+const[semaine,setSemaine]=useState(false)
+    const [weekend,setWeekend]=useState(false)
+    const [before17,setBefore17]=useState(false)
+    const [after17,setAfter17]=useState(false)
+    const [nombre,setNombre]=useState(0)
+    const [validate,setvalidate]=useState(false)
+    const [creneau2h,setCreneau2h]=useState(false)
+    const [creneau1h30,setCreneau1h30]=useState(false)
     // const[creneau,setCreneau]=useState("Créneau Spa")
-    const [prix, setPrix] = useState(0)
+    const [prix, setPrix]=useState(0)
+    const [from, setFrom] = useState("");
+    const [to, setTo] = useState("");
+    const [mailReceiver, setMailReceiver] = useState("");
+    const [mailSender, setMailSender] = useState("");
+    const [telReceiver, setTelReceiver] = useState("");
+    const [telSender, SetTelSender] = useState("");
+    const [message, setMessage] = useState("");
+    const [deliveryName, setDeliveryName] = useState("");
+    const [adress, setAdress] = useState("");
+    const [postalCode, setPostalCode] = useState("");
+    const [city, setCity] = useState("");
+    const [creneau, setCreneau] = useState("");
+    const [sending, setSending] = useState("");
 
     const BookWeekend = () => {
         if (!validate) {
@@ -257,9 +270,10 @@ export default function Spa() {
     const Invalidate = () => {
         setvalidate(false)
     }
-
-    const Validate = () => {
-        if ((!semaine & !weekend) | (semaine & !after17 & !before17) | (semaine & after17 & !creneau1h30 & !creneau2h) | (!enveloppe & !coffret & !invitation)) {
+    
+    const Validate = ()=>{
+        if((!semaine&!weekend)|(semaine&!after17&!before17)|(semaine&after17&!creneau1h30&!creneau2h)|(!enveloppe&!coffret&!invitation)|
+        (from === "")|(to === "")|(mailReceiver === "")|(mailSender === "")|(telReceiver === "")|(telSender === "")|(message === "")){
             setvalidate(false)
         }
         else {
@@ -268,63 +282,141 @@ export default function Spa() {
     }
 
     useEffect(() => {
-        if (nombre !== 0) {
-            if (semaine) {
-                if (after17) {
-                    if (creneau1h30) {
+        if(nombre!==0){
+            if(semaine){ 
+                if(after17){
+                    if(creneau1h30){
+                        setCreneau(`Semaine, ${nombre} personnes créneau 1h30 après 17h`)
                         // setCreneau("Créneau Spa - " +" Semaine - "+nombre.toString()+ " personne(s)" +" - 1h30")
-                        if (nombre === 1 || nombre === 2) {
-                            if (coffret === true) { setPrix(108) }
-                            else { setPrix(90) }
+                        if(nombre===1||nombre===2){
+                            if(coffret===true){
+                                setPrix(108);
+                                setSending(`Coffret cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+                            }
+                            else{
+                                setPrix(90)
+                                if (enveloppe){
+                                    setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+                                    setPrix(92)
+                                }
+                                else{setSending(`Email`)}
+                            }
                         }
-                        else {
-                            if (coffret === true) { setPrix(108 + (nombre - 2) * 20) }
-                            else { setPrix(90 + (nombre - 2) * 20) }
+                        else{
+                            if(coffret===true){
+                                setPrix(108+(nombre-2)*20)
+                                setSending(`Coffret cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+                            }
+                            else{
+                                setPrix(90+(nombre-2)*20)
+                                if (enveloppe){
+                                    setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+                                    setPrix(92+(nombre-2)*20)
+                                }
+                                else{setSending(`Email`)}
+                            }
                         }
                     }
                     else {
                         // setCreneau(" Créneau Spa - Semaine - " +nombre.toString()+ " personne(s)" +" - 2h")
-                        if (nombre === 1 || nombre === 2) {
-                            if (coffret === true) { setPrix(128) }
-                            else { setPrix(110) }
-                        }
-                        else {
-                            if (coffret === true) { setPrix(128 + (nombre - 2) * 30) }
-                            else { setPrix(110 + (nombre - 2) * 30) }
+                        setCreneau(`Semaine, ${nombre} personnes créneau 2H après 17h`)
+                        if(nombre===1||nombre===2){
+                            if(coffret===true){
+                                setPrix(128)
+                                setSending(`Coffret cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+                            }
+                            else{
+                                setPrix(110)
+                                if (enveloppe){
+                                    setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+                                    setPrix(112)
+                                }
+                                else{setSending(`Email`)}
+                            }}
+                        else{
+                            if(coffret===true){setPrix(128+(nombre-2)*30)}
+                            else{
+                                setPrix(110+(nombre-2)*30)
+                                if (enveloppe){
+                                    setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+                                    setPrix(112+(nombre-2)*30)
+                                }
+                                else{setSending(`Email`)}
+                            }
                         }
                     }
                 }
 
                 else {
                     // setCreneau("Créneau Spa - Semaine - " +nombre.toString()+ " personne(s)")
-                    if (nombre === 1 || nombre === 2) {
-                        if (coffret === true) { setPrix(98) }
-                        else { setPrix(80) }
-                    }
-                    else {
-                        if (coffret === true) { setPrix(98 + (nombre - 2) * 20) }
-                        else { setPrix(80 + (nombre - 2) * 20) }
-                    }
+                    setCreneau(`Semaine, ${nombre} personnes créneau avant 17h`)
+                    if(nombre===1||nombre===2){
+                        if(coffret===true){
+                            setPrix(98)
+                            setSending(`Coffret cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+                        }
+                        else{
+                            setPrix(80)
+                            if (enveloppe){
+                                setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+                                setPrix(82)
+                            }
+                                else{setSending(`Email`)}
+                        }}
+                    else{
+                        if(coffret===true){
+                            setPrix(98+(nombre-2)*20)
+                            setSending(`Coffret cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+                        }
+                        else{
+                            setPrix(80+(nombre-2)*20)
+                            if (enveloppe){
+                                setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+                                setPrix(82+(nombre-2)*20)
+                            }
+                                else{setSending(`Email`)}
+                        }
+                    }                        
                 }
 
             }
             else if (weekend) {
                 // setCreneau("Créneau Spa - Weekend - " +nombre.toString()+ " personne(s)")
-                if (nombre === 1 || nombre === 2) {
-                    if (coffret === true) { setPrix(148) }
-                    else { (setPrix(130)) }
-                }
-                else {
-                    if (coffret === true) { setPrix(148 + (nombre - 2) * 20) }
-                    else { setPrix(130 + (nombre - 2) * 20) }
-                }
+                setCreneau(`Weekend, ${nombre} personnes`)
+                if(nombre===1||nombre===2){
+                    if(coffret===true){
+                        setPrix(148)
+                        setSending(`Coffret cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+                    }
+                    else{
+                        setPrix(130)
+                        if (enveloppe){
+                            setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+                            setPrix(132)
+                        }
+                                else{setSending(`Email`)}
+                    }}
+                else{
+                    if(coffret===true){
+                        setPrix(148+(nombre-2)*20)
+                        setSending(`Coffret cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+                    }
+                    else{
+                        setPrix(130+(nombre-2)*20)
+                        if (enveloppe){
+                            setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+                            setPrix(132+(nombre-2)*20)
+                        }
+                        else{setSending(`Email`)}
+                    }}                    
             }
 
             if ((!semaine & !weekend) | (semaine & !after17 & !before17) | (semaine & after17 & !creneau1h30 & !creneau2h)) {
                 setPrix(0)
             }
         }
-    }, [after17, before17, coffret, enveloppe, invitation, creneau1h30, creneau2h, nombre, semaine, weekend])
+    }, [after17,before17, coffret, enveloppe, invitation, creneau1h30, creneau2h, nombre, semaine, weekend, adress, city, deliveryName, postalCode])
+    
 
 
     //Nouveau Code Stripe David
@@ -415,82 +507,89 @@ export default function Spa() {
                         }
                     </div>
                     <p><b>Options d'envoi :</b></p>
-                    <div className="modellingFlexRow">
+                    <div className="modellingFlexColumn">
                         {
-                            invitation ? <p className="Clicked2" onClick={() => BookInvitation()}>Invitation Electronique (gratuit)</p> : <p className="Unclicked2" onClick={() => BookInvitation()}>Invitation Electronique (gratuit)</p>
+                            invitation ? <p className="Clicked2" onClick={() => BookInvitation()}>E-mail</p> : <p className="Unclicked2" onClick={() => BookInvitation()}>E-mail</p>
                         }
                         {
-                            enveloppe ? <p className="Clicked2" onClick={() => BookEnveloppe()}>Enveloppe cadeau (gratuit)</p> : <p className="Unclicked2" onClick={() => BookEnveloppe()}>Enveloppe cadeau (gratuit)</p>
+                            enveloppe ? <p className="Clicked2" onClick={() => BookEnveloppe()}>Enveloppe</p> : <p className="Unclicked2" onClick={() => BookEnveloppe()}>Enveloppe</p>
                         }
                         {
-                            coffret ? <p className="Clicked2" onClick={() => BookCoffret()}>Boîte Cadeau la Couture du Charme (+18€)</p> : <p className="Unclicked2" onClick={() => BookCoffret()}>Boîte Cadeau la Couture du Charme (+18€)</p>
+                            coffret ? <p className="Clicked2" onClick={() => BookCoffret()}>Boîte Cadeau</p> : <p className="Unclicked2" onClick={() => BookCoffret()}>Boîte Cadeau</p>
                         }
                     </div>
-                    <p><b>Invitation électronique : </b>envoyée par nos soins par mail</p>
-                    <p><b>Enveloppe cadeau : </b>à retirer sur place ou envoyée par nos soins par courrier</p>
-                    <p><b>Boîte Cadeau la Couture du Charme: </b>envoyée par nos soins (délai Colissimo)</p>
+                    <p><b>E-mail : </b>Invitation électronique envoyée par nos soins par mail (durant les horaires du spa)</p>
+                    <p><b>Enveloppe cadeau : </b>à retirer sur place ou envoyée par nos soins par courrier + 2€</p>
+                    <p><b>Boîte Cadeau la Couture du Charme: </b>envoyée par nos soins (délai Colissimo) + 18€</p>
                     <div className="separation"></div>
                     <p><b>Personnalisez votre cadeau</b></p>
                     <div className="modellingFlexRow">
                         <div className="modellingFlexColumn">
                             <p>De la part de :</p>
-                            {!validate ? <input type="text" id="envoiMassage1" name="massage1" className="envoiMassage" /> : <input type="text" id="envoiMassage1" name="massage1" className="envoiMassage" disabled />}
-                            <p>Mail :</p>
-                            {!validate ? <input type="text" id="envoiMassage2" name="massage1" className="envoiMassage" /> : <input type="text" id="envoiMassage9" name="massage1" className="envoiMassage" disabled />}
-                            <p>Tél :</p>
-                            {!validate ? <input type="text" id="envoiMassage3" name="massage1" className="envoiMassage" /> : <input type="text" id="envoiMassage10" name="massage1" className="envoiMassage" disabled />}
+                            {!validate?<input type="text" onChange={(e) => setFrom(e.target.value)} id="envoiMassage1" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage1" name="massage1" className="envoiMassage" disabled/>}
+                            <p>Votre mail :</p>
+                            {!validate?<input type="text" onChange={(e) => setMailSender(e.target.value)} id="envoiMassage2" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage9" name="massage1" className="envoiMassage" disabled/>}
+                            <p>Votre tél :</p>
+                            {!validate?<input type="text" onChange={(e) => SetTelSender(e.target.value)} id="envoiMassage3" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage10" name="massage1" className="envoiMassage" disabled/>}
                         </div>
                         <div className="modellingFlexColumn">
                             <p>Offert à :</p>
-                            {!validate ? <input type="text" id="envoiMassage4" name="massage1" className="envoiMassage1" /> : <input type="text" id="envoiMassage2" name="massage1" className="envoiMassage1" disabled />}
-                            <p>Mail :</p>
-                            {!validate ? <input type="text" id="envoiMassage5" name="massage1" className="envoiMassage1" /> : <input type="text" id="envoiMassage11" name="massage1" className="envoiMassage1" disabled />}
-                            <p>Tél :</p>
-                            {!validate ? <input type="text" id="envoiMassage6" name="massage1" className="envoiMassage1" /> : <input type="text" id="envoiMassage12" name="massage1" className="envoiMassage1" disabled />}
+                            {!validate?<input type="text" onChange={(e) => setTo(e.target.value)} id="envoiMassage4" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage2" name="massage1" className="envoiMassage1" disabled/>}
+                            <p>Mail destinataire :</p>
+                            {!validate?<input type="text" onChange={(e) => setMailReceiver(e.target.value)} id="envoiMassage5" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage11" name="massage1" className="envoiMassage1" disabled/>}
+                            <p>Tél destinataire :</p>
+                            {!validate?<input type="text" onChange={(e) => setTelReceiver(e.target.value)} id="envoiMassage6" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage12" name="massage1" className="envoiMassage1" disabled/>}
                         </div>
                     </div>
-                    {vip ?
+                    {coffret ?
                         <div>
                             <p>À livrer à (Nom Prénom) :</p>
-                            {!validate ? <input type="text" id="envoiMassage7" name="massage1" className="envoiMassage2" /> : <input type="text" id="envoiMassage3" name="massage1" className="envoiMassage2" disabled />}
-
+                            {!validate?<input onChange={(e) => setDeliveryName(e.target.value)} type="text" id="envoiMassage7" name="massage1" className="envoiMassage2"/>:<input type="text" id="envoiMassage3" name="massage1" className="envoiMassage2" disabled/>}
+                            
                             <p>Adresse de livraison :</p>
-                            {!validate ? <input type="text" id="envoiMassage8" name="massage1" className="envoiMassage2" /> : <input type="text" id="envoiMassage4" name="massage1" className="envoiMassage2" disabled />}
-
+                            {!validate?<input onChange={(e) => setAdress(e.target.value)} type="text" id="envoiMassage8" name="massage1" className="envoiMassage2"/>:<input type="text" id="envoiMassage4" name="massage1" className="envoiMassage2" disabled/>}
+                            
                             <div className="modellingFlexRow">
                                 <div className="modellingFlexColumn">
                                     <p>Code postal :</p>
-                                    {!validate ? <input type="text" id="envoiMassage9" name="massage1" className="envoiMassage" /> : <input type="text" id="envoiMassage5" name="massage1" className="envoiMassage" disabled />}
-
+                                    {!validate?<input onChange={(e) => setPostalCode(e.target.value)} type="text" id="envoiMassage9" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage5" name="massage1" className="envoiMassage" disabled/>}
+                                    
                                 </div>
                                 <div className="modellingFlexColumn">
                                     <p>Ville :</p>
-                                    {!validate ? <input type="text" id="envoiMassage10" name="massage1" className="envoiMassage1" /> : <input type="text" id="envoiMassage6" name="massage1" className="envoiMassage1" disabled />}
-
+                                    {!validate?<input onChange={(e) => setCity(e.target.value)} type="text" id="envoiMassage10" name="massage1" className="envoiMassage1" />:<input type="text" id="envoiMassage6" name="massage1" className="envoiMassage1" disabled/>}
+                                
                                 </div>
                             </div>
                         </div> : false}
-                    <p>Message personnel (240 caractères maximum) :</p>
-                    {!validate ? <textarea rows="5" cols="50" maxLength="240" className="envoiMassage11" /> : <textarea rows="5" cols="50" maxLength="240" className="envoiMassage3" disabled />}
+                    <p>Message personnel accompagnant le cadeau :</p>
+                        {!validate?<textarea onChange={(e) => setMessage(e.target.value)} rows="5" cols="50" maxLength="240" className="envoiMassage11"/>:<textarea rows="5" cols="50" maxLength="240" className="envoiMassage3" disabled/>}
                     {
                         !validate ? <p onClick={() => Validate()} id="envoiMassage12" className="panier">Valider</p>
-                            : <p onClick={() => Invalidate()} id="envoiMassage13" className="panier">Réinitialiser</p>
+                            : <p onClick={() => Invalidate()} id="envoiMassage13" className="panier-reinit">Réinitialiser</p>
                     }
                     {
-                        validate ?
-                            <div>
-                                <div className="PriceBox">
-
-                                    <Elements stripe={stripePromise}>
-                                        <CheckoutForm element="ModelingGift" prix={prix}
-                                            ligne1={document.getElementById('envoiMassage5').value} />
-                                    </Elements>
-
-                                    <h2 className="giftPrice">{prix}€</h2>
-                                </div>
-                                <p className="StripeSentence">paiement effectué par <b>Stripe</b></p>
-                            </div>
-                            : false
+                        validate?
+                        <div className="PriceBox">
+                            <h2 className="giftPrice">{prix}€</h2>
+                            <Elements stripe={stripePromise}>
+                            <CheckoutForm element="ModelingGift" prix={prix}
+                            // ligne1={document.getElementById('envoiMassage5').value}
+                            event="spa"
+                            from={from}
+                            to={to}
+                            mailSender={mailSender}
+                            mailReceiver={mailReceiver}
+                            telSender={telSender}
+                            telReceiver={telReceiver}
+                            message={message}
+                            creneau={creneau}
+                            sending={sending}
+                            number={nombre}/>
+                            </Elements>
+                            <h4 style={{fontWeight: 'normal', margin:"2%"}}>Paiement effectué via <b>Stripe</b></h4>
+                        </div>
+                        : false
                     }
                 </div>
             </div>

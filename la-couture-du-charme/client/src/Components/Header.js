@@ -6,8 +6,8 @@ import { useHistory } from 'react-router-dom'
 
 
 //On importe les images
-import logo from '../Images/logo.png'
-import telephone from '../Images/phone-call.svg'
+import logo from '../Images/logoV2.png'
+import mail from '../Images/mail.png'
 
 //On importe le css
 import '../CSS/Header.scss'
@@ -74,7 +74,7 @@ export default function Header() {
 
                 <div className="ContainerHeader">
 
-                    <div className="link bouton"><img src={telephone} alt="icone telephone" width="20" height="20" />07 52 09 07 50</div>
+                    <div className="link bouton"><img src={mail} alt="icone mail" width="20" height="20" />spa@coutureducharme.fr</div>
 
                     <div className="link logo"> <img loading="auto" width="200" src={logo} alt="La Couture du Charme" className="header-logo" onClick={handleHome} /></div>
 

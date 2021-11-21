@@ -49,17 +49,17 @@ export default function Book() {
 
     const Choix = [
         {
-            titre: "RÉSERVER UN SPA",
+            titre: "RÉSERVER UN CRENEAU ESPACE DETENTE",
             lien: () => { BookSpa() },
             image: JET
         },
         {
-            titre: "RÉSERVER UNE CHAMBRE",
+            titre: "VERIFIER LES DISPONIBILITES DES CHAMBRES",
             lien: () => { BookRoom() },
             image: ROOM
         },
         {
-            titre: "OFFRIR UN SPA",
+            titre: "OFFRIR UNE CARTE CADEAU",
             lien: () => { handleGift() },
             image: BOX
         }
