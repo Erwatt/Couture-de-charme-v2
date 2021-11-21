@@ -2,6 +2,8 @@ import '../CSS/Modelling.scss';
 import React, { useState, useEffect } from 'react';
 import massage from '../Images/massage.jpg';
 // import { useHistory } from 'react-router-dom';
+import { Elements } from '@stripe/react-stripe-js'
+import { loadStripe } from '@stripe/stripe-js'
 import CheckoutForm from './CheckoutForm';
 // import services from '../services';
 
@@ -13,7 +15,7 @@ useEffect(() => {
 }, [])
 
 
-
+const stripePromise = loadStripe("pk_test_51JKLlzFWy0s3veRrxsohTmNgi5LdmSqBZDAyHHkce2q8JT80kWCM22PglHlQMAjoRZPe239mgXIwoyAK7FY9eCTO00FDLClGaK")
 const[min30, setMin30]=useState(false);
 const[min60, setMin60]=useState(false);
 const[solo, setSolo]=useState(false);
@@ -26,6 +28,19 @@ const[vip, setVip]=useState(false);
 // const[creneau,setCreneau]=useState("Créneau Modelage");
 const[prix, setPrix]=useState(0);
 const[validate,setvalidate]=useState(false);
+const [from, setFrom] = useState("");
+const [to, setTo] = useState("");
+const [mailReceiver, setMailReceiver] = useState("");
+const [mailSender, setMailSender] = useState("");
+const [telReceiver, setTelReceiver] = useState("");
+const [telSender, SetTelSender] = useState("");
+const [message, setMessage] = useState("");
+const [deliveryName, setDeliveryName] = useState("");
+const [adress, setAdress] = useState("");
+const [postalCode, setPostalCode] = useState("");
+const [city, setCity] = useState("");
+const [creneau, setCreneau] = useState("");
+const [sending, setSending] = useState("");
 
 
 const Book30min = ()=>{
@@ -105,31 +120,75 @@ useEffect(() => {
     if(min30){
         if(solo){
             // setCreneau("Créneau Modelage - " +nombre.toString()+ " personne" +" - 30 min")
-            if(coffret===true){setPrix(53)}
-            else{setPrix(35)}
+            setCreneau('Créneau massage 30min solo')
+            if(coffret===true){
+                setPrix(53)
+                setSending(`Coffret cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+            }
+            else if (enveloppe){
+                setPrix(37)
+                setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+            }
+            else{
+                setPrix(35)
+                setSending('Email');
+            }
         }
         else if (duo){
+            setCreneau('Créneau massage 30min duo')
             // setCreneau(" Créneau Modelage - " +nombre.toString()+ " personnes" +" - 30 min")
-            if(coffret===true){setPrix(78)}
-            else{setPrix(60)}                          
+            if(coffret===true){
+                setPrix(78)
+                setSending(`Coffret cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+            }
+            else if (enveloppe){
+                setPrix(62)
+                setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+            }     
+            else{
+                setPrix(60)
+                setSending('Email');
+            }                     
         }
     }
             
     else if (min60){
         if(solo){
             // setCreneau("Créneau Modelage - " +nombre.toString()+ " personne" +" - 60 min")
-            if(coffret===true){setPrix(78)}
-            else{setPrix(60)}                  
+            setCreneau('Créneau massage 60min solo')
+            if(coffret===true){
+                setPrix(78)
+                setSending(`Coffret cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+            }
+            else if(enveloppe){
+                setPrix(62)
+                setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+            } 
+            else{
+                setPrix(60)
+                setSending('Email');
+            }                 
         }
         else if (duo){
+            setCreneau('Créneau massage 60min duo')
             // setCreneau("Créneau Modelage - " +nombre.toString()+ " personnes"  +" - 60 min")
-            if(coffret===true){setPrix(118)}
-            else{setPrix(100)}   
+            if(coffret===true){
+                setPrix(118)
+                setSending(`Coffret cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+            }
+            else if(enveloppe){
+                setPrix(102)
+                setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
+            }
+            else{
+                setPrix(100)
+                setSending('Email');
+            }
         }
     }
 
     if ((!min30&!min60)|(!solo&!duo)){setPrix(0)}
-}, [coffret, enveloppe, solo, duo, invitation, min30, min60]);
+}, [coffret, enveloppe, solo, duo, invitation, min30, min60, deliveryName, adress, postalCode, city]);
 
 // const [name, setName] = useState("");
 // const [mail, setMail] = useState("");
@@ -187,61 +246,61 @@ useEffect(() => {
                     <p><b>Options d'envoi :</b></p>
                     <div className="modellingFlexRow">
                     {
-                            invitation?<p className="Clicked2" onClick={()=>BookInvitation()}>Invitation Electronique (gratuit)</p>:<p className="Unclicked2" onClick={()=>BookInvitation()}>Invitation Electronique (gratuit)</p>
+                            invitation?<p className="Clicked2" onClick={()=>BookInvitation()}>Invitation Electronique</p>:<p className="Unclicked2" onClick={()=>BookInvitation()}>Invitation Electronique</p>
                         }
                         {
-                            enveloppe?<p className="Clicked2" onClick={()=>BookEnveloppe()}>Enveloppe cadeau (gratuit)</p>:<p className="Unclicked2" onClick={()=>BookEnveloppe()}>Enveloppe cadeau (gratuit)</p>
+                            enveloppe?<p className="Clicked2" onClick={()=>BookEnveloppe()}>Enveloppe cadeau</p>:<p className="Unclicked2" onClick={()=>BookEnveloppe()}>Enveloppe cadeau</p>
                         }
                         {
-                            coffret?<p className="Clicked2" onClick={()=>BookCoffret()}>Boîte Cadeau la Couture du Charme (+18€)</p>:<p className="Unclicked2" onClick={()=>BookCoffret()}>Boîte Cadeau la Couture du Charme (+18€)</p>
+                            coffret?<p className="Clicked2" onClick={()=>BookCoffret()}>Boîte Cadeau la Couture du Charme</p>:<p className="Unclicked2" onClick={()=>BookCoffret()}>Boîte Cadeau la Couture du Charme</p>
                         }
                     </div>
                     <p><b>Invitation électronique : </b>envoyée par nos soins par mail</p>
-                    <p><b>Enveloppe cadeau : </b>à retirer sur place ou envoyée par nos soins par courrier</p>
-                    <p><b>Boîte Cadeau la Couture du Charme: </b>envoyée par nos soins (délai Colissimo)</p>
+                    <p><b>Enveloppe cadeau : </b>à retirer sur place ou envoyée par nos soins par courrier (+2€)</p>
+                    <p><b>Boîte Cadeau la Couture du Charme: </b>envoyée par nos soins (délai Colissimo + 18€)</p>
                     <div className="separation"></div>
                     <p><b>Personnalisez votre cadeau</b></p>
                     <div className="modellingFlexRow">
                         <div className="modellingFlexColumn">
                             <p>De la part de :</p>
-                            {!validate?<input type="text" id="envoiMassage1" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage1" name="massage1" className="envoiMassage" disabled/>}
+                            {!validate?<input onChange={(e) => setFrom(e.target.value)} type="text" id="envoiMassage1" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage1" name="massage1" className="envoiMassage" disabled/>}
                             <p>Mail :</p>
-                            {!validate?<input type="text" id="envoiMassage9" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage9" name="massage1" className="envoiMassage" disabled/>}
+                            {!validate?<input onChange={(e) => setMailSender(e.target.value)} type="text" id="envoiMassage9" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage9" name="massage1" className="envoiMassage" disabled/>}
                             <p>Tél :</p>
-                            {!validate?<input type="text" id="envoiMassage10" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage10" name="massage1" className="envoiMassage" disabled/>}
+                            {!validate?<input onChange={(e) => SetTelSender(e.target.value)} type="text" id="envoiMassage10" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage10" name="massage1" className="envoiMassage" disabled/>}
                         </div>
                         <div className="modellingFlexColumn">
                             <p>Offert à :</p>
-                            {!validate?<input type="text" id="envoiMassage2" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage2" name="massage1" className="envoiMassage1" disabled/>}
+                            {!validate?<input onChange={(e) => setTo(e.target.value)} type="text" id="envoiMassage2" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage2" name="massage1" className="envoiMassage1" disabled/>}
                             <p>Mail :</p>
-                            {!validate?<input type="text" id="envoiMassage11" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage11" name="massage1" className="envoiMassage1" disabled/>}
+                            {!validate?<input onChange={(e) => setMailReceiver(e.target.value)} type="text" id="envoiMassage11" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage11" name="massage1" className="envoiMassage1" disabled/>}
                             <p>Tél :</p>
-                            {!validate?<input type="text" id="envoiMassage12" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage12" name="massage1" className="envoiMassage1" disabled/>}
+                            {!validate?<input onChange={(e) => setTelReceiver(e.target.value)} type="text" id="envoiMassage12" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage12" name="massage1" className="envoiMassage1" disabled/>}
                         </div>
                     </div>
                     {vip?
                         <div>
                             <p>À livrer à (Nom Prénom) :</p>
-                            {!validate?<input type="text" id="envoiMassage3" name="massage1" className="envoiMassage2"/>:<input type="text" id="envoiMassage3" name="massage1" className="envoiMassage2" disabled/>}
+                            {!validate?<input onChange={(e) => setDeliveryName(e.target.value)} type="text" id="envoiMassage3" name="massage1" className="envoiMassage2"/>:<input type="text" id="envoiMassage3" name="massage1" className="envoiMassage2" disabled/>}
                             
                             <p>Adresse de livraison :</p>
-                            {!validate?<input type="text" id="envoiMassage4" name="massage1" className="envoiMassage2"/>:<input type="text" id="envoiMassage4" name="massage1" className="envoiMassage2" disabled/>}
+                            {!validate?<input onChange={(e) => setAdress(e.target.value)} type="text" id="envoiMassage4" name="massage1" className="envoiMassage2"/>:<input type="text" id="envoiMassage4" name="massage1" className="envoiMassage2" disabled/>}
                             
                             <div className="modellingFlexRow">
                                 <div className="modellingFlexColumn">
                                     <p>Code postal :</p>
-                                    {!validate?<input type="text" id="envoiMassage5" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage5" name="massage1" className="envoiMassage" disabled/>}
+                                    {!validate?<input onChange={(e) => setPostalCode(e.target.value)} type="text" id="envoiMassage5" name="massage1" className="envoiMassage"/>:<input type="text" id="envoiMassage5" name="massage1" className="envoiMassage" disabled/>}
                                     
                                 </div>
                                 <div className="modellingFlexColumn">
                                     <p>Ville :</p>
-                                    {!validate?<input type="text" id="envoiMassage6" name="massage1" className="envoiMassage1" />:<input type="text" id="envoiMassage6" name="massage1" className="envoiMassage1" disabled/>}
+                                    {!validate?<input onChange={(e) => setCity(e.target.value)} type="text" id="envoiMassage6" name="massage1" className="envoiMassage1" />:<input type="text" id="envoiMassage6" name="massage1" className="envoiMassage1" disabled/>}
                                 
                                 </div>
                             </div>
                         </div>:false}
                     <p>Message personnel (240 caractères maximum) :</p>
-                    {!validate?<textarea rows="5" cols="50" maxLength="240" className="envoiMassage3"/>:<textarea rows="5" cols="50" maxLength="240" className="envoiMassage3" disabled/>}
+                    {!validate?<textarea onChange={(e) => setMessage(e.target.value)} rows="5" cols="50" maxLength="240" className="envoiMassage3"/>:<textarea rows="5" cols="50" maxLength="240" className="envoiMassage3" disabled/>}
                     
                     {
                         !validate?<p onClick={()=>Validate()}  id="envoiMassage7" className="panier">Valider</p>
@@ -249,12 +308,23 @@ useEffect(() => {
                     }              
                     {
                         validate?
-                        <div>
                             <div className="PriceBox">
-                                <CheckoutForm element="ModelingGift" prix={prix}/>
-                                <h2 className="giftPrice">{prix}€</h2>
-                            </div>
-                            <p className="StripeSentence">paiement effectué par <b>Stripe</b></p>
+                            <h2 className="giftPrice">{prix}€</h2>
+                            <Elements stripe={stripePromise}>
+                            <CheckoutForm element="ModelingGift" prix={prix}
+                            // ligne1={document.getElementById('envoiMassage5').value}
+                            event="spa"
+                            from={from}
+                            to={to}
+                            mailSender={mailSender}
+                            mailReceiver={mailReceiver}
+                            telSender={telSender}
+                            telReceiver={telReceiver}
+                            message={message}
+                            creneau={creneau}
+                            sending={sending}/>
+                            </Elements>
+                            <h4 style={{fontWeight: 'normal', margin:"2%"}}>Paiement effectué via <b>Stripe</b></h4>
                         </div>
                         :false
                     }
