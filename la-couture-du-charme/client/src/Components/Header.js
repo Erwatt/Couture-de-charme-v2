@@ -6,7 +6,7 @@ import { useHistory } from 'react-router-dom'
 
 
 //On importe les images
-import logo from '../Images/logo.png'
+import logo from '../Images/logoV2.png'
 import mail from '../Images/mail.png'
 
 //On importe le css
