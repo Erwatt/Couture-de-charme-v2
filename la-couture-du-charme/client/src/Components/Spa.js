@@ -509,7 +509,7 @@ const[semaine,setSemaine]=useState(false)
                     <p><b>Options d'envoi :</b></p>
                     <div className="modellingFlexColumn">
                         {
-                            invitation ? <p className="Clicked2" onClick={() => BookInvitation()}>Invitation</p> : <p className="Unclicked2" onClick={() => BookInvitation()}>Invitation</p>
+                            invitation ? <p className="Clicked2" onClick={() => BookInvitation()}>E-mail</p> : <p className="Unclicked2" onClick={() => BookInvitation()}>E-mail</p>
                         }
                         {
                             enveloppe ? <p className="Clicked2" onClick={() => BookEnveloppe()}>Enveloppe</p> : <p className="Unclicked2" onClick={() => BookEnveloppe()}>Enveloppe</p>
@@ -518,7 +518,7 @@ const[semaine,setSemaine]=useState(false)
                             coffret ? <p className="Clicked2" onClick={() => BookCoffret()}>Boîte Cadeau</p> : <p className="Unclicked2" onClick={() => BookCoffret()}>Boîte Cadeau</p>
                         }
                     </div>
-                    <p><b>Invitation électronique : </b>envoyée par nos soins par mail (horaires du spa)</p>
+                    <p><b>E-mail : </b>Invitation électronique envoyée par nos soins par mail (durant les horaires du spa)</p>
                     <p><b>Enveloppe cadeau : </b>à retirer sur place ou envoyée par nos soins par courrier + 2€</p>
                     <p><b>Boîte Cadeau la Couture du Charme: </b>envoyée par nos soins (délai Colissimo) + 18€</p>
                     <div className="separation"></div>

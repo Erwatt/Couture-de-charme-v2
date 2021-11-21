@@ -14,7 +14,7 @@ function MentionsLegales() {
 
             <Helmet>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <title>Mentions légales - Couture du Charme à Saméon</title>
+                <title>Mentions légales - La Couture du Charme à Saméon</title>
                 <meta name="description" content="Retrouvez toutes les informations légales pour nous contacter." />
                 <html lang="fr" />
 
@@ -38,9 +38,9 @@ function MentionsLegales() {
                 <p> L'ensemble des éléments présents sur ce site sont protégés par le droit d'auteur et ne peuvent être reproduits sans l'accord préalable de la Couture du Charme :la présentation visuelle, le logo, le contenu écrit, le contenu audiovisuel, les photographies, les fonctionnalités du site internet... </p>
                 <br />
                 <h2>DONNEES A CARACTERE PERSONNEL</h2>
-                <p>Le présent site internet utilise des cookies dans le but de connaître les chiffres de fréquentation de ses différentes pages. L'objectif est de vous proposer du contenu de meilleur qualité, qui réponde parfaitement à vos attentes. Vos données personnelles sont collectées lors d'une prise de contact avec notamment le formulaire de contact ou lorsque vous prenez rendez-vous. Vous sont demandées uniquement les informations nécessaires pour pouvoir vous recontacter ou répondre à votre problématique. Nous ne communiquerons pas ces données à un tiers.</p>
-                <h2>DONNEES A CARACTERE PERSONNEL</h2>
-                <p>Le présent site internet utilise des cookies dans le but de connaître les chiffres de fréquentation de ses différentes pages. L'objectif est de vous proposer du contenu de meilleur qualité, qui réponde parfaitement à vos attentes. Vos données personnelles sont collectées lors d'une prise de contact avec notamment, notamment via le formulaire, lorsque vous prenez rendez-vous ou encore lorsque vous créez votre espace personnel en ligne. Vous est demandé, uniquement les informations nécessaires pour pouvoir vous recontacter ou répondre à votre problématique. Nous n'utiliserons pas ces informations dans un but de prospection, ni ne communiquerons ces données à un tiers.</p>
+                <p>Le présent site internet utilise des cookies dans le but de connaître les chiffres de fréquentation de ses différentes pages. L'objectif est de vous proposer du contenu de meilleure qualité, qui réponde parfaitement à vos attentes. Vos données personnelles sont collectées lors d'une prise de contact avec notamment le formulaire de contact ou lorsque vous prenez rendez-vous. Vous sont demandées uniquement les informations nécessaires pour pouvoir vous recontacter ou répondre à votre problématique. Nous n'utiliserons pas ces informations dans un but de prospection, ni ne communiquerons ces données à un tiers.</p>
+                <br />
+                <h2>RGPD</h2>
                 <p>Conformément au RGPD (règlement général sur la protection des données), vous disposez d’un droit d’information, d’accès, de rectification, d’effacement, de limitation, de portabilité et d’opposition sur vos données personnelles. Pour exercer ce droit, contactez-nous.</p>
             </div>
 

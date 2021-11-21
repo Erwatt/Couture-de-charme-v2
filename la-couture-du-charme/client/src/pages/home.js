@@ -37,14 +37,14 @@ export default function Home() {
             lien: "/spa-privatif",
             image: SPA,
             aos:"zoom-in-left",
-            description: "Relâchez la pression dans notre jacuzzi multi-jets <b>hydrothérapie</b> haute performance. <br/> <br/>Jusqu'à <b>6 personnes</b> pourront se prélasser dans une eau à <b>37°C</b>. <br/><br/>Profitez des bienfaits de la lumière, notre SPA est éclairé par des spots de <b>chromothérapie</b>."
+            description: "Evacuez la pression du quotidien dans notre jacuzzi multi-jets <b>hydrothérapie</b> haute performance. <br/> <br/>Jusqu'à <b>6 personnes</b> pourront se prélasser dans une eau à <b>37°C</b>. <br/><br/>Profitez des bienfaits de la lumière grâce aux spots de <b>chromothérapie</b>."
         },
         {
             titre: "PISCINE PRIVATIVE",
             lien: "/piscine-privee",
             image: Piscine,
             aos:"fade-right",
-            description: "Prélassez-vous dans le grand bain de la piscine intérieure de 10m sur 4m chauffée à <b>30°C toute l’année</b>. <br/><br/>Vous êtes sportif ? Elle est équipée d’un kit de <b>nage à contre courant</b> réglable en intensité. <br/><br/>Pour votre bien-être, elle comporte une cascade et <b>5 jets de massage</b> pour le dos, fessiers, abdos et mollets."
+            description: "Prélassez-vous dans le grand bain de la <b>piscine intérieure de 10m sur 4m</b> chauffée à <b>30°C toute l’année</b>. <br/><br/>Pour votre bien-être, elle comporte une <b>cascade</b> et <b>5 jets de massage</b> pour le dos, fessiers, abdos et mollets.<br/><br/>Vous êtes sportif ? Elle est équipée d’une <b>nage à contre courant</b> réglable en intensité."
         },
         {
             titre: "SAUNA FINLANDAIS PRIVATIF",
@@ -58,7 +58,7 @@ export default function Home() {
             lien: "#",
             image: Massage,
             aos:"fade-right",
-            description: "Invitez vos sens à découvrir les bienfaits d’un massage personnalisé concocté par notre <b>équipe d’esthéticiennes</b>. <br/><br/><b>Seul ou en duo</b>, quelle que soit la zone que vous souhaitez détendre, il ne vous reste qu’à préciser la pression souhaitée, et la senteur de l’huile de massage qui vous inspire : sensation de bienfait assurée !"
+            description: "Invitez vos sens à découvrir les bienfaits d’un massage personnalisé concocté par notre <b>équipe d’esthéticiennes</b>. <br/><br/><b>Seul ou en duo</b>, quelle que soit la zone que vous souhaitez détendre, il ne vous reste qu’à préciser la pression souhaitée, et la senteur de l’huile de massage qui vous inspire : <b>sensation de bienfait assurée !</b>"
         },
         {
             titre: "CHAMBRE D’HÔTES",

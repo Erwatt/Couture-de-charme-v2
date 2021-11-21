@@ -156,7 +156,7 @@ export default function Tarifs(){
                 <div className="borderBlack"></div>
                 <div className="flexRow">
                     <div className="flexColumn center">
-                        <p className="containerTitleESPACE"><b>FORFAIT CENTRE DE DETENTE & NUITÉE (2 personnes)</b></p>
+                        <p className="containerTitleESPACE"><b>FORFAIT CENTRE DE DETENTE & NUITÉE (2 pers.)</b></p>
                         <div className="center">2 h Centre de détente + nuitée en chambres d'hôtes + pdj</div>
                         <div className="center tarifAllInclusive">semaine: 195 € - le weekend : 210 € </div>
                     </div>
