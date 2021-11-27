@@ -6,9 +6,9 @@ import { Elements } from '@stripe/react-stripe-js'
 import { loadStripe } from '@stripe/stripe-js'
 import CheckoutForm from './CheckoutForm';
 // import services from '../services';
-import Diaporama from './Diaporama';
-import test from '../Images/arrow.png'
-import test2 from '../Images/box.jpg'
+// import Diaporama from './Diaporama';
+// import test from '../Images/arrow.png'
+// import test2 from '../Images/box.jpg'
 
 export default function Modelling(){
 
@@ -16,7 +16,7 @@ useEffect(() => {
     window.scrollTo(0, 0);
 }, [])
 
-const liste = [test, test2];
+// const liste = [test, test2];
 
 const stripePromise = loadStripe("pk_test_51JKLlzFWy0s3veRrxsohTmNgi5LdmSqBZDAyHHkce2q8JT80kWCM22PglHlQMAjoRZPe239mgXIwoyAK7FY9eCTO00FDLClGaK")
 const[min30, setMin30]=useState(false);
@@ -217,7 +217,7 @@ useEffect(() => {
     return(
         
         <div className="ModellingContainer">
-            <Diaporama picturesList={liste}/>
+            {/* <Diaporama picturesList={liste}/> */}
             <div className="modellingFlexRow">
                 <div className="modellingLeft">
                     <img src={massage} alt="spa" className="modellingPic"/>
