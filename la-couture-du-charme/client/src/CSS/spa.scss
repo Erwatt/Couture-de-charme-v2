@@ -1,0 +1,17 @@
+@use "main" as *;
+
+
+.ContainerTitrePage{
+    display: flex;
+    flex-wrap: wrap;
+    gap:2rem;
+    margin: 5rem 2rem;
+
+    .ItemTitrePage{
+        flex: 1 0 30rem;
+
+        img{
+            text-align: center;
+        }
+    }
+}

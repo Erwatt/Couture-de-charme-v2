@@ -54,7 +54,7 @@ export default function Book() {
             image: JET
         },
         {
-            titre: "VERIFIER LES DISPONIBILITES DES CHAMBRES",
+            titre: "DISPONIBILITES DES CHAMBRES",
             lien: () => { BookRoom() },
             image: ROOM
         },
