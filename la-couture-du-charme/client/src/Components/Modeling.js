@@ -110,7 +110,7 @@ const Invalidate = ()=>{
 
 
 const Validate = ()=>{
-    if((solo===false&duo===false)|(min30===false&&min60===false)|(invitation===false&&enveloppe===false&&coffret===false)){setvalidate(false)}
+    if((solo===false&duo===false)|(min30===false&&min60===false)|(invitation===false&&enveloppe===false&&coffret===false)|(from === "")|(to === "")|(mailSender === "")|(telSender === "")|(message === "")){setvalidate(false)}
     else{
         setvalidate(true)
     }
@@ -272,10 +272,10 @@ useEffect(() => {
                         <div className="modellingFlexColumn">
                             <p>Offert à :</p>
                             {!validate?<input onChange={(e) => setTo(e.target.value)} type="text" id="envoiMassage2" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage2" name="massage1" className="envoiMassage1" disabled/>}
-                            <p>Mail :</p>
-                            {!validate?<input onChange={(e) => setMailReceiver(e.target.value)} type="text" id="envoiMassage11" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage11" name="massage1" className="envoiMassage1" disabled/>}
-                            <p>Tél :</p>
-                            {!validate?<input onChange={(e) => setTelReceiver(e.target.value)} type="text" id="envoiMassage12" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage12" name="massage1" className="envoiMassage1" disabled/>}
+                            {!vip ? <><p>Mail destinataire :</p>
+                            {!validate?<input onChange={(e) => setMailReceiver(e.target.value)} type="text" id="envoiMassage11" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage11" name="massage1" className="envoiMassage1" disabled/>}</>: null}
+                            {coffret ? <><p>Tél destinataire :</p>
+                            {!validate?<input onChange={(e) => setTelReceiver(e.target.value)} type="text" id="envoiMassage12" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage12" name="massage1" className="envoiMassage1" disabled/>}</>: null}
                         </div>
                     </div>
                     {vip?
