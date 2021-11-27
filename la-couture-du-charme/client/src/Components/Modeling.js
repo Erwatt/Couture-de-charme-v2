@@ -6,7 +6,9 @@ import { Elements } from '@stripe/react-stripe-js'
 import { loadStripe } from '@stripe/stripe-js'
 import CheckoutForm from './CheckoutForm';
 // import services from '../services';
-
+// import Diaporama from './Diaporama';
+// import test from '../Images/arrow.png'
+// import test2 from '../Images/box.jpg'
 
 export default function Modelling(){
 
@@ -14,6 +16,7 @@ useEffect(() => {
     window.scrollTo(0, 0);
 }, [])
 
+// const liste = [test, test2];
 
 const stripePromise = loadStripe("pk_test_51JKLlzFWy0s3veRrxsohTmNgi5LdmSqBZDAyHHkce2q8JT80kWCM22PglHlQMAjoRZPe239mgXIwoyAK7FY9eCTO00FDLClGaK")
 const[min30, setMin30]=useState(false);
@@ -110,7 +113,7 @@ const Invalidate = ()=>{
 
 
 const Validate = ()=>{
-    if((solo===false&duo===false)|(min30===false&&min60===false)|(invitation===false&&enveloppe===false&&coffret===false)){setvalidate(false)}
+    if((solo===false&duo===false)|(min30===false&&min60===false)|(invitation===false&&enveloppe===false&&coffret===false)|(from === "")|(to === "")|(mailSender === "")|(telSender === "")|(message === "")){setvalidate(false)}
     else{
         setvalidate(true)
     }
@@ -212,7 +215,9 @@ useEffect(() => {
 
 
     return(
+        
         <div className="ModellingContainer">
+            {/* <Diaporama picturesList={liste}/> */}
             <div className="modellingFlexRow">
                 <div className="modellingLeft">
                     <img src={massage} alt="spa" className="modellingPic"/>
@@ -272,10 +277,10 @@ useEffect(() => {
                         <div className="modellingFlexColumn">
                             <p>Offert à :</p>
                             {!validate?<input onChange={(e) => setTo(e.target.value)} type="text" id="envoiMassage2" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage2" name="massage1" className="envoiMassage1" disabled/>}
-                            <p>Mail :</p>
-                            {!validate?<input onChange={(e) => setMailReceiver(e.target.value)} type="text" id="envoiMassage11" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage11" name="massage1" className="envoiMassage1" disabled/>}
-                            <p>Tél :</p>
-                            {!validate?<input onChange={(e) => setTelReceiver(e.target.value)} type="text" id="envoiMassage12" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage12" name="massage1" className="envoiMassage1" disabled/>}
+                            {!vip ? <><p>Mail destinataire :</p>
+                            {!validate?<input onChange={(e) => setMailReceiver(e.target.value)} type="text" id="envoiMassage11" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage11" name="massage1" className="envoiMassage1" disabled/>}</>: null}
+                            {coffret ? <><p>Tél destinataire :</p>
+                            {!validate?<input onChange={(e) => setTelReceiver(e.target.value)} type="text" id="envoiMassage12" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage12" name="massage1" className="envoiMassage1" disabled/>}</>: null}
                         </div>
                     </div>
                     {vip?

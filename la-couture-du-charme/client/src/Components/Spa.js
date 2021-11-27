@@ -27,6 +27,7 @@ export default function Spa() {
     const [invitation, setInvitation] = useState(false);
     const [enveloppe, setEnveloppe] = useState(false);
     const [coffret, setCoffret] = useState(false);
+    const [vip, setVip] = useState(false);
 
     // const Book30min = ()=>{
     //     if(!validate){
@@ -168,7 +169,7 @@ export default function Spa() {
             else { setInvitation(true) }
             setEnveloppe(false)
             setCoffret(false)
-            setEnveloppe(false)
+            setVip(false)
         }
     }
 
@@ -178,6 +179,7 @@ export default function Spa() {
             else { setEnveloppe(true) }
             setInvitation(false)
             setCoffret(false)
+            setVip(true)
         }
     }
 
@@ -186,7 +188,7 @@ export default function Spa() {
             if (coffret) { setCoffret(false) }
             else { setCoffret(true) }
             setInvitation(false)
-            setCoffret(true)
+            setVip(true)
             setEnveloppe(false)
         }
     }
@@ -273,7 +275,7 @@ const[semaine,setSemaine]=useState(false)
     
     const Validate = ()=>{
         if((!semaine&!weekend)|(semaine&!after17&!before17)|(semaine&after17&!creneau1h30&!creneau2h)|(!enveloppe&!coffret&!invitation)|
-        (from === "")|(to === "")|(mailReceiver === "")|(mailSender === "")|(telReceiver === "")|(telSender === "")|(message === "")){
+        (from === "")|(to === "")|(mailSender === "")|(telSender === "")|(message === "")){
             setvalidate(false)
         }
         else {
@@ -535,13 +537,13 @@ const[semaine,setSemaine]=useState(false)
                         <div className="modellingFlexColumn">
                             <p>Offert à :</p>
                             {!validate?<input type="text" onChange={(e) => setTo(e.target.value)} id="envoiMassage4" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage2" name="massage1" className="envoiMassage1" disabled/>}
-                            <p>Mail destinataire :</p>
-                            {!validate?<input type="text" onChange={(e) => setMailReceiver(e.target.value)} id="envoiMassage5" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage11" name="massage1" className="envoiMassage1" disabled/>}
-                            <p>Tél destinataire :</p>
-                            {!validate?<input type="text" onChange={(e) => setTelReceiver(e.target.value)} id="envoiMassage6" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage12" name="massage1" className="envoiMassage1" disabled/>}
+                            {!vip ? <><p>Mail destinataire :</p>
+                            {!validate ?<input type="text" onChange={(e) => setMailReceiver(e.target.value)} id="envoiMassage5" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage11" name="massage1" className="envoiMassage1" disabled/>}</> : null}
+                            {coffret ? <><p>Tél destinataire :</p>
+                            {!validate ?<input type="text" onChange={(e) => setTelReceiver(e.target.value)} id="envoiMassage6" name="massage1" className="envoiMassage1"/>:<input type="text" id="envoiMassage12" name="massage1" className="envoiMassage1" disabled/>}</> : null}
                         </div>
                     </div>
-                    {coffret ?
+                    {vip ?
                         <div>
                             <p>À livrer à (Nom Prénom) :</p>
                             {!validate?<input onChange={(e) => setDeliveryName(e.target.value)} type="text" id="envoiMassage7" name="massage1" className="envoiMassage2"/>:<input type="text" id="envoiMassage3" name="massage1" className="envoiMassage2" disabled/>}

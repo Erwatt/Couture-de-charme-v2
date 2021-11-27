@@ -14,7 +14,7 @@ export default function CheckoutForm({element,prix, ligne1, event, from, to, mai
   const [error, setError] = useState(null);
   const [processing, setProcessing] = useState('');
   const [disabled, setDisabled] = useState(true);
-  const [clientSecret, setClientSecret] = useState('');
+  // const [clientSecret, setClientSecret] = useState('');
 
   // useEffect(() => {
   //   // Create PaymentIntent as soon as the page loads
