@@ -33,6 +33,13 @@ export default function Footer() {
                         </a>
                     </div>
 
+                    <div className="AnimationBoutonFooter">
+
+                        <a href="/reglement-spa" className="hover hover-1">
+                            <img src={PlayWhite} alt="Picto flèche" width="10px" />Réglement du spa
+                        </a>
+                    </div>
+
                 </div>
 
             </div>

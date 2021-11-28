@@ -10,6 +10,7 @@ import PrivateSpa from '../pages/spa-privatif';
 import PrivateSauna from '../pages/sauna-privatif'
 import Gift from './Gift';
 import Book2 from './Book2';
+import Reglement from './Reglement';
 
 
 import MentionsLegales from './MentionsLegales';
@@ -71,6 +72,7 @@ const ga4react = new GA4React(
         <Route path='/massage' component={Massage} />
         <Route path='/Spa' component={Spa} />
         <Route path='/PaymentComponent' component={CheckoutForm} />
+        <Route path='/reglement-spa' component={Reglement}/>
       </Switch>
 
       <Footer />
