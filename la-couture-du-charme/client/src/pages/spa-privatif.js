@@ -7,11 +7,11 @@ import AOS from 'aos'
 
 
 //On importe les images
-import spa from '../Images/spa.jpg';
-import poufs from '../Images/poufs.jpg';
-import sauna from '../Images/sauna.jpg';
-import piscine from '../Images/piscine.jpg';
-import massage2 from '../Images/massage2.jpg';
+import spa from '../Images/spa1.JPG';
+// import poufs from '../Images/poufs.jpg';
+// import sauna from '../Images/sauna.jpg';
+// import piscine from '../Images/piscine.jpg';
+// import massage2 from '../Images/massage2.jpg';
 
 //On importe le CSS
 import '../CSS/Home.scss'
