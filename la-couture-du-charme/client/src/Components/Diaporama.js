@@ -1,7 +1,7 @@
 import React from "react";
 import {useState} from "react";
 import '../CSS/Diaporama.scss';
-import arrow from '../Images/arrow.png';
+import arrow from '../Images/arrow.svg';
 
 
 function Diaporama({picturesList, width, height}){

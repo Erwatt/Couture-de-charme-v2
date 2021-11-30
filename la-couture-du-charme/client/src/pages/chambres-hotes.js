@@ -12,36 +12,36 @@ import scandinave3 from '../Images/scandinave3.JPG'
 import fragole from '../Images/fragole.jpeg'
 // import House from '../Images/house1.jpg'
 import Poufs from '../Images/poufs.jpg'
-import f1 from '../Images/Fragole/f1.JPG';
-import f2 from '../Images/Fragole/f2.JPG';
-import f3 from '../Images/Fragole/f3.JPG';
-import f4 from '../Images/Fragole/f4.JPG';
-import c1 from '../Images/Cocoon/c1.JPG';
-import c2 from '../Images/Cocoon/c2.JPG';
-import c3 from '../Images/Cocoon/c3.JPG';
-import c4 from '../Images/Cocoon/c4.JPG';
-import c5 from '../Images/Cocoon/c5.JPG';
-import c6 from '../Images/Cocoon/c6.JPG';
-import s1 from '../Images/Scandinave/s1.JPG';
-import s2 from '../Images/Scandinave/s2.JPG';
-import s3 from '../Images/Scandinave/s3.JPG';
-import s4 from '../Images/Scandinave/s4.JPG';
-import s5 from '../Images/Scandinave/s5.JPG';
+import f1 from '../Images/Fragole/f1.jpg';
+import f2 from '../Images/Fragole/f2.jpg';
+import f3 from '../Images/Fragole/f3.jpg';
+import f4 from '../Images/Fragole/f4.jpg';
+import c1 from '../Images/Cocoon/c1.jpg';
+import c2 from '../Images/Cocoon/c2.jpg';
+import c3 from '../Images/Cocoon/c3.jpg';
+import c4 from '../Images/Cocoon/c4.jpg';
+import c5 from '../Images/Cocoon/c5.jpg';
+import c6 from '../Images/Cocoon/c6.jpg';
+import s1 from '../Images/Scandinave/s1.jpg';
+import s2 from '../Images/Scandinave/s2.jpg';
+import s3 from '../Images/Scandinave/s3.jpg';
+import s4 from '../Images/Scandinave/s4.jpg';
+import s5 from '../Images/Scandinave/s5.jpg';
 // import campagne1 from '../Images/Campagne/campagne1.jpg';
 import campagne2 from '../Images/Campagne/campagne2.jpg';
 import campagne3 from '../Images/Campagne/campagne3.jpg';
 import campagne4 from '../Images/Campagne/campagne4.jpg';
 import campagne5 from '../Images/Campagne/campagne5.jpg';
-import campagne6 from '../Images/Campagne/campagne6.JPG';
-import campagne7 from '../Images/Campagne/campagne7.JPG';
-import c from '../Images/c.JPG';
-import s from '../Images/s.JPG';
-import f from '../Images/f.jpeg';
+import campagne6 from '../Images/Campagne/campagne6.jpg';
+import campagne7 from '../Images/Campagne/campagne7.jpg';
+import c from '../Images/c.jpg';
+import s from '../Images/s.jpg';
+import f from '../Images/f.jpg';
 import table1 from '../Images/Table/table1.jpg';
 import table2 from '../Images/Table/table2.jpg';
 import table3 from '../Images/Table/table3.jpg';
 import table4 from '../Images/Table/table4.jpg';
-import table5 from '../Images/Table/table5.JPG';
+import table5 from '../Images/Table/table5.jpg';
 
 //On importe le css
 import '../CSS/PrivateRoom.scss'
@@ -81,13 +81,15 @@ export default function ChambresHotes() {
                         <h3 className="Static" align="center">Dormir à la campagne</h3>
                         <div className="EquipementItem PageItem">
 
-                            <p align="justify">
+                            <p className="Item">
                                 <p align="justify">Au cœur du <b>Parc National Scarpe Escaut</b>, nous vous accueillons dans un cadre verdoyant, calme et chaleureux. Vous serez <b>séduit par l'espace</b> de nos 3 chambres, et le choix de la décoration. </p>
-                                <p> Pas de stress pour stationner, nous disposons d'un grand parking clos, fermé par portail digicode et d'un emplacement vélos. Vous accédez alors à nos Trois chambres, par une entrée indépendante.</p> 
-                                <p>La <b>proximité de l’autoroute A23</b> (sortie Saint Amand / Marchiennes), de la <b>gare SNCF de Rosult</b> et de la <b>Zone d’Activité de Sars et Rosières</b> facilitera vos déplacements professionnels.</p>
+                                <p align="justify"> Pas de stress pour stationner, nous disposons d'un grand parking clos, fermé par portail digicode et d'un emplacement vélos. Vous accédez alors à nos Trois chambres, par une entrée indépendante.</p>
+                                <p align="justify">La <b>proximité de l’autoroute A23</b> (sortie Saint Amand / Marchiennes), de la <b>gare SNCF de Rosult</b> et de la <b>Zone d’Activité de Sars et Rosières</b> facilitera vos déplacements professionnels.</p>
                             </p>
                             {/* <img src={House} alt="piscine" width="580" height="350" /> */}
-                            <Diaporama picturesList={diapoCampagne} height={350} width={580}/>
+                            <p className="Item">
+                                <Diaporama picturesList={diapoCampagne} height={350} width={580} />
+                            </p>
                         </div>
 
                     </div>
@@ -101,9 +103,9 @@ export default function ChambresHotes() {
                         <h3 className="Static" align="center">Nos 3 chambres</h3>
                         <div className="EquipementItem PageItem">
 
-                            <p align="justify">
-                                <p align="justify"></p>
-                                <p>Chaque chambre (superficie de 35-40 m²) dispose de <b>lits king size</b>, de salles de bain modernes, d’une connexion internet wifi (fibre). </p>
+                            <p className="Item">
+
+                                <p align="justify">Chaque chambre (superficie de 35-40 m²) dispose de <b>lits king size</b>, de salles de bain modernes, d’une connexion internet wifi (fibre). </p>
                                 <ul>
                                     <li><a href="#fragole"><b>FRAGOLE</b></a> : (max. 3 personnes), au rez-de-chaussée, accès PMR.</li>
                                     <li><a href="#scandinave"><b>SCANDINAVE</b></a> : (max. 4 personnes), à l'étage.</li>
@@ -111,7 +113,9 @@ export default function ChambresHotes() {
                                 </ul>
                             </p>
                             {/* <img src={Poufs} alt="piscine" width="580" height="350" /> */}
-                            <Diaporama picturesList={diapoChambre} width={580} height={350}/>
+                            <p className="Item">
+                                <Diaporama picturesList={diapoChambre} width={580} height={350} />
+                            </p>
                         </div>
 
                     </div>
@@ -125,13 +129,15 @@ export default function ChambresHotes() {
                         <h3 className="Static" align="center">Notre Table d'hôtes</h3>
                         <div className="EquipementItem PageItem">
 
-                            <p align="justify">
+                            <p className="Item">
                                 <p align="justify"><b>Pièce de vie de 40 m² au rez de chaussée avec kitchenette</b> (micro-onde, réfrigérateur, lave-vaisselle, machine à café, bouilloire, vaisselle), espace repas et babyfoot.</p>
                                 <p align="justify"> <b>Accès terrasse</b>, salon de jardin, et espace pique-nique avec <b>jeux enfants en saison</b> sur notre terrain de 4000 m². </p>
                                 <p align="justify">Le <b>petit déjeuner</b> est servi dès 7h15 en semaine, 8h30 le weekend. Possibilité de <b>repas en table d’hôtes</b> sur demande (à prévoir 48h à l’avance).</p>
                             </p>
                             {/* <img src={Poufs} alt="piscine" width="580" height="350" /> */}
-                            <Diaporama picturesList={diapoTable} width={580} height={350}/>
+                            <p className="Item">
+                                <Diaporama picturesList={diapoTable} width={580} height={350} />
+                            </p>
                         </div>
 
                     </div>
@@ -144,7 +150,7 @@ export default function ChambresHotes() {
                         <div className="cocoon1">
                             <p>RdC, accès PMR</p>
                         </div>
-                        <Diaporama picturesList={diapofragole}/>
+                        <Diaporama picturesList={diapofragole} />
                         <div className="cocoon2">
                             <ul>
                                 <li>1 Lit double 160 x 200 </li>
@@ -181,7 +187,7 @@ export default function ChambresHotes() {
                         <div className="cocoon1">
                             <p>Chambre Scandinave à l'étage </p>
                         </div>
-                        <Diaporama picturesList={diapoScandinave}/>
+                        <Diaporama picturesList={diapoScandinave} />
                         <div className="cocoon2">
                             <ul>
                                 <li>1x lit double 180x200</li>
@@ -216,7 +222,7 @@ export default function ChambresHotes() {
                         <div className="cocoon1">
                             <p>Chambre Cocoon à l'étage</p>
                         </div>
-                        <Diaporama picturesList={diapoCocoon}/>
+                        <Diaporama picturesList={diapoCocoon} />
                         <div className="cocoon2">
                             <ul>
                                 <li>1x lit double 180x200</li>

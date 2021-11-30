@@ -190,6 +190,10 @@
                 padding: 1rem;
             }
 
+            .Item{
+                flex: 0 1 55rem;
+            }
+
             &.NoImage p {
                 flex: 0 1 90rem;
             }
