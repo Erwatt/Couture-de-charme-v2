@@ -12,36 +12,36 @@ import scandinave3 from '../Images/scandinave3.JPG'
 import fragole from '../Images/fragole.jpeg'
 // import House from '../Images/house1.jpg'
 import Poufs from '../Images/poufs.jpg'
-import f1 from '../Images/Fragole/f1.jpg';
-import f2 from '../Images/Fragole/f2.jpg';
-import f3 from '../Images/Fragole/f3.jpg';
-import f4 from '../Images/Fragole/f4.jpg';
-import c1 from '../Images/Cocoon/c1.jpg';
-import c2 from '../Images/Cocoon/c2.jpg';
-import c3 from '../Images/Cocoon/c3.jpg';
-import c4 from '../Images/Cocoon/c4.jpg';
-import c5 from '../Images/Cocoon/c5.jpg';
-import c6 from '../Images/Cocoon/c6.jpg';
-import s1 from '../Images/Scandinave/s1.jpg';
-import s2 from '../Images/Scandinave/s2.jpg';
-import s3 from '../Images/Scandinave/s3.jpg';
-import s4 from '../Images/Scandinave/s4.jpg';
-import s5 from '../Images/Scandinave/s5.jpg';
+import f1 from '../Images/Fragole/f1.JPG';
+import f2 from '../Images/Fragole/f2.JPG';
+import f3 from '../Images/Fragole/f3.JPG';
+import f4 from '../Images/Fragole/f4.JPG';
+import c1 from '../Images/Cocoon/c1.JPG';
+import c2 from '../Images/Cocoon/c2.JPG';
+import c3 from '../Images/Cocoon/c3.JPG';
+import c4 from '../Images/Cocoon/c4.JPG';
+import c5 from '../Images/Cocoon/c5.JPG';
+import c6 from '../Images/Cocoon/c6.JPG';
+import s1 from '../Images/Scandinave/s1.JPG';
+import s2 from '../Images/Scandinave/s2.JPG';
+import s3 from '../Images/Scandinave/s3.JPG';
+import s4 from '../Images/Scandinave/s4.JPG';
+import s5 from '../Images/Scandinave/s5.JPG';
 // import campagne1 from '../Images/Campagne/campagne1.jpg';
 import campagne2 from '../Images/Campagne/campagne2.jpg';
 import campagne3 from '../Images/Campagne/campagne3.jpg';
 import campagne4 from '../Images/Campagne/campagne4.jpg';
 import campagne5 from '../Images/Campagne/campagne5.jpg';
-import campagne6 from '../Images/Campagne/campagne6.jpg';
-import campagne7 from '../Images/Campagne/campagne7.jpg';
-import c from '../Images/c.jpg';
-import s from '../Images/s.jpg';
+import campagne6 from '../Images/Campagne/campagne6.JPG';
+import campagne7 from '../Images/Campagne/campagne7.JPG';
+import c from '../Images/c.JPG';
+import s from '../Images/s.JPG';
 import f from '../Images/f.jpg';
 import table1 from '../Images/Table/table1.jpg';
 import table2 from '../Images/Table/table2.jpg';
 import table3 from '../Images/Table/table3.jpg';
 import table4 from '../Images/Table/table4.jpg';
-import table5 from '../Images/Table/table5.jpg';
+import table5 from '../Images/Table/table5.JPG';
 
 //On importe le css
 import '../CSS/PrivateRoom.scss'
