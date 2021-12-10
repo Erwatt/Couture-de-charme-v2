@@ -7,7 +7,7 @@ import AOS from 'aos'
 
 
 //On importe les images
-import spa from '../Images/spa1.JPG';
+import spa from '../Images/spa1.jpg';
 // import poufs from '../Images/poufs.jpg';
 // import sauna from '../Images/sauna.jpg';
 // import piscine from '../Images/piscine.jpg';
