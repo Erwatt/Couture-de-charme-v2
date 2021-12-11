@@ -91,7 +91,7 @@ app.get('*', (req, res) => {
 
 
 // NOUVEAU CODE STRIPE DAVID
-app.post('/pay', async (req, res) =>{
+app.post('/api/pay', async (req, res) =>{
 
   const { items } = req.body;
 

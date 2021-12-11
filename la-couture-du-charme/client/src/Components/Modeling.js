@@ -18,7 +18,7 @@ useEffect(() => {
 
 // const liste = [test, test2];
 
-const stripePromise = loadStripe("pk_test_51JKLlzFWy0s3veRrxsohTmNgi5LdmSqBZDAyHHkce2q8JT80kWCM22PglHlQMAjoRZPe239mgXIwoyAK7FY9eCTO00FDLClGaK")
+const stripePromise = loadStripe("pk_live_51JKLlzFWy0s3veRrguOQqI3YyzZFWqN8jdcZ5gCbac99FkWWUHLolaEfwhFol5KSjNmzOz6l2i2maf74hjKj0pf600qlwGCGvY")
 const[min30, setMin30]=useState(false);
 const[min60, setMin60]=useState(false);
 const[solo, setSolo]=useState(false);

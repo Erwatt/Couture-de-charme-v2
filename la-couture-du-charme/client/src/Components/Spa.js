@@ -422,7 +422,7 @@ const[semaine,setSemaine]=useState(false)
 
 
     //Nouveau Code Stripe David
-    const stripePromise = loadStripe("pk_test_51JKLlzFWy0s3veRrxsohTmNgi5LdmSqBZDAyHHkce2q8JT80kWCM22PglHlQMAjoRZPe239mgXIwoyAK7FY9eCTO00FDLClGaK")
+    const stripePromise = loadStripe("pk_live_51JKLlzFWy0s3veRrguOQqI3YyzZFWqN8jdcZ5gCbac99FkWWUHLolaEfwhFol5KSjNmzOz6l2i2maf74hjKj0pf600qlwGCGvY")
 
 
 
