@@ -18,7 +18,7 @@ import SPA from '../Images/spa.jpg'
 import Piscine from '../Images/piscine.jpg'
 import Sauna from '../Images/sauna.jpg'
 import Massage from '../Images/massage3.jpg'
-import Chambre from '../Images/room.JPG'
+import Chambre from '../Images/room.jpg'
 import Centre from '../Images/centre.jpg'
 
 
