@@ -463,7 +463,7 @@ export default function BookSpa(){
                                         <div className="priceText">{prix} €<div className="ttcText">TTC</div></div>
                                     </div >
                                     <div className="calendar">
-                                        <InlineWidget  url="https://calendly.com/coutureducharme-le-spa/creneau-spa-1h30-soir-de-semaine" 
+                                        <InlineWidget  url="https://calendly.com/coutureducharme-le-spa/creneau-spa-1h30-la-journee-en-semaine-apres17" 
                                             pageSettings={{
                                             backgroundColor: 'ffffff',
                                             hideEventTypeDetails: true,

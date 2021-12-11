@@ -98,7 +98,7 @@ export default function CheckoutForm({element,prix, ligne1, event, from, to, mai
       ev.preventDefault();
      setProcessing(true);
       try{
-        const response = await fetch('http://localhost:3001/pay', {
+        const response = await fetch('https://lacoutureducharme.herokuapp.com/api/pay', {
           method: 'POST',
           headers:{
             'Content-Type':'application/json'
