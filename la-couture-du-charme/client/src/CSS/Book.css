@@ -1,0 +1,83 @@
+
+
+
+.headerBook{
+    background-color:burlywood;
+    padding:2%;
+    margin:5%;
+    margin-bottom: 2%;
+}
+
+.containerForm{
+    padding:3.5%;
+    margin:2%;
+    border:  solid royalblue ;
+    display: flex;
+    flex-direction: column;
+    
+}
+.formHeader{
+   text-align: center;
+   
+}
+
+.containerButtonChoix{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 2%;
+}
+
+.buttonChoix{
+    background-color: royalblue;
+    padding: 2%;
+    border-radius:12px;
+    color: whitesmoke;
+}
+.buttonChoix:hover{
+    color: royalblue;
+    background-color: whitesmoke;
+    border: solid royalblue;
+    font-weight: bolder;
+}
+
+.buttonChoix2{
+    background-color: royalblue;
+    color: whitesmoke;
+    font-weight: normal;
+    border-radius:none;
+    padding: 2%;
+    border-radius:12px;
+    justify-content:center;
+}
+.buttonChoix2:hover{
+    border: solid royalblue;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+
+#buttonNextDate{
+    margin: auto;
+}
+
+#hoverNone{
+    border: solid royalblue;
+    font-weight: normal;
+    cursor:initial;
+}
+
+    
+
+
+#personnes{
+    margin-left: 2%;
+    margin-right: 2%;
+    border-color: royalblue;
+    font-weight: bolder;
+    color: royalblue;
+    text-align: center;
+    font-size:100%;
+
+}
+

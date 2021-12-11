@@ -1,0 +1,275 @@
+.PrivateContainerRoom {
+    padding: 5%;
+    background-color: rgb(247, 238, 238);
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+.containerBookRoom {
+    margin-top: 7rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap:2rem;
+
+    .ElementRoom {
+
+        flex: 0 1 40rem;
+
+        .cocoon1 {
+            margin: 5rem 2rem;
+            font-size: 1.7rem;
+            text-align: justify;
+            line-height: 200%;
+            letter-spacing: 0.3rem;
+            height: 30vh;
+        }
+
+        .cocoon2 {
+            ul {
+                font-family: MerriweatherBold;
+                list-style-type: none;
+                font-size: 2rem;
+                line-height: 200%;
+                height: 40rem;
+                padding: 0;
+                margin: 2rem;
+
+                display: flex;
+                flex-direction: column;
+                align-items: left;
+                justify-content: center;
+
+                li {
+                    text-align: left;
+                }
+            }
+        }
+
+        .cocoon3 {
+            font-family: Merriweather;
+            text-align: left;
+            list-style-type: none;
+            margin: 2rem 2rem 7rem 2rem;
+            font-size: 2rem;
+            line-height: 150%;
+
+            p:nth-of-type(1) {
+                font-family: MerriweatherBlack;
+            }
+
+            p:nth-of-type(2),p:nth-of-type(3) {
+                font-size: 1.7rem;
+            }
+        }
+    }
+}
+
+/*.room{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.room-diapo{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.room-info{
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(94, 69, 48, 0.801);
+    margin-bottom: 5%;
+}
+
+.room-info-txt{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.room-info-txt > p {
+    max-width: 30%;
+}
+
+.RoomHeader{
+    background-color: rgba(94, 69, 48, 0.801);
+    font-size: 300%;
+    color: white;
+    margin-bottom: 8%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.cocoon-box{
+   border-bottom: dashed grey;
+   margin-top: 5%;
+   margin-bottom: 5%;
+}
+
+.scandinave-box{
+    margin-top: 5%;
+    margin-bottom: 5%;
+ }
+
+.cocoon-diapo{
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+}
+
+
+.cocoon-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.cocoon1{
+    padding-bottom: 3%;
+    padding-top: 3%;
+    padding-right: 3%;
+    padding-left: 3%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.cocoon2{
+    width: 80%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-right: 5%;
+    padding-left: 6%;
+    text-align: left;
+    border-right: solid grey;
+    border-left: solid grey;
+    
+}
+
+.cocoon3{
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;    
+    padding-bottom: 3%;
+    padding-top: 3%;
+    padding-right: 3%;
+    padding-left: 3%;
+}
+
+.cocoon32 {
+    text-decoration: underline black;
+    cursor: pointer;
+}
+
+.prix{
+    display: flex;
+    flex-direction: row;
+}
+
+.prix1{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.prix2{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+@media(max-width: 700px){
+    .cocoon-info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cocoon1{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .cocoon-diapo{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        right: 10%;
+    }
+
+    .cocoon2{
+        padding-top: 3%;
+        padding-bottom: 3%;
+        border-right: none;
+        border-left: none;
+        border-bottom: solid grey;
+        border-top: solid grey;
+    }
+}*/
+
+.privateRoomBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 5%;
+}
+
+.privateRoomDiapo {
+    width: 50%;
+}
+
+.privateRoomDiapo2 {
+    width: 60%;
+    height: 25em;
+    margin-left: 20%;
+}
+
+.privateRoomBox > p {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.subPrivateRoomBox {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.privateRoomBoxText {
+    margin-top: 8%;
+}
+
+.privateRoomBoxText2 {
+    margin-top: 18%;
+}
+
+.centré {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.Pv_Room_Link{
+    text-decoration: none;
+    color: #000000;
+}
+
+.Pv_Room_Dispo{
+    text-align: end;
+    font-style: italic;
+}
+
+.link{
+    font-style: italic;
+    text-decoration: underline;
+    font-weight: normal;
+}

@@ -1,0 +1,262 @@
+.ModellingContainer{
+    padding-left: 5%;
+    margin-top: 15%;
+}
+
+.modellingRight{
+    width: 100%;
+    margin-right: 10%;
+    // padding-left:0%;
+}
+
+.modellingLeft{
+    display: flex;
+    flex-direction: column;
+}
+
+.poolPic{
+    width: 60%;
+    height: auto;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    margin-right: 0%;
+    padding-right: 0%;
+}
+
+
+.modellingFlexRow{
+    display: flex;
+    flex-direction: row;
+    // justify-content: center;
+}
+
+.modellingFlexRow2{
+    display: flex;
+    flex-direction: row;
+    margin-right: 5%;
+}
+
+.modellingFlexRowEven{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: left;
+}
+
+.modellingFlexColumn{
+    display: flex;
+    flex-direction: column;
+}
+
+.Clicked{
+    border : solid cadetblue;
+    border-radius: 7px;
+    width: 10%;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 0.3%;
+    padding-bottom: 0.3%;
+    margin-right: 5%;
+}
+
+.Unclicked{
+    background-color: cadetblue;
+    color: white;
+    border-radius: 7px;
+    width: 10%;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 0.3%;
+    padding-bottom: 0.3%;
+    margin-right: 5%;
+}
+
+.Clicked2{
+    border : solid cadetblue;
+    border-radius: 7px;
+    width: 20%;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.5%;
+    margin-right: 5%;
+}
+
+.Unclicked2{
+    background-color: cadetblue;
+    color: white;
+    border-radius: 7px;
+    width: 20%;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.5%;
+    margin-right: 5%;
+}
+
+.Clicked3{
+    border : solid cadetblue;
+    border-radius: 7px;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-right: 100%;
+}
+
+.Unclicked3{
+    background-color: cadetblue;
+    color: white;
+    border-radius: 7px;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-right: 100%;
+}
+
+.spaSlots{
+    margin-right: 10%;
+}
+
+.separation{
+    border-bottom: solid grey;
+    border-width: 2px;
+    width: 40%;
+}
+
+.envoiMassage{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border : 1px solid rgba(50, 50, 93, 0.2) ;
+    width: 88%;
+    
+}
+.envoiMassage1{
+    border : 1px solid rgba(50, 50, 93, 0.2) ;
+    margin-left: 20%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 88%;
+}
+
+.envoiMassage2{
+    border : 1px solid rgba(50, 50, 93, 0.2) ;
+    width: 25%;
+    padding-top: 0.3%;
+    padding-bottom: 0.3%;
+}
+.envoiMassage3{
+    
+    border : 1px solid rgba(50, 50, 93, 0.2) ;
+}
+
+.panier{
+    text-align: center;
+    margin-bottom: 3%;
+    width: 15%;
+    border-radius: 30px;
+    background-color: rgb(221, 215, 215);
+    box-shadow: 0px 3px 5px black;
+    transition: 600ms;
+    cursor: pointer;
+    &:hover{
+        background-color: whitesmoke;
+        transform: translate(0, 1.5px);
+    }
+}
+
+.modellingPic{
+    width: 90%;
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+
+@media (max-width: 800px){
+
+    .modellingFlexRow{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Clicked{
+        width: 20%;
+    }
+
+    .Unclicked{
+        width: 20%;
+    }
+
+    .Clicked2{
+        width: 50%;
+    }
+
+    .Unclicked2{
+        width: 50%;
+    }
+
+    .modellingRight > p {
+        margin-right: 5%;
+    }
+
+    .envoiMassage{
+        margin-left: 0%;
+        margin-right: 10%;
+        border : 1px solid rgba(50, 50, 93, 0.2) ;
+    }
+
+    .envoiMassage1{
+        margin-left: 0%;
+        margin-right: 10%;
+        border : 1px solid rgba(50, 50, 93, 0.2) ;
+    }
+
+    .envoiMassage2{
+        margin-left: 0%;
+        width: 50%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        border : 1px solid rgba(50, 50, 93, 0.2) ;
+    }
+
+    .envoiMassage3{
+        width: 85%;
+        border : 1px solid rgba(50, 50, 93, 0.2) ;
+    }
+
+    .panier{
+        width: 30%;
+    }
+
+    .PriceBox   {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.panier5294{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.giftPrice{
+    position: relative;
+    right: 30%;
+    padding-top: 5%;
+    font-size: 300%;
+    width: 2%;
+    
+}
+
+.PriceBox{
+    display: flex;
+    flex-direction: row;
+}
+
+.StripeSentence{
+    text-align: center;
+    margin-right: 30%;
+    margin-top: -4%;
+    font-size: 70%;
+}

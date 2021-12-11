@@ -1,0 +1,23 @@
+.mentions-title{
+    background-color: rgba(94, 69, 48, 0.801);
+    color: white;
+    font-size: 200%;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.mentions-legales{
+    max-width: 120rem;
+    margin:auto;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 5rem;
+    text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+    .mentions-legales{
+      padding:0 2rem;
+    }
+  }

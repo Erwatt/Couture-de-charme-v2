@@ -1,0 +1,77 @@
+@use "main" as *;
+
+.MainHeader {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background: white;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+    .ContainerHeader {
+        max-width: 120rem;
+        margin: auto;
+        text-align: center;
+        transition: opacity 1s linear;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .link {
+        flex: 0 1 20rem;
+        cursor: pointer;
+
+        &.bouton {
+            background: #b8b58c;
+            padding: 2rem;
+            font-family: MerriweatherBold;
+            transition: 1s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075),
+                0 4px 4px hsl(0deg 0% 0% / 0.075), 0 8px 8px hsl(0deg 0% 0% / 0.075),
+                0 16px 16px hsl(0deg 0% 0% / 0.075);
+
+            img {
+                margin-right: 1rem;
+            }
+        }
+
+        &.bouton:nth-child(3):hover {
+            background: #d6d3a1;
+            transform: translateY(-0.3rem);
+        }
+    }
+
+    &.navbarHidden {
+        opacity: 0;
+        transition: opacity 1s linear;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .MainHeader {
+        position: static;
+        transform: translate(0%, 0%);
+        margin-bottom: 5rem;
+
+        &.navbarHidden {
+            opacity: 1;
+        }
+
+        .ContainerHeader {
+            justify-content: center;
+
+            .link.logo img {
+                    margin: 2rem 0;
+                }
+            
+        }
+    }
+}

@@ -1,2 +1,0 @@
-var wpapi = require('wpapi');
-
