@@ -6,6 +6,19 @@ const express = require('express');
 
 const stripe = require("stripe")("sk_test_51JKLlzFWy0s3veRrrKOLEWQnHpQMuMEPeQJWeZUm6u1YtQN0fYcDo4QcxTW6L0DoM1bdWBE2PeamG30L70zm27xj000SCUPvYB");
 
+//Code David redirection
+
+if(process.env.NODE_ENV === 'production') {
+  app.use((req, res, next) => {
+    if (req.header('x-forwarded-proto') !== 'https')
+      res.redirect(`https://www.${req.header('host')}${req.url}`)
+    else
+      next()
+  })
+}
+
+
+//Fin code David redirection
 
 const calculateOrderAmount = items => {
   
