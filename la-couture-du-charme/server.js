@@ -62,6 +62,16 @@ server.on('listening', () => {
 
 app.use(express.static(path.resolve(__dirname,'./client/build')));
 
+if(process.env.NODE_ENV === 'production') {
+  app.use((req, res, next) => {
+    if(req.header('x-forwarded-proto') !== 'https'){
+      res.redirect(`https://www.${req.header('host')}${req.url}`)
+    } else {
+      next()
+    }
+  })
+}
+
 
 
 app.use('/api', route);

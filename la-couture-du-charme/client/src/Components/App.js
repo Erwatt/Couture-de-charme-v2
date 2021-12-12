@@ -4,7 +4,7 @@ import '../CSS/App.css'
 import Home from '../pages/home';
 import Footer from './Footer';
 import Receiver from './Receiver';
-import PrivateRoom from './PrivateRoom';
+// import PrivateRoom from './PrivateRoom';
 import PrivatePool from '../pages/piscine-privee';
 import PrivateSpa from '../pages/spa-privatif';
 import PrivateSauna from '../pages/sauna-privatif'
@@ -57,7 +57,7 @@ const ga4react = new GA4React(
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/Message' component={Receiver} />
-        <Route path='/PrivateRoom' component={PrivateRoom} />
+        {/* <Route path='/PrivateRoom' component={PrivateRoom} /> */}
         <Route path='/piscine-privee' component={PrivatePool} />
         <Route path='/spa-privatif' component={PrivateSpa} />
         <Route path='/sauna-privatif' component={PrivateSauna} />
