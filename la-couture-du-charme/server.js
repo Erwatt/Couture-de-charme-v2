@@ -10,6 +10,17 @@ const Stripe = require('stripe')
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY)
 
 
+//Forcer le HTTPS sur Heroku
+if(process.env.NODE_ENV === 'production') {
+  app.use((req, res, next) => {
+    if (req.header('x-forwarded-proto') !== 'https')
+      res.redirect(`https://www.${req.header('host')}${req.url}`)
+    else
+      next()
+  })
+}
+
+
 const calculateOrderAmount = items => {
   
   return items[0].price*100;
