@@ -141,15 +141,15 @@ useEffect(() => {
             setCreneau('Créneau massage 30min duo')
             // setCreneau(" Créneau Modelage - " +nombre.toString()+ " personnes" +" - 30 min")
             if(coffret===true){
-                setPrix(78)
+                setPrix(88)
                 setSending(`Coffret cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
             }
             else if (enveloppe){
-                setPrix(62)
+                setPrix(72)
                 setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
             }     
             else{
-                setPrix(60)
+                setPrix(70)
                 setSending('Email');
             }                     
         }
@@ -160,15 +160,15 @@ useEffect(() => {
             // setCreneau("Créneau Modelage - " +nombre.toString()+ " personne" +" - 60 min")
             setCreneau('Créneau massage 60min solo')
             if(coffret===true){
-                setPrix(78)
+                setPrix(96)
                 setSending(`Coffret cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
             }
             else if(enveloppe){
-                setPrix(62)
+                setPrix(80)
                 setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
             } 
             else{
-                setPrix(60)
+                setPrix(78)
                 setSending('Email');
             }                 
         }
@@ -176,15 +176,15 @@ useEffect(() => {
             setCreneau('Créneau massage 60min duo')
             // setCreneau("Créneau Modelage - " +nombre.toString()+ " personnes"  +" - 60 min")
             if(coffret===true){
-                setPrix(118)
+                setPrix(174)
                 setSending(`Coffret cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
             }
             else if(enveloppe){
-                setPrix(102)
+                setPrix(158)
                 setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
             }
             else{
-                setPrix(100)
+                setPrix(156)
                 setSending('Email');
             }
         }
