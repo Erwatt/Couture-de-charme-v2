@@ -10,6 +10,34 @@ const Stripe = require('stripe')
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY)
 
 
+<<<<<<< HEAD
+=======
+//Forcer le HTTPS
+if (process.env.NODE_ENV === 'production') {
+  app.use((req, res, next) => {
+    // if(req.hostname.slice(0, 3) !== "www"){
+    //   res.redirect(`https://www.${req.header('host')}${req.url}`)
+    // }
+    console.log(req.hostname)
+
+    // if (req.header.host.slice(0,3) !== "www")
+    // res.redirect(`https://www.${req.header('host')}${req.url}`)
+
+    console.log(req.header.host)
+
+    if (req.header('x-forwarded-proto') !== 'https')
+      res.redirect(`https://${req.header('host')}${req.url}`)
+
+      if(req.header.host.slice(0,3) !== 'www')
+      res.redirect(`https://www.${req.header('host')}${req.url}`)
+    else
+      next()
+  })
+}
+// FIN
+
+
+>>>>>>> 8a413e1fb85e84cd1be972d4fe1a0f997ce9c84f
 const calculateOrderAmount = items => {
   
   return items[0].price*100;

@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 
 
-
 //On importe les images
 import logo from '../Images/logoV2.png'
 import mail from '../Images/mail.png'
@@ -69,20 +68,19 @@ export default function Header() {
 
 
 
-            <div className={!visible ? "MainHeader navbarHidden" : "MainHeader"}>
+        <div className={!visible ? "MainHeader navbarHidden" : "MainHeader"}>
 
+            <div className="ContainerHeader">
 
-                <div className="ContainerHeader">
+                <div className="link bouton"><img src={mail} alt="icone mail" width="20" height="20" />spa@coutureducharme.fr</div>
 
-                    <div className="link bouton"><img src={mail} alt="icone mail" width="20" height="20" />spa@coutureducharme.fr</div>
+                <div className="link logo"> <img loading="auto" width="200" src={logo} alt="La Couture du Charme" className="header-logo" onClick={handleHome} /></div>
 
-                    <div className="link logo"> <img loading="auto" width="200" src={logo} alt="La Couture du Charme" className="header-logo" onClick={handleHome} /></div>
+                <div className="link bouton" onClick={handleBook}><span>Réserver/Offrir</span></div>
 
-                    <div className="link bouton" onClick={handleBook}><span>Réserver/Offrir</span></div>
+            </div>
 
-                </div>
-
-            </div >
+        </div >
 
     );
 };
