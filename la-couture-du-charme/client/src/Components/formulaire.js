@@ -64,7 +64,7 @@ export default function NewFormulaire() {
         // Send a POST request
         //http://localhost:8000/post
         //https://domaine.com/post
-        axios.post('http://localhost:3001/api/SendMessage', {
+        axios.post('https://lacoutureducharme.herokuapp.com/api/SendMessage', {
             name,
             mail,
             phone,

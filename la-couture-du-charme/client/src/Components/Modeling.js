@@ -123,33 +123,33 @@ useEffect(() => {
     if(min30){
         if(solo){
             // setCreneau("Créneau Modelage - " +nombre.toString()+ " personne" +" - 30 min")
-            setCreneau('Créneau massage 30min solo')
+            setCreneau('Créneau massage 45min solo')
             if(coffret===true){
-                setPrix(53)
+                setPrix(77)
                 setSending(`Coffret cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
             }
             else if (enveloppe){
-                setPrix(37)
+                setPrix(61)
                 setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
             }
             else{
-                setPrix(35)
+                setPrix(59)
                 setSending('Email');
             }
         }
         else if (duo){
-            setCreneau('Créneau massage 30min duo')
+            setCreneau('Créneau massage 45min duo')
             // setCreneau(" Créneau Modelage - " +nombre.toString()+ " personnes" +" - 30 min")
             if(coffret===true){
-                setPrix(88)
+                setPrix(133)
                 setSending(`Coffret cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
             }
             else if (enveloppe){
-                setPrix(72)
+                setPrix(117)
                 setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
             }     
             else{
-                setPrix(70)
+                setPrix(115)
                 setSending('Email');
             }                     
         }
@@ -176,15 +176,15 @@ useEffect(() => {
             setCreneau('Créneau massage 60min duo')
             // setCreneau("Créneau Modelage - " +nombre.toString()+ " personnes"  +" - 60 min")
             if(coffret===true){
-                setPrix(174)
+                setPrix(168)
                 setSending(`Coffret cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
             }
             else if(enveloppe){
-                setPrix(158)
+                setPrix(152)
                 setSending(`Enveloppe cadeau, livraison: ${deliveryName} ${adress} ${postalCode} ${city}`)
             }
             else{
-                setPrix(156)
+                setPrix(150)
                 setSending('Email');
             }
         }
@@ -233,7 +233,7 @@ useEffect(() => {
                     <p><b>Durée :</b></p>
                     <div className="modellingFlexRow">
                         {
-                            min30?<p className="Clicked" onClick={()=>Book30min()}>30 min</p>:<p className="Unclicked" onClick={()=>Book30min()}>30 min</p>
+                            min30?<p className="Clicked" onClick={()=>Book30min()}>45 min</p>:<p className="Unclicked" onClick={()=>Book30min()}>45 min</p>
                         }
                         {
                             min60?<p className="Clicked" onClick={()=>Book60min()}>60 min</p>:<p className="Unclicked" onClick={()=>Book60min()}>60 min</p>

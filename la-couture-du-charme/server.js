@@ -10,8 +10,6 @@ const Stripe = require('stripe')
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY)
 
 
-<<<<<<< HEAD
-=======
 //Forcer le HTTPS
 if (process.env.NODE_ENV === 'production') {
   app.use((req, res, next) => {
@@ -37,7 +35,6 @@ if (process.env.NODE_ENV === 'production') {
 // FIN
 
 
->>>>>>> 8a413e1fb85e84cd1be972d4fe1a0f997ce9c84f
 const calculateOrderAmount = items => {
   
   return items[0].price*100;
