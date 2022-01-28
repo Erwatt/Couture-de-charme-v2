@@ -1,7 +1,7 @@
 import React from 'react'
 
 //On importe le css
-import '../CSS/main.scss'
+import '../css/main.scss'
 
 
 export default function Reserver(){

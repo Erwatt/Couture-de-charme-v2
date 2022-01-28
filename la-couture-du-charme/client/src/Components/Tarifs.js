@@ -1,6 +1,6 @@
-import '../CSS/Tarifs.scss';
+import '../css/tarifs.scss';
 import React from 'react';
-// import tarif from '../Images/Tarifs.PNG'
+// import tarif from '../images/Tarifs.PNG'
 
 
 export default function Tarifs(){

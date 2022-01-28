@@ -1,10 +1,8 @@
-import '../CSS/Book2.scss';
+import '../css/book2.scss';
 import React, { useState } from 'react';
-import détente from '../Images/photoCentre.jpg'
+import détente from '../images/photocentre.jpg'
 import { InlineWidget} from "react-calendly";
-// import imgRoom from '../Images/chambre.jpeg'
-import logoCouture from '../Images/logo.png'
-// import HomeBook2 from './HomeBook2'
+import logoCouture from '../images/logo.png'
 
 
 

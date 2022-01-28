@@ -1,14 +1,14 @@
-import '../CSS/Modelling.scss';
+import '../css/modelling.scss';
 import React, { useState, useEffect } from 'react';
-import massage from '../Images/massage.jpg';
+import massage from '../images/massage.jpg';
 // import { useHistory } from 'react-router-dom';
 import { Elements } from '@stripe/react-stripe-js'
 import { loadStripe } from '@stripe/stripe-js'
-import CheckoutForm from './CheckoutForm';
+import CheckoutForm from './checkoutform';
 // import services from '../services';
 // import Diaporama from './Diaporama';
-// import test from '../Images/arrow.png'
-// import test2 from '../Images/box.jpg'
+// import test from '../images/arrow.png'
+// import test2 from '../images/box.jpg'
 
 export default function Modelling(){
 

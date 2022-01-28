@@ -2,60 +2,59 @@ import * as React from "react"
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 
 //On importe les composants
-import Adresse from '../Components/adresse';
-import Diaporama from '../Components/Diaporama';
+import Adresse from '../components/adresse';
+import Diaporama from '../components/diaporama';
 
 
 //On importe les images
-import cocoon3 from '../Images/cocoon3.jpg'
-import scandinave3 from '../Images/scandinave3.jpg'
-import fragole from '../Images/fragole.jpeg'
-// import House from '../Images/house1.jpg'
-import Poufs from '../Images/poufs.jpg'
-import f1 from '../Images/Fragole/f1.jpg';
-import f2 from '../Images/Fragole/f2.jpg';
-import f3 from '../Images/Fragole/f3.jpg';
-import f4 from '../Images/Fragole/f4.jpg';
-import c1 from '../Images/Cocoon/c1.jpg';
-import c2 from '../Images/Cocoon/c2.jpg';
-import c3 from '../Images/Cocoon/c3.jpg';
-import c4 from '../Images/Cocoon/c4.jpg';
-import c5 from '../Images/Cocoon/c5.jpg';
-import c6 from '../Images/Cocoon/c6.jpg';
-import s1 from '../Images/Scandinave/s1.jpg';
-import s2 from '../Images/Scandinave/s2.jpg';
-import s3 from '../Images/Scandinave/s3.jpg';
-import s4 from '../Images/Scandinave/s4.jpg';
-import s5 from '../Images/Scandinave/s5.jpg';
-// import campagne1 from '../Images/Campagne/campagne1.jpg';
-import campagne2 from '../Images/Campagne/campagne2.jpg';
-import campagne3 from '../Images/Campagne/campagne3.jpg';
-import campagne4 from '../Images/Campagne/campagne4.jpg';
-import campagne5 from '../Images/Campagne/campagne5.jpg';
-import campagne6 from '../Images/Campagne/campagne6.jpg';
-import campagne7 from '../Images/Campagne/campagne7.jpg';
-import c from '../Images/c.jpg';
-import s from '../Images/s.jpg';
-import f from '../Images/f.jpg';
-import table1 from '../Images/Table/table1.jpg';
-import table2 from '../Images/Table/table2.jpg';
-import table3 from '../Images/Table/table3.jpg';
-import table4 from '../Images/Table/table4.jpg';
-import table5 from '../Images/Table/table5.jpg';
+import cocoon3 from '../images/cocoon3.jpg'
+import scandinave3 from '../images/scandinave3.jpg'
+import fragole from '../images/fragole.jpg'
+// import House from '../images/house1.jpg'
+import f1 from '../images/fragole/f1.jpg';
+import f2 from '../images/fragole/f2.jpg';
+import f3 from '../images/fragole/f3.jpg';
+import f4 from '../images/fragole/f4.jpg';
+import c1 from '../images/cocoon/c1.jpg';
+import c2 from '../images/cocoon/c2.jpg';
+import c3 from '../images/cocoon/c3.jpg';
+import c4 from '../images/cocoon/c4.jpg';
+import c5 from '../images/cocoon/c5.jpg';
+import c6 from '../images/cocoon/c6.jpg';
+import s1 from '../images/scandinave/s1.jpg';
+import s2 from '../images/scandinave/s2.jpg';
+import s3 from '../images/scandinave/s3.jpg';
+import s4 from '../images/scandinave/s4.jpg';
+import s5 from '../images/scandinave/s5.jpg';
+// import campagne1 from '../images/campagne/campagne1.jpg';
+import campagne2 from '../images/campagne/campagne2.jpg';
+import campagne3 from '../images/campagne/campagne3.jpg';
+import campagne4 from '../images/campagne/campagne4.jpg';
+import campagne5 from '../images/campagne/campagne5.jpg';
+import campagne6 from '../images/campagne/campagne6.jpg';
+import campagne7 from '../images/campagne/campagne7.jpg';
+import c from '../images/c.jpg';
+import s from '../images/s.jpg';
+import f from '../images/f.jpg';
+import table1 from '../images/table/table1.jpg';
+import table2 from '../images/table/table2.jpg';
+import table3 from '../images/table/table3.jpg';
+import table4 from '../images/table/table4.jpg';
+import table5 from '../images/table/table5.jpg';
 
 //On importe le css
-import '../CSS/PrivateRoom.scss'
+import '../css/privateroom.scss'
 
 
 export default function ChambresHotes() {
 
     // window.scrollTo(0, 0);
     const diapofragole = [f1, f2, f3, f4];
-    const diapoCocoon = [c2, c1, c3, c4, c5, c6];
-    const diapoScandinave = [s1, s2, s3, s4, s5];
-    const diapoCampagne = [campagne2, campagne3, campagne4, campagne5, campagne6, campagne7];
+    const diapococoon = [c2, c1, c3, c4, c5, c6];
+    const diaposcandinave = [s1, s2, s3, s4, s5];
+    const diapocampagne = [campagne2, campagne3, campagne4, campagne5, campagne6, campagne7];
     const diapoChambre = [c, f, s];
-    const diapoTable = [table1, table2, table3, table4, table5];
+    const diapotable = [table1, table2, table3, table4, table5];
 
     return (
         <HelmetProvider>
@@ -88,7 +87,7 @@ export default function ChambresHotes() {
                             </p>
                             {/* <img src={House} alt="piscine" width="580" height="350" /> */}
                             <p className="Item">
-                                <Diaporama picturesList={diapoCampagne} height={350} width={580} />
+                                <Diaporama picturesList={diapocampagne} height={350} width={580} />
                             </p>
                         </div>
 
@@ -107,9 +106,9 @@ export default function ChambresHotes() {
 
                                 <p align="justify">Chaque chambre (superficie de 35-40 m²) dispose de <b>lits king size</b>, de salles de bain modernes, d’une connexion internet wifi (fibre). </p>
                                 <ul>
-                                    <li><a href="#fragole"><b>FRAGOLE</b></a> : (max. 3 personnes), au rez-de-chaussée, accès PMR.</li>
-                                    <li><a href="#scandinave"><b>SCANDINAVE</b></a> : (max. 4 personnes), à l'étage.</li>
-                                    <li><a href="#cocoon"><b>COCOON</b></a> : (max. 5 personnes), à l'étage.</li>
+                                    <li><a href="#fragole"><b>fragole</b></a> : (max. 3 personnes), au rez-de-chaussée, accès PMR.</li>
+                                    <li><a href="#scandinave"><b>scandinave</b></a> : (max. 4 personnes), à l'étage.</li>
+                                    <li><a href="#cocoon"><b>cocoon</b></a> : (max. 5 personnes), à l'étage.</li>
                                 </ul>
                             </p>
                             {/* <img src={Poufs} alt="piscine" width="580" height="350" /> */}
@@ -126,7 +125,7 @@ export default function ChambresHotes() {
 
                     <div className="ContainerHome">
 
-                        <h3 className="Static" align="center">Notre Table d'hôtes</h3>
+                        <h3 className="Static" align="center">Notre table d'hôtes</h3>
                         <div className="EquipementItem PageItem">
 
                             <p className="Item">
@@ -136,7 +135,7 @@ export default function ChambresHotes() {
                             </p>
                             {/* <img src={Poufs} alt="piscine" width="580" height="350" /> */}
                             <p className="Item">
-                                <Diaporama picturesList={diapoTable} width={580} height={350} />
+                                <Diaporama picturesList={diapotable} width={580} height={350} />
                             </p>
                         </div>
 
@@ -146,7 +145,7 @@ export default function ChambresHotes() {
 
                 <div className="containerBookRoom">
                     <div className="ElementRoom">
-                        <h3 id="fragole"><b>FRAGOLE</b></h3>
+                        <h3 id="fragole"><b>fragole</b></h3>
                         <div className="cocoon1">
                             <p>RdC, accès PMR</p>
                         </div>
@@ -174,7 +173,7 @@ export default function ChambresHotes() {
                         <div className="ContainerEl">
 
                             <div className="el">
-                                <img alt="Fragole" className="imgRoombis" src={fragole}></img>
+                                <img alt="fragole" className="imgRoombis" src={fragole}></img>
                             </div>
                             <div className="el"><iframe title="itea-fragole" className="containerIframe" src='https://widget.itea.fr/widget.php?key=amkkhds7&numgite=2697&widget-itea=dispo&nbmois-ligne=1&numChambre=1' ></iframe></div>
 
@@ -183,11 +182,11 @@ export default function ChambresHotes() {
 
 
                     <div className="ElementRoom">
-                        <h3 id="scandinave"><b>SCANDINAVE</b></h3>
+                        <h3 id="scandinave"><b>scandinave</b></h3>
                         <div className="cocoon1">
-                            <p>Chambre Scandinave à l'étage </p>
+                            <p>Chambre scandinave à l'étage </p>
                         </div>
-                        <Diaporama picturesList={diapoScandinave} />
+                        <Diaporama picturesList={diaposcandinave} />
                         <div className="cocoon2">
                             <ul>
                                 <li>1x lit double 180x200</li>
@@ -217,12 +216,12 @@ export default function ChambresHotes() {
                     </div>
 
                     <div className="ElementRoom">
-                        <h3 id="cocoon"><b>COCOON</b></h3>
+                        <h3 id="cocoon"><b>cocoon</b></h3>
 
                         <div className="cocoon1">
-                            <p>Chambre Cocoon à l'étage</p>
+                            <p>Chambre cocoon à l'étage</p>
                         </div>
-                        <Diaporama picturesList={diapoCocoon} />
+                        <Diaporama picturesList={diapococoon} />
                         <div className="cocoon2">
                             <ul>
                                 <li>1x lit double 180x200</li>

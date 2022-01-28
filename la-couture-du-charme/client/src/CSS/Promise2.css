@@ -2,7 +2,7 @@
     margin: 6%;
     margin-top: 3%;
     margin-bottom: 3%;    
-    background: url('../Images/centre.jpg');
+    background: url('../images/centre.jpg');
     background-size: cover;
     height: 40em;
 
@@ -49,7 +49,7 @@
 
 .containerFond{
     /* background-color: rgba(70, 131, 131, 0.5); */
-    background: url('../Images/centre.jpg');
+    background: url('../images/centre.jpg');
 
     height: 40em;
 

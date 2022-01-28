@@ -1,7 +1,7 @@
-import { AvisList } from "../Data/avis";
+import { AvisList } from "../data/avis";
 import React from "react";
-import Rate from "./Rate";
-import '../CSS/Avis.css';
+import Rate from "./rate";
+import '../css/avis.css';
 import {useState, useEffect} from 'react';
 
 function Avis(){

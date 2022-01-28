@@ -1,12 +1,12 @@
-import '../CSS/Modelling.scss';
+import '../css/modelling.scss';
 import React, { useState, useEffect } from 'react';
-import piscine from '../Images/photoPiscine.jpg';
+import piscine from '../images/photopiscine.jpg';
 // import { useHistory } from 'react-router-dom';
 
 //NOUVEAU CODE STRIPE DAVID
 import { Elements } from '@stripe/react-stripe-js'
 import { loadStripe } from '@stripe/stripe-js'
-import CheckoutForm from './CheckoutForm'
+import CheckoutForm from './checkoutform'
 
 export default function Spa() {
 

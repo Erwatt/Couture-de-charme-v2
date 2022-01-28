@@ -5,10 +5,10 @@ import { useState } from 'react'
 import axios from 'axios'
 
 //On importe les CSS
-import '../CSS/formulaire.scss'
+import '../css/formulaire.scss'
 
 //On importe les SVG
-import Play from '../Images/play.svg'
+import Play from '../images/play.svg'
 
 
 

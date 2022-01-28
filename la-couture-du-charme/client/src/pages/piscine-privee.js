@@ -2,15 +2,15 @@ import React, { useEffect } from 'react'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 
 //On importe les composants
-import Adresse from '../Components/adresse'
+import Adresse from '../components/adresse'
 import AOS from 'aos'
-import Reserver from '../Components/reserver'
+import Reserver from '../components/reserver'
 
 //On importe les images
-import piscine from '../Images/piscine.jpg';
+import piscine from '../images/piscine.jpg';
 
 //On importe le CSS
-import '../CSS/Home.scss'
+import '../css/home.scss'
 import 'aos/dist/aos.css'
 
 

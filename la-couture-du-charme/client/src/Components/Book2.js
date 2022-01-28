@@ -6,16 +6,16 @@ import { useHistory } from 'react-router-dom';
 
 
 //On importe le CSS
-import '../CSS/Book2.scss'
-import '../CSS/Book.scss'
+import '../css/book2.scss'
+import '../css/book.scss'
 
 //On importe les composants
 import Adresse from './adresse'
 
 //On importe les images
-import JET from '../Images/jet.jpg'
-import ROOM from '../Images/rsv-room.jpg'
-import BOX from '../Images/box.jpg'
+import JET from '../images/jet.jpg'
+import ROOM from '../images/rsv-room.jpg'
+import BOX from '../images/box.jpg'
 
 
 export default function Book() {

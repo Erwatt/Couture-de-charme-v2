@@ -1,4 +1,4 @@
-import '../CSS/Book.css';
+import '../css/book.css';
 import React, { useState } from 'react';
 
 

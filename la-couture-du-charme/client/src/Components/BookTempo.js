@@ -1,6 +1,5 @@
-import '../CSS/BookTempo.css';
+import '../css/booktempo.css';
 import React from 'react';
-// import React, { useState } from 'react';
 
 
 

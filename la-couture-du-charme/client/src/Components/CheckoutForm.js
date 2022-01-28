@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-// import logocouture from '../Images/logo.png'
-import '../CSS/CheckoutForm.scss'
+
+import '../css/checkoutform.scss'
 
 //NOUVEAU CODE STRIPE DAVID
 import {CardElement, useStripe, useElements} from "@stripe/react-stripe-js"

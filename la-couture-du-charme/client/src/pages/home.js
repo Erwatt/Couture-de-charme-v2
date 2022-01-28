@@ -4,22 +4,22 @@ import { Helmet, HelmetProvider } from 'react-helmet-async'
 
 
 //On importe le CSS
-import '../CSS/Home.scss'
+import '../css/home.scss'
 import 'aos/dist/aos.css'
 
 //On importe les composants
-import Reserver from '../Components/reserver'
-import Adresse from '../Components/adresse'
+import Reserver from '../components/reserver'
+import Adresse from '../components/adresse'
 import AOS from 'aos'
 
 //On importe les images
-import Facade from '../Images/house2.jpg'
-import SPA from '../Images/spa.jpg'
-import Piscine from '../Images/piscine.jpg'
-import Sauna from '../Images/sauna.jpg'
-import Massage from '../Images/massage3.jpg'
-import Chambre from '../Images/room.jpg'
-import Centre from '../Images/centre.jpg'
+import Facade from '../images/house2.jpg'
+import SPA from '../images/spa.jpg'
+import Piscine from '../images/piscine.jpg'
+import Sauna from '../images/sauna.jpg'
+import Massage from '../images/massage3.jpg'
+import Chambre from '../images/room1.jpg'
+import Centre from '../images/centre.jpg'
 
 
 

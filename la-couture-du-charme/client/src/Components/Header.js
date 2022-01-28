@@ -5,11 +5,11 @@ import { useHistory } from 'react-router-dom'
 
 
 //On importe les images
-import logo from '../Images/logoV2.png'
-import mail from '../Images/mail.png'
+import logo from '../images/logov2.png'
+import mail from '../images/mail.png'
 
 //On importe le css
-import '../CSS/Header.scss'
+import '../css/header.scss'
 
 
 export default function Header() {

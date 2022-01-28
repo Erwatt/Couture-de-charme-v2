@@ -1,28 +1,27 @@
 import React from 'react';
-import Header from './Header';
-import '../CSS/App.css'
+import GA4React from "ga-4-react";
+import { Route, Switch } from 'react-router-dom';
+
+import Header from './header';
+import '../css/app.css'
 import Home from '../pages/home';
-import Footer from './Footer';
-import Receiver from './Receiver';
-// import PrivateRoom from './PrivateRoom';
+import Footer from './footer';
+import Receiver from './receiver';
 import PrivatePool from '../pages/piscine-privee';
 import PrivateSpa from '../pages/spa-privatif';
 import PrivateSauna from '../pages/sauna-privatif'
-import Gift from './Gift';
-import Book2 from './Book2';
-
-
-import MentionsLegales from './MentionsLegales';
-import '../CSS/App.css';
-import { Route, Switch } from 'react-router-dom';
-import BkSpa from './BookSpa';
+import Gift from './gift';
+import Book2 from './book2';
+import MentionsLegales from './mentionslegales';
+import '../css/app.css';
+import BkSpa from './bookspa';
 import ChambresHotes from '../pages/chambres-hotes';
-import Tarifs from './Tarifs';
-import Modelling from './Modeling';
+import Tarifs from './tarifs';
+import Modelling from './modeling';
 import Massage from '../pages/massage'
-import Spa from './Spa';
-import CheckoutForm from './CheckoutForm';
-import GA4React from "ga-4-react";
+import Spa from './spa';
+import CheckoutForm from './checkoutform';
+
 
 
 function App() {

@@ -1,15 +1,14 @@
-// import { Link } from 'react-router-dom';
 import React from 'react'
 import { useHistory } from 'react-router'
 
 //On importe les photos
-import Coffret from '../Images/coffret.jpg'
-import OffrirSpa from '../Images/offrir-spa.jpg'
-import OffrirMassage from '../Images/offrir-massage.jpg'
+import Coffret from '../images/coffret.jpg'
+import OffrirSpa from '../images/offrir-spa.jpg'
+import OffrirMassage from '../images/offrir-massage.jpg'
 
 
 //On importe le css
-import '../CSS/Gift.scss'
+import '../css/gift.scss'
 
 //On importe les composants
 import Adresse from './adresse'

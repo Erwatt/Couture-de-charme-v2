@@ -6,10 +6,10 @@ import Formulaire from './formulaire'
 
 
 //On importre le CSS
-import '../CSS/adresse.scss'
+import '../css/adresse.scss'
 
 //On importe les SVG
-import PhoneBlack from '../Images/phone-call-black.svg'
+import PhoneBlack from '../images/phone-call-black.svg'
 
 
 

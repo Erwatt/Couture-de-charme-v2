@@ -4,10 +4,10 @@ import React from 'react'
 import CookieConsent from "react-cookie-consent";
 
 //On importe le css
-import '../CSS/Footer.scss'
+import '../css/footer.scss'
 
 //On importe le SVG
-import PlayWhite from '../Images/playwhite.svg'
+import PlayWhite from '../images/playwhite.svg'
 
 export default function Footer() {
 

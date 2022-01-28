@@ -8,7 +8,7 @@
     margin-top: 10%;
     display: flex; 
     flex-direction: column; 
-    background: url('../Images/fôret.png');
+    background: url('../images/foret.png');
     position: initial;
     
     width: 100%;
@@ -103,7 +103,7 @@ li{
 
     display: flex; 
     flex-direction: column; 
-    background: url('../Images/test.png');
+    background: url('../images/test.png');
     top: 25%;
     left: 8%;
     height: 100%;
